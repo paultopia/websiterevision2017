@@ -32,13 +32,17 @@ Tasks before it will compile
 
 [x] integrate old_main.js and new main.js
 
-[ ] go through every component and get assets to right paths (make a reasonable structure for assets directory, like /css /images /pdf /json /md etc.)
+[x] go through every component and get assets to right paths (make a reasonable structure for assets directory, like /css /images /pdf /json /md etc.)
 
-[ ] rewrite icons to just use raw svg.  getting rid of vue-awesome, don't need it.
+[x] rewrite icons to just use raw svg.  getting rid of vue-awesome, don't need it.
 
 [ ] get rid of all css imports.  it'll be per component henceforth and any global files in root component per suggestions in http://vuejs-templates.github.io/webpack/pre-processors.html.
 
-[ ] change cv build script to make cv build in assets
+[x] change cv pdf build script to make cv build in assets
+
+[ ] integrate cv pdf building into npm script for prod/dev.
+
+[ ] look into requiring littlenav globally.  it's all over the place right now, wouldn't surprise me if that's dumping a bunch of extra code in bundle or something stupid.
 
 [ ] fix all the bugs that this process will introduce.
 

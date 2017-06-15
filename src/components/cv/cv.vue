@@ -7,7 +7,7 @@
 
     <div class="twelve columns">
         <h1 id="top"><a href="http://paul-gowder.com">Paul Gowder</a></h1>
-        <p><a :href="'mailto:' + basics.email"><icon name="envelope-o"></icon></a> <a :href="cvURL" download="gowdercv.pdf"><icon name="file-pdf-o"></icon></a></p>
+        <p><a :href="'mailto:' + basics.email"><img src="./assets/icons/envelope.svg"></a> <a :href="cvURL" download="gowdercv.pdf"><img src="./assets/icons/file-pdf.svg"></a></p>
 
     </div></div>
 
@@ -73,8 +73,6 @@ import teaching from "./teaching.vue";
 import generictable from "./generictable.vue";
 import publications from "./publications.vue";
 import service from "./service.vue";
-import icon from 'vue-awesome';
-
 
 export default {    
      components: {presentations, teaching, generictable, publications, service, icon},

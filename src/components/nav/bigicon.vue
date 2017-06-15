@@ -12,7 +12,7 @@
 import mixins from "../../mixins.js";
 
 export default {
-mixins: [mixins.nav]
+mixins: [mixins.nav, mixins.icon]
 };
 
 </script>

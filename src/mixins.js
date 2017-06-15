@@ -9,4 +9,10 @@ var nav = {
     }
 };
 
-export default {nav}
+var icon = {
+    methods: {
+        iconPath: function(nom){return require("./assets/icons/" + nom + ".svg")} // see "getting asset path in javascript" in docs here. http://vuejs-templates.github.io/webpack/static.html  If this doesn't work right, I can always switch to just requiring them in state.js and getting the URLs from the store with vuex.
+    }
+};
+
+export default {nav, icon}

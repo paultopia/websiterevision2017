@@ -1,13 +1,13 @@
 const latex = require('node-latex');
 const fs = require('fs');
 const Mustache = require('mustache');
-const awards = require('./data/awards.json');
-const basic = require('./data/basic.json');
-const courses = require('./data/courses.json');
-const misc = require('./data/misc.json');
-const presentations = require('./data/presentations.json');
-const publications = require('./data/publications.json');
-const service = require('./data/service.json');
+const awards = require('./src/assets/json/awards.json');
+const basic = require('./src/assets/json/basic.json');
+const courses = require('./src/assets/json/courses.json');
+const misc = require('./src/assets/json/misc.json');
+const presentations = require('./src/assets/json/presentations.json');
+const publications = require('./src/assets/json/publications.json');
+const service = require('./src/assets/json/service.json');
 
 const customTags = [ '<<', '>>' ];
 Mustache.tags = customTags;
@@ -86,7 +86,7 @@ const template = fs.readFileSync("./cvtex/template.tex", "utf8");
 
 const input = Mustache.render(template, templatedata);
 
-const output = fs.createWriteStream('./data/gowdercv.pdf');
+const output = fs.createWriteStream('./src/assets/pdf/gowdercv.pdf');
 
 const opts = {cmd: 'xelatex',
 	            inputs: './cvtex',

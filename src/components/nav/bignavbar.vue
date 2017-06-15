@@ -6,8 +6,8 @@
 </div>
 </transition>
                 <div class="row">
-                   <bigicon icon="phone" word="bio" toggle="bio"></bigicon>
-                   <bigicon icon="certificate" word="pubs" toggle="pubs"></bigicon>
+                   <bigicon icon="user-secret" word="bio" toggle="bio"></bigicon>
+                   <bigicon icon="flask" word="pubs" toggle="pubs"></bigicon>
                    <bigicon icon="list-ul" word="cv" toggle="cv"></bigicon>
  
             </div>
@@ -15,8 +15,6 @@
 <div class="row">
 <bigicon icon="pencil" word="other writing" toggle="writing"></bigicon>
 
-<span class="icon icon-spinner"></span>
-<img :src="icons.apple" height=100 width=100>
 </div>
 
 
