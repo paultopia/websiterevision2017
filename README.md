@@ -30,17 +30,17 @@ Right now, it won't compile.  I need to change all the paths to match new direct
 
 Tasks before it will compile
 
-[ ] integrate old_main.js and new main.js
+[x] integrate old_main.js and new main.js
 
 [ ] go through every component and get assets to right paths (make a reasonable structure for assets directory, like /css /images /pdf /json /md etc.)
 
-[ ] just register all components globally (like vue-awesome icons were in original) to simplify.  I don't have enough components to make the alternative worth the time.
-
 [ ] rewrite icons to just use raw svg.  getting rid of vue-awesome, don't need it.
 
-[ ] get rid of all css imports.  it'll be per component henceforth.
+[ ] get rid of all css imports.  it'll be per component henceforth and any global files in root component per suggestions in http://vuejs-templates.github.io/webpack/pre-processors.html.
 
 [ ] change cv build script to make cv build in assets
+
+[ ] fix all the bugs that this process will introduce.
 
 Then it should build, but will look ugly because I'm also dumping the old CSS. Next task is to rewrite the css. See layout-experiments from old repo for the start of a design for palm pilot look with flexbox.
 

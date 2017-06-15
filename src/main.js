@@ -15,12 +15,6 @@ import store from "./state.js";
 
 Vue.config.productionTip = false;
 
-// TEMPORARY CSS IMPORTS TO GET COMPILATION WORKING
-import '../css/normalize.css';
-import '../css/skeleton.css';
-import '../css/hint.min.css';
-import '../css/custom.css';
-import '../css/sprite.css';
 
 /* eslint-disable no-new */
 new Vue({

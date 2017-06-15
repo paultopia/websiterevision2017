@@ -1,17 +1,16 @@
 <template>
 <div>
- <p><img :src="headshot"></p>
+ <p><img src="./assets/images/headshot.jpg"></p>
 <bio></bio>
 </div>
 </template>
 
 <script>
-import bio from '../../data/bio.md'; // dumps directly to markdown component from webpack.
+import bio from '../assets/md/bio.md';
 import littlenav from './nav/littlenavbar.vue';
 
 export default {
-     components: {bio, littlenav},
-     computed: {headshot: function () {return this.$store.state.headshotURL;}}
+     components: {bio, littlenav}
 }
 
 </script>
