@@ -6,22 +6,15 @@ Vue.use(Vuex);
 
 // get my external data in
 
-import pubs from '../data/publications.json';
-import pres from '../data/presentations.json';
-import courses from '../data/courses.json';
-import misc from '../data/misc.json';
-import basics from '../data/basic.json';
-import svc from '../data/service.json';
-import commentary from '../data/commentary.json';
-import headshotURL from '../images/headshot.jpg';
-import cvURL from '../data/gowdercv.pdf';
-import bbabbrv from '../data/bbtables.json';
-import awards from '../data/awards.json';
-
-// I'm going to try to load some icons this way, directly into state, to pull out when needed.
-
-import apple from '../icons/apple.svg';
-const icons = {apple};
+import pubs from '../assets/json/publications.json';
+import pres from '../assets/json/presentations.json';
+import courses from '../assets/json/courses.json';
+import misc from '../assets/json/misc.json';
+import basics from '../assets/json/basic.json';
+import svc from '../assets/json/service.json';
+import commentary from '../assets/json/commentary.json';
+import bbabbrv from '../assets/json/bbtables.json';
+import awards from '../assets/json/awards.json';
 
 // load up the state object
 
@@ -41,11 +34,8 @@ var state = {currentView,
              basics,
              svc,
              commentary,
-             headshotURL,
-             cvURL,
              bbabbrv,
-             awards,
-             icons};
+             awards};
 
 var mutations = {navigate(state, view){state.lastView = state.currentView; 
                                        state.currentView = view;},

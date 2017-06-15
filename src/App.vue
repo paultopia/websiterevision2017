@@ -20,12 +20,32 @@
 
 <script>
 import Hello from './components/Hello'
+import navigation from './components/nav/bignavbar.vue';
+import littlenav from './components/nav/littlenavbar.vue'
+import cv from './components/cv/cv.vue';
+import bio from "./components/bio.vue";
+import pubs from './components/pubs/publications.vue';
+import writing from './components/writing.vue';
+
 
 export default {
   name: 'app',
   components: {
-    Hello
-  }
+      Hello,
+      bio,
+      navigation,
+      cv,
+      pubs,
+      writing,
+      littlenav
+  },
+    computed: {
+        currentView: function(){return store.state.currentView;}
+    },
+    methods: {
+        clog: x => console.log(x), // for debugging
+        checkViewForTransition: function(){return (store.state.currentView == "navigation" || store.state.lastView == "navigation") ? "main-view-anim" : "main-view-nonav";}
+    }
 }
 </script>
 
