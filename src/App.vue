@@ -1,7 +1,20 @@
 <template>
   <div id="app">
+
     <img src="./assets/logo.png">
     <hello></hello>
+
+            <div id="view">
+                <transition name="lilnav" mode="out-in">
+                    <littlenav v-if="currentView != 'navigation'"></littlenav>
+                </transition>
+                <transition v-bind:name="checkViewForTransition()" mode="out-in">
+                <keep-alive>
+                    <component :is="currentView"></component>
+                </keep-alive>
+                </transition>
+            </div>
+
   </div>
 </template>
 

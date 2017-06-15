@@ -1,0 +1,98 @@
+.bignavbox {
+    backface-visibility: hidden;
+}
+
+.big-nav-label {
+    margin-top:-5%;
+    font-size:20px;
+    font-weight:bold;
+}
+
+.little-nav-label {
+    margin-top:-5%;
+    font-size:8px;
+}
+
+svg.topiconcolor {
+    fill: rgba(229, 81, 229, 0.68);
+}
+
+/* classes to manage greying out little icons */
+
+.live {
+    transition: all 0.3s;
+}
+
+.greyedout {
+    fill: rgba(229, 81, 229, 0.35);
+    color: rgba(229, 81, 229, 0.35);
+    transition: all 0.3s;
+}
+
+/* typer, obvs. */
+
+.vue-typer .custom.caret {
+  width: 10px;
+  background-color: rgba(229, 81, 229, 0.68);
+}
+
+.vue-typer {
+    font-size:30px;
+    font-weight:bold;
+}
+
+
+/* animations */
+
+
+.main-view-anim-enter-active {
+    transition: opacity 0.3s, transform 0.6s;
+}
+
+.main-view-anim-leave-active {
+    transition: opacity 0.5s ease-in, transform 0.6s;
+}
+.main-view-anim-leave-to /* .fade-leave-active in <2.1.8 */ {
+    opacity: 0;
+    transform: translateY(-50%);
+}
+
+.main-view-anim-enter {
+    opacity: 0.5;
+    transform: translateY(-35%);
+}
+
+.main-view-nonav-enter-active {
+    transition: opacity 0.4s;
+}
+
+.main-view-nonav-leave-active {
+    transition: opacity 0.4s;
+}
+.main-view-nonav-leave-to /* .fade-leave-active in <2.1.8 */ {
+    opacity: 0;
+}
+
+.main-view-nonav-enter {
+    opacity: 0;
+}
+
+
+
+.lilnav-enter-active {
+    transition: opacity 0.6s, transform 0.6s;
+}
+
+.lilnav-enter {
+    opacity: 0;
+    transform: translateY(-30%);
+}
+
+.lilnav-leave-active {
+    transition: opacity 0.6s, transform 0.6s;
+}
+
+.lilnav-leave-to {
+    opacity: 0;
+    transform: translateY(-30%);
+}
