@@ -55,9 +55,7 @@ export default {
 </script>
 
 <style>
-body {
-background-color: rgba(172, 196, 165, 0.5);
-}
+
 
 /* nav */
 
@@ -66,7 +64,10 @@ background-color: rgba(172, 196, 165, 0.5);
   flex-direction: column;
   justify-content: space-around;
   align-items: stretch;
-  margin: 3em;
+margin: 3em;
+text-align: center;
+font-size: 1em;
+
 }
 
 .subcontainer {
@@ -82,11 +83,12 @@ background-color: rgba(172, 196, 165, 0.5);
   margin-right: auto;
 }
 
+
 /* typer */
 
 .vue-typer .custom.caret {
-  width: 10px;
-  background-color: rgba(229, 81, 229, 0.68);
+  width: 0.3em;
+background-color: rgba(255, 131, 0, 0.7);
 }
 
 .vue-typer {
@@ -116,10 +118,19 @@ width: 40px;
   justify-content: space-between;
   }
 
+.bignavlabel
+
+{
+font-size: 1.1em;
+margin-top: -0.25em;
+}
+
+
 .vue-typer {
     font-size:1.5em;
 
 }
+
 
 
 }
@@ -147,6 +158,13 @@ width: 100px;
 
 .vue-typer {
     font-size:3em;
+}
+
+.bignavlabel
+
+{
+font-size: 2em;
+margin-top: -0.25em;
 }
 
 
