@@ -1,12 +1,14 @@
 <template>
 <div class="bignavbox">
+
+<div class="bigcontainer">
+
 <transition name="main-view-anim">
-                <div v-if="typerOn">
-                    <vue-typer text="Paul Gowder" caret-animation="solid" :type-delay="300" :repeat="0"></vue-typer>
+<div class="subcontainer" v-if="typerOn" id="headline">
+<vue-typer text="Paul Gowder" caret-animation="solid" :type-delay="300" :repeat="0"></vue-typer>
 </div>
 </transition>
 
-<div class="bigcontainer">
 
 <div class="subcontainer">
  <bigicon icon="user-secret" word="bio" toggle="bio" class="navicon"></bigicon>
@@ -54,7 +56,7 @@ export default {
 
 <style>
 body {
-background-color: rgb(172, 196, 165);
+background-color: rgba(172, 196, 165, 0.5);
 }
 
 /* nav */
@@ -90,6 +92,10 @@ background-color: rgb(172, 196, 165);
 .vue-typer {
 
     font-weight:bold;
+}
+
+#headline {
+  justify-content: space-around;
 }
 
 /* media queries */
