@@ -1,12 +1,24 @@
 <template>
-            <div class="row">
-                <littleicon icon="home" word="home" toggle="navigation"></littleicon>
-                <littleicon icon="user-secret" word="bio" toggle="bio"></littleicon>
-                <littleicon icon="flask" word="pubs" toggle="pubs"></littleicon>
-                <littleicon icon="list-ul" word="cv" toggle="cv"></littleicon>
-                <littleicon icon="pencil" word="other writing" toggle="writing"></littleicon>
 
-            </div>
+<div class="littlenavbox">
+  <div class="subcontainer">
+ <littleicon icon="home" word="home" toggle="navigation"></littleicon>
+ <littleicon icon="user-secret" word="bio" toggle="bio" class="navicon"></littleicon>
+ <littleicon icon="flask" word="research" toggle="pubs" class="navicon"></littleicon>
+ <littleicon icon="list-ul" word="cv" toggle="cv" class="navicon"></littleicon>
+ 
+<littleicon icon="pencil" word="writing" toggle="writing" class="navicon"></littleicon>
+<littleicon icon="lightbulb" word="teaching" toggle="teaching" class="navicon"></littleicon>
+<littleicon icon="code" word="tech" toggle="tech" class="navicon"></littleicon>
+
+<littleicon icon="news" word="news" toggle="news" class="navicon"></littleicon>
+<littleicon icon="rocket" word="links" toggle="links" class="navicon"></littleicon>
+<littleicon icon="address-card" word="contact" toggle="contact" class="navicon"></littleicon>
+
+</div>
+
+</div>
+
 
 </template>
 
@@ -20,3 +32,14 @@ export default {
 
 
 </script>
+
+<style>
+
+
+  .littlenav {
+  height: 50%;
+  width: 50%;
+  }
+
+
+  </style>
