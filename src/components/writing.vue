@@ -35,8 +35,6 @@
 
 <script>
 
-import littlenav from './nav/littlenavbar.vue';
-
 function chronThenTitle(a, b){
     if(parseInt(a.year) > parseInt(b.year)) return -1;
     if(parseInt(a.year) < parseInt(b.year)) return 1;
@@ -47,7 +45,6 @@ function chronThenTitle(a, b){
 }
 
 export default {
-       components: {littlenav},
        computed: {
                  commentary: function(){return this.$store.state.commentary;}
                  },

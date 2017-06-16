@@ -42,7 +42,6 @@
 import articlerow from './articlerow.vue';
 import bibtex from "../../bibtex.js";
 import io from "../../io.js";
-import littlenav from '../nav/littlenavbar.vue';
 
 function isArticle(pub){
     return pub.type === "peer review" || pub.type === "law review";
@@ -59,7 +58,7 @@ function chronThenTypeThenTitle(a, b){
 
 
 export default {
-       components: {articlerow, littlenav},
+       components: {articlerow},
        computed: {
                  publications: function(){return this.$store.state.pubs;},
                  articles: function(){return this.$store.state.pubs.filter(isArticle).sort(chronThenTypeThenTitle)},
@@ -68,3 +67,10 @@ export default {
 }
 
 </script>
+
+<style>
+  img {
+  height: 20px;
+  width: 20px;
+  }
+  </style>

@@ -36,23 +36,18 @@ Tasks before it will compile
 
 [x] rewrite icons to just use raw svg.  getting rid of vue-awesome, don't need it.
 
-[ ] get rid of all css imports.  it'll be per component henceforth and any global files in root component per suggestions in http://vuejs-templates.github.io/webpack/pre-processors.html.
+[x] get rid of all css imports.  it'll be per component henceforth and any global files in root component per suggestions in http://vuejs-templates.github.io/webpack/pre-processors.html.
 
 [x] change cv pdf build script to make cv build in assets
 
 [ ] integrate cv pdf building into npm script for prod/dev.
 
-[ ] look into requiring littlenav globally.  it's all over the place right now, wouldn't surprise me if that's dumping a bunch of extra code in bundle or something stupid.
+[x] look into requiring littlenav globally.  it's all over the place right now, wouldn't surprise me if that's dumping a bunch of extra code in bundle or something stupid.
 
-[ ] fix all the bugs that this process will introduce.
+[x] fix all the bugs that this process will introduce.
 
 Then it should build, but will look ugly because I'm also dumping the old CSS. Next task is to rewrite the css. See layout-experiments from old repo for the start of a design for palm pilot look with flexbox.
 
 ----
 
-with new cli scaffold it seems to work this way with assets, rather than shoving into state? 
-
-    <img src="./assets/logo.png">
-    <hello></hello>
-
-that is, web pack grabs things from the assets file, compiles them into js, but also lets you use original urls.?!  nice. 
+(now done.  next step, write the css.  oh, and the rest of the content.  The basic functionality is finished, so long as it compiles properly for build.)

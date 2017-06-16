@@ -15,6 +15,7 @@ import svc from './assets/json/service.json';
 import commentary from './assets/json/commentary.json';
 import bbabbrv from './assets/json/bbtables.json';
 import awards from './assets/json/awards.json';
+import cvURL from './assets/pdf/gowdercv.pdf';
 
 // load up the state object
 
@@ -35,7 +36,8 @@ var state = {currentView,
              svc,
              commentary,
              bbabbrv,
-             awards};
+             awards,
+             cvURL};
 
 var mutations = {navigate(state, view){state.lastView = state.currentView; 
                                        state.currentView = view;},

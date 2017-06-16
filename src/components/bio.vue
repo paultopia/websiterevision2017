@@ -7,10 +7,9 @@
 
 <script>
 import bio from '../assets/md/bio.md';
-import littlenav from './nav/littlenavbar.vue';
 
 export default {
-     components: {bio, littlenav}
+     components: {bio}
 }
 
 </script>

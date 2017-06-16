@@ -1,9 +1,6 @@
 <template>
   <div id="app">
 
-    <img src="./assets/logo.png">
-    <hello></hello>
-
             <div id="view">
                 <transition name="lilnav" mode="out-in">
                     <littlenav v-if="currentView != 'navigation'"></littlenav>
