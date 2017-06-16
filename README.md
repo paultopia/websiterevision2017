@@ -51,3 +51,5 @@ Then it should build, but will look ugly because I'm also dumping the old CSS. N
 ----
 
 (now done.  next step, write the css.  oh, and the rest of the content.  The basic functionality is finished, so long as it compiles properly for build.)
+
+(builds successfully, however, limited CSS I have in here works differently on prod build than on dev build.  I think in-component CSS is running into one another.  I could use scoped CSS, but would be better to use proper classes. https://vue-loader.vuejs.org/en/features/scoped-css.html )
