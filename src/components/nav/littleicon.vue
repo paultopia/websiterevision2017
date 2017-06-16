@@ -1,7 +1,7 @@
 <template>
 <div class="two columns" v-on:click="navto" :class="isActive">
-<img :src="iconPath(icon)" height=50 width=50>
-<p class="little-nav-label">{{ word }}</p>
+<img :src="iconPath(icon)" class="littlenav">
+<p class="littlenavlabel">{{ word }}</p>
 </div>
 </template>
 

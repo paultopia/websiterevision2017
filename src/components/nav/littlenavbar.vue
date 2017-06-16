@@ -37,9 +37,16 @@ export default {
 
 
   .littlenav {
-  height: 50%;
-  width: 50%;
+  height: 30%;
+  width: 30%;
   }
+
+.littlenavlabel
+
+{
+font-size: 0.4em;
+margin-top: -0.15em;
+}
 
 
   </style>
