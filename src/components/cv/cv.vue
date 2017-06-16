@@ -7,7 +7,7 @@
 
     <div class="twelve columns">
         <h1 id="top"><a href="http://paul-gowder.com">Paul Gowder</a></h1>
-        <p><a :href="'mailto:' + basics.email"><img src="./assets/icons/envelope.svg"></a> <a :href="cvURL" download="gowdercv.pdf"><img src="./assets/icons/file-pdf.svg"></a></p>
+        <p><a :href="'mailto:' + basics.email"><img src="../../assets/icons/envelope.svg"></a> <a :href="cvURL" download="gowdercv.pdf"><img src="../../assets/icons/file-pdf.svg"></a></p>
 
     </div></div>
 
@@ -75,7 +75,7 @@ import publications from "./publications.vue";
 import service from "./service.vue";
 
 export default {    
-     components: {presentations, teaching, generictable, publications, service, icon},
+     components: {presentations, teaching, generictable, publications, service},
     computed: {
         cvURL: function(){return this.$store.state.cvURL;},
         pubs: function(){return this.$store.state.pubs;},

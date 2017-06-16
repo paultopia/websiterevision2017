@@ -4,9 +4,9 @@
         <td>{{ art.journal }} {{ art.volume }}<span v-if="art.issue">({{ art.issue }})</span>:{{ art.firstpage }}-{{ art.lastpage }}<span v-if="art.coauthor"> (with {{ art.coauthor }})</span></td>
         <td>{{ art.year }}</td>
         <td>
-        <span class="hint--bottom" aria-label="abstract/full citation" v-on:click="abs()"><img src="./assets/icons/file-text.svg"></span>
-        <a class="hint--bottom" aria-label="publisher link" v-if="art.publink" :href="art.publink"><img src="./assets/icons/external-link.svg"></a>
-<a class="hint--bottom" aria-label="alternative download link" v-if="art.altlink" :href="art.altlink"><img src="./assets/icons/cloud-download.svg"></a>
+        <span class="hint--bottom" aria-label="abstract/full citation" v-on:click="abs()"><img src="../../assets/icons/file-text.svg"></span>
+        <a class="hint--bottom" aria-label="publisher link" v-if="art.publink" :href="art.publink"><img src="../../assets/icons/external-link.svg"></a>
+<a class="hint--bottom" aria-label="alternative download link" v-if="art.altlink" :href="art.altlink"><img src="../../assets/icons/cloud-download.svg"></a>
 <!-- Why do I have one span and two anchors with the same function?! -->
 
         </td>
@@ -23,7 +23,7 @@
 
 </td>
 <td style="vertical-align: top;"><span class="hint--bottom" aria-label="close abstract" v-on:click="line()">
-<img src="./assets/icons/times.svg">
+<img src="../../assets/icons/times.svg">
 </span></td>
     </tr>
 </template>

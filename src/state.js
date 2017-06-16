@@ -6,15 +6,15 @@ Vue.use(Vuex);
 
 // get my external data in
 
-import pubs from '../assets/json/publications.json';
-import pres from '../assets/json/presentations.json';
-import courses from '../assets/json/courses.json';
-import misc from '../assets/json/misc.json';
-import basics from '../assets/json/basic.json';
-import svc from '../assets/json/service.json';
-import commentary from '../assets/json/commentary.json';
-import bbabbrv from '../assets/json/bbtables.json';
-import awards from '../assets/json/awards.json';
+import pubs from './assets/json/publications.json';
+import pres from './assets/json/presentations.json';
+import courses from './assets/json/courses.json';
+import misc from './assets/json/misc.json';
+import basics from './assets/json/basic.json';
+import svc from './assets/json/service.json';
+import commentary from './assets/json/commentary.json';
+import bbabbrv from './assets/json/bbtables.json';
+import awards from './assets/json/awards.json';
 
 // load up the state object
 

@@ -1,6 +1,6 @@
 <template>
 <div>
- <p><img src="./assets/images/headshot.jpg"></p>
+ <p><img src="../assets/images/headshot.jpg"></p>
 <bio></bio>
 </div>
 </template>

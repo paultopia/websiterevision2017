@@ -40,11 +40,11 @@ export default {
       littlenav
   },
     computed: {
-        currentView: function(){return store.state.currentView;}
+        currentView: function(){return this.$store.state.currentView;}
     },
     methods: {
         clog: x => console.log(x), // for debugging
-        checkViewForTransition: function(){return (store.state.currentView == "navigation" || store.state.lastView == "navigation") ? "main-view-anim" : "main-view-nonav";}
+        checkViewForTransition: function(){return (this.$store.state.currentView == "navigation" || this.$store.state.lastView == "navigation") ? "main-view-anim" : "main-view-nonav";}
     }
 }
 </script>
