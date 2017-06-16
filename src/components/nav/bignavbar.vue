@@ -16,14 +16,14 @@
 </div>
 
 <div class="subcontainer">
-<bigicon icon="pencil" word="other writing" toggle="writing" class="navicon"></bigicon>
+<bigicon icon="pencil" word="writing" toggle="writing" class="navicon"></bigicon>
 <bigicon icon="lightbulb" word="teaching" toggle="teaching"> class="navicon"</bigicon>
 <bigicon icon="code" word="tech" toggle="tech" class="navicon"></bigicon>
 
 </div>
 
 <div class="subcontainer">
-<bigicon icon="news" word="recent news" toggle="news" class="navicon"></bigicon>
+<bigicon icon="news" word="news" toggle="news" class="navicon"></bigicon>
 <bigicon icon="rocket" word="links" toggle="links" class="navicon"></bigicon>
 <bigicon icon="address-card" word="contact" toggle="contact" class="navicon"></bigicon>
 
@@ -57,11 +57,7 @@ body {
 background-color: rgb(172, 196, 165);
 }
 
-.bignavbox {
-width: 80%;
-  margin-left: auto;
-  margin-right: auto;
-}
+/* nav */
 
 .bigcontainer {
   display: flex;
@@ -79,8 +75,79 @@ width: 80%;
   padding-top: 3em;
   }
 
-.fa {
-	justify-content: center;
+.bignavbox {
+  margin-left: auto;
+  margin-right: auto;
 }
+
+/* typer */
+
+.vue-typer .custom.caret {
+  width: 10px;
+  background-color: rgba(229, 81, 229, 0.68);
+}
+
+.vue-typer {
+
+    font-weight:bold;
+}
+
+/* media queries */
+
+@media (max-width: 699px) 
+{
+
+.bignavbox {
+width: 95%;
+}
+
+img {
+height: 40px;
+width: 40px;
+}
+
+.subcontainer {
+  justify-content: space-between;
+  }
+
+.vue-typer {
+    font-size:1.5em;
+
+}
+
+
+}
+
+
+
+
+
+
+@media (min-width: 700px) 
+{
+
+.bignavbox {
+width: 80%;
+}
+
+img {
+height: 100px;
+width: 100px;
+}
+
+.subcontainer {
+  justify-content: space-around;
+  }
+
+.vue-typer {
+    font-size:3em;
+}
+
+
+}
+
+
+
+
 
   </style>
