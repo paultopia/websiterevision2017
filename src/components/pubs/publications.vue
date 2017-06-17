@@ -69,8 +69,5 @@ export default {
 </script>
 
 <style>
-  img {
-  height: 20px;
-  width: 20px;
-  }
+
   </style>

@@ -7,7 +7,7 @@
 
     <div class="twelve columns">
         <h1 id="top"><a href="http://paul-gowder.com">Paul Gowder</a></h1>
-        <p><a :href="'mailto:' + basics.email"><img src="../../assets/icons/envelope.svg"></a> <a :href="cvURL" download="gowdercv.pdf"><img src="../../assets/icons/file-pdf.svg"></a></p>
+        <p><a :href="'mailto:' + basics.email"><img src="../../assets/icons/envelope.svg" class="cvicon"></a> <a :href="cvURL" download="gowdercv.pdf"><img src="../../assets/icons/file-pdf.svg" class="cvicon"></a></p>
 
     </div></div>
 
@@ -91,7 +91,7 @@ export default {
 </script>
 
 <style>
-  img {
+  .cvicon {
   height: 20px;
   width: 20px;
   }

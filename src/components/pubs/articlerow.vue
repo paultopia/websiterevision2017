@@ -4,10 +4,10 @@
         <td>{{ art.journal }} {{ art.volume }}<span v-if="art.issue">({{ art.issue }})</span>:{{ art.firstpage }}-{{ art.lastpage }}<span v-if="art.coauthor"> (with {{ art.coauthor }})</span></td>
         <td>{{ art.year }}</td>
         <td>
-        <span class="hint--bottom" aria-label="abstract/full citation" v-on:click="abs()"><img src="../../assets/icons/file-text.svg"></span>
-        <a class="hint--bottom" aria-label="publisher link" v-if="art.publink" :href="art.publink"><img src="../../assets/icons/external-link.svg"></a>
-<a class="hint--bottom" aria-label="alternative download link" v-if="art.altlink" :href="art.altlink"><img src="../../assets/icons/cloud-download.svg"></a>
-<!-- Why do I have one span and two anchors with the same function?! -->
+        <span class="hint--bottom" aria-label="abstract/full citation" v-on:click="abs()"><img src="../../assets/icons/file-text.svg" class="pubsicon"></span>
+        <a class="hint--bottom" aria-label="publisher link" v-if="art.publink" :href="art.publink"><img src="../../assets/icons/external-link.svg" class="pubsicon"></a>
+<a class="hint--bottom" aria-label="alternative download link" v-if="art.altlink" :href="art.altlink"><img src="../../assets/icons/cloud-download.svg" class="pubsicon"></a>
+<!-- Why do I have one span and two anchors with the same function?! Also I need to replace the tooltops with labels. -->
 
         </td>
     </tr>
@@ -41,3 +41,12 @@ import citation from "./citation.vue";
          line(){this.infoline = true;}
      }}
 </script>
+
+<style>
+
+  .pubsicon {
+  height: 20px;
+  width: 20px;
+  }
+
+  </style>
