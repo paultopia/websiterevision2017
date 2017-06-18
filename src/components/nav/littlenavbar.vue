@@ -32,45 +32,5 @@ export default {
 
 <style>
 
-  .littlenavbox {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: stretch;
-  float: left;
-margin: 3em;
-text-align: center;
-font-size: 1em;
 
-}
-
-
-  .littlenav {
-  height: 30%;
-  width: 30%;
-  }
-
-.littlenavlabel
-
-{
-font-size: 0.4em;
-margin-top: -0.15em;
-}
-
-  @media (max-width: 699px) 
-{
-  .littlenavicon {
-display: none;
-  }
-
-  .homeicon
-
-  {
-  display: block;
-  }
-  .littlenavbox {
-  position: fixed;
-  bottom: 0;
-  }
-}
   </style>

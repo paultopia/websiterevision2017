@@ -91,8 +91,5 @@ export default {
 </script>
 
 <style>
-  .cvicon {
-  height: 20px;
-  width: 20px;
-  }
+
   </style>

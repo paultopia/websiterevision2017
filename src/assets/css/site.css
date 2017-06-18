@@ -1,0 +1,204 @@
+/* ********************************* */
+/*                                   */
+/* ALL SCREENS                       */
+/*                                   */
+/* ********************************* */
+
+body {
+    background-color: rgba(255, 131, 0, 0.25);
+    font-family: 'Avenir', Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+
+/* opening page */
+
+
+.bigcontainer {
+    display: flex;
+    justify-content: space-around;
+    align-items: stretch;
+    margin: 3em;
+    text-align: center;
+    font-size: 1em;
+
+}
+
+.bigsubcontainer {
+    display: flex;
+    justify-content: space-around;
+    align-items: stretch;
+    padding-top: 3em;
+}
+
+.bignavbox {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+.vue-typer .custom.caret {
+    width: 0.3em;
+    background-color: rgba(255, 131, 0, 0.7);
+}
+
+.vue-typer {
+
+    font-weight:bold;
+}
+
+
+/*  little navbox */
+
+.littlenavbox {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: stretch;
+    float: left;
+    margin: 3em;
+    text-align: center;
+    font-size: 1em;
+}
+
+.littlenav {
+    height: 30%;
+    width: 30%;
+}
+
+.littlenavlabel {
+    font-size: 0.4em;
+    margin-top: -0.15em;
+}
+
+
+
+/* cv  */
+
+.cvicon {
+    height: 20px;
+    width: 20px;
+}
+
+
+/* pubs */
+
+
+.pubsicon {
+    height: 20px;
+    width: 20px;
+}
+
+
+
+
+/* ********************************* */
+/*                                   */
+/* BIG SCREENS                       */
+/*                                   */
+/* ********************************* */
+
+/* opening page */
+
+@media (min-width: 700px) 
+{
+
+    .bigcontainer {
+        width: 80%;
+        flex-direction: row;
+    }
+
+    .bigsubcontainer {
+        flex-direction: column;
+    }
+
+
+    img {
+        height: 100px;
+        width: 100px;
+    }
+
+    .subcontainer {
+        justify-content: space-around;
+    }
+
+    .vue-typer {
+        font-size:3em;
+    }
+
+    .bignavlabel {
+        font-size: 2em;
+        margin-top: -0.25em;
+    }
+
+    .headline {
+        margin-bottom: -3em;
+        margin-left: 15%;
+    }
+
+
+}
+
+
+/* ********************************* */
+/*                                   */
+/* LITTLE SCREENS                    */
+/*                                   */
+/* ********************************* */
+
+/* opening page */
+
+@media (max-width: 699px) 
+{
+
+    .bigcontainer {
+        width: 95%;
+        flex-direction: column;
+    }
+
+    .bigsubcontainer {
+        flex-direction: row;
+    }
+
+    img {
+        height: 40px;
+        width: 40px;
+    }
+
+    .subcontainer {
+        justify-content: space-between;
+    }
+
+    .bignavlabel {
+        font-size: 1.1em;
+        margin-top: -0.25em;
+    }
+
+    .vue-typer {
+        font-size:1.5em;
+    }
+
+    .headline {
+        margin-bottom: -4em;
+        margin-left: 30%;
+    }
+
+
+    /* little nav */
+
+
+    .littlenavicon {
+        display: none;
+    }
+
+    .homeicon {
+        display: block;
+    }
+
+    .littlenavbox {
+        position: fixed;
+        bottom: 0;
+    }
+
+}

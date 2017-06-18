@@ -12,6 +12,9 @@ Vue.use(VueTyperPlugin);
 // get the store in...
 import store from "./state.js";
 
+// get my css in
+
+import './assets/css/site.css';
 
 Vue.config.productionTip = false;
 

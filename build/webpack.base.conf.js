@@ -53,6 +53,10 @@ module.exports = {
             test: /\.(pdf)$/,
             loader: 'url-loader'
         },
+        {
+            test: /\.css$/,
+            loaders: ['style-loader', 'css-loader']
+        },
       {
         test: /\.(woff2?|eot|ttf|otf)(\?.*)?$/,
         loader: 'url-loader',

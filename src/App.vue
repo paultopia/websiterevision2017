@@ -47,14 +47,7 @@ export default {
 </script>
 
 <style>
-      body {
-        background-color: rgba(255, 131, 0, 0.25);
-      }
 
-  #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+
 
 </style>

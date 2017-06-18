@@ -44,9 +44,4 @@ import citation from "./citation.vue";
 
 <style>
 
-  .pubsicon {
-  height: 20px;
-  width: 20px;
-  }
-
   </style>
