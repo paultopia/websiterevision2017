@@ -88,6 +88,14 @@ body {
 }
 
 
+/* the very occasional use of buttons */
+
+button {
+    color: rgb(214, 250, 203);
+    padding: 2px;
+    background-color: rgba(50,50,50, 0.75);
+    border: none;
+}
 
 
 /* ********************************* */
@@ -140,7 +148,26 @@ body {
     #innerfooter {
         font-size: 0.75em;
     }
+
+    /* tabular data (cv, research page, external page with writing list) */
+
+    th, td {
+        padding: 12px 15px;
+        text-align: left;
+    }
+
+    th:first-child, td:first-child {
+        padding-left: 0; }
+
+    th:last-child, td:last-child {
+        padding-right: 0; }
+
+    .mobileonly {
+        display: none;
+    }
+
 }
+
 
 
 /* ********************************* */
@@ -196,4 +223,26 @@ body {
         font-size: 0.5em;
     }
 
+    /* some stuff just isn't going to display on mobile properly */
+
+    .nomobile {
+        display: none;
+    }
+
+    /* special formatting for stuff replacing tables on mobile screens */
+
+    .mobilearticleblock {
+        margin-top: 20px;
+    }
+
+    .mobilearticleflexcontainer {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .mobilearticleiconbuttons {
+        display: flex;
+        flex-direction: column;
+    }
 }

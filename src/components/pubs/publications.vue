@@ -1,14 +1,12 @@
 <template>
-<div>
+<div class="textcontainer">
 <div style="margin-top:5%;">
 
        <h3>Books</h3>
-            <ol>
-                <li v-for="book in publications" v-if="book.type === 'book'">
-                    {{ book.title }}
-                </li></ol>
-
+<p><em>The Rule of Law in the Real World</em>, Cambridge University Press 2016. <br> For more information, go to <a href="http://rulelaw.net">rulelaw.net</a>.</p>
             <h3>Articles</h3>
+
+            <div class="nomobile">
             <table>
                 <thead>
                     <tr>
@@ -17,20 +15,28 @@
                         <th>Year</th>
                         <th>options</th>
                     </tr>
-                </thead>
+                    </thead>
                     <tbody>
 
                         <tr is="articlerow" v-for="art in articles" v-bind:art="art" v-bind:key="art.title"></tr>
 
 
-                    </tbody></table>
+                        </tbody>
+                      </table>
 
-                        </tr>
+                    </div> 
+
+                    <div class="mobileonly">
+
+                         <mobilearticlerow v-for="art in articles" v-bind:art="art" v-bind:key="art.title"></mobilearticlerow>
+
+                                        </div>
 
                     
                     <p>
                         <a :href="bturl" download="gowder.bib">download bibtex</a>
                     </p>
+
 
 
 </div>
@@ -40,6 +46,7 @@
 <script>
 
 import articlerow from './articlerow.vue';
+import mobilearticlerow from './mobilearticlerow.vue';
 import bibtex from "../../bibtex.js";
 import io from "../../io.js";
 
@@ -58,7 +65,7 @@ function chronThenTypeThenTitle(a, b){
 
 
 export default {
-       components: {articlerow},
+       components: {articlerow, mobilearticlerow},
        computed: {
                  publications: function(){return this.$store.state.pubs;},
                  articles: function(){return this.$store.state.pubs.filter(isArticle).sort(chronThenTypeThenTitle)},
