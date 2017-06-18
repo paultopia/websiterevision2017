@@ -1,5 +1,5 @@
 <template>
-<div>
+<div class="textcontainer">
  <p><img src="../assets/images/headshot.jpg"></p>
 <bio></bio>
 </div>

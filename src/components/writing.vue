@@ -1,8 +1,7 @@
 <template>
 
-<div>
 
-<div style="margin-top:5%;">
+<div class="textcontainer">
 <h2>Non-Academic Writings</h2>
 
 <div v-for="category in commentary.orderedcategories">
@@ -28,7 +27,6 @@
 </table>
 </div>
 
-</div>
 </div>
 
 </template>
