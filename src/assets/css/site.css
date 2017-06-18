@@ -40,7 +40,7 @@ body {
 
 .vue-typer .custom.caret {
     width: 0.3em;
-    background-color: rgba(255, 131, 0, 0.7);
+    background-color: rgb(109, 131, 103)
 }
 
 .vue-typer {
@@ -51,22 +51,25 @@ body {
 
 #footer {
     position:fixed;
-    left:0px;
     bottom:0px;
-    height:2em;
-    width:100%;
-    background:#999;
-    background-color: rgb(172, 196, 165);
+    width: 100%;
+    background-color: rgba(50,50,50, 0.95);
+    color: rgb(214, 250, 203);
 }
 
 /* text in general */
 
-.textcontainer {
+.textcontainer, #innerfooter {
     width: 75%;
     margin: 0 auto;
-    margin-bottom: 3em;
-
 }
+
+#innerfooter {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
 
 /* cv  */
 
@@ -125,7 +128,18 @@ body {
         margin-left: 15%;
     }
 
+    /* footer */
 
+    .textcontainer {
+        margin-bottom: 3em;
+    }
+    #footer {
+        height:1.5em;
+    }
+
+    #innerfooter {
+        font-size: 0.75em;
+    }
 }
 
 
@@ -168,5 +182,18 @@ body {
         margin-left: 30%;
     }
 
+    /* footer */
+
+    .textcontainer {
+        margin-bottom: 1.5em;
+    }
+
+    #footer {
+        height: 1em;
+    }
+
+    #innerfooter {
+        font-size: 0.5em;
+    }
 
 }

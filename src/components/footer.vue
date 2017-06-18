@@ -1,8 +1,14 @@
 <template>
 <div id="footer">
-<img src="../assets/icons/home.svg" class="cvicon" v-on:click="goHome"> &copy; Paul Gowder. Last rev. {{ lastRev }}.
+<div id="innerfooter">
 
+<span v-on:click="goHome">Return Home</span>
 
+<span>&copy; Paul Gowder.</span>
+
+<span>Last rev. {{ lastRev }}.</span>
+
+</div>
 </div>
 </template>
 
