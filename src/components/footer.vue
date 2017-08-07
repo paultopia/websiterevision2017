@@ -2,9 +2,9 @@
 <div id="footer">
 <div id="innerfooter" v-on:click="goHome">
 
-<span>&copy; Paul Gowder</span>
+<span class="nomobile">&copy; Paul Gowder</span>
 
-<span>Last rev. {{ lastRev }}</span>
+<span class="nomobile">Last rev. {{ lastRev }}</span>
 
 <span class="homelink">
 <img src="../assets/icons/home.svg" class="footericon">
