@@ -169,6 +169,11 @@ button {
         margin-bottom: -3em;
     }
 
+    .naviconimage {
+        width: 80%;
+        height: 80%; 
+    }
+
     /* footer */
 
     .textcontainer {
@@ -242,12 +247,17 @@ button {
     }
 
     .navicon:nth-child(2n + 1) {
-        padding-right: 5%
+        padding-right: 2%
     }
 
 
     .navicon:nth-child(2n) {
-        padding-left: 5%
+        padding-left: 2%
+    }
+
+    .naviconimage {
+        width: 60%;
+        height: 60%; 
     }
 
     /* footer */

@@ -1,6 +1,6 @@
 <template>
 <div v-on:click="navto">
-<img :src="iconPath(icon)" height=100 width=100>
+<img class="naviconimage" :src="iconPath(icon)">
 
 <!-- for some bizarre reason taking away these hardcoded dimensions breaks layout, even though I have dimensions in css.  I might just have to accept this. -->
 
