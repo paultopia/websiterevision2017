@@ -4,7 +4,42 @@
 <div class="headline">
 <transition name="main-view-anim">
 <div class="subcontainer" v-if="typerOn" id="headline">
-<vue-typer text="Paul Gowder" caret-animation="solid" :type-delay="300" :repeat="0"></vue-typer>
+  <vue-typer
+    :text='["Pau", "Rul", "Polit", "Dat", "Pau"]'
+    caret-animation="solid"
+    erase-style="backspace"
+    :erase-on-complete='true'
+    :type-delay="300"
+    initial-action="erasing"
+    :repeat="0"></vue-typer>
+
+  <vue-typer
+    :text='["l G", "e o", "ical ", "a S", "l G"]'
+    caret-animation="solid"
+    erase-style="backspace"
+    :erase-on-complete='true'
+    :type-delay="300"
+    initial-action="erasing"
+    :repeat="0"></vue-typer>
+
+<vue-typer
+    :text='["owd", "f L", "Philo", "cie", "owd"]'
+    caret-animation="solid"
+    erase-style="backspace"
+    :erase-on-complete='true'
+    :type-delay="300"
+    initial-action="erasing"
+    :repeat="0"></vue-typer>
+
+<vue-typer
+    :text='["er", "aw", "sophy", "nce", "er"]'
+    caret-animation="solid"
+    erase-style="backspace"
+    :erase-on-complete='true'
+    :type-delay="300"
+    initial-action="erasing"
+    :repeat="0"></vue-typer>
+
 </div>
 </transition>
 </div>
@@ -49,7 +84,6 @@ export default {
      }
 }
 
-// this is also an experiment, it might not let me use methods from the global vue instance in here... might have to have them as mixins or something.
 
 </script>
 

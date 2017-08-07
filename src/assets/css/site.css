@@ -44,7 +44,8 @@ body {
 
 
 .vue-typer .custom.caret {
-    width: 0.3em;
+    width: 0;
+    /* width: 0.3em; */
     background-color: rgb(109, 131, 103)
 }
 
