@@ -16,7 +16,10 @@
 
 export default {
      methods: {
-     goHome: function(){this.$store.commit('navigate', 'navigation')}},
+     goHome: function(){
+window.history.back();
+// this.$store.commit('navigate', 'navigation')
+}},
      computed: {
      lastRev: function(){return this.$store.state.basics.core.revdate}
 }} 

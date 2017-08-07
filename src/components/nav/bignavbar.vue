@@ -9,7 +9,7 @@
     caret-animation="blink"
     erase-style="select-all"
     :erase-on-complete='true'
-    pre-type-delay="0"
+    :pre-type-delay=0
     :type-delay="70"
     :erase-delay="400"
     initial-action="erasing"
@@ -48,11 +48,10 @@
 
 import VueTyperPlugin from 'vue-typer';
 
-
 import bigicon from "./bigicon.vue";
 export default {
      components: {bigicon, VueTyperPlugin},
-     deactivated() {this.$store.commit('typerOff');},
+    deactivated() {this.$store.commit('typerOff')},
      computed: {typerOn(){return this.$store.state.typerOn;},
      icons(){return this.$store.state.icons;},
      }

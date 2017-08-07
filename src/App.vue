@@ -33,7 +33,11 @@ export default {
   },
     computed: {
         currentView: function(){return this.$store.state.currentView;}
-    }
+    },
+mounted() {var that = this;
+window.onpopstate = function(event){
+            that.$store.commit('navigate', "navigation");};},
+
 }
 </script>
 
