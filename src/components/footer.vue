@@ -1,12 +1,12 @@
 <template>
 <div id="footer">
-<div id="innerfooter">
+<div id="innerfooter" v-on:click="goHome">
 
-<span v-on:click="goHome">Return Home</span>
+<span>&copy; Paul Gowder</span>
 
-<span>&copy; Paul Gowder.</span>
+<span>Last rev. {{ lastRev }}</span>
 
-<span>Last rev. {{ lastRev }}.</span>
+<span class="homelink">Home</span>
 
 </div>
 </div>
