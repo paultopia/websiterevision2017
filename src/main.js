@@ -14,6 +14,7 @@ import store from "./state.js";
 
 // get my css in
 
+import './assets/css/normalize.css';
 import './assets/css/site.css';
 
 Vue.config.productionTip = false;

@@ -6,7 +6,10 @@
 
 <span>Last rev. {{ lastRev }}</span>
 
-<span class="homelink">Home</span>
+<span class="homelink">
+<img src="../assets/icons/home.svg" class="footericon">
+<span class="homelinktext">Home</span>
+</span>
 
 </div>
 </div>

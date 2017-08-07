@@ -57,15 +57,6 @@ body {
     background-color: rgb(242, 132, 53);
 }
 
-
-#footer {
-    position:fixed;
-    bottom:0px;
-    width: 100%;
-    background-color: rgba(50,50,50, 0.95);
-    color: rgb(214, 250, 203);
-}
-
 /* text in general */
 
 .textcontainer, #innerfooter {
@@ -102,6 +93,9 @@ body {
 }
 
 
+/* FOOTER  */
+
+
 #innerfooter {
     display: flex;
     flex-direction: row;
@@ -109,7 +103,15 @@ body {
 }
 
 
-/* cv  */
+#footer {
+    position:fixed;
+    bottom:0px;
+    width: 100%;
+    background-color: rgba(50,50,50, 0.95);
+    color: rgb(214, 250, 203);
+}
+
+/* CV  */
 
 .cvicon {
     height: 20px;
@@ -174,8 +176,8 @@ button {
     }
 
     .naviconimage {
-        width: 80%;
-        height: 80%; 
+        width: 70%;
+        height: auto; 
     }
 
     /* footer */
@@ -194,6 +196,17 @@ button {
     #innerfooter .homelink{
         font-size: 1.2em;
         font-weight: bold;
+    }
+
+    .homelink .footericon{
+        height: 15px;
+        width: 15px;
+    }
+
+    .homelink{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
     }
 
     /* tabular data (cv, research page, external page with writing list) */
