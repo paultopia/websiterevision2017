@@ -344,4 +344,21 @@ button {
         display: flex;
         flex-direction: column;
     }
+
+    td {
+        display: block;
+    }
+
+    td:first-child{
+        margin-left: -5px;
+        margin-top: 5px;
+    }
+
+    td:nth-child(3n){
+        margin-left: 15px;
+    }
+
+    td:nth-child(4n){
+        margin-left: 15px;
+    }
 }

@@ -144,7 +144,7 @@
                 <col style="width:40%">
                 <col style="width:50%">
 
-                <thead><tr><th>Title</th><th>Description</th><th>Years</th></tr></thead><tbody>
+                <tbody>
                     
                     <tr v-for="misc in sortedPubs" v-if="misc.type === 'misc'">              
                     <td>
