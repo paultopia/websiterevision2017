@@ -62,6 +62,16 @@
     <hr />
     <p style="float: left;"><a :href="basics.url"><b>&lt;&lt;---</b></a></p> <p style="float: right;">Last Revised {{ basics.revdate }} </p>
 
+
+    <input v-model.number="page" type="number" style="width: 5em"> /{{numPages}}
+    <button @click="$refs.pdf.print()">print</button>
+
+
+			<div v-if="loadedRatio > 0 && loadedRatio < 1" style="background-color: green; color: white; text-align: center" :style="{ width: loadedRatio * 100 + '%' }">{{ Math.floor(loadedRatio * 100) }}%</div>
+			<pdf ref="pdf" :src="cvbin" :page="page"  @progress="loadedRatio = $event" @numPages="numPages = $event"></pdf>
+
+
+
 </div>
 
 </template>
@@ -73,9 +83,14 @@ import teaching from "./teaching.vue";
 import generictable from "./generictable.vue";
 import publications from "./publications.vue";
 import service from "./service.vue";
+import pdf from 'vue-pdf';
 
 export default {    
-     components: {presentations, teaching, generictable, publications, service},
+    components: {presentations, teaching, generictable, publications, service, pdf},
+    data(){return {
+			  loadedRatio: 0,
+			  page: 1,
+			  numPages: 0}},
     computed: {
         cvURL: function(){return this.$store.state.cvURL;},
         pubs: function(){return this.$store.state.pubs;},
@@ -84,8 +99,9 @@ export default {
         misc: function(){return this.$store.state.misc;},
         basics: function(){return this.$store.state.basics;},
         svc: function(){return this.$store.state.svc;},
-        awards: function(){return this.$store.state.awards;}
-              }
+        awards: function(){return this.$store.state.awards;},
+        cvbin: function(){return {data: atob(this.$store.state.cvURL.replace("data:application/pdf;base64,", ""))};}
+    }
 }
 
 </script>
