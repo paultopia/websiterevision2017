@@ -1,17 +1,27 @@
 <template>
 <div>
+<h2>Publications</h2>
+            <h3>Books</h3>
+            <table>
+<col style="width:5%">
+                
+              <col style="width:55%">
+                <col style="width:40%">
+                
 
-            <h5>Books</h5>
-            <table class="u-full-width">
-                <col style="width:35%">
-                <col style="width:55%">
-                <col style="width:7%">
-                <thead><tr><th>Title</th><th>Publisher</th><th>Years</th></tr></thead><tbody>
+                <tbody>
 
 <tr v-for="book in sortedPubs" v-if="book.type === 'book'">
-                    
+
+<td>
+
+                        {{ book.year }}
+
+                    </td>
+                   
+
                     <td>
-                        {{ book.title }}
+                        <b>{{ book.title }}</b>
 
                         <span v-if="book.coauthor">
                         <br>(Co-Author with {{ book.coauthor }})
@@ -20,26 +30,27 @@
                     </td><td>
                         {{ book.publisher }}
 
-                    </td><td>
-
-                        {{ book.year }}
-
                     </td>
-                    </tr>
+                     </tr>
                     
                 </tbody></table>
 
 
-            <h5>Peer Reviewed Articles</h5>
-            <table class="u-full-width">
+            <h3>Peer Reviewed Articles</h3>
+            <table>
+                <col style="width:5%">
                 <col style="width:35%">
                 <col style="width:35%">
                 <col style="width:20%">
-                <col style="width:7%">
-                <thead><tr><th>Title</th><th>Journal</th><th>Citation</th><th>Years</th></tr></thead><tbody>
+
+                <tbody>
 
 <tr v-for="art in sortedPubs" v-if="art.type === 'peer review'">
-                    
+                    <td>
+
+                        {{ art.year }}
+
+                    </td>
                     <td>
                         {{ art.title }}
 
@@ -53,25 +64,27 @@
                     </td><td>
                         {{ makeCitation(art) }}
 
-                    </td><td>
-
-                        {{ art.year }}
-
                     </td>
+                    
                     </tr>
                 </tbody></table>
 
 
-            <h5>Law Review Articles</h5>
-            <table class="u-full-width">
+            <h3>Law Review Articles</h3>
+            <table>
+                <col style="width:5%">
                 <col style="width:35%">
                 <col style="width:35%">
                 <col style="width:20%">
-                <col style="width:7%">
-                <thead><tr><th>Title</th><th>Journal</th><th>Citation</th><th>Years</th></tr></thead><tbody>
+
+                <tbody>
 
 <tr v-for="art in sortedPubs" v-if="art.type === 'law review'">
-                    
+                    <td>
+
+                        {{ art.year }}
+
+                    </td>
                     <td>
                         {{ art.title }}
 
@@ -85,24 +98,24 @@
                     </td><td>
                         {{ makeCitation(art) }}
 
-                    </td><td>
-
-                        {{ art.year }}
-
                     </td>
                     </tr>
                 </tbody></table>
 
 
-            <h5>Book Chapters</h5>
-            <table class="u-full-width">
-                <col style="width:35%">
-                <col style="width:35%">
-                <col style="width:20%">
-                <col style="width:7%">
-                <thead><tr><th>Title</th><th>Book</th><th>Pages</th><th>Years</th></tr></thead><tbody>
+            <h3>Book Chapters</h3>
+            <table>
+<col style="width:5%">
+              <col style="width:35%">
+                <col style="width:45%">
+                <col style="width:10%">
+                
+<tbody>
                 
 <tr v-for="chapter in sortedPubs" v-if="chapter.type === 'chapter'">                
+<td>
+                        {{ chapter.year }}
+                    </td>
 
 <td>
                         {{ chapter.title }}
@@ -113,27 +126,30 @@
     
                 </td>
                     <td>
-                        {{ chapter.editors }}, eds., <em>{{ chapter.book }}</em> ({{ chapter.publisher }})
+                        {{ chapter.editor }}, ed., <em>{{ chapter.book }}</em> ({{ chapter.publisher }})
                         
                     </td><td>
                         
                         {{chapter.firstpage + "-" + chapter.lastpage}}
                     
-                    </td><td>
-                        {{ chapter.year }}
-                    </td></tr>
+                    </td>
+
+</tr>
                     
                 </tbody></table>
 
-            <h5>Miscellany</h5>
-            <table class="u-full-width">
+            <h3>Miscellany</h3>
+            <table>
+                <col style="width:5%">
                 <col style="width:40%">
                 <col style="width:50%">
-                <col style="width:7%">
+
                 <thead><tr><th>Title</th><th>Description</th><th>Years</th></tr></thead><tbody>
                     
                     <tr v-for="misc in sortedPubs" v-if="misc.type === 'misc'">              
-                    
+                    <td>
+                        {{ misc.year }}
+                    </td>
                     <td>
                         {{ misc.title }}
                         
@@ -143,9 +159,7 @@
     
                         
                     </td><td>
-                        {{ misc.description }}
-                    </td><td>
-                        {{ misc.year }}
+                        {{ misc.note }}
                     </td></tr>
                     
                 </tbody></table>
@@ -169,8 +183,8 @@ export default {
      displayPubs: function(){return JSON.stringify(this.pubs);}
      },
      methods: {makeCitation: function(art){
-     var iss = art.issue ? "(" + art.issue + ")" : "";
-     return art.volume + art.issue + ":" + art.firstpage + "-" + art.lastpage;}
+         var iss = art.issue ? "(" + art.issue + ")" : "";
+     return art.volume + iss + ":" + art.firstpage + "-" + art.lastpage;}
       }
     }
  

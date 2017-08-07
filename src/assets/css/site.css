@@ -230,6 +230,13 @@ button {
         display: none;
     }
 
+/* text */
+
+    h2{
+        margin-bottom: 1.2m;
+        margin-top: 1.2em;
+    }
+
 }
 
 

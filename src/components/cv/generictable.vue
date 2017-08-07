@@ -4,14 +4,14 @@
 
 <!-- This is only suitable for when the header is just a capitalized version of the items.  headingslist will be lowercase and I'll just uppercase the first word in a method. -->
 
-    <h3 v-if="ismajor"> {{ header }} </h3>
+    <h2 v-if="ismajor"> {{ header }} </h2>
 
-    <h5 v-else> {{ header }} </h5>
+    <h3 v-else> {{ header }} </h3>
 
-    <table class="u-full-width">
-        <col style="width:40%">
+    <table>
+        <col style="width:10%">
         <col style="width:50%">
-        <col style="width:7%">
+        <col style="width:40%">
         <thead>
             <tr>
                 <th v-for="heading in titleCase(headings)">
@@ -19,7 +19,7 @@
             </tr>
         </thead>
         <tbody>
-            <tr v-for="item in itemslist">
+            <tr v-for="item in sortedItems">
                 <td v-for="heading in headings">
                     {{ item[heading] }}
                 </td>
@@ -34,9 +34,18 @@
 
 <script>
 
+function chron(a, b){
+    if(a.year >= b.year) return -1;
+    return 1;
+}
+
+
  export default {
      props: ["header", "itemslist", "ismajor"],
-     computed: {headings: function () {return Object.keys(this.itemslist[0])}},
+     computed: {
+headings: function () {return Object.keys(this.itemslist[0])},
+sortedItems(){return this.itemslist.sort(chron);}
+},
      methods: {titleCase: arr => arr.map(s=>s.slice(0,1).toUpperCase() + s.slice(1))}
  }
 </script>

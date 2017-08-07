@@ -1,43 +1,71 @@
 
 
 <template>
-<div>
-<div class="row">
+<div class="textcontainer">
+
+        <div>
+
+        <h1>Paul Gowder: CV</h1>
+        <p><a :href="cvURL" download="gowdercv.pdf"><img src="../../assets/icons/file-pdf.svg" class="cvicon"> Download in PDF</a></p>
+
+        <h2>Academic Positions</h2>
+
+        <p>2017- <b>Professor of Law</b>, University of Iowa
+          <ul>
+            <li>with tenure</li>
+            <li>courtesy appointments in political science, philosophy</li>
+            </ul>
+        </p>
+        <p>2012-7 <b>Associate Professor of Law</b>, University of Iowa
+          <ul>
+            <li>pre-tenure</li>
+            <li>courtesy appointments in political science (2012-), philosophy (2016-)</li>
+            </ul>
+        </p>
+          
+
+        <h2>Education</h2>
+        <p>2012 <b>Ph.D., Political Science</b>, Stanford University</p>
+        <p>2000 <b>J.D.</b>, Harvard Law School</p>
+        <p>1997 <b>B.A., Political Science</b>, California State University Los Angeles</p>
 
 
-    <div class="twelve columns">
-        <h1 id="top"><a href="http://paul-gowder.com">Paul Gowder</a></h1>
-        <p><a :href="'mailto:' + basics.email"><img src="../../assets/icons/envelope.svg" class="cvicon"></a> <a :href="cvURL" download="gowdercv.pdf"><img src="../../assets/icons/file-pdf.svg" class="cvicon"></a></p>
+        <publications :pubs="pubs"></publications>
 
-    </div></div>
+        <h2>Grants, Awards and Honors</h2>
 
-    <div class="row">
-        <div class="twelve columns">
+            <table>
+        <col style="width:20%">
+        <col style="width:80%">
 
-            <generictable :ismajor="true" header="Academic Positions" :itemslist="basics.positions"></generictable>
+        <tr v-for="aw in awards">
+          <td>{{ aw.year }}</td> <td>{{ aw.award }}</td>
+        </tr>
+        </table>
 
-<!-- this might be worth hard-coding, since it obv changes rarely and requires special formatting for things like promotion, courtesy appointments, etc. -->
-
-            <generictable :ismajor="true" header="Education" :itemslist="basics.education"></generictable>
-
-<!-- pubs are too annoyingly messy to separate out into individual components for now.  Maybe later. -->
-
-<publications :pubs="pubs"></publications>
-
-            <generictable :ismajor="true" header="Grants, Awards and Honors" :itemslist="awards"></generictable>
-
-            <h3 id="pres">Presentations</h3>
+            <h2>Presentations</h2>
 
             <presentations header="Invited Talks" :presentationlist="pres.invited"></presentations>
             <presentations header="Conference Presentations" :presentationlist="pres.conferences"></presentations>
             <presentations header="Campus Talks" :presentationlist="pres.campus"></presentations>
 
-            <h3 id="teach">Teaching</h3>
+            <h2>Teaching</h2>
             <teaching header="Lead Instructor" :classlist="courses.lead"></teaching>
 
 <p>Graduate School teaching assistantships ommitted for brevity, but included courses on introductory political philosophy, global justice, the philosophy of race, and corruption.</p>
 
-            <generictable :ismajor="true" header="Legal Practice" :itemslist="misc.practice"></generictable>
+        <h2>Legal Practice</h2>
+
+            <table>
+        <col style="width:10%">
+        <col style="width:40%">
+        <col style="width:40%">
+
+        <tr v-for="prac in misc.practice">
+          <td>{{ prac.years }}</td> <td>{{ prac.employer }}</td><td>{{ prac.role }}</td>
+        </tr>
+        </table>
+
 
             <service :servicelist="svc"></service>
 
@@ -58,19 +86,6 @@
                 <p v-for="n in misc.notes"> {{ n }} </p>
 
         </div>
-    </div>
-    <hr />
-    <p style="float: left;"><a :href="basics.url"><b>&lt;&lt;---</b></a></p> <p style="float: right;">Last Revised {{ basics.revdate }} </p>
-
-
-    <input v-model.number="page" type="number" style="width: 5em"> /{{numPages}}
-    <button @click="$refs.pdf.print()">print</button>
-
-
-			<div v-if="loadedRatio > 0 && loadedRatio < 1" style="background-color: green; color: white; text-align: center" :style="{ width: loadedRatio * 100 + '%' }">{{ Math.floor(loadedRatio * 100) }}%</div>
-			<pdf ref="pdf" :src="cvbin" :page="page"  @progress="loadedRatio = $event" @numPages="numPages = $event"></pdf>
-
-
 
 </div>
 
@@ -78,19 +93,20 @@
 
 <script>
 
+function chron(a, b){
+    if(a.year >= b.year) return -1;
+    return 1;
+}
+
+
 import presentations from "./presentations.vue";
 import teaching from "./teaching.vue";
 import generictable from "./generictable.vue";
 import publications from "./publications.vue";
 import service from "./service.vue";
-import pdf from 'vue-pdf';
 
 export default {    
-    components: {presentations, teaching, generictable, publications, service, pdf},
-    data(){return {
-			  loadedRatio: 0,
-			  page: 1,
-			  numPages: 0}},
+    components: {presentations, teaching, generictable, publications, service},
     computed: {
         cvURL: function(){return this.$store.state.cvURL;},
         pubs: function(){return this.$store.state.pubs;},
@@ -100,7 +116,7 @@ export default {
         basics: function(){return this.$store.state.basics;},
         svc: function(){return this.$store.state.svc;},
         awards: function(){return this.$store.state.awards;},
-        cvbin: function(){return {data: atob(this.$store.state.cvURL.replace("data:application/pdf;base64,", ""))};}
+        practice: function(){return this.misc.practice.sort(chron);}
     }
 }
 
