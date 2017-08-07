@@ -6,17 +6,10 @@
 
 <div v-for="category in commentary.orderedcategories">
 <h4>{{ category }}</h4>
-<table class="u-full-width">
+<table>
         <col style="width:7%">
         <col style="width:60%">
         <col style="width:30%">
-<thead>
-<tr>
-<th>Date</th>
-<th>Title</th>
-<th>Read at</th>
-</tr>
-</thead>
 <tbody>
 <tr v-for="article in catsort(commentary.articles)" v-if="article.category == category">
 <td>{{ article.month + '/' + article.year }}</td>
