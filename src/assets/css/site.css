@@ -44,14 +44,17 @@ body {
 
 
 .vue-typer .custom.caret {
-    width: 0;
-    /* width: 0.3em; */
-    background-color: rgb(109, 131, 103)
+    width: 0.3em;
+    background-color: rgb(242, 132, 53);
 }
 
 .vue-typer {
 
     font-weight:bold;
+}
+
+.vue-typer .custom.char.selected {
+    background-color: rgb(242, 132, 53);
 }
 
 

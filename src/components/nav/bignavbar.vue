@@ -5,41 +5,15 @@
 <transition name="main-view-anim">
 <div class="subcontainer" v-if="typerOn" id="headline">
   <vue-typer
-    :text='["Pau", "Rul", "Polit", "Dat", "Pau"]'
-    caret-animation="solid"
-    erase-style="backspace"
+    :text='["Paul Gowder", "Rule of Law", "Political Philosophy", "Data Science", "Paul Gowder"]'
+    caret-animation="blink"
+    erase-style="select-all"
     :erase-on-complete='true'
-    :type-delay="300"
+    pre-type-delay="0"
+    :type-delay="70"
+    :erase-delay="400"
     initial-action="erasing"
     :repeat="0"></vue-typer>
-
-  <vue-typer
-    :text='["l G", "e o", "ical ", "a S", "l G"]'
-    caret-animation="solid"
-    erase-style="backspace"
-    :erase-on-complete='true'
-    :type-delay="300"
-    initial-action="erasing"
-    :repeat="0"></vue-typer>
-
-<vue-typer
-    :text='["owd", "f L", "Philo", "cie", "owd"]'
-    caret-animation="solid"
-    erase-style="backspace"
-    :erase-on-complete='true'
-    :type-delay="300"
-    initial-action="erasing"
-    :repeat="0"></vue-typer>
-
-<vue-typer
-    :text='["er", "aw", "sophy", "nce", "er"]'
-    caret-animation="solid"
-    erase-style="backspace"
-    :erase-on-complete='true'
-    :type-delay="300"
-    initial-action="erasing"
-    :repeat="0"></vue-typer>
-
 </div>
 </transition>
 </div>
