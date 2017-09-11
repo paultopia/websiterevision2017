@@ -2,7 +2,19 @@
 
 > Revision of personal website in 2017, with vue and all that jazz.
 
-## Build Setup
+Soon to be live on staging/alt website (http://gowder.io)
+
+needs to have cv building integrated into overall build script.
+
+also needs to replace JSON with YAML for much easier editing.
+
+
+
+---- 
+
+## garbage that can be ignored, some auto-generated
+
+### Build Setup
 
 ``` bash
 # install dependencies
