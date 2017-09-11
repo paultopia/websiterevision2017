@@ -8,13 +8,13 @@ Soon to be live on staging/alt website (http://gowder.io)
 
 TODO: 
 
-[fix cursor on links](https://developer.mozilla.org/en-US/docs/Web/CSS/cursor)
-
 needs to have cv building integrated into overall build script.
 
 also needs to replace JSON with YAML for much easier editing.
 
-and fix the headline?
+and change the headline?
+
+and make forward button work?
 
 ---- 
 
