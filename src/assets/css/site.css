@@ -57,6 +57,7 @@ body {
     background-color: rgb(242, 132, 53);
 }
 
+
 /* text in general */
 
 .textcontainer, #innerfooter {
@@ -176,12 +177,19 @@ button {
     }
 
     .naviconimage {
-        width: 70%;
-        height: auto; 
+        /* width: 70%;
+        height: auto; */ 
+        width: 100px;
+        height: 100px;
     }
 
     .navicon {
         max-width: 150px;
+    }
+
+    .navicon:hover {
+        filter: invert(100%);
+        cursor: pointer;
     }
 
     /* footer */
