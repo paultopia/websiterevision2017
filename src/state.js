@@ -39,9 +39,23 @@ var state = {currentView,
              awards,
              cvURL};
 
+const legitPages = new Set(["navigation", "bio", "pubs", "cv", "tech", "writing", "contact"]);
+
 var mutations = {navigate(state, view){state.lastView = state.currentView; 
                                        state.currentView = view;},
                  changeCitation(state, newFormat){state.citeFormat = newFormat;},
+                 urlNavigate(){
+                     var derlocation = window.location.href.split("#").pop()
+                     if (derlocation){
+                         console.log("has location")
+                         if (legitPages.has(derlocation))
+                         {
+                             console.log(derlocation);
+                             state.lastView = "navigation";
+                             state.currentView = derlocation;
+                         }
+                     }
+                 },
                  typerOff(){state.typerOn = false;}};
 
 // this one is just for debugging

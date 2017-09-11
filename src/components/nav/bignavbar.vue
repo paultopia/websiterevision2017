@@ -46,16 +46,23 @@
 
 <script>
 
-import VueTyperPlugin from 'vue-typer';
+ import VueTyperPlugin from 'vue-typer';
 
-import bigicon from "./bigicon.vue";
-export default {
+ import bigicon from "./bigicon.vue";
+
+ function hashJump(){
+     
+     this.$store.commit('navigate', location);
+ }
+
+ export default {
      components: {bigicon, VueTyperPlugin},
-    deactivated() {this.$store.commit('typerOff')},
+     deactivated() {this.$store.commit('typerOff');},
+     mounted() {this.$store.commit('urlNavigate');},
      computed: {typerOn(){return this.$store.state.typerOn;},
-     icons(){return this.$store.state.icons;},
+                icons(){return this.$store.state.icons;},
      }
-}
+ }
 
 
 </script>
