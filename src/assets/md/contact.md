@@ -2,7 +2,7 @@ I'm best reached over e-mail.
 
 If you'd like to reach me on *official University of Iowa business*, please e-mail me at paul-gowder (AT-SYMBOL-GOES-HERE) uiowa.edu.
 
-However, you should be aware that the official e-mail address is subject to the University of Iowa's open records laws. If you'd like to reach me on *personal business*, and *especially* if anything political is involved, please e-mail me at paul.gowder (AT SYMBOL, YEP) gmail.com.
+However, you should be aware that **my university e-mail is subject to the state of Iowa's open records laws**. If you'd like to reach me on *personal business*, and *especially* if anything political is involved, please e-mail me at paul.gowder (AT SYMBOL, YEP) gmail.com.
 
 I really prefer not to receive unsolicited telephone calls, and I very rarely check voicemail unless a call has been prearranged. 
 

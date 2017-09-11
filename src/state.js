@@ -47,11 +47,9 @@ var mutations = {navigate(state, view){state.lastView = state.currentView;
                  urlNavigate(){
                      var derlocation = window.location.href.split("#").pop()
                      if (derlocation){
-                         console.log("has location")
                          if (legitPages.has(derlocation))
                          {
-                             console.log(derlocation);
-                             state.lastView = "navigation";
+                             state.lastView = state.currentView;
                              state.currentView = derlocation;
                          }
                      }
