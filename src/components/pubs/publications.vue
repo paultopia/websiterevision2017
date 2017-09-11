@@ -2,7 +2,9 @@
 <div class="textcontainer">
 <div style="margin-top:5%;">
 
-       <h3>Books</h3>
+<research></research>
+
+       <h3>Book</h3>
 <p><em>The Rule of Law in the Real World</em>, Cambridge University Press 2016. <br> For more information, go to <a href="http://rulelaw.net">rulelaw.net</a>.</p>
             <h3>Articles</h3>
 
@@ -63,9 +65,10 @@ function chronThenTypeThenTitle(a, b){
     return 1;
 }
 
+import research from '../../assets/md/research.md';
 
 export default {
-       components: {articlerow, mobilearticlerow},
+       components: {articlerow, mobilearticlerow, research},
        computed: {
                  publications: function(){return this.$store.state.pubs;},
                  articles: function(){return this.$store.state.pubs.filter(isArticle).sort(chronThenTypeThenTitle)},

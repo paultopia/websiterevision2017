@@ -19,7 +19,8 @@ import cv from './components/cv/cv.vue';
 import bio from "./components/bio.vue";
 import pubs from './components/pubs/publications.vue';
 import writing from './components/writing.vue';
-
+import tech from "./components/tech.vue";
+import contact from "./components/contact.vue";
 
 export default {
   name: 'app',
@@ -29,6 +30,8 @@ export default {
       cv,
       pubs,
       writing,
+      tech,
+      contact,
       foot
   },
     computed: {
