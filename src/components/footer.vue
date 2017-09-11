@@ -22,11 +22,11 @@
 export default {
      methods: {
      goHome: function(){
-window.history.back();
-// this.$store.commit('navigate', 'navigation')
+//window.history.back();
+this.$store.commit('navigate', 'navigation');
 }},
      computed: {
-     lastRev: function(){return this.$store.state.basics.core.revdate}
+     lastRev: function(){return this.$store.state.basics.core.revdate;}
 }} 
      
 </script>
