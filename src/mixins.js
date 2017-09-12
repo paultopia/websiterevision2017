@@ -2,7 +2,7 @@ var nav = {
     props: ["icon", "word", "toggle"],
     methods: {
 	      navto: function(){
-            var hashurl = "#" + this.word;
+            var hashurl = "#" + this.toggle;
             window.history.pushState({sentTo: this.toggle}, "", hashurl);
             this.$store.commit('navigate', this.toggle);
                          },

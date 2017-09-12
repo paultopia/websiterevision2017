@@ -23,7 +23,7 @@
 
 </td>
 <td style="vertical-align: top;"><span class="hint--bottom" aria-label="close abstract" v-on:click="line()">
-<img src="../../assets/icons/times.svg">
+<img src="../../assets/icons/times.svg" class="pubsicon">
 </span></td>
     </tr>
 </template>
