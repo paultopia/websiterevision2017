@@ -31,6 +31,12 @@ body {
     margin: 2em;
 }
 
+hr.instructions {
+    margin-top: 3em;
+    height: 10px;
+    border: 0;
+    box-shadow: 0 10px 10px -10px rgb(242, 132, 53) inset;
+}
 
 /* opening page */
 
