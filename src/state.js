@@ -41,8 +41,10 @@ var state = {currentView,
 
 const legitPages = new Set(["navigation", "bio", "pubs", "cv", "tech", "writing", "contact"]);
 
-var mutations = {navigate(state, view){state.lastView = state.currentView; 
-                                       state.currentView = view;},
+var mutations = {navigate(state, view){
+    if (state.currentView !== "tldr"){
+        state.lastView = state.currentView;}
+    state.currentView = view;},
                  changeCitation(state, newFormat){state.citeFormat = newFormat;},
                  urlNavigate(){
                      var derlocation = window.location.href.split("#").pop()

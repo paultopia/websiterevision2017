@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-       <v-touch @swipedown="tldr">
+       <v-touch @swipedown="openTLDR">
             <div id="view">
                 <keep-alive>
                     <component :is="currentView"></component>
@@ -43,9 +43,15 @@ export default {
       foot,
       tldr
   },
-    methods: {tldr: function(){innerTLDR(this.$store.state.currentView);}},
+    methods: {openTLDR: function(){this.$store.commit('navigate', "tldr");},
+             closeTLDR: function(){
+                        if (this.currentView === "tldr"){
+                        this.$store.commit('navigate', this.lastView);}
+             }
+},
     computed: {
-        currentView: function(){return this.$store.state.currentView;}
+        currentView: function(){return this.$store.state.currentView;},
+        lastView: function(){return this.$store.state.lastView;}
     },
     mounted() {var that = this;
                window.onpopstate = function(event){
@@ -53,8 +59,12 @@ export default {
     created() {var that = this;
                window.addEventListener('keydown', function(e){
                if (e.keyCode == KEYCODE_SPACE){
-                 that.$store.commit('navigate', "tldr");
-               }});}
+                 that.openTLDR();
+               }
+               if (e.keyCode == KEYCODE_ESC){
+                 that.closeTLDR();
+               }
+});}
 
 }
 </script>
