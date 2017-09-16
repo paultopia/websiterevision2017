@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-       <v-touch @swipedown="openTLDR" @swipeup="closeTLDR">
+       <v-touch @pinchin="openTLDR" @pinchout="closeTLDR">
             <div id="view">
                 <keep-alive>
                     <component :is="currentView"></component>
