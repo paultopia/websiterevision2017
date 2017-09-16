@@ -1,1 +1,1 @@
-RLRW.
+Key research areas include the rule of law ([book!](http://rulelaw.net)), the intersection between political philosophy/political science/constitutional law, law and technology, and critical race theory. I've also done a healthy amount of work in ancient Athenian law.

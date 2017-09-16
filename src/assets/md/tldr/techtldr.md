@@ -1,1 +1,1 @@
-CODE ALL THE THINGS.
+I write a lot of code, mostly in Clojure and Python, but when necessary also in JavaScript, R, or Java. My main tech interests are in legal data science (particularly automated reading of legal text) and in using technology to promote access to justice.

@@ -54,6 +54,7 @@ export default {
         lastView: function(){return this.$store.state.lastView;}
     },
     mounted() {var that = this;
+               window.focus();
                window.onpopstate = function(event){
               that.$store.commit('navigate', "navigation");};},
     created() {var that = this;
