@@ -28,7 +28,7 @@ body {
 }
 
 .bailoutcontainer .bailout img.bailouticon {
-    margin: 0;
+    margin: 2em;
 }
 
 
@@ -321,6 +321,12 @@ button {
     .naviconimage {
         width: 60%;
         height: 60%; 
+    }
+
+    .bailoutcontainer .bailout img.bailouticon {
+        margin: 0.5em;
+        width: 40%;
+        height: 40%; 
     }
 
     /* footer */
