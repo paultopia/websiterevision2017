@@ -10,9 +10,13 @@
     "build": "node build/build.js"
   },
   "dependencies": {
+    "caniuse-lite": "^1.0.30000731",
+    "process-nextick-args": "^1.0.7",
+    "util-deprecate": "^1.0.2",
     "vue": "^2.3.3",
     "vue-cookie": "^1.1.4",
     "vue-pdf": "^1.2.4",
+    "vue-touch": "^2.0.0-beta.4",
     "vue-typer": "^1.0.3",
     "vuex": "^2.3.1"
   },
