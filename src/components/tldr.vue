@@ -10,7 +10,7 @@
 </template>
 
 <script>
-import navigationTLDR from '../assets/md/tldr.md';
+import navigationTLDR from '../assets/md/tldr/navigationtldr.md';
 
 export default {
     components: {navigationTLDR},
