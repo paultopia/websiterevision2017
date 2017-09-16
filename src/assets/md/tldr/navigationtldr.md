@@ -10,4 +10,3 @@ Inside this website, you will find:
 
 Major affiliations, credentials, experiences, and other sorts of things you might want to know about if you've googled me to see if I'm someone whose word you should take seriously about something I've said: J.D. Harvard Law; Ph.D. Stanford Political Science; legal practice experience in nonprofit legal aid/poverty law and barely-profitable private civil rights litigation; Institute for Advanced Study member 2014-5; Recurse Center Summer 2 2017 batch.
 
-If you have cookies enabled in your browser, you won't see this tl/dr text the next time you visit (within a month). This time, you can click (pet) Leonidas to proceed to the full site. 
