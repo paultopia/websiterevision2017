@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-       <v-touch @swipedown="openTLDR">
+       <v-touch @swipedown="openTLDR" @swipeup="closeTLDR">
             <div id="view">
                 <keep-alive>
                     <component :is="currentView"></component>
@@ -28,7 +28,7 @@ function innerTLDR(view){console.log(view);}
 
 const KEYCODE_ESC = 27;
 
-const KEYCODE_SPACE = 32;
+const KEYCODE_TAB = 9;
 
 export default {
   name: 'app',
@@ -58,7 +58,7 @@ export default {
               that.$store.commit('navigate', "navigation");};},
     created() {var that = this;
                window.addEventListener('keydown', function(e){
-               if (e.keyCode == KEYCODE_SPACE){
+               if (e.keyCode == KEYCODE_TAB){
                  that.openTLDR();
                }
                if (e.keyCode == KEYCODE_ESC){
