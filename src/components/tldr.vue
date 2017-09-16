@@ -14,7 +14,7 @@ import navigationTLDR from '../assets/md/tldr.md';
 
 export default {
     components: {navigationTLDR},
-    computed: {viewMap: function(){return this.$store.state.currentView + "TLDR";}}
+    computed: {viewMap: function(){return this.$store.state.lastView + "TLDR";}}
 }
 
 </script>

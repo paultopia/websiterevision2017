@@ -22,8 +22,13 @@ import pubs from './components/pubs/publications.vue';
 import writing from './components/writing.vue';
 import tech from "./components/tech.vue";
 import contact from "./components/contact.vue";
+import tldr from "./components/tldr.vue";
 
 function innerTLDR(view){console.log(view);}
+
+const KEYCODE_ESC = 27;
+
+const KEYCODE_SPACE = 32;
 
 export default {
   name: 'app',
@@ -35,7 +40,8 @@ export default {
       writing,
       tech,
       contact,
-      foot
+      foot,
+      tldr
   },
     methods: {tldr: function(){innerTLDR(this.$store.state.currentView);}},
     computed: {
@@ -44,9 +50,11 @@ export default {
     mounted() {var that = this;
                window.onpopstate = function(event){
               that.$store.commit('navigate', "navigation");};},
-    created() {var vm = this;
+    created() {var that = this;
                window.addEventListener('keydown', function(e){
-               if (e.keyCode == 32){vm.tldr();}});}
+               if (e.keyCode == KEYCODE_SPACE){
+                 that.$store.commit('navigate', "tldr");
+               }});}
 
 }
 </script>
