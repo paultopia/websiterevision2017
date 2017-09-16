@@ -3,16 +3,15 @@
 
 <div class="headline">
 <transition name="main-view-anim">
-<div class="subcontainer" v-if="typerOn" id="headline">
+<div class="subcontainer" id="headline">
   <vue-typer
-    :text='["Paul Gowder", "Rule of Law", "Political Philosophy", "Data Science", "Paul Gowder"]'
+    :text='["Paul Gowder"]'
     caret-animation="blink"
     erase-style="select-all"
-    :erase-on-complete='true'
+    :erase-on-complete='false'
     :pre-type-delay=0
-    :type-delay="70"
+    :type-delay="350"
     :erase-delay="400"
-    initial-action="erasing"
     :repeat="0"></vue-typer>
 </div>
 </transition>
