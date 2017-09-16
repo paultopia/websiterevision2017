@@ -39,7 +39,7 @@
 </div>
 </div>
 
-<p><span class="nomobile">Press tab</span><span class="mobileonly">Pinch in</span> on any screen for concise info & quick navigation.</p>
+<p><span class="nomobile">Press tab</span><span class="mobileonly">Hold a long touch</span> on any screen for concise info & quick navigation.</p>
 
 </div>
 

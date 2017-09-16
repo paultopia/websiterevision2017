@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-       <v-touch @pinchin="openTLDR" @pinchout="closeTLDR">
+       <v-touch @press="openTLDR">
             <div id="view">
                 <keep-alive>
                     <component :is="currentView"></component>

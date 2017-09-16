@@ -4,9 +4,9 @@
   <component :is="viewMap"></component>
 
   <hr class="instructions">
-  <p><b>Navigation info:</b> This quick info functionality works on every page; <span class="nomobile">press tab</span><span class="mobileonly">pinch in</span> for page-specific info and navigation.</p>
+  <p><b>Navigation info:</b> This quick info functionality works on every page; <span class="nomobile">press tab</span><span class="mobileonly">hold a long touch</span> for page-specific info and navigation.</p>
 
-  <p><span class="nomobile">Click</span><span class="mobileonly">Touch</span> the arrow or <span class="nomobile">press escape</span><span class="mobileonly">pinch out</span> to close this message and go back where you were. To go home, <span class="nomobile">click</span><span class="mobileonly">touch</span> the orange house.</p>
+  <p><span class="nomobile">Click</span><span class="mobileonly">Touch</span> the arrow <span class="nomobile">or press escape </span>to close this message and go back where you were. To go home, <span class="nomobile">click</span><span class="mobileonly">touch</span> the orange house.</p>
   <p class="nomobile">If the keyboard doesn't work, try clicking into the page first.</p>
     <div class="bailoutcontainer">
   <div class="bailout">
