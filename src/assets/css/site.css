@@ -20,23 +20,6 @@ body {
     align-items: center;
 }
 
-/* .bailout { */
-/*     display: flex; */
-/*     flex-direction: row; */
-/*     align-items: stretch; */
-/*     justify-content: space-around; */
-/* } */
-
-/* .bailoutcontainer { */
-/*     display: flex; */
-/*     justify-content: space-around; */
-/* } */
-
-/* .bailoutcontainer .bailout img.bailouticon { */
-/*     margin: 0; */
-/* } */
-// fuck you css specificity rules
-
 .bigcontainer {
     display: flex;
     justify-content: space-around;
