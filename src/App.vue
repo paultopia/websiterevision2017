@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-       <v-touch @press="openTLDR">
+       <v-touch @press="openTLDR" :options="hammerOpts" >
             <div id="view">
                 <keep-alive>
                     <component :is="currentView"></component>
@@ -48,16 +48,18 @@ export default {
                         if (this.currentView === "tldr"){
                         this.$store.commit('navigate', this.lastView);}
              }
-},
+    },
     computed: {
         currentView: function(){return this.$store.state.currentView;},
-        lastView: function(){return this.$store.state.lastView;}
+        lastView: function(){return this.$store.state.lastView;},
     },
     mounted() {var that = this;
                window.focus();
                window.onpopstate = function(event){
               that.$store.commit('navigate', "navigation");};},
-    created() {var that = this;
+              created() {
+               this.hammerOpts = {'cssProps': {'userSelect': 'auto'}}
+               var that = this;
                window.addEventListener('keydown', function(e){
                if (e.keyCode == KEYCODE_TAB){
                  that.openTLDR();
@@ -65,7 +67,7 @@ export default {
                if (e.keyCode == KEYCODE_ESC){
                  that.closeTLDR();
                }
-});}
+               });}
 
 }
 </script>
