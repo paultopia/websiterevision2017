@@ -14,3 +14,5 @@ Step 4: rewrite docx template for existing json format, also loop to dropbox fol
 Step 6: find out scp info for both servers, make sure keys are up, etc.
 
 Overall: then string all these individual scripts plus npm run build together into one big build script or makefile. 
+
+(I should probably move moment and js-yaml from dependencies to dev-dependencies... though is webpack tree-shaking smart enough to figure that stuff out?)
