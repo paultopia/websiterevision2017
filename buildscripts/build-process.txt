@@ -1,0 +1,16 @@
+1.  convert YAML in dropbox folder to json in github folder (needs to be built)
+2.  update last-updated date (not yet done) (UPDATE: DONE)
+3.  compile pdf cv (ready to go) and push to dropbox folder (not yet established)
+4.  compile docx cv (needs to be fixed) and push to dropbox folder
+5.  npm run build (ready to go)
+6.  scp up to servers (not yet done)
+
+Steps to build process: 
+
+Step 1: add dropbox folder, get everything converted to yaml, write json-to-yaml.js and yaml-to-json.js (only the latter will be in big script)
+Step 2: get good node date library and write update-last-updated.js (DONE)
+Step 3: just hook a copy to dropbox folder in existing script.  ALSO move cv compilation script to buildscripts folder for organizational rationality.
+Step 4: rewrite docx template for existing json format, also loop to dropbox folder
+Step 6: find out scp info for both servers, make sure keys are up, etc.
+
+Overall: then string all these individual scripts plus npm run build together into one big build script or makefile. 

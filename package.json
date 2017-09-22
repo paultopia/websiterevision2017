@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "caniuse-lite": "^1.0.30000731",
+    "moment": "^2.18.1",
     "process-nextick-args": "^1.0.7",
     "util-deprecate": "^1.0.2",
     "vue": "^2.3.3",
