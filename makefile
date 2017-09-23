@@ -6,7 +6,7 @@ all: deploy
 deploy: build
 	scp -r dist/static/ $(GOWDERIOTARGET)
 	scp dist/index.html $(GOWDERIOTARGET)
-	scp dist/index.html $(PAULGOWDERCOMTARGET)
+	scp -r dist/static/ $(PAULGOWDERCOMTARGET)
 	scp dist/index.html $(PAULGOWDERCOMTARGET)
 
 build: yaml2json updatedate buildcv
