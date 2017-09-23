@@ -1,4 +1,10 @@
-all: build
+GOWDERIOTARGET = ${gowderiotarget}
+
+all: deploy
+
+deploy: build
+	scp -r dist/static/ $(GOWDERIOTARGET)
+	scp dist/index.html $(GOWDERIOTARGET)
 
 build: yaml2json updatedate buildcv
 	npm run build
