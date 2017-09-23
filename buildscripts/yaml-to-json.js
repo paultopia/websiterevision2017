@@ -1,8 +1,15 @@
+// NOTE: this will not run with raw node call from directory, because makefile is a directory up and node executes in the directory it's called from.
+
 const fs = require("fs");
 const yaml = require('js-yaml');
 
-var pathToJSONS = "../src/assets/json/";
-var pathToYAMLS = "../src/assets/yaml/";
+var pathToJSONS = "src/assets/json/";
+var pathToYAMLS = "src/assets/yaml/";
+
+
+// uncomment next two lines to run directly from buildscripts directory
+// var pathToJSONS = "../src/assets/json/";
+// var pathToYAMLS = "../src/assets/yaml/";
 
 var yamlfiles = fs.readdirSync(pathToYAMLS).filter(x => x.slice(-5, x.length) == ".yaml");
 
