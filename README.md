@@ -5,6 +5,8 @@
 
 (This is now live, but for some reason sorting the list of service, at least disciplinary service, by year doesn't seem to work.)
 
+(never mind that, it isn't service, it's presentations.  and it's for a very simple reason: I don't actually sort the presentations before passing them to the latex compilation process!  Need to redo that. )
+
 
 TODO: 
 
