@@ -150,6 +150,9 @@ campus:
       Psychology and Politics of the Money-Hungry
     year: '2010'
 invited:
+  - venue: 'McGill University, Legal Theory Workshop'
+    title: 'Popular Sovereignty with Weak Causality'
+    year: '2017'
   - venue: 'University of Toronto, Centre for Innovation Law and Policy'
     title: Two Models of Technological Change in Law
     year: '2017'
@@ -200,6 +203,3 @@ invited:
       (invited commentary on Tomasi, Free Market Fairness)
     title: How Demanding is Occupational Liberty?
     year: '2013'
-  - venue: 'McGill University, Legal Theory Workshop'
-    title: 'Popular Sovereignty with Weak Causality'
-    year: '2017'

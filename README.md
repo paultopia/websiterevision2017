@@ -2,8 +2,8 @@
 
 > Revision of personal website in 2017, with vue and all that jazz.
 
-Soon to be live on staging/alt website (http://gowder.io)
 
+(This is now live, but for some reason sorting the list of service, at least disciplinary service, by year doesn't seem to work.)
 
 
 TODO: 
