@@ -98,6 +98,7 @@ function chron(a, b){
     return 1;
 }
 
+// TODO sort presentations.
 
 import presentations from "./presentations.vue";
 import teaching from "./teaching.vue";
