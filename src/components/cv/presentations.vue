@@ -9,7 +9,7 @@
         
 
         <tbody>
-        <tr v-for="presentation in presentationlist">
+        <tr v-for="presentation in sortedPres">
 
 
                 <td>
@@ -33,7 +33,14 @@
 
 <script>
 
+function chronThenTitle(a, b){
+    if(parseInt(a.year) != parseInt(b.year)) return parseInt(b.year) - parseInt(a.year);
+    if(a.title < b.title) return -1;
+    return 1;
+}
+
 export default {
-     props: ["header", "presentationlist"]
+     props: ["header", "presentationlist"],
+     computed: {sortedPres: function(){return this.presentationlist.sort(chronThenTitle);}}
      }
 </script>
