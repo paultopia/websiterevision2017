@@ -24,4 +24,4 @@ updatedate: yaml2json
 	node ./buildscripts/update-last-updated.js
 
 buildcv: updatedate yaml2json
-	node compile-cv.js
+	node ./buildscripts/compile-cv.js

@@ -1,13 +1,13 @@
 const latex = require('node-latex');
 const fs = require('fs');
 const Mustache = require('mustache');
-const awards = require('./src/assets/json/awards.json');
-const basic = require('./src/assets/json/basic.json');
-const courses = require('./src/assets/json/courses.json');
-const misc = require('./src/assets/json/misc.json');
-const presentations = require('./src/assets/json/presentations.json');
-const publications = require('./src/assets/json/publications.json');
-const service = require('./src/assets/json/service.json');
+const awards = require('../src/assets/json/awards.json');
+const basic = require('../src/assets/json/basic.json');
+const courses = require('../src/assets/json/courses.json');
+const misc = require('../src/assets/json/misc.json');
+const presentations = require('../src/assets/json/presentations.json');
+const publications = require('../src/assets/json/publications.json');
+const service = require('../src/assets/json/service.json');
 
 const customTags = [ '<<', '>>' ];
 Mustache.tags = customTags;
@@ -67,6 +67,13 @@ function citeAdder(art){
     return a;
 }
 
+// clean up presentations
+
+const invited = presentations.invited.sort(chronThenTitle);
+const conferences = presentations.conferences.sort(chronThenTitle);
+const campus = presentations.campus.sort(chronThenTitle);
+
+
 const leadteaching = courses.lead.sort(termsThenSchoolthenTitle);
 const taships = courses.ta.sort(termsThenSchoolthenTitle);
 
@@ -80,7 +87,7 @@ const lawreview = publications.filter(p => p.type === "law review").sort(chronTh
 const chapters = publications.filter(p => p.type === "chapter").sort(chronThenTitle);
 const miscpubs = publications.filter(p => p.type === "misc").sort(chronThenTitle);
 
-const templatedata = {awards, basic, leadteaching, taships, misc, presentations, userv, dserv, cserv, books, peerreview, lawreview, chapters, miscpubs};
+const templatedata = {awards, basic, leadteaching, taships, misc, invited, conferences, campus, userv, dserv, cserv, books, peerreview, lawreview, chapters, miscpubs};
 
 const template = fs.readFileSync("./cvtex/template.tex", "utf8");
 
