@@ -1,9 +1,6 @@
 <template>
   <div class="citecontent" ref="citetext">
-    <p v-if="citeFormat == 'none'">
-      Select citation format above.
-      </p>
-    <p v-else-if="(art.type == 'peer review' || art.type == 'law review') && citeFormat == 'Chicago'">
+    <p v-if="(art.type == 'peer review' || art.type == 'law review') && citeFormat == 'Chicago'">
 
 <span v-if="art.coauthor">{{chimlaAuthorMaker(art.coauthor)}}</span> 
 <span v-else>Gowder, Paul.</span> 
@@ -108,19 +105,11 @@ Sorry, I don't have a clear citation rule for this item.
            this.$nextTick(function(){
                 const title = this.art.title;
                 this.$store.commit('changeCitationText', {"title": title, "text": this.$refs.citetext.innerText});
-               // console.log("mounting");
-               // console.log(title);
-               // console.log(this.$store.state.citeText[title]);
                               })},
   updated: function(){
            this.$nextTick(function(){
                   const title = this.art.title;
-                  this.$store.commit('changeCitationText', {"title": title, "text": this.$refs.citetext.innerText});
-                  console.log("in update function");
-                  console.log(title);
-                  console.log(this.$store.state.citeText[title]);
-                  console.log(JSON.stringify(this.$store.state.citeText));
-                  console.log("out of update function");                  
+                  this.$store.commit('changeCitationText', {"title": title, "text": this.$refs.citetext.innerText});             
   })}
   }
 </script>

@@ -20,7 +20,7 @@ import cvURL from './assets/pdf/gowdercv.pdf';
 // load up the state object
 
 var currentView = "navigation";
-var citeFormat = "none"
+var citeFormat = "Chicago"
 var lastView = null;
 var typerOn = true;
 var citeText = {};

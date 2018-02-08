@@ -6,7 +6,6 @@
 <form>
 
 <select v-model="citeFormat" class="citeselect">
-  <option disabled value="">Select format</option>
   <option>Chicago</option>
   <option>APA</option>
   <option>Bluebook</option>
