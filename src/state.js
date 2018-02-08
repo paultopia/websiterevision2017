@@ -23,6 +23,7 @@ var currentView = "navigation";
 var citeFormat = "Chicago"
 var lastView = null;
 var typerOn = true;
+var citeText = ""
 
 var state = {currentView,
              citeFormat,
@@ -37,26 +38,27 @@ var state = {currentView,
              commentary,
              bbabbrv,
              awards,
-             cvURL};
+             cvURL,
+             citeText};
 
 const legitPages = new Set(["navigation", "bio", "pubs", "cv", "tech", "writing", "contact"]);
 
-var mutations = {navigate(state, view){
+var mutations = {
+    navigate(state, view){
     if (state.currentView !== "tldr"){
         state.lastView = state.currentView;}
-    state.currentView = view;},
-                 changeCitation(state, newFormat){state.citeFormat = newFormat;},
-                 urlNavigate(){
-                     var derlocation = window.location.href.split("#").pop()
-                     if (derlocation){
-                         if (legitPages.has(derlocation))
-                         {
-                             state.lastView = state.currentView;
-                             state.currentView = derlocation;
-                         }
-                     }
-                 },
-                 typerOff(){state.typerOn = false;}};
+        state.currentView = view;},
+    changeCitation(state, newFormat){state.citeFormat = newFormat;},
+    changeCitationText(state, newText){state.citeText = newText;},
+    urlNavigate(){
+       var derlocation = window.location.href.split("#").pop()
+       if (derlocation){
+          if (legitPages.has(derlocation))
+           {
+            state.lastView = state.currentView;
+            state.currentView = derlocation;
+           }}},
+    typerOff(){state.typerOn = false;}};
 
 // this one is just for debugging
 

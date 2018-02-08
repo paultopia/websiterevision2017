@@ -103,7 +103,7 @@ Sorry, I don't have a clear citation rule for this item.
 
 <p>
 <button v-clipboard:copy="copyCite()">
-Copy citation to clipboard.
+Copy citation.
 </button>
 </p>
 
@@ -123,8 +123,7 @@ Copy citation to clipboard.
      },
      methods: {
          copyCite: function(){
-             console.log("calling copycite")
-             return "foo";
+             return this.$store.state.citeText;
          },
               chimlaAuthorMaker: (coau) => coau.split(" ").reverse().join(", ") + ", and Paul Gowder.",
               apaAuthorMaker: (coau) => coau.split(" ")[1] + ", " + coau.split(" ")[0].charAt(0) + "., & Gowder, P.",
@@ -135,7 +134,19 @@ Copy citation to clipboard.
               .map(function(word){
                 return bb[word] || word;})
               .join("");
-              }}
+              }},
+      mounted: function(){
+               this.$nextTick(function(){
+                   const citeText = this.$refs.citetext.innerText;
+                   this.$store.commit('changeCitationText', citeText);
+                              })
+                         },
+      updated: function(){
+               this.$nextTick(function(){
+                    const citeText = this.$refs.citetext.innerText;
+                    this.$store.commit('changeCitationText', citeText);
+                              })
+                         }
      }
 
 // AUTHORMAKER DOES NOT HANDLE JOURNAL ON LEGISLATION GROUP AUTHORSHIP CASE.
