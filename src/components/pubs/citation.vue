@@ -16,7 +16,15 @@
 </form>
 </div>
 
-<div class="citecontent" id="citetext">
+<div class="foo" id="fooelement" ref="fooelement">
+Here is some text!
+</div>
+<button v-clipboard:copy="theCite">
+Some Text
+</button>
+
+
+<div class="citecontent" id="citetext" ref="citetext">
 <p v-if="(art.type == 'peer review' || art.type == 'law review') && citeFormat == 'Chicago'">
 
 <span v-if="art.coauthor">{{chimlaAuthorMaker(art.coauthor)}}</span> 
@@ -119,14 +127,15 @@ import copyText from "../../copy.js";
 
  export default {
      props: ["art"],
-     computed: { theCite: {get(){console.log(this); return "foo";} },
+     computed: {theCite: {get(){console.log(this.$refs.fooelement.innerText); return "foo";} },
 // GETITNG THERE: need to find a way to get child element from the this and put text in there.
                citeFormat: {
                            get(){return this.$store.state.citeFormat;},
                            set(value){this.$store.commit('changeCitation', value);}
                }
      },
-     methods: {copyCite: () => copyText.copy(document.getElementById('citetext').innerText),
+     methods: {citeMethod: function(){return "foobar"},
+              copyCite: () => copyText.copy(document.getElementById('citetext').innerText),
               chimlaAuthorMaker: (coau) => coau.split(" ").reverse().join(", ") + ", and Paul Gowder.",
               apaAuthorMaker: (coau) => coau.split(" ")[1] + ", " + coau.split(" ")[0].charAt(0) + "., & Gowder, P.",
               bbAuthorMaker: (coau) => coau + " & Paul Gowder,",
