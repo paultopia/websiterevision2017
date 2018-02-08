@@ -16,7 +16,7 @@
 </form>
 </div>
 
-<div class="citecontent">
+<div class="citecontent" id="citetext">
 <p v-if="(art.type == 'peer review' || art.type == 'law review') && citeFormat == 'Chicago'">
 
 <span v-if="art.coauthor">{{chimlaAuthorMaker(art.coauthor)}}</span> 
@@ -100,11 +100,19 @@ Sorry, I don't have a clear citation rule for this item.
 </p>
 </div>
 
+<p>
+<button v-on:click="copyCite()">
+Copy citation to clipboard.
+</button>
+</p>
+
+
 </div>
 </template>
 
 <script>
 
+import copyText from "../../copy.js";
 
  export default {
      props: ["art"],
@@ -114,7 +122,8 @@ Sorry, I don't have a clear citation rule for this item.
                            set(value){this.$store.commit('changeCitation', value);}
                }
      },
-     methods: {chimlaAuthorMaker: (coau) => coau.split(" ").reverse().join(", ") + ", and Paul Gowder.",
+     methods: {copyCite: () => copyText.copy(document.getElementById('citetext').innerText),
+               chimlaAuthorMaker: (coau) => coau.split(" ").reverse().join(", ") + ", and Paul Gowder.",
               apaAuthorMaker: (coau) => coau.split(" ")[1] + ", " + coau.split(" ")[0].charAt(0) + "., & Gowder, P.",
               bbAuthorMaker: (coau) => coau + " & Paul Gowder,",
               bbJournalMaker: function(journal){
