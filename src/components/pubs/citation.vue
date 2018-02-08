@@ -104,6 +104,9 @@ Sorry, I don't have a clear citation rule for this item.
 <button v-on:click="copyCite()">
 Copy citation to clipboard.
 </button>
+<button v-clipboard:copy="theCite">
+Experimental alt copy.
+</button>
 </p>
 
 
@@ -116,14 +119,15 @@ import copyText from "../../copy.js";
 
  export default {
      props: ["art"],
-     computed: {
+     computed: { theCite: {get(){console.log(this); return "foo";} },
+// GETITNG THERE: need to find a way to get child element from the this and put text in there.
                citeFormat: {
                            get(){return this.$store.state.citeFormat;},
                            set(value){this.$store.commit('changeCitation', value);}
                }
      },
      methods: {copyCite: () => copyText.copy(document.getElementById('citetext').innerText),
-               chimlaAuthorMaker: (coau) => coau.split(" ").reverse().join(", ") + ", and Paul Gowder.",
+              chimlaAuthorMaker: (coau) => coau.split(" ").reverse().join(", ") + ", and Paul Gowder.",
               apaAuthorMaker: (coau) => coau.split(" ")[1] + ", " + coau.split(" ")[0].charAt(0) + "., & Gowder, P.",
               bbAuthorMaker: (coau) => coau + " & Paul Gowder,",
               bbJournalMaker: function(journal){

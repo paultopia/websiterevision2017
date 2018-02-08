@@ -11,6 +11,9 @@ import App from './App';
 import VueTyperPlugin from 'vue-typer'; // maybe this goes into nav component?!
 Vue.use(VueTyperPlugin);
 
+import VueClipboard from 'vue-clipboard2'
+Vue.use(VueClipboard)
+
 // get the store in...
 import store from "./state.js";
 
