@@ -6,6 +6,7 @@
 <form>
 
 <select v-model="citeFormat" class="citeselect">
+  <option disabled value="">Select format</option>
   <option>Chicago</option>
   <option>APA</option>
   <option>Bluebook</option>
@@ -20,7 +21,7 @@
 <innercitation :art="art"></innercitation>
 
 <p>
-<button v-clipboard:copy="copyCite()">
+<button v-clipboard:copy="copyCite(art.title)">
 Copy citation.
 </button>
 </p>
@@ -37,14 +38,17 @@ Copy citation.
      props: ["art"],
      components: {innercitation},
      computed: {
+               cites(){return this.$store.state.citeText},
                citeFormat: {
-                           get(){return this.$store.state.citeFormat;},
-                           set(value){this.$store.commit('changeCitation', value);}
+                   get(){
+                       return this.$store.state.citeFormat;},
+                   set(value){
+                       this.$store.commit('changeCitation', value);}
                }
      },
      methods: {
-         copyCite: function(){
-             return this.$store.state.citeText;
+         copyCite: function(title){
+             return this.cites[title];
          }}}
 
 // AUTHORMAKER DOES NOT HANDLE JOURNAL ON LEGISLATION GROUP AUTHORSHIP CASE.

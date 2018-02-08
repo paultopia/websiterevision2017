@@ -20,10 +20,10 @@ import cvURL from './assets/pdf/gowdercv.pdf';
 // load up the state object
 
 var currentView = "navigation";
-var citeFormat = "Chicago"
+var citeFormat = "none"
 var lastView = null;
 var typerOn = true;
-var citeText = ""
+var citeText = {};
 
 var state = {currentView,
              citeFormat,
@@ -49,7 +49,8 @@ var mutations = {
         state.lastView = state.currentView;}
         state.currentView = view;},
     changeCitation(state, newFormat){state.citeFormat = newFormat;},
-    changeCitationText(state, newText){state.citeText = newText;},
+    changeCitationText(state, inobj){
+        Vue.set(state.citeText, inobj.title, inobj.text);},
     urlNavigate(){
        var derlocation = window.location.href.split("#").pop()
        if (derlocation){
