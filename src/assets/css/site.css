@@ -154,6 +154,10 @@ hr.instructions {
     width: 20px;
 }
 
+.citeselect {
+    background-color: rgba(172, 196, 165, 0.75);
+    font-family: 'Avenir', Helvetica, Arial, sans-serif;
+}
 
 /* the very occasional use of buttons */
 
