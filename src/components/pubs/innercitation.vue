@@ -82,9 +82,10 @@ MLA Chapter
 Sorry, I don't have a clear citation rule for this item.
 </p>
 
+<!--
   <p>Test html version</p>
   <p v-html="experimental_cite(art)"></p>
-
+-->
 
   </div>
 

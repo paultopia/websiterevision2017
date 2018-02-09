@@ -4,8 +4,14 @@
 /*                                   */
 /* ********************************* */
 
+:root {
+    --main-bg-color: rgba(172, 196, 165, 0.75);
+    --main-accent-color: rgb(242, 132, 53);
+    --main-light-color: rgb(214, 250, 203);
+}
+
 body {
-    background-color: rgba(172, 196, 165, 0.75);
+    background-color: var(--main-bg-color);
     font-family: 'Avenir', Helvetica, Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -35,7 +41,7 @@ hr.instructions {
     margin-top: 3em;
     height: 10px;
     border: 0;
-    box-shadow: 0 10px 10px -10px rgb(242, 132, 53) inset;
+    box-shadow: 0 10px 10px -10px var(--main-accent-color) inset;
 }
 
 /* opening page */
@@ -71,7 +77,7 @@ hr.instructions {
 
 .vue-typer .custom.caret {
     width: 0.3em;
-    background-color: rgb(242, 132, 53);
+    background-color: var(--main-accent-color);
 }
 
 .vue-typer {
@@ -80,7 +86,7 @@ hr.instructions {
 }
 
 .vue-typer .custom.char.selected {
-    background-color: rgb(242, 132, 53);
+    background-color: var(--main-accent-color);
 }
 
 
@@ -135,7 +141,7 @@ hr.instructions {
     bottom:0px;
     width: 100%;
     background-color: rgba(50,50,50, 0.95);
-    color: rgb(214, 250, 203);
+    color: var(--main-light-color);
 }
 
 /* CV  */
@@ -155,14 +161,14 @@ hr.instructions {
 }
 
 .citeselect {
-    background-color: rgba(172, 196, 165, 0.75);
+    background-color: var(--main-bg-color);
     font-family: 'Avenir', Helvetica, Arial, sans-serif;
 }
 
 /* the very occasional use of buttons */
 
 button {
-    color: rgb(214, 250, 203);
+    color: var(--main-light-color);
     padding: 2px;
     background-color: rgba(50,50,50, 0.75);
     border: none;
