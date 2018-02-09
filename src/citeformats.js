@@ -30,13 +30,16 @@ function chicago(p){
 }
 
 
+function bluebook (p){
+	var text = "";
+	var markdown = "";
+	return {text, markdown}
+	}
+
+const styleMapper = {chicago, bluebook}
 
 
+const formatCite = (pub, citeStyle, textFormat) => styleMapper[citeStyle](pub)[textFormat]
+// so citeStyle is, e.g., "bluebook" "chicago", textFormat is "text" or "markdown"
 
-
-
-function formatCite(inpub, format){
-	markdown = ""
-	text = ""
-	return {"markdown": markdown, "text": text}}
-	
+module.exports.cite = formatcite;
