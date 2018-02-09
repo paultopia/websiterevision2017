@@ -1,19 +1,19 @@
-import bbabbrv from './assets/json/bbtables.json';
+// import bbabbrv from './assets/json/bbtables.json';
 
-const italicizer (text) => `<i>${text}</i>`;
-const quoter (text) => `"${text}"`;
-const smallcapser (text) => `<span style="font-variant:small-caps;">${text}</span>`;
+const italicizer = (text) => `<i>${text}</i>`;
+const quoter = (text) => `"${text}"`;
+const smallcapser = (text) => `<span style="font-variant:small-caps;">${text}</span>`;
 
 
-function bbjournal(journal) {
+function bbjournal(journal, bb) {
     return journal.split(/([!-#%-\x2A,-\/:;\x3F@\d\s])/)
-        .map((word) => bbabbrv[word] || word)
+        .map((word) => bb[word] || word)
         .join("");
 }
 
 
 
-function chicago(p){
+function chicago(p, _){
 	var text = "";
 	var html = "";
 	const author = p.coauthor? p.coauthor.split(" ").reverse().join(", ") + ", and Paul Gowder." : "Gowder, Paul";
@@ -51,7 +51,8 @@ function bluebook (p){
 const styleMapper = {chicago, bluebook}
 
 
-const formatCite = (pub, citeStyle, textFormat) => styleMapper[citeStyle](pub)[textFormat]
+const formatCite = (pub, citeStyle, textFormat, bb) => styleMapper[citeStyle](pub, bb)[textFormat]
 // so citeStyle is, e.g., "bluebook" "chicago", textFormat is "text" or "html"
+// bb is path to bluebook abbreviations, which gets passed in everywhere just because otherwise if I import it here there are stupid webpack dependency glitches like https://stackoverflow.com/a/35240717/4386239
 
-module.exports.cite = formatcite;
+module.exports.cite = formatCite;
