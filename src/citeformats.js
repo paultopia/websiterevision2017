@@ -8,11 +8,13 @@ function bbjournal(journal, bb) {
         .join("");
 }
 
-function chicago(p, _){
+// Executive decision: it's really stupid to have MLA and APA.  Chicago and Bluebook are all I need, and then I can switch back to nice non-buggy radio boxes too. 
+
+function Chicago(p, _){
 	  var text = "";
 	  var html = "";
 	  const author = p.coauthor? p.coauthor.split(" ").reverse().join(", ") + ", and Paul Gowder." : "Gowder, Paul";
-	  const numbers = p.volume ? `${p.volume}${p.issue ? `.${p.issue}` : ""} (${p.year})	:${p.firstpage}-${p.lastpage}` : "";
+	  const numbers = p.volume ? `${p.volume}${p.issue ? `, no. ${p.issue}` : ""} (${p.year}):${p.firstpage}-${p.lastpage}` : "";
 	  switch (p.type) {
 	  case "peer review":
         // horrible fallthrough fuckery I may regret this oh god.  I don't want to duplicate journal code though!
@@ -26,7 +28,7 @@ function chicago(p, _){
 		    break;
 	  case "chapter":
 		    text = `${author}. ${quoter(`${p.title}.`)} In ${p.book}, ed. ${p.editor}, ${p.firstpage}-${p.lastpage}. ${p.address}: ${p.publisher}, ${p.year}.`;
-		    html = `${author}. ${quoter(`${p.title}.`)} In ${italicizer(p.book)}, ed. ${p.editor}, ${p.firstpage}-${p.lastpage}. ${p.address}: ${p.publisher}, ${p.year}.`;
+		    html = `${author}. ${quoter(`${p.title}.`)} In ${italicizer(p.book)}, edited by ${p.editor}, ${p.firstpage}-${p.lastpage}. ${p.address}: ${p.publisher}, ${p.year}.`;
 		    break;
 	  default:
 		    console.log("no citation for this type");
@@ -34,7 +36,7 @@ function chicago(p, _){
 	  return {text, html};
 }
 
-function bluebook(p, bb){
+function Bluebook(p, bb){
 	  var text = "";
 	  var html = "";
     const author = p.coauthor ? `${p.coauthor} & Paul Gowder` : "Paul Gowder";
@@ -59,61 +61,11 @@ function bluebook(p, bb){
 	  return {text, html};
 }
 
-function apa(p, _){
-	  var text = "";
-	  var html = "";
-    const author = p.coauthor ? p.coauthor.split(" ")[1] + ", " + p.coauthor.split(" ")[0].charAt(0) + "., & Gowder, P" : "Gowder, P";
-    const numbers = p.volume ? `${p.volume}${p.issue ? `(${p.issue})` : ""}, ${p.firstpage}-${p.lastpage}` : "";
-    switch (p.type) {
-    case "law review":
-    case "peer review":
-        text = `${author}. (${p.year}). ${p.title}. ${p.journal}, ${numbers}.`;
-        html = `${author}. (${p.year}). ${p.title}. ${italicizer(p.journal)}, ${numbers}.`;
-        break;
-    case "book":
-        text = `${author}. (${p.year}). ${p.title}. ${p.address}: ${p.publisher}.`;
-        text = `${author}. (${p.year}). ${italicizer(p.title)}. ${p.address}: ${p.publisher}.`;
-        break;
-    case "chapter":
-        text = `${author}. (${p.year}). ${p.title}. In ${p.editor} (Ed.), ${p.book} (pp. ${p.firstpage}-${p.lastpage}). ${p.address}: ${p.publisher}.`;
-        html = `${author}. (${p.year}). ${p.title}. In ${p.editor} (Ed.), ${italicizer(p.book)} (pp. ${p.firstpage}-${p.lastpage}). ${p.address}: ${p.publisher}.`;
-        break;
-    default:
-		    console.log("no citation for this type");
-    }
-	  return {text, html};
-}
-
-function mla(p, _){
-	  var text = "";
-	  var html = "";
-    const author = p.coauthor ? p.coauthor.split(" ")[1] + ", " + p.coauthor.split(" ")[0].charAt(0) + "., & Gowder, P" : "Gowder, P";
-    const numbers = p.volume ? `${p.volume}${p.issue ? `(${p.issue})` : ""}, ${p.firstpage}-${p.lastpage}` : "";
-    switch (p.type) {
-    case "law review":
-    case "peer review":
-        text = `${author}. (${p.year}). ${p.title}. ${p.journal}, ${numbers}.`;
-        html = `${author}. (${p.year}). ${p.title}. ${italicizer(p.journal)}, ${numbers}.`;
-        break;
-    case "book":
-        text = `${author}. (${p.year}). ${p.title}. ${p.address}: ${p.publisher}.`;
-        text = `${author}. (${p.year}). ${italicizer(p.title)}. ${p.address}: ${p.publisher}.`;
-        break;
-    case "chapter":
-        text = `${author}. (${p.year}). ${p.title}. In ${p.editor} (Ed.), ${p.book} (pp. ${p.firstpage}-${p.lastpage}). ${p.address}: ${p.publisher}.`;
-        html = `${author}. (${p.year}). ${p.title}. In ${p.editor} (Ed.), ${italicizer(p.book)} (pp. ${p.firstpage}-${p.lastpage}). ${p.address}: ${p.publisher}.`;
-        break;
-    default:
-		    console.log("no citation for this type");
-    }
-	  return {text, html};
-}
-
-const styleMapper = {chicago, bluebook}
+const styleMapper = {Chicago, Bluebook}
 
 
 const formatCite = (pub, citeStyle, textFormat, bb) => styleMapper[citeStyle](pub, bb)[textFormat]
-// so citeStyle is, e.g., "bluebook" "chicago", textFormat is "text" or "html"
+// so citeStyle is "bluebook" or "chicago", textFormat is "text" or "html"
 // bb is path to bluebook abbreviations, which gets passed in everywhere just because otherwise if I import it here there are stupid webpack dependency glitches like https://stackoverflow.com/a/35240717/4386239
 
 module.exports.cite = formatCite;
