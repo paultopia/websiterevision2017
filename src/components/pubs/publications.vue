@@ -37,7 +37,12 @@
                     
                     <p>
                         <a :href="bturl" download="gowder.bib">download bibtex</a>
-                    </p>
+                        </p>
+
+                        <p>
+
+                      See cv page for additional publications, including chapters in edited volumes and minor works.
+                      </p>
 
 
 
@@ -49,6 +54,8 @@
 
 import articlerow from './articlerow.vue';
 import mobilearticlerow from './mobilearticlerow.vue';
+// import chapterrow from './chapterrow.vue';
+// import mobilechapterrow from './mobilechapterrow.vue';
 import bibtex from "../../bibtex.js";
 import io from "../../io.js";
 
@@ -68,7 +75,12 @@ function chronThenTypeThenTitle(a, b){
 import research from '../../assets/md/research.md';
 
 export default {
-       components: {articlerow, mobilearticlerow, research},
+       components: {articlerow,
+                    mobilearticlerow,
+                    research,
+                    // mobilechapterrow,
+                    // chapterrow
+                    },
        computed: {
                  publications: function(){return this.$store.state.pubs;},
                  articles: function(){return this.$store.state.pubs.filter(isArticle).sort(chronThenTypeThenTitle)},
