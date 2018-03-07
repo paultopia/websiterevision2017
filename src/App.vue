@@ -1,12 +1,11 @@
 <template>
   <div id="app">
-       <v-touch @press="openTLDR" :options="hammerOpts" >
+
             <div id="view">
                 <keep-alive>
                     <component :is="currentView"></component>
                 </keep-alive>
             </div>
-       </v-touch>
 
 <foot v-if="currentView != 'navigation'"></foot>
 
@@ -22,13 +21,6 @@ import pubs from './components/pubs/publications.vue';
 import writing from './components/writing.vue';
 import tech from "./components/tech.vue";
 import contact from "./components/contact.vue";
-import tldr from "./components/tldr.vue";
-
-function innerTLDR(view){console.log(view);}
-
-const KEYCODE_ESC = 27;
-
-const KEYCODE_TAB = 9;
 
 export default {
   name: 'app',
@@ -40,15 +32,8 @@ export default {
       writing,
       tech,
       contact,
-      foot,
-      tldr
+      foot
   },
-    methods: {openTLDR: function(){this.$store.commit('navigate', "tldr");},
-             closeTLDR: function(){
-                        if (this.currentView === "tldr"){
-                        this.$store.commit('navigate', this.lastView);}
-             }
-    },
     computed: {
         currentView: function(){return this.$store.state.currentView;},
         lastView: function(){return this.$store.state.lastView;},
@@ -56,19 +41,7 @@ export default {
     mounted() {var that = this;
                window.focus();
                window.onpopstate = function(event){
-              that.$store.commit('navigate', "navigation");};},
-              created() {
-               this.hammerOpts = {'cssProps': {'userSelect': 'auto'}}
-               var that = this;
-               window.addEventListener('keydown', function(e){
-               if (e.keyCode == KEYCODE_TAB){
-                 that.openTLDR();
-               }
-               if (e.keyCode == KEYCODE_ESC){
-                 that.closeTLDR();
-               }
-               });}
-
+                   that.$store.commit('navigate', "navigation");};},
 }
 </script>
 

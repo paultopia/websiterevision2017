@@ -12,7 +12,7 @@
   "dependencies": {
     "caniuse-lite": "^1.0.30000731",
     "js-yaml": "^3.10.0",
-    "moment": "^2.18.1",
+    "moment": "^2.21.0",
     "prerender-spa-plugin": "^2.1.0",
     "process-nextick-args": "^1.0.7",
     "util-deprecate": "^1.0.2",
@@ -20,7 +20,6 @@
     "vue-clipboard2": "0.0.8",
     "vue-cookie": "^1.1.4",
     "vue-pdf": "^1.2.4",
-    "vue-touch": "^2.0.0-beta.4",
     "vue-typer": "^1.0.3",
     "vuex": "^2.3.1"
   },

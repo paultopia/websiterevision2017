@@ -3,8 +3,6 @@
 import Vue from 'vue';
 import Vuex from 'vuex';
 Vue.use(Vuex);
-import VueTouch from 'vue-touch';
-Vue.use(VueTouch);
 
 import App from './App';
 
