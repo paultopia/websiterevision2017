@@ -22,7 +22,7 @@
 <p v-else>Sorry, I don't have an abstract for this publication.</p>
 <h6>Citation</h6>
 <p>
-<citation :art="art"></citation></p>
+<newcitation :art="art"></newcitation></p>
 
 <p>
 <button v-on:click="line()">
@@ -38,11 +38,11 @@ Close abstract.
 
 <script>
 
-import citation from "./citation.vue";
+import newcitation from "./newcitation.vue";
 
  export default {
      props: ["art"],
-     components: {citation},
+     components: {newcitation},
      data: function(){return {infoline: true};},
      methods: {
          abs(){this.infoline = false;},

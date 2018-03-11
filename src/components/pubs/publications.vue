@@ -125,10 +125,12 @@ export default {
                     },
        computed: {
                  publications: function(){return this.$store.state.pubs;},
-                 articles: function(){return this.$store.state.pubs.filter(isArticle).sort(chronThenTypeThenTitle)},
+                 articles: function(){return this.$store.state.augmented
+                   .filter(isArticle)
+                     .sort(chronThenTypeThenTitle)},
                  chapters: function(){return this.$store.state.augmented
-                 .filter(isChapter)
-                   .sort(chronThenTitle)},
+                   .filter(isChapter)
+                     .sort(chronThenTitle)},
 bturl: function (){return io.downloadURL(bibtex.string(this.publications));}
 }
 }
