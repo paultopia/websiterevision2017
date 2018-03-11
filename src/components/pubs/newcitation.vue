@@ -2,26 +2,26 @@
 
 <div class="citation">
 
+<div class="citecontent">
+<p v-html="html"></p>
+</div>
+
 <div class="citeselector">
 <form>
-
+Choose Style: 
 <select v-model="style" class="citeselect">
   <option v-for="option in options" v-bind:value="option.value">
     {{ option.text }}
   </option>
 </select>
+ <button v-clipboard:copy="text">
+Copy Citation
+</button>
 
 </form>
 </div>
 
-<div class="citecontent">
-<span v-html="html"></span>
-</div>
-
 <p>
-<button v-clipboard:copy="text">
-Copy citation.
-</button>
 </p>
 
 
@@ -29,8 +29,6 @@ Copy citation.
 </template>
 
 <script>
-
-// THIS WHOLE COMPONENT IS UNTESTED
 
  export default {
      props: ["art"],

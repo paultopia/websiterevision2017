@@ -1,7 +1,7 @@
 <template>
     <tr v-if="this.infoline">
         <td>{{ art.title }}</td>
-        <td>pp. {{ art.firstpage }}-{{ art.lastpage }} in {{ art.editor }}, ed., {{ art.book }}  (with {{ art.coauthor }})</span></td>
+        <td>pp. {{ art.firstpage }}-{{ art.lastpage }} in {{ art.editor }}, ed., {{ art.book }}<span v-if="art.coauthor"> (with {{ art.coauthor }})</span></td>
         <td>{{ art.year }}</td>
         <td>
         <span class="hint--bottom" aria-label="abstract/full citation" v-on:click="abs()"><img src="../../assets/icons/file-text.svg" class="pubsicon"></span>

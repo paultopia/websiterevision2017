@@ -125,9 +125,14 @@ export default {
                     },
        computed: {
                  publications: function(){return this.$store.state.pubs;},
-                 articles: function(){return this.$store.state.augmented
-                   .filter(isArticle)
-                     .sort(chronThenTypeThenTitle)},
+                 articles: function(){
+                   var arts = this.$store.state.augmented
+                     .filter(isArticle)
+                       .sort(chronThenTypeThenTitle);
+                   arts.pop()
+                   // get rid of harvard journal on legislation thing
+                   return arts;
+                     },
                  chapters: function(){return this.$store.state.augmented
                    .filter(isChapter)
                      .sort(chronThenTitle)},
