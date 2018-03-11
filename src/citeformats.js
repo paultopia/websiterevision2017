@@ -69,3 +69,18 @@ const formatCite = (pub, citeStyle, textFormat, bb) => styleMapper[citeStyle](pu
 // bb is path to bluebook abbreviations, which gets passed in everywhere just because otherwise if I import it here there are stupid webpack dependency glitches like https://stackoverflow.com/a/35240717/4386239
 
 module.exports.cite = formatCite;
+
+// NEW STUFF UNTESTED
+
+function expandCites(pub, bb){
+	var htmlBB = formatCite(pub, "bluebook", "html", bb);
+	var textBB = formatCite(pub, "bluebook", "text", bb);
+	var htmlCH = formatCite(pub, "chicago", "html", bb);
+	var textCH = formatCite(pub, "chicago", "text", bb);
+	return {htmlBB, textBB, htmlCH, textCH};
+}
+
+const augmentPub = (pub, bb) => Object.assign(pub, expandCites(pub, bb))
+module.exports.augment = augmentPub;
+
+// END NEW STUFF

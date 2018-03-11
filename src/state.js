@@ -17,6 +17,15 @@ import bbabbrv from './assets/json/bbtables.json';
 import awards from './assets/json/awards.json';
 import cvURL from './assets/pdf/gowdercv.pdf';
 
+
+// NEW STUFF, UNTESTED
+
+import citeformats from "./citeformats.js";
+const augmentedPubs = pubs.map(citeformats.augment);
+console.log(augmentedPubs[0]);
+
+// END NEW STUFF (except for adding augmentedPubs to state object)
+
 // load up the state object
 
 var currentView = "navigation";
@@ -39,7 +48,8 @@ var state = {currentView,
              bbabbrv,
              awards,
              cvURL,
-             citeText};
+             citeText,
+             augmentedPubs};
 
 const legitPages = new Set(["navigation", "bio", "pubs", "cv", "tech", "writing", "contact"]);
 
