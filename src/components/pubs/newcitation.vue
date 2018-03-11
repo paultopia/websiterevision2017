@@ -5,7 +5,7 @@
 <div class="citeselector">
 <form>
 
-<select v-model="style">
+<select v-model="style" class="citeselect">
   <option v-for="option in options" v-bind:value="option.value">
     {{ option.text }}
   </option>
