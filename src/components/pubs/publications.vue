@@ -92,6 +92,9 @@ import mobilechapterrow from './mobilechapterrow.vue';
 import bibtex from "../../bibtex.js";
 import io from "../../io.js";
 
+import research from '../../assets/md/research.md';
+
+
 const isArticle = pub => pub.type === "peer review" || pub.type === "law review";
 
 const isChapter = pub => pub.type === "chapter";
@@ -112,7 +115,6 @@ function chronThenTitle(a, b){
     return 1;
 }
 
-import research from '../../assets/md/research.md';
 
 export default {
        components: {articlerow,
@@ -124,9 +126,11 @@ export default {
        computed: {
                  publications: function(){return this.$store.state.pubs;},
                  articles: function(){return this.$store.state.pubs.filter(isArticle).sort(chronThenTypeThenTitle)},
-                 chapters: function(){return this.$store.state.augmentedPubs.filter(isChapter).sort(chronThenTitle)}
-                 bturl: function (){return io.downloadURL(bibtex.string(this.publications));},
-                 }
+                 chapters: function(){return this.$store.state.augmented
+                 .filter(isChapter)
+                   .sort(chronThenTitle)},
+bturl: function (){return io.downloadURL(bibtex.string(this.publications));}
+}
 }
 
 </script>

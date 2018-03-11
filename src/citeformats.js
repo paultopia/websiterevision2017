@@ -68,19 +68,22 @@ const formatCite = (pub, citeStyle, textFormat, bb) => styleMapper[citeStyle](pu
 // so citeStyle is "bluebook" or "chicago", textFormat is "text" or "html"
 // bb is path to bluebook abbreviations, which gets passed in everywhere just because otherwise if I import it here there are stupid webpack dependency glitches like https://stackoverflow.com/a/35240717/4386239
 
-module.exports.cite = formatCite;
+// module.exports.cite = formatCite;
 
 // NEW STUFF UNTESTED
 
 function expandCites(pub, bb){
-	var htmlBB = formatCite(pub, "bluebook", "html", bb);
-	var textBB = formatCite(pub, "bluebook", "text", bb);
-	var htmlCH = formatCite(pub, "chicago", "html", bb);
-	var textCH = formatCite(pub, "chicago", "text", bb);
+	var htmlBB = formatCite(pub, "Bluebook", "html", bb);
+	var textBB = formatCite(pub, "Bluebook", "text", bb);
+	var htmlCH = formatCite(pub, "Chicago", "html", bb);
+	var textCH = formatCite(pub, "Chicago", "text", bb);
 	return {htmlBB, textBB, htmlCH, textCH};
 }
 
 const augmentPub = (pub, bb) => Object.assign(pub, expandCites(pub, bb))
-module.exports.augment = augmentPub;
 
-// END NEW STUFF
+// module.exports.augment = augmentPub;
+// I think this doesn't work because there's es6 in here, so I have to use a
+// different kind of export.
+
+export default augmentPub;

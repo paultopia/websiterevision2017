@@ -82,10 +82,6 @@ MLA Chapter
 Sorry, I don't have a clear citation rule for this item.
 </p>
 
-<!--
-  <p>Test html version</p>
-  <p v-html="experimental_cite(art)"></p>
--->
 
   </div>
 
@@ -94,14 +90,12 @@ Sorry, I don't have a clear citation rule for this item.
 
 <script>
 
-import citeformats from "../../citeformats.js";
+// import citeformats from "../../citeformats.js";
 
   export default {
   props: ["art"],
   computed: {citeFormat: function(){return this.$store.state.citeFormat;}},
-  methods: {
-            experimental_cite: function(art) {return citeformats.cite(art, "Chicago", "html", this.$store.state.bbabbrv)}, 
-            chimlaAuthorMaker: (coau) => coau.split(" ").reverse().join(", ") + ", and Paul Gowder.",
+  methods: {chimlaAuthorMaker: (coau) => coau.split(" ").reverse().join(", ") + ", and Paul Gowder.",
             apaAuthorMaker: (coau) => coau.split(" ")[1] + ", " + coau.split(" ")[0].charAt(0) + "., & Gowder, P.",
             bbAuthorMaker: (coau) => coau + " & Paul Gowder,",
             bbJournalMaker: function(journal){

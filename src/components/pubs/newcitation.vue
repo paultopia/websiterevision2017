@@ -32,16 +32,15 @@ Copy citation.
 
 // THIS WHOLE COMPONENT IS UNTESTED
 
-
  export default {
      props: ["art"],
-     data: {
+     data: function(){return {
                style: "CH",
                options: [
                          {text: "Chicago", value: "CH"},
                          {text: "Bluebook", value: "BB"}
                ]
-     },
+     }},
      computed: {
                html: function(){return this.art["html" + this.style]},
                text: function(){return this.art["text" + this.style]}

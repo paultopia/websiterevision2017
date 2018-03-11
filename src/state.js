@@ -18,12 +18,11 @@ import awards from './assets/json/awards.json';
 import cvURL from './assets/pdf/gowdercv.pdf';
 
 
+
 // NEW STUFF, UNTESTED
-
-import citeformats from "./citeformats.js";
-const augmentedPubs = pubs.map(citeformats.augment);
-console.log(augmentedPubs[0]);
-
+import augment from "./citeformats.js";
+// console.log(augment(pubs[0], bbabbrv)["textBB"]);
+// when I add this line, I get ""
 // END NEW STUFF (except for adding augmentedPubs to state object)
 
 // load up the state object
@@ -48,8 +47,7 @@ var state = {currentView,
              bbabbrv,
              awards,
              cvURL,
-             citeText,
-             augmentedPubs};
+             citeText};
 
 const legitPages = new Set(["navigation", "bio", "pubs", "cv", "tech", "writing", "contact"]);
 
