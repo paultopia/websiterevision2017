@@ -79,4 +79,4 @@ function pagesMaker(pubitem){
 	return "pages={" + pubitem.firstpage + "--" + pubitem.lastpage + "}";
 }
 
-module.exports.string = makebibtex;
+export default makebibtex;

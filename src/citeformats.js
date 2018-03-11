@@ -31,7 +31,7 @@ function Chicago(p, _){
 		    html = `${author}. ${quoter(`${p.title}.`)} In ${italicizer(p.book)}, edited by ${p.editor}, ${p.firstpage}-${p.lastpage}. ${p.address}: ${p.publisher}, ${p.year}.`;
 		    break;
 	  default:
-		    console.log("no citation for this type");
+		    // console.log("no citation for this type");
 	  }
 	  return {text, html};
 }

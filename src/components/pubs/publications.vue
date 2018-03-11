@@ -83,14 +83,11 @@
 
 import articlerow from './articlerow.vue';
 import mobilearticlerow from './mobilearticlerow.vue';
-
-// EXPERIMENTAL
 import chapterrow from './chapterrow.vue';
 import mobilechapterrow from './mobilechapterrow.vue';
-// END EXPERIMENTAL
 
 import bibtex from "../../bibtex.js";
-import io from "../../io.js";
+import downloadURL from "../../io.js";
 
 import research from '../../assets/md/research.md';
 
@@ -136,7 +133,7 @@ export default {
                  chapters: function(){return this.$store.state.augmented
                    .filter(isChapter)
                      .sort(chronThenTitle)},
-bturl: function (){return io.downloadURL(bibtex.string(this.publications));}
+bturl: function (){return downloadURL(bibtex(this.publications));}
 }
 }
 

@@ -3,4 +3,4 @@ function makeDownloadUrl(text){
     return URL.createObjectURL(b);
 }
 
-module.exports.downloadURL = makeDownloadUrl;
+export default makeDownloadUrl;
