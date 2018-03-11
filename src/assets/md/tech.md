@@ -12,11 +12,9 @@ Here's a collection of interests.
 
     - I have a working and usable but not feature complete [wrapper for the courtlistener api](https://github.com/paultopia/lawpy) to download cases, 
     
-    - a Clojure [text-mining utility library](https://github.com/paultopia/tzara) that does things like tokenization but is in the middle of a delayed refactor, and
+    - a Clojure [text-mining utility library](https://github.com/paultopia/tzara) that does things like tokenization but is in the middle of a delayed refactor (and hence is currently not working), 
     
-    - an actually completed and on pypi [micro-library to quickly clean strings for textmining](https://github.com/paultopia/dirtyclean) (mostly devoted to getting rid of things like unicode punctuation). 
-    
-    - I'm just starting a [project to build a document coding platform](https://github.com/paultopia/labelmaker) for easy deploy for researchers and lawyers, mostly because I need one myself .
+    - I've released a [micro-library to quickly clean strings for textmining](https://github.com/paultopia/dirtyclean) (mostly devoted to getting rid of things like unicode punctuation). 
 
 - Teaching tech and data to non-tech people. 
 
@@ -25,12 +23,11 @@ Here's a collection of interests.
         - In the course of doing so, I tried to teach some basic coding to a group of law students, you can see some not-clean notebooks I had them work through [here](https://github.com/paultopia/code-data-lawstudents/blob/master/hack-law.ipynb), and even showed them a basic kind of data science workflow with some key concepts [here](https://github.com/paultopia/code-data-lawstudents/blob/master/crunch-law.ipynb). 
         
     - I've tried to explain probability to law students, e.g. with a [micro-simulation of the Monty Hall problem](http://paul-gowder.com/montyhall/). 
-    
-    - I'm also working on a very slow project to bring more data crunching to the masses by writing a (work slowly in progress) [chrome extension to grab tabular data off web pages and do basic analysis](https://github.com/paultopia/browser-stats).
 
 - Afflicting the comfortable and comforting the afflicted. 
 
     - Right around the 2017 inauguration, I pushed out into the world a [quick monitoring tool](https://github.com/paultopia/minitrue) to tweet out hashes of public web documents and catch them if they change, just in case Trump decides to cook the government books. 
+    
     - I'm also working on several game-theory informed proposals to build tools to solve public commitment problems in order to shift power between mass and elite. For example, the University of Toronto Law Journal will soon contain a sketch of an idea I have for a nonprofit platform to allow consumers to negotiate in the aggregate to demand changes to form contracts from the likes of cable companies, phone companies, etc.; if there's sufficient interest I may build it.
 
 - Taking functionality offered by big complex applications and yanking it out into simple, small commandline unixey things. Mostly involving document processing. For example, 
@@ -40,6 +37,12 @@ Here's a collection of interests.
     - I have another [thingey to add page numbers to PDFs](https://github.com/paultopia/batesstamp). 
     
     - I'm working on [pulling data out of MS Word documents in browser](https://github.com/paultopia/dedocx/tree/master/browser), but that project might go on the backburner.
+    
+- Making routine science and basic statistical tasks a little bit easier, including: 
+
+    - I've released [a micro-library for black-and-white, print-quality basic datavis](https://github.com/paultopia/plottyprint), smoothing out the rough edges of the matplotlib api for workaday stuff like scatterplots for journals.
+    
+    - I've started, but mostly put on the back-burner, [a chrome extension to extract data from web pages and do basic stats/visualizations](https://github.com/paultopia/browser-stats). Maybe I'll get back to this soon.
 
 ## Technologies of choice.
 
@@ -47,11 +50,11 @@ Here's a collection of interests.
 
 - Datavis: ggplot, Seaborn, Bokeh, plotly.  You can see some of my favorite flashy visualizations on the [book site](http://rulelaw.net/).
 
-- General programming: Clojure/Script for bigger projects, Python for smaller and quicker stuff.
+- General programming: Clojure/Script for bigger projects, Python for smaller and quicker stuff. 
 
 - Editors: Spacemacs, vim for quick terminal edits, the magical iPython Notebook for quick-iteration working through problems and displaying [quick and dirty analyses](http://rulelaw.net/aba/).
 
-- Web: Luminus or Flask for the back-end, Reagent or raw JS for the front, Heroku or Digital Ocean for serving.  I'm mostly over CSS frameworks (except for Skeleton) thanks to the magic of flexbox.
+- Web: Luminus or Flask for the back-end, Reagent or raw JS for the front, Heroku or Digital Ocean for serving.  I'm mostly over CSS frameworks (except for Skeleton) thanks to the magic of Flexbox.
 
 - Database: Postgres.
 
