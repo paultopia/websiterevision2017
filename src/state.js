@@ -21,7 +21,8 @@ import cvURL from './assets/pdf/gowdercv.pdf';
 
 // NEW STUFF, UNTESTED
 import augment from "./citeformats.js";
-// console.log(augment(pubs[0], bbabbrv)["textBB"]);
+const augmented = pubs.map(pub => augment(pub, bbabbrv))
+// console.log(augmented[0]["textBB"]);
 // when I add this line, I get ""
 // END NEW STUFF (except for adding augmentedPubs to state object)
 
@@ -47,7 +48,8 @@ var state = {currentView,
              bbabbrv,
              awards,
              cvURL,
-             citeText};
+             citeText,
+             augmented};
 
 const legitPages = new Set(["navigation", "bio", "pubs", "cv", "tech", "writing", "contact"]);
 

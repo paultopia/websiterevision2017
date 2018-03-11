@@ -56,7 +56,7 @@ function Bluebook(p, bb){
         html = `${author}, ${italicizer(p.title)}, in ${smallcapser(p.book)} ${p.firstpage}-${p.lastpage} (${p.editor} ed. ${p.year}).`;
         break;
     default:
-		    console.log("no citation for this type");
+		    // console.log("no citation for this type");
     }
 	  return {text, html};
 }
