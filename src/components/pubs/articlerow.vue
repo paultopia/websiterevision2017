@@ -17,6 +17,9 @@
     <h6>Abstract</h6>
 <p v-if="art.abstract">{{ art.abstract }}</p>
 <p v-else>Sorry, I don't have an abstract for this publication.</p>
+<p v-if="art.publink || art.altlink">
+<a v-if="art.publink" :href="art.publink"><button>Publisher Link</button></a> <a v-if="art.altlink" :href="art.altlink"><button>Self-Archived Link</button></a>
+</p>
 <h6>Citation</h6>
 <p>
 <newcitation :art="art"></newcitation></p>
