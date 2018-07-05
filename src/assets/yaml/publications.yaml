@@ -22,6 +22,7 @@
   volume: '62'
   year: '2018'
   doi: '10.5281/zenodo.1305411'
+  tags: ['rule of law', 'egalitarianism']
 - abstract: >-
     This article distinguishes two types of legal technology, ‘cheaper lawyers’ (or simply
     replacing the cognitive operations of lawyers in their existing domains with technology)
@@ -46,6 +47,7 @@
   volume: '68'
   year: '2018'
   doi: '10.3138/utlj.2017-0047'
+  tags: ['rule of law', 'legal technology', 'artificial intelligence']
 - abstract: >-
     In this paper, I first defend a broad analogy between our worries about
     individual level paternalism and our worries about antimajoritarian elite
@@ -72,6 +74,7 @@
   type: law review
   volume: '14'
   year: '2016'
+  tags: ['democracy', 'libertarianism', 'egalitarianism']
 - abstract: >-
     We use game theory to argue that perceptions of widespread corruption in the
     judicial processes in many countries create ex ante incentives to act
@@ -98,6 +101,7 @@
   type: law review
   volume: '94'
   year: '2016'
+  tags: ['corruption', 'rule of law']
 - abstract: >-
     This short essay, published in a law review online supplement, is a response
     to Corey Brettschneider & David McNamee's 'Sovereign and State: A Democratic
@@ -129,6 +133,7 @@
   type: law review
   volume: '93'
   year: '2015'
+  tags: ['rule of law', 'democracy', 'constitutional law']
 - abstract: >-
     This paper, prepared for a Fordham Law Review symposium on critical race
     theory and empiricism, argues for the consolidation of a methodological
@@ -153,6 +158,7 @@
   type: law review
   volume: '83'
   year: '2015'
+  tags: ['race']
 - abstract: >-
     This paper describes a new model of the relationship between racial
     ascriptions on an individual level, private racial bias, social
@@ -188,6 +194,7 @@
   type: law review
   volume: '92'
   year: '2014'
+  tags: ['race', 'constitutional law']
 - abstract: >-
     The principle that the law must be general - that it must apply equally to
     all - is often said to be a fundamental demand of legal morality, associated
@@ -233,6 +240,7 @@
   type: law review
   volume: '99'
   year: '2014'
+  tags: ['rule of law', 'egalitarianism', 'constitutional law']
 - abstract: >-
     In this paper, I defend three claims. First, contra some classicists
     and legal historians, classical Athens during the democratic period
@@ -277,6 +285,7 @@
   type: law review
   volume: '62'
   year: '2014'
+  tags: ['rule of law', 'democracy', 'athens', 'egalitarianism']
 - abstract: >-
     This essay offers an argument against the proposition that binding judicial
     review is inconsistent with democracy. The first section considers three
@@ -313,6 +322,7 @@
   type: law review
   volume: '23'
   year: '2014'
+  tags: ['democracy', 'judicial review', 'constitutional law']
 - abstract: null
   address: null
   altlink: null
@@ -330,6 +340,7 @@
   type: law review
   volume: '115'
   year: '2006'
+  tags: ['constitutional law']
 - abstract: null
   address: null
   altlink: null
@@ -349,6 +360,7 @@
   type: law review
   volume: '35'
   year: '1998'
+  tags: ['constitutional law']
 - abstract: >-
     This paper gives a novel reading of the argument addressed by the Laws of
     Athens to Socrates in Plato's Crito. Many philosophers have suggested that
@@ -390,6 +402,7 @@
   type: peer review
   volume: '98'
   year: '2015'
+  tags: ['athens', 'democracy', 'rule of law']
 - abstract: >-
     In this paper, I describe a category of political values that I call
     institutional values. An institutional value (the quintessential examples of
@@ -415,6 +428,7 @@
   type: peer review
   volume: '30'
   year: '2014'
+  tags: ['democracy', 'rule of law']
 - abstract: >-
     The literature contains two concepts of corruption which are often confused
     with one another: corruption as twisted character (pollution), and
@@ -446,6 +460,7 @@
   type: peer review
   volume: '9'
   year: '2014'
+  tags: ['corruption', 'democracy']
 - abstract: >-
     John Tomasi's 'market democrat' is right to suppose that Rawlsians have
     erred in omitting economic liberty from their theories of justice. A
@@ -474,6 +489,7 @@
   type: peer review
   volume: '26'
   year: '2014'
+  tags: ['libertarianism', 'egalitarianism']
 - abstract: >-
     This paper offers an expressive interpretation of Chief Justice Roberts's
     opinion in NFIB v. Sebelius, focusing on the Chief Justice's distinction
@@ -504,6 +520,7 @@
   type: peer review
   volume: '27'
   year: '2013'
+  tags: ['constitutional law']
 - abstract: >-
     This paper prevents a novel account of the rule of law and its normative
     value. Conventional conceptions of the rule of law are rooted in an idea of
@@ -537,6 +554,7 @@
   type: peer review
   volume: '32'
   year: '2013'
+  tags: ['rule of law', 'egalitarianism']
 - abstract: null
   address: null
   altlink: null
@@ -556,6 +574,7 @@
   type: peer review
   volume: '2'
   year: '2006'
+  tags: ['minor']
 - abstract: >-
     This paper draws on a case study of the Athenian amnesty after the
     blood-soaked rule of the Thirty Tyrants (404-3 B.C.E.) to draw out some
@@ -590,6 +609,7 @@
   type: chapter
   volume: null
   year: '2015'
+  tags: ['athens', 'rule of law', 'democracy']
 - abstract: >-
     See above, 'Death and Taxes in NFIB v. Sebelius.'  This is an adaptation of
     that paper.
@@ -609,6 +629,7 @@
   type: chapter
   volume: null
   year: '2014'
+  tags: ['constitutional law']
 - abstract: >-
     The Rule of Law in the Real World gives a comprehensive new theory of the
     political and legal ideal known as the rule of law: what it means (the
@@ -633,6 +654,7 @@
   type: book
   volume: null
   year: '2016'
+  tags: ['rule of law', 'egalitarianism']
 - abstract: null
   address: null
   altlink: null
@@ -650,6 +672,7 @@
   type: misc
   volume: 53
   year: '2018'
+  tags: ['minor', review]
 - abstract: null
   address: null
   altlink: null
@@ -667,6 +690,7 @@
   type: misc
   volume: null
   year: '2016'
+  tags: ['rule of law', 'minor', review]
 - abstract: null
   address: null
   altlink: null
@@ -684,6 +708,7 @@
   type: misc
   volume: null
   year: '2014'
+  tags: ['constitutional law', 'minor']
 - abstract: null
   address: null
   altlink: null
@@ -701,6 +726,7 @@
   type: misc
   volume: null
   year: '2014'
+  tags: ['rule of law', 'minor']
 - abstract: null
   address: null
   altlink: null
@@ -720,6 +746,7 @@
   type: misc
   volume: null
   year: '2013'
+  tags: ['minor']
 - abstract: null
   address: null
   altlink: null
@@ -741,6 +768,7 @@
   type: misc
   volume: null
   year: '2009'
+  tags: ['constitutional law', 'minor']
 - abstract: null
   address: null
   altlink: null
@@ -762,6 +790,7 @@
   type: misc
   volume: null
   year: '2008'
+  tags: ['constitutional law', 'minor']
 - abstract: null
   address: null
   altlink: null
@@ -779,6 +808,7 @@
   type: misc
   volume: null
   year: '1999'
+  tags: ['review', 'minor']
 - abstract: null
   address: null
   altlink: null
@@ -796,6 +826,7 @@
   type: misc
   volume: null
   year: '1999'
+  tags: ['review', 'minor']
 - abstract: null
   address: null
   altlink: null
@@ -813,3 +844,4 @@
   type: misc
   volume: null
   year: '1999'
+  tags: ['minor']
