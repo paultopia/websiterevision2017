@@ -16,10 +16,15 @@
 </div>
 
     <div v-else>
+      <hr>
     <h5>{{art.title}}</h5>
     <h6>Abstract</h6>
 <p v-if="art.abstract">{{ art.abstract }}</p>
-<p v-else>Sorry, I don't have an abstract for this publication.</p>
+    <p v-else>Sorry, I don't have an abstract for this publication.</p>
+<p>
+            <a v-if="art.publink" :href="art.publink"><img src="../../assets/icons/external-link.svg" class="pubsicon"></a>
+<a v-if="art.altlink" :href="art.altlink"><img src="../../assets/icons/cloud-download.svg" class="pubsicon"></a></p><br>
+
 <h6>Citation</h6>
 <p>
 <newcitation :art="art"></newcitation></p>
@@ -29,7 +34,7 @@
 Close abstract.
 </button>
 </p>
-
+<hr>
     </div>
 
   </div>
