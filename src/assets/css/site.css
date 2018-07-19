@@ -277,7 +277,7 @@ button {
         display: none;
     }
 
-    td.legendcell {
+    .legendtable td {
         padding: 0px 15px;
     }
 

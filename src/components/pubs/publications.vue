@@ -8,26 +8,26 @@
   <h4>Legend:</h4>
   <table class="legendtable">
     <tr>
-      <td class="legendcell">
+      <td>
         <img src="../../assets/icons/file-text.svg" class="pubsicon">
       </td>
-      <td class="legendcell">
+      <td>
         abstract
       </td>
       </tr>
     <tr>
-      <td class="legendcell">
+      <td>
         <img src="../../assets/icons/external-link.svg" class="pubsicon">
       </td>
-      <td class="legendcell">
+      <td>
         official/journal link
       </td>
       </tr>
     <tr>
-      <td class="legendcell">
+      <td>
         <img src="../../assets/icons/cloud-download.svg" class="pubsicon">
       </td>
-      <td class="legendcell">
+      <td>
         unofficial/preprint link (may not be final version)
       </td>
     </tr>
