@@ -164,6 +164,10 @@ hr.instructions {
     font-family: 'Avenir', Helvetica, Arial, sans-serif;
 }
 
+.legendtable td {
+    padding: 0px 15px;
+}
+
 /* the very occasional use of buttons */
 
 button {
@@ -277,9 +281,6 @@ button {
         display: none;
     }
 
-    .legendtable td {
-        padding: 0px 15px;
-    }
 
     .legendtable {
         margin-left: 20px;
