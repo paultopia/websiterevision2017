@@ -1,5 +1,29 @@
 [
   {
+    "abstract": "This is a response to commentary (by Colleen Murphy, Robin West, Chad Flanders and Matt Lister) on my The Rule of Law in the Real World (Cambridge, 2016) in which I further defend the  egalitarian principle of generality and its relationship to the classic idea of a contrast  between the rule of law and the rule of (wo)men, Jim Crow, the difference between private  oppression and state oppression, rape culture, and arbitrary official power over migrants,  among other issues.",
+    "address": null,
+    "altlink": "https://zenodo.org/record/1305412",
+    "book": null,
+    "coauthor": null,
+    "editor": null,
+    "firstpage": "333",
+    "issue": "2",
+    "journal": "Saint Louis University Law Journal",
+    "lastpage": "359",
+    "note": null,
+    "publink": null,
+    "publisher": null,
+    "title": "Resisting the Rule of Men",
+    "type": "law review",
+    "volume": "62",
+    "year": "2018",
+    "doi": "10.5281/zenodo.1305411",
+    "tags": [
+      "rule of law",
+      "egalitarianism"
+    ]
+  },
+  {
     "abstract": "This article distinguishes two types of legal technology, ‘cheaper lawyers’ (or simply replacing the cognitive operations of lawyers in their existing domains with technology) and ‘transformative artificial legal cognition’ (or introducing the cognitive operations characteristic of lawyers in contexts where human lawyers cannot economically be deployed at all). It then makes the case for finding advances in egalitarian access to justice and the rule of law primarily in the latter category.",
     "address": null,
     "altlink": null,
@@ -17,7 +41,12 @@
     "type": "peer review",
     "volume": "68",
     "year": "2018",
-    "doi": "10.3138/utlj.2017-0047"
+    "doi": "10.3138/utlj.2017-0047",
+    "tags": [
+      "rule of law",
+      "legal technology",
+      "artificial intelligence"
+    ]
   },
   {
     "abstract": "In this paper, I first defend a broad analogy between our worries about individual level paternalism and our worries about antimajoritarian elite influences in democratic politics. I then argue that the best objections to paternalistic policies in both domains, including those offered by Sunstein and Thaler under the label libertarian paternalism, are rooted in democratic rather than libertarian ideals. Finally, I offer a preliminary account of the conditions under which paternalistic policies are permissible, rooted in their compatability with individual and collective agents conceived as capable of learning and revising decisions over the course of time.",
@@ -36,7 +65,12 @@
     "title": "Democratic Paternalism, not Libertarian Paternalism",
     "type": "law review",
     "volume": "14",
-    "year": "2016"
+    "year": "2016",
+    "tags": [
+      "democracy",
+      "libertarianism",
+      "egalitarianism"
+    ]
   },
   {
     "abstract": "We use game theory to argue that perceptions of widespread corruption in the judicial processes in many countries create ex ante incentives to act corruptly. It is rational (though not moral) to preemptively act corruptly when litigating in the courts of such nations. Accordingly, contrary to judicial narratives in individual cases-such as the (in)famous Chevron-Ecuador dispute used herein as an illustration-the problem of corruption in transnational litigation is structural and thus calls for structural solutions. The Article offers one such solution: the establishment of an international court of civil justice.",
@@ -55,7 +89,11 @@
     "title": "Transnational Litigation as a Prisoner's Dilemma",
     "type": "law review",
     "volume": "94",
-    "year": "2016"
+    "year": "2016",
+    "tags": [
+      "corruption",
+      "rule of law"
+    ]
   },
   {
     "abstract": "This short essay, published in a law review online supplement, is a response to Corey Brettschneider & David McNamee's 'Sovereign and State: A Democratic Theory of Sovereign Immunity.' It's worthy (from my limited perspective) of separate note because it contains a not-published-elsewhere piece of the overall theory of the rule of law I have been developing: an argument that the rule of law is necessary for democratic legitimacy, for three reasons: (1) The conceptual reason: democratic sovereignty relies on abstracted (legal) rules to identify the acts that count as those of the sovereign demos. (2) The pragmatic reason: effective legal systems are a crucial tool of mass coordination, and such tools are required to maintain popular authority. (3) The moral reason: the inegalitarian ills of states that violate the rule of law are inconsistent with the equal standing of citizens presupposed by democratic theory.",
@@ -74,7 +112,12 @@
     "title": "The Rule of Law Against Sovereign Immunity in a Democratic State",
     "type": "law review",
     "volume": "93",
-    "year": "2015"
+    "year": "2015",
+    "tags": [
+      "rule of law",
+      "democracy",
+      "constitutional law"
+    ]
   },
   {
     "abstract": "This paper, prepared for a Fordham Law Review symposium on critical race theory and empiricism, argues for the consolidation of a methodological research program within critical race theory, which draws from insights from feminist philosophy of science about the standpoint-dependence and system-justification bias of empirical research, as well as from social science methodology about the ways in which those biases can be ameliorated (or compensated for with counter-bias).",
@@ -93,7 +136,10 @@
     "title": "Critical Race Science and Critical Race Philosophy of Science",
     "type": "law review",
     "volume": "83",
-    "year": "2015"
+    "year": "2015",
+    "tags": [
+      "race"
+    ]
   },
   {
     "abstract": "This paper describes a new model of the relationship between racial ascriptions on an individual level, private racial bias, social disadvantage, and state action, called the cognitive hierarchical model. As the name suggests, it deploys psychological, sociological, and historical evidence to argue that racial hierarchy in the wider culture leaks into our individual cognitions, and vice versa. Status evaluations turn out to be built deep into our racial perceptions. The state, for its part, exercises a continuing influence on that culture and the cognitions it generates; this gives rise to new grounds for constitutional challenge to state complicity in racial hierarchy. To be ascribed a stigmatized racial identity is to be subject to continuing harm, which this paper calls ascriptive injury. This paper ultimately argues that the state, by participating in the continual creation and reinscription of stigmatized racial identities, causes such ascriptive injuries, and argues for a constitutional remedy. (n.b. The journal seems to ascribe this an official publication date of 2014, despite the fact that it did not see print until mid-2015; I am not certain what the best choice is to handle this, citation-wise.)",
@@ -112,7 +158,11 @@
     "title": "Racial Classification and Ascriptive Injury",
     "type": "law review",
     "volume": "92",
-    "year": "2014"
+    "year": "2014",
+    "tags": [
+      "race",
+      "constitutional law"
+    ]
   },
   {
     "abstract": "The principle that the law must be general - that it must apply equally to all - is often said to be a fundamental demand of legal morality, associated with the ideal of the rule of law. But many worry that the formal equality of law creates substantive inequalities in a world in which people have different capacities, endowments, and fundamental interests. This is a theoretical problem at the heart of liberal democracy. The rule of law is ordinarily understood to be a basic condition for the legitimacy of (small-l) liberal states. Its demands are expressed in provisions of the U.S. constitution like the due process and equal protection clauses. And its ideals are deeply embedded in the Anglo-American legal tradition, in Magna Carta as well as the principles of the common law. If, as some scholars have argued, there's something hostile to genuine equality in the rule of law, then that hostility is at the heart of our constitutional order. I aim to relieve some worries about this putative hostility. The paper carries out three tasks. 1) It clarifies what it takes for the state to satisfy the rule of law demand that the laws must be general. 2) It shows that the evaluation of whether a society comports with the rule of law does not depend solely on facts about the legal system, but also on a host of other non-legal social facts, particularly, the extent to which some members of society are the victims of (non-legal) injustice. And, 3) it shows that the rule of law generates a critique of economic injustice. It follows that the traditional association of the rule of law with the political right, and its critique from the left, are misguided. Ultimately, the paper reinterprets the notion of general law as an expressive ideal, meant to protect the equal status of the members of a political community. It gives an account of the vexed question of how the expressive meaning of a law may be found. And it aims to show that rule of law, interpreted in this expressive fashion, genuinely protects 'substantive' equality",
@@ -131,7 +181,12 @@
     "title": "Equal Law in an Unequal World",
     "type": "law review",
     "volume": "99",
-    "year": "2014"
+    "year": "2014",
+    "tags": [
+      "rule of law",
+      "egalitarianism",
+      "constitutional law"
+    ]
   },
   {
     "abstract": "In this paper, I defend three claims. First, contra some classicists and legal historians, classical Athens during the democratic period substantially satisfied the demands of the rule of law (excepting its treatment of women, noncitizens, and slaves). I show that arguments to the contrary mostly represent an unduly narrow conception of what might count as law in Athens, one that inappropriately excludes common-knowledge social customs. Second, Athenians saw the rule of law as serving the equality of mass and elite, oligarchs and democrats: there was no contradiction (again contra some classicists) between the democratic power of the masses and the rule of law. This equality consisted in two topoi frequently deployed in the Athenian legal and social discourse. First is the respect topos, according to which the laws represent respect for the democratic polis. To disregard them is to reveal one's lack of respect for the polis and one's oligarchic character. Second is the strength topos, according to which the laws are the way that the democratic polis exercises its power: weak members of the masses cannot stand up to strong members of the elite alone, they need the backing of the whole community, and that backing is coordinated through the law; to undermine the law is thereby to undermine the political power of the masses. Third, this connection between equality and the rule of law explains the most striking fact about Athenian legality, to wit, the otherwise puzzling effectiveness of the amnesty enacted for crimes committed under the Thirty Tyrants. The strength topos explains why the democrats in Athens refrained from avenging themselves against the Thirty despite their opportunity to do so: by doing so, they would have undermined the law, and thereby their own equality. The strength topos led the Athenians to take the internal point of view on the law.",
@@ -150,7 +205,13 @@
     "title": "Democracy, Solidarity and the Rule of Law: Lessons from Athens",
     "type": "law review",
     "volume": "62",
-    "year": "2014"
+    "year": "2014",
+    "tags": [
+      "rule of law",
+      "democracy",
+      "athens",
+      "egalitarianism"
+    ]
   },
   {
     "abstract": "This essay offers an argument against the proposition that binding judicial review is inconsistent with democracy. The first section considers three versions of this countermajoritarian complaint, and concludes that the only potentially defensible version is the 'respect complaint,' associated with the popular constitutionalists, according to which constitutional courts impermissibly override popular legal judgments. The second section offers an argument against the respect complaint, centered on the notion that courts express rather than override popular legal judgments. The third section draws on the second to argue that 'weak judicial review systems,' in which legislatures may override constitutional rulings, function the same way as 'strong judicial review systems,' such as the U.S., in virtue of the fact that the courts in each system can wield power over legislatures only to the extent they can generally recruit popular support. In light of the empirical fact that the extent to which legislatures defer to constitutional courts varies widely in weak judicial review systems, I conclude that the question of the relationship between judicial review and democracy is really a far more fine-grained problem of institutional design, not the simple binary choice to have or not have what critics of the U.S. system have misguidedly named 'judicial supremacy.'",
@@ -169,7 +230,12 @@
     "title": "The Countermajoritarian Complaint",
     "type": "law review",
     "volume": "23",
-    "year": "2014"
+    "year": "2014",
+    "tags": [
+      "democracy",
+      "judicial review",
+      "constitutional law"
+    ]
   },
   {
     "abstract": null,
@@ -188,7 +254,10 @@
     "title": "Quasi-Public Executives",
     "type": "law review",
     "volume": "115",
-    "year": "2006"
+    "year": "2006",
+    "tags": [
+      "constitutional law"
+    ]
   },
   {
     "abstract": null,
@@ -207,7 +276,10 @@
     "title": "Remote Purchasing and Fundamental Fairness: The Sales and Use Tax Equalization Act",
     "type": "law review",
     "volume": "35",
-    "year": "1998"
+    "year": "1998",
+    "tags": [
+      "constitutional law"
+    ]
   },
   {
     "abstract": "This paper gives a novel reading of the argument addressed by the Laws of Athens to Socrates in Plato's Crito. Many philosophers have suggested that the argument of the Laws is merely a weak 'rhetorical sop' to Crito. However, I offer an interpretation of that argument that brings out its plausibility, particularly in the context of the post-Oligarchic demos of early fourth-century Athens. For on Crito's plan, Socrates would have undermined a critical form of civic trust in Athens, not by merely disobeying the sentence imposed on him by the jury, but by openly displaying the legal impunity of the rich. We can call this 'legal trust.'  By that coinage, I mean citizens' faith in their fellow citizens' willingness and ability to collectively defend the law---to enforce it against the powerful, and refrain from acting to undermine that capacity. When the members of a democratic political community recognize one another's commitment to their legal system, they are able to defend the laws that hold their democracy together; in such a state, the laws are both conceptually constitutive of democratic authority and practically necessary for democracy. Taken in the context of the strategic structure of the Athenian legal system, in the appeal to the filial loyalty Socrates owed the Laws we can see just such an account of the interweaving of law, trust, and citizenship in the preservation of a democracy. The Laws demand that Socrates be trustworthy, and thereby refrain from undermining his fellow citizens' trust in them, where that trust is necessary for the citizens' collective defense of the democratic legal system; they make this demand on Socrates in virtue of the Laws' role in Socrates's identity as citizen.",
@@ -226,7 +298,12 @@
     "title": "What the Laws Demand of Socrates---and of Us",
     "type": "peer review",
     "volume": "98",
-    "year": "2015"
+    "year": "2015",
+    "tags": [
+      "athens",
+      "democracy",
+      "rule of law"
+    ]
   },
   {
     "abstract": "In this paper, I describe a category of political values that I call institutional values. An institutional value (the quintessential examples of which are democracy and the rule of law) is distinct from an ordinary (or abstract) political value like justice by having both descriptive and evaluative components. I defend a method of sorting out correct from incorrect conceptions of an institutional value that relies on two ideas: coherence and verisimilitude.",
@@ -245,7 +322,11 @@
     "title": "Institutional Values, or How to Say What Democracy Is",
     "type": "peer review",
     "volume": "30",
-    "year": "2014"
+    "year": "2014",
+    "tags": [
+      "democracy",
+      "rule of law"
+    ]
   },
   {
     "abstract": "The literature contains two concepts of corruption which are often confused with one another: corruption as twisted character (pollution), and corruption as disloyalty. It also contains two sites for corruption: the corruption of individuals, and the corruption of entire institutions such as a state or a legislature. This paper first draws a clear distinction between the pollution and disloyalty concepts of corruption in the individual context, and then defends a conception of disloyalty corruption according to which the distinguishing feature is an agent who uses powers delegated to her from her principal as her own. Then, the paper shifts gears to the institutional context, arguing that the best account of institutional corruption in the extant literature is of the pollution kind. It then fills the remaining logical space by laying out a conception of institutional corruption as disloyalty and explaining its moral significance for the political legitimacy of a democracy.",
@@ -264,7 +345,11 @@
     "title": "Institutional Corruption and the Rule of Law",
     "type": "peer review",
     "volume": "9",
-    "year": "2014"
+    "year": "2014",
+    "tags": [
+      "corruption",
+      "democracy"
+    ]
   },
   {
     "abstract": "John Tomasi's 'market democrat' is right to suppose that Rawlsians have erred in omitting economic liberty from their theories of justice. A Rawlsian ought to include economic liberty as a basic freedom because it facilitates individuals' development and pursuit of their conceptions of the good. However, the most plausible version of economic liberty will require the state to guarantee, if possible, that no one will be driven by economic desperation to engage in immiserating work, which may impair rather than facilitate his or her pursuit of the good. There is reason to worry that contemporary economies such as the United States fall seriously short of that ideal.",
@@ -283,7 +368,11 @@
     "title": "Market Unfreedom",
     "type": "peer review",
     "volume": "26",
-    "year": "2014"
+    "year": "2014",
+    "tags": [
+      "libertarianism",
+      "egalitarianism"
+    ]
   },
   {
     "abstract": "This paper offers an expressive interpretation of Chief Justice Roberts's opinion in NFIB v. Sebelius, focusing on the Chief Justice's distinction between a command, which 'restricts' a citizen's 'lawful choice' to do or not do some act, and a tax, which allegedly does not work such a restriction. I argue that the quoted language can be charitably understood as an interpretation of what it means for an act to be unlawful. For the state to say that an act is unlawful and impose a penalty on it is to express disapproval of that act; no such disapproval is expressed merely by taxing an act. NFIB v. Sebelius raises this expressive aspect of outlawing to constitutional significance. n.b. A heavily revised version with slight changes to the argument was reprinted as 'The Health Insurance Mandate Really is a Tax, and That's a Good Thing Too,' also listed in this publications list.",
@@ -302,7 +391,10 @@
     "title": "Death and Taxes in NFIB v. Sebelius",
     "type": "peer review",
     "volume": "27",
-    "year": "2013"
+    "year": "2013",
+    "tags": [
+      "constitutional law"
+    ]
   },
   {
     "abstract": "This paper prevents a novel account of the rule of law and its normative value. Conventional conceptions of the rule of law are rooted in an idea of liberty. The standard account supposes that the rule of law is valuable because, e.g., it permits citizens to plan their lives, and thereby supports their free choices. This paper, by contrast, defends an egalitarian theory of the rule of law. The rule of law fosters vertical equality between officials and ordinary citizens by requiring officials to treat citizens with respect when they use their public powers, and by forbidding systems of state terror. It fosters horizontal equality among ordinary citizens by requiring citizens to reciprocally share the cost to produce the public good of law and order, and by forbidding the creation of legal castes.\n  Reimagining the rule of law as an egalitarian principle supports a\nnew account of what the rule of law demands, focused on three principles: regularity, publicity, and generality. Together, they require that official power be used only under laws that citizens can participate in enforcing, and that treat all citizens as equals.",
@@ -321,7 +413,11 @@
     "title": "The Rule of Law and Equality",
     "type": "peer review",
     "volume": "32",
-    "year": "2013"
+    "year": "2013",
+    "tags": [
+      "rule of law",
+      "egalitarianism"
+    ]
   },
   {
     "abstract": null,
@@ -340,7 +436,10 @@
     "title": "Secrecy as Mystification of Power: Meaning and Ethics in the Security State",
     "type": "peer review",
     "volume": "2",
-    "year": "2006"
+    "year": "2006",
+    "tags": [
+      "minor"
+    ]
   },
   {
     "abstract": "This paper draws on a case study of the Athenian amnesty after the blood-soaked rule of the Thirty Tyrants (404-3 B.C.E.) to draw out some ideas about the role of commitment-keeping in transitional justice. There is an important value, for the maintenance of the rule of law, to a transitional democracy in keeping its post-conflict legal commitments, independent of the substantive content of those commitments (e.g., to offer amnesty to the prior regime, to prosecute that regime, etc.).  I also argue that the Athenian mass jury, because of its size, publicity, and representativeness, had an unusual capacity to help democratic citizens signal their commitment to the rule of law to their fellows: it allowed them to indicate their willingness to sacrifice their personal preferences (punishing oligarchs) in the cause of upholding the law, by voting in accordance in the jury-room. In transitional conditions, this signaling function is critically important in building a record of legal trust to strengthen nascent democratic legal systems; the paper closes by suggesting that the truth commissions often seen in contemporary transitional states can serve some of the same functions.",
@@ -359,7 +458,12 @@
     "title": "Trust and Commitment: How Athens Rebuilt the Rule of Law",
     "type": "chapter",
     "volume": null,
-    "year": "2015"
+    "year": "2015",
+    "tags": [
+      "athens",
+      "rule of law",
+      "democracy"
+    ]
   },
   {
     "abstract": "See above, 'Death and Taxes in NFIB v. Sebelius.'  This is an adaptation of that paper.",
@@ -378,7 +482,10 @@
     "title": "The Health Insurance Mandate Really is a Tax, and That's a Good Thing Too",
     "type": "chapter",
     "volume": null,
-    "year": "2014"
+    "year": "2014",
+    "tags": [
+      "constitutional law"
+    ]
   },
   {
     "abstract": "The Rule of Law in the Real World gives a comprehensive new theory of the political and legal ideal known as the rule of law: what it means (the coordinated collective control of power), why it matters (it constitutes a morally important kind of social equality), and how these properties should be taken into account in social scientific attempts to measure it as well as policy efforts to promote it.",
@@ -397,7 +504,11 @@
     "title": "The Rule of Law in the Real World",
     "type": "book",
     "volume": null,
-    "year": "2016"
+    "year": "2016",
+    "tags": [
+      "rule of law",
+      "egalitarianism"
+    ]
   },
   {
     "abstract": null,
@@ -416,7 +527,11 @@
     "title": "Institutions and Instrumentalization in International Law (Review of Fox-Decent and Criddle, Fiduciaries of Humanity)",
     "type": "misc",
     "volume": 53,
-    "year": "2018"
+    "year": "2018",
+    "tags": [
+      "minor",
+      "review"
+    ]
   },
   {
     "abstract": null,
@@ -435,7 +550,12 @@
     "title": "The Rule of Law",
     "type": "misc",
     "volume": null,
-    "year": "2016"
+    "year": "2016",
+    "tags": [
+      "rule of law",
+      "minor",
+      "review"
+    ]
   },
   {
     "abstract": null,
@@ -454,7 +574,11 @@
     "title": "Procedural Due Process: the Missing Casebook Chapter",
     "type": "misc",
     "volume": null,
-    "year": "2014"
+    "year": "2014",
+    "tags": [
+      "constitutional law",
+      "minor"
+    ]
   },
   {
     "abstract": null,
@@ -473,7 +597,11 @@
     "title": "The Rule of Law",
     "type": "misc",
     "volume": null,
-    "year": "2014"
+    "year": "2014",
+    "tags": [
+      "rule of law",
+      "minor"
+    ]
   },
   {
     "abstract": null,
@@ -492,7 +620,10 @@
     "title": "The Serious Point",
     "type": "misc",
     "volume": null,
-    "year": "2013"
+    "year": "2013",
+    "tags": [
+      "minor"
+    ]
   },
   {
     "abstract": null,
@@ -511,7 +642,11 @@
     "title": "\"Shopping Malls and the First Amendment,\" \"Masson v. New Yorker Magazine,\" and \"Pruneyard Shopping Center v. Robins\"",
     "type": "misc",
     "volume": null,
-    "year": "2009"
+    "year": "2009",
+    "tags": [
+      "constitutional law",
+      "minor"
+    ]
   },
   {
     "abstract": null,
@@ -530,7 +665,11 @@
     "title": "\"Noerr-Pennington Doctrine,\" \"Pruneyard Shopping Center v. Robins,\" and \"Amalgamated Food Employees Union Local 590 v. Logan Valley Plaza, Inc\"",
     "type": "misc",
     "volume": null,
-    "year": "2008"
+    "year": "2008",
+    "tags": [
+      "constitutional law",
+      "minor"
+    ]
   },
   {
     "abstract": null,
@@ -549,7 +688,11 @@
     "title": "Book Note: Losing the Vote, the Impact of Prisoner Disenfranchisement",
     "type": "misc",
     "volume": null,
-    "year": "1999"
+    "year": "1999",
+    "tags": [
+      "review",
+      "minor"
+    ]
   },
   {
     "abstract": null,
@@ -568,7 +711,11 @@
     "title": "Book Note: Data Smog/The Transparent Society",
     "type": "misc",
     "volume": null,
-    "year": "1999"
+    "year": "1999",
+    "tags": [
+      "review",
+      "minor"
+    ]
   },
   {
     "abstract": null,
@@ -587,6 +734,9 @@
     "title": "Recent Developments: Antitrust",
     "type": "misc",
     "volume": null,
-    "year": "1999"
+    "year": "1999",
+    "tags": [
+      "minor"
+    ]
   }
 ]
