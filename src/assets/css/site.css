@@ -280,7 +280,6 @@ button {
     td.legendcell {
         padding: 0px 15px;
     }
-    /* THE LEGENDCELL CLASS DOES NOT WORK AT ALL AND I HAVE SHOVED IT INLINE. (no fucking clue why the legend cell won't work)*/
 
     .legendtable {
         margin-left: 20px;
