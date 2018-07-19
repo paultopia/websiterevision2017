@@ -4,6 +4,35 @@
 
 <research></research>
 
+<p>
+  <h4>Legend:</h4>
+  <table>
+    <tr>
+      <td class="legendcell">
+        <img src="../../assets/icons/file-text.svg" class="pubsicon">
+      </td>
+      <td class="legendcell">
+        abstract
+      </td>
+      </tr>
+    <tr>
+      <td class="legendcell">
+        <img src="../../assets/icons/external-link.svg" class="pubsicon">
+      </td>
+      <td class="legendcell">
+        official/journal link
+      </td>
+      </tr>
+    <tr>
+      <td class="legendcell">
+        <img src="../../assets/icons/cloud-download.svg" class="pubsicon">
+      </td>
+      <td class="legendcell">unofficial/preprint link (may not be final version)
+      </td>
+    </tr>
+    </table>
+</p>
+
        <h3>Book</h3>
 <p><em>The Rule of Law in the Real World</em>, Cambridge University Press 2016. <br> For more information, go to <a href="http://rulelaw.net">rulelaw.net</a>.</p>
             <h3>Articles</h3>
