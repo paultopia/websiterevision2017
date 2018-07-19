@@ -265,6 +265,8 @@ button {
         text-align: left;
     }
 
+
+
     th:first-child, td:first-child {
         padding-left: 0; }
 
@@ -275,12 +277,15 @@ button {
         display: none;
     }
 
-    td.legendcell {
+    tr.legendcell {
         padding: 0px, 15px !important;
+        padding-bottom: -10px;
     }
+    /* THE LEGENDCELL CLASS DOES NOT WORK AT ALL AND I HAVE SHOVED IT INLINE. (no fucking clue why the legend cell won't work)*/
 
     .legendtable {
-        margin-left: 10px;
+        margin-left: 20px;
+        border-collapse: collapse;
     }
 
 

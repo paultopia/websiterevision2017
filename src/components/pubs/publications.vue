@@ -6,28 +6,28 @@
 
 <p>
   <h4>Legend:</h4>
-  <table>
-    <tr>
-      <td class="legendcell">
+  <table class="legendtable">
+    <tr class="legendcell">
+      <td style="padding: 1px 15px">
         <img src="../../assets/icons/file-text.svg" class="pubsicon">
       </td>
-      <td class="legendcell">
+      <td style="padding: 1px 15px">
         abstract
       </td>
       </tr>
     <tr>
-      <td class="legendcell">
+      <td style="padding: 1px 15px">
         <img src="../../assets/icons/external-link.svg" class="pubsicon">
       </td>
-      <td class="legendcell">
+      <td style="padding: 1px 15px">
         official/journal link
       </td>
       </tr>
     <tr>
-      <td class="legendcell">
+      <td style="padding: 1px 15px">
         <img src="../../assets/icons/cloud-download.svg" class="pubsicon">
       </td>
-      <td class="legendcell">unofficial/preprint link (may not be final version)
+      <td style="padding: 1px 15px">unofficial/preprint link (may not be final version)
       </td>
     </tr>
     </table>
