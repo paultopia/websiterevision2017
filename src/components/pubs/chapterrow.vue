@@ -4,9 +4,9 @@
         <td>pp. {{ art.firstpage }}-{{ art.lastpage }} in {{ art.editor }}, ed., {{ art.book }}<span v-if="art.coauthor"> (with {{ art.coauthor }})</span></td>
         <td>{{ art.year }}</td>
         <td>
-        <span class="hint--bottom" aria-label="abstract/full citation" v-on:click="abs()"><img src="../../assets/icons/file-text.svg" class="pubsicon"></span>
-        <a class="hint--bottom" aria-label="publisher link" v-if="art.publink" :href="art.publink"><img src="../../assets/icons/external-link.svg" class="pubsicon"></a>
-<a class="hint--bottom" aria-label="alternative download link" v-if="art.altlink" :href="art.altlink"><img src="../../assets/icons/cloud-download.svg" class="pubsicon"></a>
+        <span v-on:click="abs()"><img src="../../assets/icons/file-text.svg" class="pubsicon"></span>
+        <a v-if="art.publink" :href="art.publink"><img src="../../assets/icons/external-link.svg" class="pubsicon"></a>
+<a v-if="art.altlink" :href="art.altlink"><img src="../../assets/icons/cloud-download.svg" class="pubsicon"></a>
 <!-- Why do I have one span and two anchors with the same function?! Also I need to replace the tooltops with labels. -->
 
         </td>
@@ -22,9 +22,10 @@
 <newcitation :art="art"></newcitation></p>
 
 </td>
-<td style="vertical-align: top;"><span class="hint--bottom" aria-label="close abstract" v-on:click="line()">
+<td style="vertical-align: top;"><span v-on:click="line()">
 <img src="../../assets/icons/times.svg" class="pubsicon">
-</span></td>
+</span>         <a v-if="art.publink" :href="art.publink"><img src="../../assets/icons/external-link.svg" class="pubsicon"></a>
+<a v-if="art.altlink" :href="art.altlink"><img src="../../assets/icons/cloud-download.svg" class="pubsicon"></a> </td>
     </tr>
 </template>
 
