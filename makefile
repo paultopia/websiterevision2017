@@ -4,7 +4,10 @@ GOWDERIO = ${gowderio}
 PAULGOWDERCOM = ${paulgowdercom}
 # I don't want to expose usernames and servers, set in env variable via api keys file
 
-all: deploy
+all: cleanup
+
+cleanup: deploy
+	python clearcloudflare.py
 
 deploy: build
 	ssh $(PAULGOWDERCOM) "rm -rf public_html/paul-gowder.com/static/" # cleanup old versions of compiled files
