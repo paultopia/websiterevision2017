@@ -189,16 +189,16 @@
   type: disciplinary
 - years: '2013-4'
   role: 'Reviewer, Journal of Politics'
-  type: disciplinary
+  type: 'disciplinary'
 - years: '2017'
   role: 'Reviewer, Critical Review of International Social and Political Philosophy'
   type: disciplinary
 - years: '2018'
   role: 'Reviewer, Law & Social Inquiry'
   type: disciplinary
-  - years: '2018'
+- years: '2018'
   role: 'Reviewer, Social Theory & Practice'
   type: disciplinary
-  - years: '2018'
+- years: '2018'
   role: 'Reviewer, Routledge'
   type: disciplinary
