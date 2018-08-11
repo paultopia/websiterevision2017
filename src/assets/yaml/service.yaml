@@ -1,4 +1,14 @@
 - years: 2017-
+  subentity: College of Law
+  entity: University of Iowa
+  role: 'Member, J.D. Admissions Committee'
+  type: university
+- years: 2017-8
+  subentity: College of Law
+  entity: University of Iowa
+  role: 'Chair, S.J.D. Admissions Committee'
+  type: university
+- years: 2017-
   subentity: Obermann Center for Advanced Studies
   entity: University of Iowa
   role: Advisory Board Member
@@ -53,7 +63,7 @@
   entity: University of Iowa
   role: 'Member, Speakers Committee'
   type: university
-- years: 2012-7
+- years: 2012-8
   subentity: College of Law
   entity: University of Iowa
   role: 'Judge, AAI Moot Court'
@@ -182,4 +192,13 @@
   type: disciplinary
 - years: '2017'
   role: 'Reviewer, Critical Review of International Social and Political Philosophy'
+  type: disciplinary
+- years: '2018'
+  role: 'Reviewer, Law & Social Inquiry'
+  type: disciplinary
+  - years: '2018'
+  role: 'Reviewer, Social Theory & Practice'
+  type: disciplinary
+  - years: '2018'
+  role: 'Reviewer, Routledge'
   type: disciplinary
