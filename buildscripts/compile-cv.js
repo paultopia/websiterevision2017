@@ -93,6 +93,8 @@ const template = fs.readFileSync("./cvtex/template.tex", "utf8");
 
 const input = Mustache.render(template, templatedata);
 
+fs.writeFileSync("./currentcv.tex", input)
+
 const output = fs.createWriteStream('./src/assets/pdf/gowdercv.pdf');
 
 const opts = {cmd: 'xelatex',
