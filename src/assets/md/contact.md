@@ -8,7 +8,7 @@ I really prefer not to receive unsolicited telephone calls, and I very rarely ch
 
 Other web presences that you might use to reach me, find out more about me, etc.: 
 
-- [Official law school profile](http://www.law.uiowa.edu/faculty/paul-gowder)
+- [Official law school profile](http://www.law.uiowa.edu/faculty/paul-gowder) and [Law Library publications list](https://library.law.uiowa.edu/paul-gowder)
 
 - [Official political science department profile](http://clas.uiowa.edu/polisci/people/paul-gowder)
 
@@ -16,7 +16,7 @@ Other web presences that you might use to reach me, find out more about me, etc.
 
 - [Linkedin](http://www.linkedin.com/in/paulgowder)
 
-- [PhilPapers](http://philpapers.org/profile/12056)
+- [PhilPapers](http://philpapers.org/profile/12056) and [PhilPeople](https://philpeople.org/profiles/paul-gowder)
 
 - [Orcid](http://orcid.org/0000-0001-7641-585X)
 
