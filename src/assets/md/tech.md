@@ -8,21 +8,27 @@ I am also currently (as of Spring 2019) teaching a stats course for law students
 
 Here's a collection of interests.
 
-## Problems that interest me
+## Useful Stuff I've Made 
+
+- [Plottyprint](https://github.com/paultopia/plottyprint) --- a small Python library to generate zero-effort black and white data visualizations for print use, without [chart junk](https://infovis-wiki.net/wiki/Chart_Junk). 
+
+- [Dirtyclean](https://github.com/paultopia/dirtyclean), a Python micro-library to quickly clean strings for textmining, mostly devoted to getting rid of things like unicode punctuation).
+
+- A collection of CLI apps to do small useful things to PDFs, including a java thing to [merge a folder of PDFs](https://github.com/paultopia/mergepdfs), which somehow got like 40+ github stars, but has an annoying JVM dependency and occasionally gets the order wrong.  So I [rewrote it in Swift](https://github.com/paultopia/pdfmerge), and Mac users should use that. I have another [thingey to add page numbers to PDFs](https://github.com/paultopia/batesstamp). 
+
+- [Minitrue](https://github.com/paultopia/minitrue), a slightly paranoid monitoring tool that I wrote for the Trump inauguration which takes and tweets out hashes of public web documents and then monitors them to see if they change, just in case Trump decides to cook the government books. 
+
+## Problems that interest me/Other Stuff I'm Working On
 
 - NLP, especially on legal text. I think that there's a lot of hidden structure in legal texts that should make automated reading a lot more prevalent than it currently is. Also, very few lawyers also have formal stats training (thanks Stanford political science!) and coding knowledge, so this is kind of low-hanging fruit for me. I have several live non-public research projects along these lines, public stuff mostly consists in tools in various states of completion. For example... 
 
-    - Frustrated by the effort required of creating decent black and white basic data visualizations for print without chart junk, I eventually wrote and released a small Python library called [Plottyprint](https://github.com/paultopia/plottyprint) to do it. 
-
     - I have a working and usable but not feature complete [wrapper for the courtlistener api](https://github.com/paultopia/lawpy) to download cases, trying to get around to adding more legal APIs to it.
     
-    - a Clojure [text-mining utility library](https://github.com/paultopia/tzara) that does things like tokenization but is in the middle of a delayed refactor (and hence is currently not working)... I may abandon it.
-    
-    - I've released a [micro-library to quickly clean strings for textmining](https://github.com/paultopia/dirtyclean) (mostly devoted to getting rid of things like unicode punctuation). 
+    - a Clojure [text-mining utility library](https://github.com/paultopia/tzara) that does things like tokenization but is in the middle of a delayed refactor (and hence is currently not working)... I may abandon it. 
     
     - I've started, but mostly put on the back-burner, [a chrome extension to extract data from web pages and do basic stats/visualizations](https://github.com/paultopia/browser-stats). Maybe I'll get back to this soon.
 
-- Teaching tech and data to non-tech people. 
+- Teaching tech and data to non-tech people (in addition to my Spring 2019 class, [Introduction to Quantitative and Computational Legal Reasoning](http://sociologicalgobbledygook.com/), A.K.A. Sociological Gobbledygook).
 
     - In the entire 2014-5 academic year I taught an experimental class called the Policy Lab, in which I gathered a group of law students and guest speakers from industry and the academy (including from really fancy places like IBM and big law firms) to examine the impact of internet-mediated cross-jurisdictional practice, machine learning, computational contracts, and other disruptive legal technologies on access to justice. 
     
@@ -30,22 +36,9 @@ Here's a collection of interests.
         
     - I've tried to explain probability to law students, e.g. with a [micro-simulation of the Monty Hall problem](http://paul-gowder.com/montyhall/). 
     
-    - And then, of course, there's [Introduction to Quantitative and Computational Legal Reasoning](http://sociologicalgobbledygook.com/), A.K.A. Sociological Gobbledygook.
-
 - Afflicting the comfortable and comforting the afflicted. 
-
-    - Right around the 2017 inauguration, I pushed out into the world a [quick monitoring tool](https://github.com/paultopia/minitrue) to tweet out hashes of public web documents and catch them if they change, just in case Trump decides to cook the government books. 
     
     - I'm also working on several game-theory informed proposals to build tools to solve public commitment problems in order to shift power between mass and elite. My article "[Transformative Legal Technology and the Rule of Law](https://utpjournals.press/doi/abs/10.3138/utlj.2017-0047)" in the University of Toronto Law Journal contains a sketch of an idea I have for a nonprofit platform to allow consumers to negotiate in the aggregate to demand changes to form contracts from the likes of cable companies, phone companies, etc.; if there's sufficient interest I may build it.
-
-    - Taking functionality offered by big complex applications and yanking it out into simple, small commandline unixey things. Mostly involving document processing. For example, 
-
-    - somehow I got 42 github stars on [a thingey to merge a folder of PDFs](https://github.com/paultopia/mergepdfs). Somehow that gets the numbers wrong, and it's in Java which has the annoying JVM dependency, so I rewrote it as a self-contained OSX binary [in Swift](https://github.com/paultopia/pdfmerge). 
-    
-    - I have another [thingey to add page numbers to PDFs](https://github.com/paultopia/batesstamp). 
-    
-    - I'm working on [pulling data out of MS Word documents in browser](https://github.com/paultopia/dedocx/tree/master/browser), but that project is on the backburner.
-    
 
 
 ## Technologies of choice.
@@ -54,11 +47,11 @@ Here's a collection of interests.
 
 - Datavis: ggplot, Seaborn, Bokeh, plotly.  You can see some of my favorite flashy visualizations on the [book site](http://rulelaw.net/).
 
-- General programming: Clojure/Script for bigger projects, Python for smaller and quicker stuff. I'm picking up Swift and may switch it to my daily driver soon.
+- General programming: Python, Clojure/Script. I'm picking up Swift and may switch it to my daily driver soon.
 
 - Editors: Spacemacs, vim for quick terminal edits, the magical iPython Notebook for quick-iteration working through problems and displaying [quick and dirty analyses](http://rulelaw.net/aba/).
 
-- Web: Luminus or Flask for the back-end, Reagent or raw JS for the front, Heroku or Digital Ocean for serving.  I'm mostly over CSS frameworks (except for Skeleton) thanks to the magic of Flexbox.
+- Web: Flask for the back-end, Reagent or raw JS for the front, Heroku for serving.  I'm mostly over CSS frameworks (except for Skeleton) thanks to the magic of Flexbox.
 
 - Database: Postgres.
 
