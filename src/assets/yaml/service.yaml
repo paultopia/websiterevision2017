@@ -1,3 +1,8 @@
+- years: '2019'
+  subentity: 'College of Law'
+  entity: 'University of Iowa'
+  role: 'Member, Curricular and Community Enhancement Committee'
+  type: 'university'
 - years: 2017-
   subentity: College of Law
   entity: University of Iowa
@@ -104,7 +109,7 @@
   entity: Harvard Law School
   role: Public Relations Chair
   type: university
-- years: 2016-
+- years: 2016-9
   role: 'Member, Iowa City Telecommunications Commission'
   type: community
 - years: '2016'

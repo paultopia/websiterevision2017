@@ -1,5 +1,12 @@
 [
   {
+    "years": "2019",
+    "subentity": "College of Law",
+    "entity": "University of Iowa",
+    "role": "Member, Curricular and Community Enhancement Committee",
+    "type": "university"
+  },
+  {
     "years": "2017-",
     "subentity": "College of Law",
     "entity": "University of Iowa",
@@ -7,13 +14,13 @@
     "type": "university"
   },
   {
-    "years": "2017-",
+    "years": "2017-9",
     "entity": "University of Iowa",
     "role": "Member, Faculty Judicial Commission",
     "type": "university"
   },
   {
-    "years": "2017-8",
+    "years": "2017-",
     "subentity": "College of Law",
     "entity": "University of Iowa",
     "role": "Chair, S.J.D. Admissions Committee",
@@ -146,7 +153,7 @@
     "type": "university"
   },
   {
-    "years": "2016-",
+    "years": "2016-9",
     "role": "Member, Iowa City Telecommunications Commission",
     "type": "community"
   },
@@ -221,7 +228,7 @@
     "type": "disciplinary"
   },
   {
-    "years": "2016",
+    "years": "2016, 8-9",
     "role": "Reviewer, McGill University Press",
     "type": "disciplinary"
   },
@@ -251,7 +258,7 @@
     "type": "disciplinary"
   },
   {
-    "years": "2014, 6, 7",
+    "years": "2014, 6, 7, 9",
     "role": "Reviewer, European Journal of Political Theory",
     "type": "disciplinary"
   },
@@ -291,7 +298,7 @@
     "type": "disciplinary"
   },
   {
-    "years": "2018",
+    "years": "2018-9",
     "role": "Reviewer, Northwestern University Law Review",
     "type": "disciplinary"
   },
