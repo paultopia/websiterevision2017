@@ -112,3 +112,12 @@ const inputPrivate = Mustache.render(templatePrivate, templatedata);
 const outputPrivate = fs.createWriteStream('./cvtex/private/gowdercv_private.pdf');
 
 latex(inputPrivate).pipe(outputPrivate);
+
+
+const templateAbbr = fs.readFileSync("./cvtex/abbreviated.tex", "utf8");
+
+const inputPrivate = Mustache.render(templatePrivate, templatedata);
+
+const outputPrivate = fs.createWriteStream('./cvtex/private/gowdercv_private.pdf');
+
+latex(inputPrivate).pipe(outputPrivate);
