@@ -15,11 +15,12 @@ notes:
     'The Health Insurance Mandate Really is a Tax...' is an only slightly
     changed adaptation of 'Death and Taxes...'
 humanlang:
-  - Attic Greek (basic reading level)
+  - ' Attic Greek (basic reading level, rusty)'
 computerlang:
-  - Python (intermediate)
-  - ' R (intermediate)'
+  - ' Python (intermediate)'
+  - ' R (intermediate, rusty)'
   - ' Clojure (intermediate)'
+  - ' Swift (beginner)'
   - ' Javascript (rudimentary)'
 practice:
   - employer: Victor M. Glasberg & Associates
@@ -32,7 +33,7 @@ practice:
     role: Summer Law Clerk
     years: '1999'
 bars:
-  - Louisiana
+  - ' Louisiana'
   - ' Massachusetts'
   - ' Oregon'
   - ' Virginia'

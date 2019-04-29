@@ -27,6 +27,10 @@
                         <br>(Co-Author with {{ book.coauthor }})
                         </span>
 
+                        <span v-if="book.note">
+                        <br>{{ book.note }}
+                        </span>
+
                     </td><td>
                         {{ book.publisher }}
 

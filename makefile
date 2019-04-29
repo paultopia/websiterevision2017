@@ -20,6 +20,9 @@ deploy: build
 build: yaml2json updatedate buildcv
 	npm run build
 
+local: yaml2json updatedate buildcv
+	npm run dev
+
 yaml2json:
 	node ./buildscripts/yaml-to-json.js
 
