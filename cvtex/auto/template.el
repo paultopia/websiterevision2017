@@ -10,6 +10,7 @@
     "moderncv"
     "moderncv10"
     "textcomp"
+    "multicol"
     "inputenc"
     "geometry"))
  :latex)

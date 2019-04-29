@@ -7,6 +7,7 @@
 
 \documentclass[letterpaper]{moderncv} 
 \usepackage{textcomp}
+\usepackage{multicol}
 % moderncv themes
 \moderncvstyle{classic}           % style options are 'casual' (default), 'classic', 'oldstyle' and 'banking'
 \moderncvcolor{green}               % color options 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
@@ -262,12 +263,16 @@
 <</userv>>
 
 \subsection{Disciplinary Service}
-<<#dserv>>
-\cvitem
-{<<years>>}
-{<<role>>.}
+\hspace{1cm} \textit{Peer Reviewer for (various years)}
+\begin{multicols}{2}
+
+  <<#refing>>
+  \hspace*{1cm}
+  <<.>>
+  \newline
+  <</refing>>
+\end{multicols}
 \vspace{1mm}
-<</dserv>>
 \subsection{Community Service and Outreach}
 <<#cserv>>
 \cvitem
@@ -284,7 +289,7 @@
 \cvitem{Major Fields}{Political Theory. Political Institutions.}
 \cvitem{Minor Fields}{American Politics.}
 \subsection{Languages}
-\cvitem{Human}{English (native). Attic Greek (rudimentary reading).}
+\cvitem{Human}{English (native). Attic Greek (rudimentary reading, rusty).}
 \cvitem{Computer}{<<#misc.computerlang>><<.>>. <</misc.computerlang>>}
 \subsection{Bar Admissions}
 \cvitem{}{<<#misc.bars>><<.>>. <</misc.bars>>}

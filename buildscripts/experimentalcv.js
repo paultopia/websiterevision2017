@@ -97,6 +97,8 @@ const template = fs.readFileSync("./cvtex/private/experimental.tex", "utf8");
 
 const input = Mustache.render(template, templatedata);
 
+fs.writeFileSync("./cvtex/private/current_experimental_cv.tex", input)
+
 const output = fs.createWriteStream('./cvtex/private/experimentalcv.pdf');
 
 const opts = {cmd: 'xelatex',

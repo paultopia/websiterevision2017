@@ -9,6 +9,7 @@ const presentations = require('../src/assets/json/presentations.json');
 const publications = require('../src/assets/json/publications.json');
 const service = require('../src/assets/json/service.json');
 const forthcoming = require('../src/assets/json/forthcoming.json');
+const refereeing = require('../src/assets/json/refereeing.json');
 
 const customTags = [ '<<', '>>' ];
 Mustache.tags = customTags;
@@ -88,7 +89,9 @@ const lawreview = publications.filter(p => p.type === "law review").sort(chronTh
 const chapters = publications.filter(p => p.type === "chapter").sort(chronThenTitle);
 const miscpubs = publications.filter(p => p.type === "misc").sort(chronThenTitle);
 
-const templatedata = {awards, basic, leadteaching, taships, misc, invited, conferences, campus, userv, dserv, cserv, books, peerreview, lawreview, chapters, miscpubs, forthcoming};
+const refing = refereeing.sort()
+
+const templatedata = {awards, basic, leadteaching, taships, misc, invited, conferences, campus, userv, dserv, cserv, books, peerreview, lawreview, chapters, miscpubs, forthcoming, refing};
 
 const template = fs.readFileSync("./cvtex/template.tex", "utf8");
 
