@@ -1,0 +1,941 @@
+%% start of file 'template.tex'.
+%% Based on a c.v. template (moderncv) that is Copyright 2006-2013 Xavier Danaux (xdanaux@gmail.com).
+%% Also based on code by Saad Quadri in latexresu.me
+%% modern cv under LaTeX Project Public License version 1.3c
+%% latexresu.me under MIT license. 
+%% Paul Gowder additions under MIT license.
+
+\documentclass[letterpaper]{moderncv} 
+\usepackage{textcomp}
+
+%%%%% STUFF FROM SO
+
+\newcommand*{\mycvlistdoubleitem}[3][.25em]{%
+  \cvitem[#1]{}{\begin{minipage}[t]{\listdoubleitemcolumnwidth}#2\end{minipage}%
+  \hfill% fill of \separatorcolumnwidth
+  \ifthenelse{\equal{#3}{}}%
+    {}%
+    {\begin{minipage}[t]{\listdoubleitemcolumnwidth}#3\end{minipage}}}} 
+
+%%%%%%%
+
+% moderncv themes
+\moderncvstyle{classic}           % style options are 'casual' (default), 'classic', 'oldstyle' and 'banking'
+\moderncvcolor{green}               % color options 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
+%\renewcommand{\familydefault}{\sfdefault}         % to set the default font; use '\sfdefault' for the default sans serif font, '\rmdefault' for the default roman one, or any tex font name
+%\nopagenumbers{}                                  % uncomment to suppress automatic page numbering for CVs longer than one page
+
+% character encoding
+\usepackage[utf8]{inputenc}                       % if you are not using xelatex ou lualatex, replace by the encoding you are using
+
+% adjust the page margins
+\usepackage[scale=0.75]{geometry}
+\setlength{\hintscolumnwidth}{2cm}                % if you want to change the width of the column with the dates
+%\setlength{\makecvtitlenamewidth}{10cm}           % for the 'classic' style, if you want to force the width allocated to your name and avoid line breaks. be careful though, the length is normally calculated to avoid any overlap with your personal info; use this at your own typographical risks...
+    % Profile
+\name{Paul Gowder}{}
+\address{Last update: April 29, 2019} %% total hack to get last rev date instead of
+                                %% address in here.
+\phone[office]{319-384-3202 (office)}
+\email{pgowder@post.harvard.edu}
+\homepage{gowder.io}
+    \begin{document}
+\makecvtitle
+
+\lfoot{\thepage}
+
+%
+% positions
+%
+\section{Academic Positions}
+\cventry
+{09/12-Present}
+{Professor of Law}
+{University of Iowa}
+{Iowa City, IA}
+{}
+{\begin{itemize}%
+	\item Associate Professor of Law (pre-tenure): 2012-2017.
+	\item Professor of Law (tenured): 2017-.
+	\item Courtesy appointments in Political Science (2012-), Philosophy (2016-)
+	\end{itemize}}
+%
+% education
+%
+\section{Education}
+\cventry
+{2012}
+{Ph.D., Political Science}
+{Stanford University}
+{}
+{\textit{Stanford, CA}}
+{}
+\cventry
+{2000}
+{J.D.}
+{Harvard Law School}
+{}
+{\textit{Cambridge, MA}}
+{}
+\cventry
+{1997}
+{B.A., Political Science}
+{California State University}
+{}
+{\textit{Los Angeles, CA}}
+{}
+%
+% Publications
+%
+\section{Publications}
+\subsection{Books}
+\cventry
+{2016}
+{The Rule of Law in the Real World}
+{}
+{\textit{Cambridge University Press}}
+{}
+{Translated into Ukrainian (2019)}
+\vspace{1mm}
+\vspace{1mm}
+\subsection{Peer-Reviewed/Edited Articles}
+\cventry
+{2018}
+{Transformative Legal Technology and the Rule of Law}
+{}
+{\textit{University of Toronto Law Journal}}
+{}
+{68(S1):82-105. }
+\vspace{1mm}
+\cventry
+{2015}
+{What the Laws Demand of Socrates---and of Us}
+{}
+{\textit{The Monist}}
+{}
+{98(4):360-374. }
+\vspace{1mm}
+\cventry
+{2014}
+{Institutional Corruption and the Rule of Law}
+{}
+{\textit{Les Ateliers de l'Ethique/The Ethics Forum}}
+{}
+{9(1):84-102. }
+\vspace{1mm}
+\cventry
+{2014}
+{Institutional Values, or How to Say What Democracy Is}
+{}
+{\textit{Southwest Philosophy Review}}
+{}
+{30(1):235-242. }
+\vspace{1mm}
+\cventry
+{2014}
+{Market Unfreedom}
+{}
+{\textit{Critical Review}}
+{}
+{26:3-4. (peer-edited, invited contribution, not blind reviewed)}
+\vspace{1mm}
+\cventry
+{2013}
+{Death and Taxes in NFIB v. Sebelius}
+{}
+{\textit{Public Affairs Quarterly}}
+{}
+{27(3):243-266. }
+\vspace{1mm}
+\cventry
+{2013}
+{The Rule of Law and Equality}
+{}
+{\textit{Law \& Philosophy}}
+{}
+{32(5):565-618. }
+\vspace{1mm}
+\cventry
+{2006}
+{Secrecy as Mystification of Power: Meaning and Ethics in the Security State}
+{}
+{\textit{ I/S: A Journal of Law and Policy for the Information Society}}
+{}
+{2(1):1-26. (supported by the Century Foundation; reprinted in Maret and Goldman, eds., Understanding Government Secrecy: Classic and Contemporary Readings)}
+\vspace{1mm}
+\vspace{1mm}
+\subsection{Law Review (Student-Edited) Articles}
+\cventry
+{2018}
+{Resisting the Rule of Men}
+{}
+{\textit{Saint Louis University Law Journal}}
+{}
+{62(2):333-359. }
+\vspace{1mm}
+\cventry
+{2016}
+{Democratic Paternalism, not Libertarian Paternalism}
+{}
+{\textit{Georgetown Journal of Law and Public Policy}}
+{}
+{14:747-787. }
+\vspace{1mm}
+\cventry
+{2016}
+{Transnational Litigation as a Prisoner's Dilemma}
+{}
+{\textit{North Carolina Law Review}}
+{}
+{94(3):751-816. (co-author with Maya Steinitz)}
+\vspace{1mm}
+\cventry
+{2015}
+{Critical Race Science and Critical Race Philosophy of Science}
+{}
+{\textit{Fordham Law Review}}
+{}
+{83(6):3155-3177. (invited contribution)}
+\vspace{1mm}
+\cventry
+{2015}
+{The Rule of Law Against Sovereign Immunity in a Democratic State}
+{}
+{\textit{Texas Law Review See Also}}
+{}
+{93:247-262. (online law review commentary)}
+\vspace{1mm}
+\cventry
+{2014}
+{Democracy, Solidarity and the Rule of Law: Lessons from Athens}
+{}
+{\textit{Buffalo Law Review}}
+{}
+{62(1):1-67. }
+\vspace{1mm}
+\cventry
+{2014}
+{Equal Law in an Unequal World}
+{}
+{\textit{Iowa Law Review}}
+{}
+{99:1021-1081. }
+\vspace{1mm}
+\cventry
+{2014}
+{Racial Classification and Ascriptive Injury}
+{}
+{\textit{Washington University Law Review}}
+{}
+{92(2):325-396. }
+\vspace{1mm}
+\cventry
+{2014}
+{The Countermajoritarian Complaint}
+{}
+{\textit{Transnational Law and Contemporary Problems}}
+{}
+{23:7-33 . (invited contribution)}
+\vspace{1mm}
+\cventry
+{2006}
+{Quasi-Public Executives}
+{}
+{\textit{Yale Law Journal}}
+{}
+{115(9):2254-2278. (co-author with K.A.D. Camara)}
+\vspace{1mm}
+\cventry
+{1998}
+{Remote Purchasing and Fundamental Fairness: The Sales and Use Tax Equalization Act}
+{}
+{\textit{Harvard Journal on Legislation}}
+{}
+{35:537-559. (major contributor within Harvard Legislative Research Bureau)}
+\vspace{1mm}
+\vspace{1mm}
+\subsection{Book Chapters}
+\cventry
+{2015}
+{Trust and Commitment: How Athens Rebuilt the Rule of Law}
+{}
+{in \textit{Theorizing Transitional Justice}}
+{}
+{Corradetti, Eiskovits, and Rotondi, ed., Ashgate, pp. 225-236.}
+\vspace{1mm}
+\cventry
+{2014}
+{The Health Insurance Mandate Really is a Tax, and That's a Good Thing Too}
+{}
+{in \textit{The Affordable Care Act Decision: Philosophical and Legal Implications}}
+{}
+{Allhoff and Hall, ed., Routledge, pp. 103-116.}
+\vspace{1mm}
+\vspace{1mm}
+
+\subsection{Forthcoming (all categories)}
+\cvitem
+{}
+{\textit{Reconstituting We the People: Frederick Douglass and Jurgen Habermas in Conversation}, forthcoming in Northwestern University Law Review 2019.}
+\vspace{1mm}
+\cvitem
+{}
+{\textit{Is Legal Cognition Computational? (When Will DeepVehicle Replace Judge Hercules?)}, forthcoming in Computational Legal Studies: The Promise and Challenge of Data-Driven Legal Research, edited by Ryan Whalen, Elgar (2019).}
+\vspace{1mm}
+\cvitem
+{}
+{\textit{Philosophical Approaches to Constitutional Law Methods}, forthcoming in Constitutional Law Methodology volume (title pending), edited by David Law and Malcolm Langford, Elgar (2019).}
+\vspace{1mm}
+
+\subsection{Miscellany}
+\cvitem
+{2018}
+{\textit{Institutions and Instrumentalization in International Law (Review of Fox-Decent and Criddle, Fiduciaries of Humanity)}, Tulsa Law Review Book Review Issue.}
+\vspace{1mm}
+\cvitem
+{2016}
+{\textit{The Rule of Law}, entry in Oxford Bibliographies in Political Science.}
+\vspace{1mm}
+\cvitem
+{2014}
+{\textit{Procedural Due Process: the Missing Casebook Chapter}, open access casebook chapter, released on SSRN.}
+\vspace{1mm}
+\cvitem
+{2014}
+{\textit{The Rule of Law}, entry in Sage Encyclopedia of Criminal Justice Ethics.}
+\vspace{1mm}
+\cvitem
+{2013}
+{\textit{The Serious Point}, a micro-contribution to the Green Bag/Journal of Law micro- symposium on Orin Kerr's "Theory of Law".}
+\vspace{1mm}
+\cvitem
+{2009}
+{\textit{"Shopping Malls and the First Amendment," "Masson v. New Yorker Magazine," and "Pruneyard Shopping Center v. Robins"}, entries in Schultz, ed., Encyclopedia of the United States Constitution (Facts on File).}
+\vspace{1mm}
+\cvitem
+{2008}
+{\textit{"Noerr-Pennington Doctrine," "Pruneyard Shopping Center v. Robins," and "Amalgamated Food Employees Union Local 590 v. Logan Valley Plaza, Inc"}, entries in Hudson, Schultz and Vile, eds., Encyclopedia of the First Amendment, (Congressional Quarterly Press).}
+\vspace{1mm}
+\cvitem
+{1999}
+{\textit{Book Note: Data Smog/The Transparent Society}, 12 Harvard Journal of Law and Technology 513 (student book note).}
+\vspace{1mm}
+\cvitem
+{1999}
+{\textit{Book Note: Losing the Vote, the Impact of Prisoner Disenfranchisement}, 12 Harvard Human Rights Journal 399 (student book note).}
+\vspace{1mm}
+\cvitem
+{1999}
+{\textit{Recent Developments: Antitrust}, 27 Journal of Law, Medicine, and Ethics 278 (student comment).}
+\vspace{1mm}
+
+
+\section{Grants, Awards, Honors}
+\cvitem
+{2014-5}
+{Institute for Advanced Study, Princeton, NJ: Member (School of Social Science).}
+\vspace{1mm}
+\cvitem
+{2014-5}
+{Law and Public Affairs Program, Princeton University (LAPA/Perkins Fellow, offered but declined).}
+\vspace{1mm}
+\cvitem
+{2014-5}
+{Edmond J. Safra Center for Ethics, Harvard University: Network Fellow.}
+\vspace{1mm}
+\cvitem
+{2014}
+{Montreal Political Theory Manuscript Award, Groupe de recherche interuniversitaire en philosophie politique de Montreal (for The Rule of Law in the Real World).}
+\vspace{1mm}
+\cvitem
+{2011-2}
+{Geballe Dissertation Prize Fellowship, Stanford University.}
+\vspace{1mm}
+\cvitem
+{2008-11}
+{Gerhard Casper Stanford Graduate Fellowship.}
+\vspace{1mm}
+\cvitem
+{2008-9}
+{Philanthropy and Civil Society Fellowship, Stanford University.}
+\vspace{1mm}
+\cvitem
+{1998}
+{Williston Contracts Competition (first place), Harvard Law School.}
+\vspace{1mm}
+
+
+\section{Presentations}
+\subsection{Invited Talks}
+\cvitem
+{2018}
+{\textit{Is Legal Cognition Computational?}, Hong Kong University, Workshop on the Emergence of Computational Legal Studies.}
+\vspace{1mm}
+\cvitem
+{2017}
+{\textit{Ethics of Augmentation}, University of Toronto, Centre for Ethics.}
+\vspace{1mm}
+\cvitem
+{2017}
+{\textit{Normative and Empirical Constitutionalism}, Research Methods in Constitutional Law Conference, University of Oslo.}
+\vspace{1mm}
+\cvitem
+{2017}
+{\textit{Popular Sovereignty with Weak Causality}, McGill University, Legal Theory Workshop.}
+\vspace{1mm}
+\cvitem
+{2017}
+{\textit{Two Models of Technological Change in Law}, University of Toronto, Centre for Innovation Law and Policy.}
+\vspace{1mm}
+\cvitem
+{2016}
+{\textit{The Rule of Law in the Real World (practitioner-oriented book presentation)}, American Bar Association, Rule of Law Initiative.}
+\vspace{1mm}
+\cvitem
+{2015}
+{\textit{Democratic Paternalism, not Libertarian Paternalism}, Georgetown University McDonough School of Business, Symposium on Nudging.}
+\vspace{1mm}
+\cvitem
+{2015}
+{\textit{Democratic Rule of Law Reform, Circa 403 B.C.E.}, Stanford University, Freeman Spogli Institute for International Studies and Stanford Law School.}
+\vspace{1mm}
+\cvitem
+{2015}
+{\textit{General Will, Causality, Equality}, Georgetown University, McDonough School of Business.}
+\vspace{1mm}
+\cvitem
+{2015}
+{\textit{Thinking Aloud About Vulnerability and Policy}, American Association of Law Schools Midyear Meeting, Workshop on Next Generation Issues on Sex, Gender and the Law (plenary session).}
+\vspace{1mm}
+\cvitem
+{2015}
+{\textit{What the Laws Demand of Socrates---and of Us}, Stanford University, Political Theory Workshop.}
+\vspace{1mm}
+\cvitem
+{2014}
+{\textit{Critical Race Science Studies?}, Fordham Law Review symposium on critical race theory and empirical methods.}
+\vspace{1mm}
+\cvitem
+{2014}
+{\textit{Racial Classification and Ascriptive Injury}, Loyola University Chicago School of Law faculty workshop.}
+\vspace{1mm}
+\cvitem
+{2014}
+{\textit{Underprotection, Domination, and Group-Subordinating Violence}, Cardozo Law School Conference on Republicanism and Criminal Law.}
+\vspace{1mm}
+\cvitem
+{2014}
+{\textit{What the Laws Demand of Socrates---and of Us}, Princeton University, Law and Public Affairs seminar.}
+\vspace{1mm}
+\cvitem
+{2014}
+{\textit{What the Laws Demand of Socrates---and of Us}, Loyola University New Orleans School of Law faculty workshop.}
+\vspace{1mm}
+\cvitem
+{2013}
+{\textit{How Demanding is Occupational Liberty?}, Annual Meeting of the American Philosophical Association, Pacific Division (invited commentary on Tomasi, Free Market Fairness).}
+\vspace{1mm}
+\subsection{Conference Presentations}
+\cvitem
+{2019}
+{\textit{Reconstituting We the People: Frederick Douglass and Jurgen Habermas in Conversation}, National Conference of Constitutional Law Scholars, Arizona State University.}
+\vspace{1mm}
+\cvitem
+{2019}
+{\textit{Reconstituting We the People: Frederick Douglass and Jurgen Habermas in Conversation}, National People of Color Legal Scholarship Conference, American University.}
+\vspace{1mm}
+\cvitem
+{2017}
+{\textit{Author/Respondent for Author Meets Critics session on The Rule of Law in the Real World}, Annual Meeting of the American Philosophical Association, Central Division.}
+\vspace{1mm}
+\cvitem
+{2017}
+{\textit{Beyond the Arab Spring: Digital Collective Action and the Rule of Law}, Loyola Constitutional Law Colloquium.}
+\vspace{1mm}
+\cvitem
+{2016}
+{\textit{Scalia, Equality, Rule of Law}, Southeast Association of Law Schools Annual Meeting.}
+\vspace{1mm}
+\cvitem
+{2016}
+{\textit{The Rule of Law in the Real World}, Loyola Constitutional Law Colloquium.}
+\vspace{1mm}
+\cvitem
+{2015}
+{\textit{Heaven Save Us From Legal Heroes}, American Association of Law Schools Annual Meeting, Law and Humanities Section.}
+\vspace{1mm}
+\cvitem
+{2015}
+{\textit{What the Laws Demand of Socrates---and of Us}, American Society for Legal History.}
+\vspace{1mm}
+\cvitem
+{2014}
+{\textit{A Respect-Centered Sex Discrimination Jurisprudence}, Southeast Association of Law Schools Annual Meeting.}
+\vspace{1mm}
+\cvitem
+{2014}
+{\textit{An Islamic Rule of Law}, Mid-Atlantic People of Color Legal Scholarship Conference.}
+\vspace{1mm}
+\cvitem
+{2014}
+{\textit{Racial Classification and Ascriptive Injury}, Midwest People of Color Legal Scholarship Conference.}
+\vspace{1mm}
+\cvitem
+{2014}
+{\textit{Racial Classification and Ascriptive Injury}, Mid-Atlantic Law and Society Association Annual Meeting.}
+\vspace{1mm}
+\cvitem
+{2014}
+{\textit{Racial Classification and Ascriptive Injury}, John Mercer Langston Conference.}
+\vspace{1mm}
+\cvitem
+{2014}
+{\textit{The Rule of Law in the Real World (two book MS chapters)}, Culp Colloquium at Duke Law School.}
+\vspace{1mm}
+\cvitem
+{2013}
+{\textit{Equal Law in an Unequal World}, Mid-Atlantic People of Color Legal Scholarship Conference.}
+\vspace{1mm}
+\cvitem
+{2013}
+{\textit{Equal Law in an Unequal World}, Arizona State University Legal Scholars Workshop.}
+\vspace{1mm}
+\cvitem
+{2013}
+{\textit{Equal Law in an Unequal World}, Sharing Scholarship, Building Teachers Development Workshop at Albany Law School.}
+\vspace{1mm}
+\cvitem
+{2013}
+{\textit{Equal Law in an Unequal World}, Southeast/Southwest People of Color Legal Scholarship Conference.}
+\vspace{1mm}
+\cvitem
+{2013}
+{\textit{Institutional Values, or How to Say What Democracy Is}, Southwestern Philosophical Society.}
+\vspace{1mm}
+\cvitem
+{2013}
+{\textit{The Countermajoritarian Complaint}, American Political Science Association.}
+\vspace{1mm}
+\cvitem
+{2013}
+{\textit{The People's Will and the People's Laws}, Association for Political Theory.}
+\vspace{1mm}
+\cvitem
+{2013}
+{\textit{The People's Will and the People's Laws}, American Political Science Association.}
+\vspace{1mm}
+\cvitem
+{2013}
+{\textit{The People's Will and the People's Laws}, Annual Meeting of the Law and Society Association.}
+\vspace{1mm}
+\cvitem
+{2013}
+{\textit{The People's Will and the People's Laws}, Loyola Constitutional Law Colloquium.}
+\vspace{1mm}
+\cvitem
+{2013}
+{\textit{The People's Will and the People's Laws}, Midwest People of Color Legal Scholarship Conference.}
+\vspace{1mm}
+\cvitem
+{2013}
+{\textit{The Rule of Law Will Not Set You Free}, Midwest Law and Economics Association.}
+\vspace{1mm}
+\cvitem
+{2012}
+{\textit{Death and Taxes in NFIB v. Sebelius}, Medical Humanities Conference, Western Michigan University.}
+\vspace{1mm}
+\cvitem
+{2012}
+{\textit{Democracy, Solidarity, and the Rule of Law: Lessons from Athens}, Big Ten Conference for Untenured Scholars, Indiana University Maurer School of Law.}
+\vspace{1mm}
+\cvitem
+{2012}
+{\textit{Equal Law in an Unequal World}, Washington University Regional Junior Faculty Workshop.}
+\vspace{1mm}
+\cvitem
+{2012}
+{\textit{Equal Law in an Unequal World}, Classcrits V, University of Wisconsin, Madison.}
+\vspace{1mm}
+\cvitem
+{2012}
+{\textit{The Countermajoritarian Complaint}, Loyola Constitutional Law Colloquium.}
+\vspace{1mm}
+\cvitem
+{2012}
+{\textit{Violence and Inequality: The Liberal Critique of Domination}, Western Political Science Association.}
+\vspace{1mm}
+\cvitem
+{2010}
+{\textit{Para-Ideal Theory and the Strategic Justification of Democracy}, Democracy as Idea and Practice Conference, University of Oslo.}
+\vspace{1mm}
+\cvitem
+{2010}
+{\textit{Para-Ideal Theory and the Strategic Justification of Democracy}, Canadian Political Science Association.}
+\vspace{1mm}
+\cvitem
+{2010}
+{\textit{When does the Rule of Law Persist? A Strategic Model of Institutional Endurance}, Midwest Law and Economics Association.}
+\vspace{1mm}
+\cvitem
+{2009}
+{\textit{Don't be Afraid, the Clown's Afraid Too: Deliberation, Participation, Tolerance and Fear}, Association for Political Theory.}
+\vspace{1mm}
+\cvitem
+{2009}
+{\textit{Making Space for Rosa Parks: Democratic Authorship as Political Autonomy}, Public Reason Political Philosophy Podcast Symposium.}
+\vspace{1mm}
+\cvitem
+{2009}
+{\textit{Strategic Morality and Para-Ideal Theory}, Graduate Conference in Political Philosophy, University of Pavia.}
+\vspace{1mm}
+\subsection{Campus Talks}
+\cvitem
+{2015}
+{\textit{Corruption and the Transnational Litigation Prisoner's Dilemma (Co-Author with Maya Steinitz)}, Iowa Legal Studies Workshop.}
+\vspace{1mm}
+\cvitem
+{2015}
+{\textit{General Will, Causality, Equality}, Institute for Advanced Study, School of Social Science.}
+\vspace{1mm}
+\cvitem
+{2015}
+{\textit{The Logic of Coordination/The Logic of Commitment (book MS chapters)}, Institute for Advanced Study, School of Social Science---Egalitarianism Workshop.}
+\vspace{1mm}
+\cvitem
+{2014}
+{\textit{Racial Classification and Ascriptive Injury}, Iowa Legal Studies Workshop.}
+\vspace{1mm}
+\cvitem
+{2012}
+{\textit{Equal Law in an Unequal World}, Iowa Legal Studies Workshop.}
+\vspace{1mm}
+\cvitem
+{2012}
+{\textit{The Countermajoritarian Complaint}, University of Iowa Food for Thought Speaker Series.}
+\vspace{1mm}
+\cvitem
+{2012}
+{\textit{The Countermajoritarian Complaint}, Annual Meeting of the American Society for Comparative Law (hosted at Iowa).}
+\vspace{1mm}
+\cvitem
+{2010}
+{\textit{The Oligarch, the Miser, and the Capitalist: Plato, Kant, and Marx on the Psychology and Politics of the Money-Hungry}, Stanford Ethics and Politics, Ancient and Modern Workshop.}
+\vspace{1mm}
+
+\section{Legal Practice}
+
+\cventry
+{2004-6}
+{Victor M. Glasberg and Associates}
+{Associate Attorney}
+{Alexandria, VA}
+{}
+{\begin{itemize}%
+	\item Civil rights litigation in small private public interest firm with caseload including employment discrimination,
+    police misconduct, First Amendment, due process and similar subject areas.
+	\end{itemize}}
+
+\cventry
+{2001-3}
+{Oregon Law Center}
+{Staff Attorney}
+{Ontario, OR}
+{}
+{\begin{itemize}%
+	\item Low-income legal services representation with caseload primarily centered on employment
+    (especially farmworker), housing, and public benefits litigation.
+	\end{itemize}}
+
+\cventry
+{1999}
+{ACLU of the National Capital Area}
+{Summer Law Clerk}
+{Washington, D.C.}
+{}
+{}
+
+
+\section{Consulting}
+
+\cventry
+{2018-present}
+{Facebook, Inc.}
+{Contract Researcher/Consultant}
+{Menlo Park, CA}
+{}
+{\begin{itemize}%
+	\item Consulting relating to questions surrounding elections and democratic
+    integrity. Full-time for two months in summer 2018, and then continuing on
+    part-time/as-needed basis thereafter. Formal relationship
+    as contractor via Pro Unlimited, Inc.
+	\end{itemize}}
+
+\cventry
+{07/2016}
+{JSTOR Labs}
+{Subject matter expert}
+{Ann Arbor, CA}
+{}
+{\begin{itemize}%
+	\item Participate as outside expert on a voluntary basis in weeklong design
+    sprint relating to potential expansion of scholarly archiving and discovery products.
+	\end{itemize}}
+
+\section{Teaching}
+\subsection{Lead Instructor}
+\cvitem
+{2019-}
+{Introduction to Quantitative and Computational Legal Reasoning, University of Iowa.}
+\vspace{1mm}
+\cvitem
+{2016-8}
+{Constitutional Law I, University of Iowa.}
+\vspace{1mm}
+\cvitem
+{2016-}
+{Torts, University of Iowa.}
+\vspace{1mm}
+\cvitem
+{2015-6}
+{Policy Lab, University of Iowa.}
+\vspace{1mm}
+\cvitem
+{2013-4}
+{Professional Responsibility, University of Iowa.}
+\vspace{1mm}
+\cvitem
+{2012-}
+{Constitutional Law II, University of Iowa.}
+\vspace{1mm}
+\cvitem
+{2010-2}
+{Topics in Political Science, Stanford University, Educational Program for Gifted Youth (Stanford campus, plus Singapore Honors Academy in 2011).}
+\vspace{1mm}
+\subsection{Teaching Assistant}
+\cvitem
+{2008}
+{Corruption Research Seminar, Stanford University.
+  \newline
+  (teaching assistant for Lawrence Lessig).
+}
+\vspace{1mm}
+\cvitem
+{2008}
+{Introduction to Global Justice, Stanford University.
+  \newline
+  (teaching assistant for Helena de Bres and Avia Pasternak).
+}
+\vspace{1mm}
+\cvitem
+{2008}
+{Philosophical Issues Concerning Race and Racism, Stanford University.
+  \newline
+  (teaching assistant for Debra Satz).
+}
+\vspace{1mm}
+\cvitem
+{2007}
+{Introduction to Political Philosophy, Stanford University.
+  \newline
+  (teaching assistant for Nadeem Hussein).
+}
+\vspace{1mm}
+
+\section{Service}
+\subsection{University Service}
+\cvitem
+{2019}
+{Member, Curricular and Community Enhancement Committee, University of Iowa, College of Law.}
+\vspace{1mm}
+\cvitem
+{2017-9}
+{Member, Faculty Judicial Commission, University of Iowa, .}
+\vspace{1mm}
+\cvitem
+{2017-}
+{Service on two Ph.D. committees and one M.A. committee, University of Iowa, Department of Philosophy.}
+\vspace{1mm}
+\cvitem
+{2017-}
+{Member, J.D. Admissions Committee, University of Iowa, College of Law.}
+\vspace{1mm}
+\cvitem
+{2017-}
+{Advisory Board Member, University of Iowa, Obermann Center for Advanced Studies.}
+\vspace{1mm}
+\cvitem
+{2017-}
+{Chair, S.J.D. Admissions Committee, University of Iowa, College of Law.}
+\vspace{1mm}
+\cvitem
+{2017}
+{Public/Student Presentation, "The Unfamiliar Threats to Free Speech", University of Iowa, Student Governmemt/Lecture Committee.}
+\vspace{1mm}
+\cvitem
+{2016-7}
+{Member, Honors and Awards Committee, University of Iowa, College of Law.}
+\vspace{1mm}
+\cvitem
+{2016-7}
+{Member, Diversity Committee, University of Iowa, College of Law.}
+\vspace{1mm}
+\cvitem
+{2016-}
+{Faculty Advisor, American Constitution Society Student Chapter, University of Iowa, College of Law.}
+\vspace{1mm}
+\cvitem
+{2016-}
+{Faculty Adviser, Black Law Students Association, University of Iowa, College of Law.}
+\vspace{1mm}
+\cvitem
+{2015-6}
+{Chair, Speakers Committee, University of Iowa, College of Law.}
+\vspace{1mm}
+\cvitem
+{2015-}
+{Service on one S.J.D. committee, and (2016-) adviser to another, University of Iowa, College of Law.}
+\vspace{1mm}
+\cvitem
+{2014, 6}
+{Faculty Advisor, AAI Moot Court Problem Creation, University of Iowa, College of Law.}
+\vspace{1mm}
+\cvitem
+{2012-8}
+{Judge, AAI Moot Court, University of Iowa, College of Law.}
+\vspace{1mm}
+\cvitem
+{2012-4}
+{Member, Speakers Committee, University of Iowa, College of Law.}
+\vspace{1mm}
+\cvitem
+{2010-11}
+{Graduate Admissions Committee, Stanford University, Department of Political Science.}
+\vspace{1mm}
+\cvitem
+{2008}
+{Chair, Ad Hoc Graduate Incentives Committee, Political Science Graduate Students Association, Stanford University, Department of Political Science.}
+\vspace{1mm}
+\cvitem
+{2008}
+{Graduate Organizer (interim), Global Justice Workshop, Stanford University, Department of Political Science.}
+\vspace{1mm}
+\cvitem
+{2008}
+{Graduate Organizer, Political Theory Workshop, Stanford University, Department of Political Science.}
+\vspace{1mm}
+\cvitem
+{2007-8}
+{Social Chair, Political Science Graduate Students Association, Stanford University, Department of Political Science.}
+\vspace{1mm}
+\cvitem
+{1999-2000}
+{Public Relations Chair, Harvard Law School, Student Public Interest Network.}
+\vspace{1mm}
+
+\subsection{Disciplinary Service}
+\hspace{1cm} \textit{Peer Reviewer for (various years)}
+
+
+
+\mycvlistdoubleitem{}{}
+
+
+\mycvlistdoubleitem{}{}
+
+
+\mycvlistdoubleitem{}{}
+
+
+\mycvlistdoubleitem{}{}
+
+
+\mycvlistdoubleitem{}{}
+
+
+\mycvlistdoubleitem{}{}
+
+
+\mycvlistdoubleitem{}{}
+
+
+\mycvlistdoubleitem{}{}
+
+
+\mycvlistdoubleitem{}{}
+
+
+\vspace{1mm}
+\subsection{Community Service and Outreach}
+\cvitem
+{2016-9}
+{Member, Iowa City Telecommunications Commission.}
+\vspace{1mm}
+\cvitem
+{2016}
+{Panelist: 'Family Law', Iowa LGBT Rural Summit (USDA/National Center for Lesbian Rights/Drake Law School).}
+\vspace{1mm}
+\cvitem
+{2016}
+{Presentation, 'Loving v. Virginia,' African-American Museum of Iowa/Cedar Rapids Public Library.}
+\vspace{1mm}
+\cvitem
+{2015, 6}
+{Guest blogger, Prawfsblawg.}
+\vspace{1mm}
+\cvitem
+{2015}
+{Presentation, 'The Leadership Rationale,' The Past, Present, \& Future of Diversity and Inclusion Within the Central Iowa Legal Community.}
+\vspace{1mm}
+\cvitem
+{2014}
+{Editorial, "Court Moves Toward Death for Contraceptive Coverage": Des Moines Register,.}
+\vspace{1mm}
+\cvitem
+{2014}
+{Panelist, Ethical Perspectives on the News: KCRG TV (discussing religion and public life, Hobby Lobby, etc.).}
+\vspace{1mm}
+\cvitem
+{2014}
+{Presentation, Voting Rights in the United States: Iowa Interfaith Alliance, Intersections speaker series.}
+\vspace{1mm}
+\cvitem
+{2013}
+{Guest blogger, Concurring Opinions.}
+\vspace{1mm}
+\cvitem
+{2012}
+{Editorial: "Independent Judiciary": Cedar Rapids Gazette (with Nicholas Johnson).}
+\vspace{1mm}
+\cvitem
+{2010}
+{Presentation: The Law and Ethics of Farm Worker Internships, Cultivating Food Justice Conference.}
+\vspace{1mm}
+\cvitem
+{2005}
+{Editorial: "A Naked Assault on the Public and Courts": Oregon State Bar Journal.}
+\vspace{1mm}
+\cvitem
+{2001-3}
+{Executive Board Member, Oregon Rural Action.}
+\vspace{1mm}
+% 
+% languages
+%
+\section{Miscellany}
+\subsection{Ph.D.}
+\cvitem{Dissertation}{\textit{An Egalitarian	Theory of the	Rule of Law}.}
+\cvitem{Major Fields}{Political Theory. Political Institutions.}
+\cvitem{Minor Fields}{American Politics.}
+\subsection{Languages}
+\cvitem{Human}{English (native). Attic Greek (rudimentary reading, rusty).}
+\cvitem{Computer}{ Python (intermediate).  R (intermediate, rusty).  Clojure (intermediate).  Swift (beginner).  Javascript (rudimentary). }
+\subsection{Bar Admissions}
+\cvitem{}{ Louisiana.  Massachusetts.  Oregon.  Virginia. }
+\subsection{Less Formal Education}
+\cvitem{2017}{Recurse Center (summer 2 half-batch).}
+\cvitem{2013}{University College Cork, Attic Greek Summer Immersion.}
+\subsection{Notes}
+\cvitem{}{Market Unfreedom was reviewed only by (specialist) editor, not external referees.} \cvitem{}{'The Rule of Law Against Sovereign Immunity...' was published in an online supplement.} \cvitem{}{Bar Admissions are not currently in active/authorized to practice status.} \cvitem{}{'Secrecy as Mystification of Power' was supported by the Century Foundation and was reprinted in Maret and Goldman, eds., Understanding Government Secrecy: Classic and Contemporary Readings (Greenwood Press/Libraries Unlimited, 2009).} \cvitem{}{'The Health Insurance Mandate Really is a Tax...' is an only slightly changed adaptation of 'Death and Taxes...'} 
+\cvitem{}{Research Assistant to Lawrence Lessig (2006-8, 1999), and to Richard Sobel (1998).}
+\ 
+\end{document}

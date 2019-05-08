@@ -7,7 +7,18 @@
 
 \documentclass[letterpaper]{moderncv} 
 \usepackage{textcomp}
-\usepackage{multicol}
+
+%%%%% STUFF FROM SO
+
+\newcommand*{\mycvlistdoubleitem}[3][.25em]{%
+  \cvitem[#1]{}{\begin{minipage}[t]{\listdoubleitemcolumnwidth}#2\end{minipage}%
+  \hfill% fill of \separatorcolumnwidth
+  \ifthenelse{\equal{#3}{}}%
+    {}%
+    {\begin{minipage}[t]{\listdoubleitemcolumnwidth}#3\end{minipage}}}} 
+
+%%%%%%%
+
 % moderncv themes
 \moderncvstyle{classic}           % style options are 'casual' (default), 'classic', 'oldstyle' and 'banking'
 \moderncvcolor{green}               % color options 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
@@ -264,14 +275,17 @@
 
 \subsection{Disciplinary Service}
 \hspace{1cm} \textit{Peer Reviewer for (various years)}
-\begin{multicols}{2}
 
-  <<#refing>>
-  \hspace*{1cm}
-  <<.>>
-  \newline
-  <</refing>>
-\end{multicols}
+
+<<#refing2>>
+
+\mycvlistdoubleitem{<<.[0]>>}{<<.[1]>>}
+
+%% THIS DOESN'T WORK BECAUSE APPARENTLY YOU CAN'T INDEX THE DOT
+%% I SHOULD CHANGE NESTED ARRAY TO ARRAY OF OBJECTS WITH SOME RAMDA FANCINESS AND THEN JUST ITERATE THE STANDARD WAY.
+
+  <</refing2>>
+
 \vspace{1mm}
 \subsection{Community Service and Outreach}
 <<#cserv>>
