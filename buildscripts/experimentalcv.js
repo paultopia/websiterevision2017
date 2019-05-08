@@ -11,6 +11,7 @@ const service = require('../src/assets/json/service.json');
 const forthcoming = require('../src/assets/json/forthcoming.json');
 const refereeing = require('../src/assets/json/refereeing.json');
 
+
 const customTags = [ '<<', '>>' ];
 Mustache.tags = customTags;
 
@@ -88,8 +89,14 @@ const peerreview = publications.filter(p => p.type === "peer review").sort(chron
 const lawreview = publications.filter(p => p.type === "law review").sort(chronThenTitle).map(citeAdder);
 const chapters = publications.filter(p => p.type === "chapter").sort(chronThenTitle);
 const miscpubs = publications.filter(p => p.type === "misc").sort(chronThenTitle);
+const refing = refereeing.sort();
 
-const refing = refereeing.sort()
+const opts = {cmd: 'xelatex',
+	            inputs: './cvtex',
+              fonts: './cvtex'};
+
+/*
+  // CURRENT STUFF
 
 const templatedata = {awards, basic, leadteaching, taships, misc, invited, conferences, campus, userv, dserv, cserv, books, peerreview, lawreview, chapters, miscpubs, forthcoming, refing};
 
@@ -101,8 +108,31 @@ fs.writeFileSync("./cvtex/private/current_experimental_cv.tex", input)
 
 const output = fs.createWriteStream('./cvtex/private/experimentalcv.pdf');
 
-const opts = {cmd: 'xelatex',
-	            inputs: './cvtex',
-              fonts: './cvtex'};
 
 latex(input).pipe(output);
+
+*/
+
+
+// **** EXPERIMENT WITH BETTER FORMATTING OF SERVICE ****
+const R = require('ramda');
+
+// stuff at end is to make sure every element of refering is even-numbered.
+const refing2 = R.splitEvery(2, refereeing.sort()).map(elem => elem.length == 1 ? R.append("", elem) : elem);
+console.log(refing2);
+
+/*
+
+const td2 = {awards, basic, leadteaching, taships, misc, invited, conferences, campus, userv, dserv, cserv, books, peerreview, lawreview, chapters, miscpubs, forthcoming, refing2};
+
+const t2 = fs.readFileSync("./cvtex/multicolumn_experiment.tex", "utf8");
+
+const i2 = Mustache.render(t2, td2);
+
+const o2 = fs.createWriteStream('./cvtex/multicol_experiment.pdf');
+
+latex(i2).pipe(o2);
+
+*/
+
+// *************
