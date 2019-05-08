@@ -10,9 +10,8 @@
     "moderncv"
     "moderncv10"
     "textcomp"
+    "multicol"
     "inputenc"
-    "geometry")
-   (TeX-add-symbols
-    '("mycvlistdoubleitem" ["argument"] 2)))
+    "geometry"))
  :latex)
 

@@ -7,17 +7,8 @@
 
 \documentclass[letterpaper]{moderncv} 
 \usepackage{textcomp}
+\usepackage{multicol}
 
-%%%%% STUFF FROM SO
-
-\newcommand*{\mycvlistdoubleitem}[3][.25em]{%
-  \cvitem[#1]{}{\begin{minipage}[t]{\listdoubleitemcolumnwidth}#2\end{minipage}%
-  \hfill% fill of \separatorcolumnwidth
-  \ifthenelse{\equal{#3}{}}%
-    {}%
-    {\begin{minipage}[t]{\listdoubleitemcolumnwidth}#3\end{minipage}}}} 
-
-%%%%%%%
 
 % moderncv themes
 \moderncvstyle{classic}           % style options are 'casual' (default), 'classic', 'oldstyle' and 'banking'
@@ -279,7 +270,7 @@
 
 <<#refing2>>
 
-\mycvlistdoubleitem{<<first>>}{<<second>>}
+\cvlistdoubleitem{<<first>>}{<<second>>}
 
 %% THIS DOESN'T WORK BECAUSE APPARENTLY YOU CAN'T INDEX THE DOT
 %% I SHOULD CHANGE NESTED ARRAY TO ARRAY OF OBJECTS WITH SOME RAMDA FANCINESS AND THEN JUST ITERATE THE STANDARD WAY.
