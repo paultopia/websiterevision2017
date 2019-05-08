@@ -118,7 +118,9 @@ latex(input).pipe(output);
 const R = require('ramda');
 
 // stuff at end is to make sure every element of refering is even-numbered.
-const refing2 = R.splitEvery(2, refereeing.sort()).map(elem => elem.length == 1 ? R.append("", elem) : elem);
+const refing2 = R.splitEvery(2, refereeing.sort()).map(elem => elem.length == 1 ? R.append("", elem) : elem).map(elem=>({"first": elem[0], "second": elem[1]}));
+
+console.log(refing2)
 
 const td2 = {awards, basic, leadteaching, taships, misc, invited, conferences, campus, userv, dserv, cserv, books, peerreview, lawreview, chapters, miscpubs, forthcoming, refing2};
 
