@@ -12,6 +12,8 @@
     "textcomp"
     "multicol"
     "inputenc"
-    "geometry"))
+    "geometry")
+   (TeX-add-symbols
+    '("mycvlistdoubleitem" ["argument"] 2)))
  :latex)
 

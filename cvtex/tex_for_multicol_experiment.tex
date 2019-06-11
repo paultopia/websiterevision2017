@@ -9,6 +9,12 @@
 \usepackage{textcomp}
 \usepackage{multicol}
 
+\newcommand*{\mycvlistdoubleitem}[3][.25em]{%
+  \cvitem[#1]{}{\begin{minipage}[t]{\listdoubleitemcolumnwidth}#2\end{minipage}%
+  \hfill% fill of \separatorcolumnwidth
+  \ifthenelse{\equal{#3}{}}%
+    {}%
+    {\begin{minipage}[t]{\listdoubleitemcolumnwidth}#3\end{minipage}}}} 
 
 % moderncv themes
 \moderncvstyle{classic}           % style options are 'casual' (default), 'classic', 'oldstyle' and 'banking'
@@ -828,55 +834,55 @@
 
 
 
-\cvlistdoubleitem{American J. of Pol. Sci.}{British J. of Pol. Sci.}
+\mycvlistdoubleitem{American J. of Pol. Sci.}{British J. of Pol. Sci.}
 
 %% THIS DOESN'T WORK BECAUSE APPARENTLY YOU CAN'T INDEX THE DOT
 %% I SHOULD CHANGE NESTED ARRAY TO ARRAY OF OBJECTS WITH SOME RAMDA FANCINESS AND THEN JUST ITERATE THE STANDARD WAY.
 
 
-\cvlistdoubleitem{Cambridge Univ. Press}{Columbia Univ. Press}
+\mycvlistdoubleitem{Cambridge Univ. Press}{Columbia Univ. Press}
 
 %% THIS DOESN'T WORK BECAUSE APPARENTLY YOU CAN'T INDEX THE DOT
 %% I SHOULD CHANGE NESTED ARRAY TO ARRAY OF OBJECTS WITH SOME RAMDA FANCINESS AND THEN JUST ITERATE THE STANDARD WAY.
 
 
-\cvlistdoubleitem{Critical Rev. of Int'l Soc. \& Pol. Phil.}{European J. of Pol. Theory}
+\mycvlistdoubleitem{Critical Rev. of Int'l Soc. \& Pol. Phil.}{European J. of Pol. Theory}
 
 %% THIS DOESN'T WORK BECAUSE APPARENTLY YOU CAN'T INDEX THE DOT
 %% I SHOULD CHANGE NESTED ARRAY TO ARRAY OF OBJECTS WITH SOME RAMDA FANCINESS AND THEN JUST ITERATE THE STANDARD WAY.
 
 
-\cvlistdoubleitem{Int'l J. of Law \& Econ.}{J. of Legal Analysis}
+\mycvlistdoubleitem{Int'l J. of Law \& Econ.}{J. of Legal Analysis}
 
 %% THIS DOESN'T WORK BECAUSE APPARENTLY YOU CAN'T INDEX THE DOT
 %% I SHOULD CHANGE NESTED ARRAY TO ARRAY OF OBJECTS WITH SOME RAMDA FANCINESS AND THEN JUST ITERATE THE STANDARD WAY.
 
 
-\cvlistdoubleitem{J. of Pol. Phil.}{J. of Politics}
+\mycvlistdoubleitem{J. of Pol. Phil.}{J. of Politics}
 
 %% THIS DOESN'T WORK BECAUSE APPARENTLY YOU CAN'T INDEX THE DOT
 %% I SHOULD CHANGE NESTED ARRAY TO ARRAY OF OBJECTS WITH SOME RAMDA FANCINESS AND THEN JUST ITERATE THE STANDARD WAY.
 
 
-\cvlistdoubleitem{Law \& Policy}{Law \& Soc. Inquiry}
+\mycvlistdoubleitem{Law \& Policy}{Law \& Soc. Inquiry}
 
 %% THIS DOESN'T WORK BECAUSE APPARENTLY YOU CAN'T INDEX THE DOT
 %% I SHOULD CHANGE NESTED ARRAY TO ARRAY OF OBJECTS WITH SOME RAMDA FANCINESS AND THEN JUST ITERATE THE STANDARD WAY.
 
 
-\cvlistdoubleitem{McGill Univ. Press}{Northwestern Univ. Law Rev.}
+\mycvlistdoubleitem{McGill Univ. Press}{Northwestern Univ. Law Rev.}
 
 %% THIS DOESN'T WORK BECAUSE APPARENTLY YOU CAN'T INDEX THE DOT
 %% I SHOULD CHANGE NESTED ARRAY TO ARRAY OF OBJECTS WITH SOME RAMDA FANCINESS AND THEN JUST ITERATE THE STANDARD WAY.
 
 
-\cvlistdoubleitem{Oxford Univ. Press}{Routledge}
+\mycvlistdoubleitem{Oxford Univ. Press}{Routledge}
 
 %% THIS DOESN'T WORK BECAUSE APPARENTLY YOU CAN'T INDEX THE DOT
 %% I SHOULD CHANGE NESTED ARRAY TO ARRAY OF OBJECTS WITH SOME RAMDA FANCINESS AND THEN JUST ITERATE THE STANDARD WAY.
 
 
-\cvlistdoubleitem{Social Theory \& Practice}{South Carolina Law Rev.}
+\mycvlistdoubleitem{Social Theory \& Practice}{South Carolina Law Rev.}
 
 %% THIS DOESN'T WORK BECAUSE APPARENTLY YOU CAN'T INDEX THE DOT
 %% I SHOULD CHANGE NESTED ARRAY TO ARRAY OF OBJECTS WITH SOME RAMDA FANCINESS AND THEN JUST ITERATE THE STANDARD WAY.

@@ -131,9 +131,9 @@ const i2 = Mustache.render(t2, td2);
 fs.writeFileSync("./cvtex//tex_for_multicol_experiment.tex", i2)
 
 
-const o2 = fs.createWriteStream('./cvtex/multicol_experiment.pdf');
+//const o2 = fs.createWriteStream('./cvtex/multicol_experiment.pdf');
 
-latex(i2).pipe(o2);
+//latex(i2).pipe(o2);
 
 
 // *************
