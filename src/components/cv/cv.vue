@@ -10,7 +10,7 @@
 
         <h2>Academic Positions</h2>
 
-        <p>2017- <b>Professor of Law</b>, University of Iowa
+        <p>2017- <b>Professor of Law and (2019-) O.K. Patton Fellow in Law</b>, University of Iowa
           <ul>
             <li>with tenure</li>
             <li>courtesy appointments in political science, philosophy</li>
