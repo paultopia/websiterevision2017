@@ -17,7 +17,8 @@ deploy: build
 	scp -r dist/static/ $(PAULGOWDERCOMTARGET)
 	scp dist/index.html $(PAULGOWDERCOMTARGET)
 
-netlify: yaml2json updatedate buildpubliccv
+# Netlify doesn't support LaTeX builds, so I'll have to rely on local build for this and can't really do prod.
+netlify: yaml2json updatedate
 	npm run build
 
 build: yaml2json updatedate buildpubliccv buildprivatecv
