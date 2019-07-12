@@ -17,10 +17,13 @@ deploy: build
 	scp -r dist/static/ $(PAULGOWDERCOMTARGET)
 	scp dist/index.html $(PAULGOWDERCOMTARGET)
 
-build: yaml2json updatedate buildcv
+netlify: yaml2json updatedate buildpubliccv
 	npm run build
 
-local: yaml2json updatedate buildcv
+build: yaml2json updatedate buildpubliccv buildprivatecv
+	npm run build
+
+local: yaml2json updatedate buildpubliccv buildprivatecv
 	npm run dev
 
 yaml2json:
@@ -29,5 +32,8 @@ yaml2json:
 updatedate: yaml2json
 	node ./buildscripts/update-last-updated.js
 
-buildcv: updatedate yaml2json
-	node ./buildscripts/compile-cv.js
+buildpubliccv: updatedate yaml2json
+	node ./buildscripts/compile-public-cv.js
+
+buildprivatecv: updatedate yaml2json
+	node ./buildscripts/compile-private-cv.js

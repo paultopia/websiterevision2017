@@ -107,20 +107,3 @@ const opts = {cmd: 'xelatex',
 
 latex(input).pipe(output);
 
-
-const templatePrivate = fs.readFileSync("./cvtex/private/private.tex", "utf8");
-
-const inputPrivate = Mustache.render(templatePrivate, templatedata);
-
-const outputPrivate = fs.createWriteStream('./cvtex/private/gowdercv_private.pdf');
-
-latex(inputPrivate).pipe(outputPrivate);
-
-
-const templateAbbr = fs.readFileSync("./cvtex/private/abbreviated.tex", "utf8");
-
-const inputAbbr = Mustache.render(templateAbbr, templatedata);
-
-const outputAbbr = fs.createWriteStream('./cvtex/private/gowdercv_abbreviated.pdf');
-
-latex(inputAbbr).pipe(outputAbbr);
