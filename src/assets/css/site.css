@@ -5,8 +5,8 @@
 /* ********************************* */
 
 :root {
-    --main-bg-color: rgba(172, 196, 165, 0.75);
-    --main-accent-color: rgb(242, 132, 53);
+    --main-accent-color: rgba(172, 196, 165, 0.75);
+    --main-bg-color: rgb(242, 132, 53);
     --main-light-color: rgb(214, 250, 203);
 }
 
