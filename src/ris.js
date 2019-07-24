@@ -39,14 +39,14 @@ function authorFlip(author){
 
 function authorMaker(pubitem){
  const moi = "AU  - Gowder,Paul"
- return pubitem.coauthor ? authorflip(pubitem.coauthor) + "\n" + moi : moi
+ return pubitem.coauthor ? authorFlip(pubitem.coauthor) + "\n" + moi : moi;
 }
 
 function yearMaker(pubitem){
   return "PY  - " + pubitem.year + "///"
 }
 
-const funcUp = fields => [typeMaker, authormaker, yearMaker].concat(fields.map(basicR));
+const funcUp = fields => [typeMaker, authorMaker, yearMaker].concat(fields.map(basicR));
 
 function articleRis(pubitem){
   const fields = ["title", "journal", "volume", "firstpage", "lastpage"];
@@ -68,9 +68,9 @@ function bookRis(pubitem){
 function makeRis(pubs){
 	return pubs.map(function(pubitem){
       return get({"law review": articleRis,
-      	"peer review": articleRis,
-      	"chapter": chapterRis,
-      	"book": bookRis}, pubitem.type, _=>null)(pubitem);
+                  "peer review": articleRis,
+                  "chapter": chapterRis,
+                  "book": bookRis}, pubitem.type, _=>null)(pubitem);
 	}).filter(elem=>elem).join("\n");
 }
 
