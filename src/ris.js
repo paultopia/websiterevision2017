@@ -38,19 +38,19 @@ function authorFlip(author){
 }
 
 function authorMaker(pubitem){
- const moi = "AU  - Gowder,Paul"
+ const moi = "AU  - Gowder,Paul";
  return pubitem.coauthor ? authorFlip(pubitem.coauthor) + "\n" + moi : moi;
 }
 
 function yearMaker(pubitem){
-  return "PY  - " + pubitem.year + "///"
+  return "PY  - " + pubitem.year + "///";
 }
 
 const funcUp = fields => [typeMaker, authorMaker, yearMaker].concat(fields.map(basicR));
 
 function articleRis(pubitem){
   const fields = ["title", "journal", "volume", "firstpage", "lastpage"];
-  const baseLineFuncs = funcUp(fields)
+  const baseLineFuncs = funcUp(fields);
   const lineFuncs = pubitem.issue ? baseLineFuncs.concat([basicR("issue")]) : baseLineFuncs;
   return compositor(pubitem, lineFuncs);
 }
