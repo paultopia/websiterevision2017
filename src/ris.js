@@ -16,7 +16,7 @@ const jsonRisMapping = {"abstract": "AB",
 
 function compositor (pubitem, funcs) {
 
-    return `${funcs.map((func) => func(pubitem)).join(",\n")}\nER  - \n`;
+    return `${funcs.map((func) => func(pubitem)).join("\n")}\nER  - \n`;
 
 }
 
