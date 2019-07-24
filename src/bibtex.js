@@ -2,7 +2,7 @@
 
 // main function--- array of publication objects --> string containing bibtex of all of them suitable for delivery as a file
 
-function get(obj, key, def){return obj[key] || def};
+import { get } from "./utils.js";
 
 function makebibtex(pubs){
 	return pubs.map(function(pubitem){
