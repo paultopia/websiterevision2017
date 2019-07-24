@@ -1,6 +1,18 @@
 import { get } from "./utils.js";
 
-
+const jsonRisMapping = {"abstract":"AB",
+                        "address":"CY",
+                        "book":"T2",
+                        "editor":"ED",
+                        "firstpage":"SP",
+                        "issue":"IS",
+                        "journal":"JF",
+                        "lastpage":"EP",
+                        "publink":"UR",
+                        "publisher":"PB",
+                        "title":"TI",
+                        "volume":"VL",
+                        "year":"PY"};
 
 function compositor(pubitem, funcs){
 	return funcs.map(function(func){
@@ -8,33 +20,49 @@ function compositor(pubitem, funcs){
 	}).join(",\n") + "\nER  - \n";
 }
 
-
+function basicR(entry){
+  return pubitem => jsonRisMapping[entry] + "  - " + pubitem[entry];
+}
 
 function typeMaker(pubitem){
 	var refType = {"law review": "JOUR", "peer review": "JOUR", 
-		"chapter": "CHAP", "book": "BOOK"}[pubitem.type];
+		"chapter": "CHAP", "book": "BOOK"}[pubitem.type]; 
 	return "\nTY  - " + refType;
 }
 
-function authorMaker(pubitem){
- const moi = "Gowder,Paul"
- // COAUTHOR
+function authorFlip(author){
+  // won't work with jr etc.
+  var alist = author.split(" ");
+  var lastname = author.pop();
+  return "AU  - " + lastname + "," + alist.join(",");
 }
 
+function authorMaker(pubitem){
+ const moi = "AU  - Gowder,Paul"
+ return pubitem.coauthor ? authorflip(pubitem.coauthor) + "\n" + moi : moi
+}
+
+function yearMaker(pubitem){
+  return "PY  - " + pubitem.year + "///"
+}
+
+const funcUp = fields => [typeMaker, authormaker, yearMaker].concat(fields.map(basicR));
+
 function articleRis(pubitem){
-  const baseLineFuncs = [typeMaker]
-  const lineFuncs = pubitem.issue ? baseLineFuncs.concat([issueMaker]) : baseLineFuncs
-  return compositor(pubitem, lineFuncs)
+  const fields = ["title", "journal", "volume", "firstpage", "lastpage"];
+  const baseLineFuncs = funcUp(fields)
+  const lineFuncs = pubitem.issue ? baseLineFuncs.concat([basicR("issue")]) : baseLineFuncs;
+  return compositor(pubitem, lineFuncs);
 }
 
 function chapterRis(pubitem){
-  const lineFuncs = [typeMaker]
-  return compositor(pubitem, lineFuncs)
+  const fields = ["title", "editor", "book", "firstpage", "lastpage", "publisher", "address"];
+  return compositor(pubitem, funcUp(fields));
 }
 
 function bookRis(pubitem){
-  const lineFuncs = [typeMaker]
-  return compositor(pubitem, lineFuncs)
+  const fields = ["title", "address", "publisher"];
+  return compositor(pubitem, funcUp(fields))
 }
 
 function makeRis(pubs){
@@ -47,47 +75,3 @@ function makeRis(pubs){
 }
 
 export default makeRis;
-pubitem
-
-/*
-
-function articleBT(pubitem){
-// if there's no issue number I don't want to have to handle a blank line or null value upstream
-	return pubitem.issue ?
-		compositor(pubitem, [nameMaker, authorMaker, basicB("title"), 
-			basicB("journal"), basicB("volume"), numberMaker, 
-			pagesMaker, basicB("year")]) :
-		compositor(pubitem, [nameMaker, authorMaker, basicB("title"), 
-			basicB("journal"), basicB("volume"), pagesMaker, basicB("year")]);
-}
-
-function chapterBT(pubitem){
-	return compositor(pubitem, [nameMaker, authorMaker, basicB("title"),
-		                          editorMaker, collectionTitleMaker, pagesMaker,
-                              basicB("address"), basicB("publisher"),
-                              basicB("year")]);
-}
-
-function bookBT(pubitem){
-	  return compositor(pubitem, [nameMaker, authorMaker, basicB("title"),
-                                basicB("address"), basicB("publisher"),
-                                basicB("year")]);
-}
-
-function compositor(pubitem, funcs){
-	return funcs.map(function(func){
-		return func(pubitem);
-	}).join(",\n") + "\n}";
-}
-
-function basicB(entry){
-    //	return function(pubitem){return entry + "={" + pubitem[entry] + "}";};
-    return pubitem => entry + "={" + pubitem[entry] + "}";
-}
-
-	var nom1 = pubitem.coauthor ? pubitem.coauthor.split(" ")[1]
-		.toLowerCase() + "gowder" : "gowder"; 
-	var nom2 = pubitem.title.split(" ").map(function(word){return word[0];})
-		.join("").toLowerCase();
-
-*/

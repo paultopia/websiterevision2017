@@ -98,6 +98,9 @@
                         <a :href="bturl" download="gowder.bib">download bibtex</a>
                         </p>
 
+                    <p>
+                        <a :href="risurl" download="gowder.bib">download ris (reference manager format)</a>
+                        </p>
                         <p>
 
                       See cv page for additional, minor, publications.
@@ -117,6 +120,7 @@ import chapterrow from './chapterrow.vue';
 import mobilechapterrow from './mobilechapterrow.vue';
 
 import bibtex from "../../bibtex.js";
+import ris from "../../ris.js";
 import downloadURL from "../../io.js";
 
 import research from '../../assets/md/research.md';
@@ -144,7 +148,8 @@ function chronThenTitle(a, b){
 
 
 export default {
-       components: {articlerow,
+       components: {
+                    articlerow,
                     mobilearticlerow,
                     research,
                     mobilechapterrow,
@@ -154,17 +159,17 @@ export default {
                  publications: function(){return this.$store.state.pubs;},
                  articles: function(){
                    var arts = this.$store.state.augmented
-                     .filter(isArticle)
-                       .sort(chronThenTypeThenTitle);
+                              .filter(isArticle)
+                              .sort(chronThenTypeThenTitle);
                    arts.pop()
                    // get rid of harvard journal on legislation thing
-                   return arts;
-                     },
+                   return arts;},
                  chapters: function(){return this.$store.state.augmented
                    .filter(isChapter)
-                     .sort(chronThenTitle)},
-bturl: function (){return downloadURL(bibtex(this.publications));}
-}
+                   .sort(chronThenTitle)},
+                 bturl: function (){return downloadURL(bibtex(this.publications));},
+                 risurl: function (){return downloadURL(ris(this.publications));}
+      }
 }
 
 </script>
