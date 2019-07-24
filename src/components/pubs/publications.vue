@@ -99,7 +99,7 @@
                         </p>
 
                     <p>
-                        <a :href="risurl" download="gowder.bib">download ris (reference manager format)</a>
+                        <a :href="risurl" download="gowder.ris">download ris (reference manager format)</a>
                         </p>
                         <p>
 
