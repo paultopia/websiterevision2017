@@ -19,6 +19,7 @@ deploy: build
 	scp dist/index.html $(GOWDERIOTARGET)
 	scp -r dist/static/ $(PAULGOWDERCOMTARGET)
 	scp dist/index.html $(PAULGOWDERCOMTARGET)
+	scp square.jpg $(PAULGOWDERCOMTARGET)
 
 # Netlify doesn't support LaTeX builds, so I'll have to rely on local build for this and can't really do prod.
 netlify: yaml2json updatedate
