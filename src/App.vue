@@ -38,7 +38,21 @@ export default {
     },
     metaInfo: {
         meta: [
-            {bestCat: "Leonidas"}
+            {name: "viewport", content: metadata.viewport},
+            {charset: metadata.charset},
+            {name: "description", content: metadata.description},
+            {name: "twitter:card", content: metadata.twittercard},
+            {name: "twitter:site", content: metadata.twittersite},
+            {name: "twitter:title", content: metadata.title},
+            {name: "twitter:image", content: metadata.image},
+            {name: "twitter:description", content: metadata.description},
+            {property: "og:url", content: metadata.url},
+            {property: "og:title", content: metadata.title},
+            {property: "og:description", content: metadata.description},
+            {property: "og:image", content: metadata.image},
+            {itemprop: 'name', content: metadata.title},
+            {itemprop: 'description', content: metadata.description},
+            {itemprop: 'image', content: metadata.image}
         ],
         link: [
             {rel: 'canonical', href: metadata.url}
