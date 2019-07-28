@@ -22,23 +22,33 @@ import writing from './components/writing.vue';
 import tech from "./components/tech.vue";
 import contact from "./components/contact.vue";
 
+import metadata from './assets/json/metadata.json';
+
 export default {
-  name: 'app',
-  components: {
-      bio,
-      navigation,
-      cv,
-      pubs,
-      writing,
-      tech,
-      contact,
-      foot
+    name: 'app',
+    components: {
+        bio,
+        navigation,
+        cv,
+        pubs,
+        writing,
+        tech,
+        contact,
+        foot
+    },
+    metaInfo: {
+        meta: [
+            {bestCat: "Leonidas"}
+        ],
+        link: [
+            {rel: 'canonical', href: metadata.url}
+        ]
   },
-    computed: {
+  computed: {
         currentView: function(){return this.$store.state.currentView;},
         lastView: function(){return this.$store.state.lastView;},
-    },
-    mounted() {var that = this;
+  },
+  mounted() {var that = this;
                window.focus();
                window.onpopstate = function(event){
                    that.$store.commit('navigate', "navigation");};},

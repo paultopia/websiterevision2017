@@ -19,12 +19,9 @@ import cvURL from './assets/pdf/gowdercv.pdf';
 
 
 
-// NEW STUFF, UNTESTED
 import augment from "./citeformats.js";
 const augmented = pubs.map(pub => augment(pub, bbabbrv))
-// console.log(augmented[0]["textBB"]);
-// when I add this line, I get ""
-// END NEW STUFF (except for adding augmentedPubs to state object)
+
 
 // load up the state object
 

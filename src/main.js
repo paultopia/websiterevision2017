@@ -4,6 +4,9 @@ import Vue from 'vue';
 import Vuex from 'vuex';
 Vue.use(Vuex);
 
+import VueMeta from 'vue-meta';
+Vue.use(VueMeta);
+
 import App from './App';
 
 import VueTyperPlugin from 'vue-typer'; // maybe this goes into nav component?!

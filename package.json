@@ -20,6 +20,7 @@
     "vue": "^2.3.3",
     "vue-clipboard2": "0.0.8",
     "vue-cookie": "^1.1.4",
+    "vue-meta": "^2.1.1",
     "vue-pdf": "^1.2.4",
     "vue-typer": "^1.0.3",
     "vuex": "^2.3.1"
