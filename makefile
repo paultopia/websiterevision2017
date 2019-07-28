@@ -4,7 +4,10 @@ GOWDERIO = ${gowderio}
 PAULGOWDERCOM = ${paulgowdercom}
 # I don't want to expose usernames and servers, set in env variable via api keys file
 
-all: cleanup
+all: log
+
+log: cleanup
+	python log_filenames.py
 
 cleanup: deploy
 	python clearcloudflare.py
