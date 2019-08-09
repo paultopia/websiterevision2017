@@ -13,6 +13,7 @@
     "multicol"
     "inputenc"
     "geometry"
-    "fontspec"))
+    "fontspec"
+    "xpatch"))
  :latex)
 
