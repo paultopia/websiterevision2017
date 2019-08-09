@@ -14,6 +14,8 @@
     "inputenc"
     "geometry"
     "fontspec"
-    "xpatch"))
+    "xpatch")
+   (TeX-add-symbols
+    '("mycvlistdoubleitem" ["argument"] 2)))
  :latex)
 
