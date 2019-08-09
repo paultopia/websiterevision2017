@@ -12,6 +12,7 @@
     "textcomp"
     "multicol"
     "inputenc"
-    "geometry"))
+    "geometry"
+    "fontspec"))
  :latex)
 

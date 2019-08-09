@@ -105,5 +105,7 @@ const opts = {cmd: 'xelatex',
 	            inputs: './cvtex',
               fonts: './cvtex'};
 
-latex(input).pipe(output);
+const pdf = latex(input, opts)
 
+pdf.pipe(output);
+pdf.on('error', err => console.error(err))

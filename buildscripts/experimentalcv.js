@@ -93,10 +93,9 @@ const refing = refereeing.sort();
 
 const opts = {cmd: 'xelatex',
 	            inputs: './cvtex',
-              fonts: './cvtex'};
+              fonts: './cvtex',
+              errorLogs: "./builderror.txt"};
 
-/*
-  // CURRENT STUFF
 
 const templatedata = {awards, basic, leadteaching, taships, misc, invited, conferences, campus, userv, dserv, cserv, books, peerreview, lawreview, chapters, miscpubs, forthcoming, refing};
 
@@ -109,31 +108,9 @@ fs.writeFileSync("./cvtex/private/current_experimental_cv.tex", input)
 const output = fs.createWriteStream('./cvtex/private/experimentalcv.pdf');
 
 
-latex(input).pipe(output);
+const pdf = latex(input, opts)
 
-*/
-
-
-// **** EXPERIMENT WITH BETTER FORMATTING OF SERVICE ****
-const R = require('ramda');
-
-// stuff at end is to make sure every element of refering is even-numbered.
-const refing2 = R.splitEvery(2, refereeing.sort()).map(elem => elem.length == 1 ? R.append("", elem) : elem).map(elem=>({"first": elem[0], "second": elem[1]}));
-
-console.log(refing2)
-
-const td2 = {awards, basic, leadteaching, taships, misc, invited, conferences, campus, userv, dserv, cserv, books, peerreview, lawreview, chapters, miscpubs, forthcoming, refing2};
-
-const t2 = fs.readFileSync("./cvtex/multicolumn_experiment.tex", "utf8");
-
-const i2 = Mustache.render(t2, td2);
-
-fs.writeFileSync("./cvtex//tex_for_multicol_experiment.tex", i2)
-
-
-//const o2 = fs.createWriteStream('./cvtex/multicol_experiment.pdf');
-
-//latex(i2).pipe(o2);
-
+pdf.pipe(output);
+pdf.on('error', err => console.error(err))
 
 // *************

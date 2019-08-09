@@ -20,15 +20,31 @@
 % adjust the page margins
 \usepackage[scale=0.75]{geometry}
 \setlength{\hintscolumnwidth}{2cm}                % if you want to change the width of the column with the dates
-%\setlength{\makecvtitlenamewidth}{10cm}           % for the 'classic' style, if you want to force the width allocated to your name and avoid line breaks. be careful though, the length is normally calculated to avoid any overlap with your personal info; use this at your own typographical risks...
+%\setlength{\makecvtitlenamewidth}{10cm}           % for the 'classic' style, if
+%you want to force the width allocated to your name and avoid line breaks. be
+%careful though, the length is normally calculated to avoid any overlap with
+%your personal info; use this at your own typographical risks...
+
+
+\usepackage{fontspec}
+\renewcommand*{\addressfont}{\small\mdseries}
+\renewcommand*{\namefont}{\fontsize{34}{36}\mdseries\upshape\sffamily}
+\renewcommand*{\titlefont}{\LARGE\mdseries\upshape\sffamily}
+\renewcommand*{\sectionfont}{\Large\bfseries\upshape\sffamily}
+\renewcommand*{\subsectionfont}{\large\bfseries\upshape\sffamily}
+\setsansfont{Fira Sans}
+
+
     % Profile
 \name{Paul Gowder}{}
-\address{Last update: July 28, 2019} %% total hack to get last rev date instead of
+\address{Last update: August 8, 2019} %% total hack to get last rev date instead of
                                 %% address in here.
 \phone[office]{319-384-3202 (office)}
 \email{pgowder@post.harvard.edu}
 \homepage{gowder.io}
-    \begin{document}
+
+\begin{document}
+
 \makecvtitle
 
 \lfoot{\thepage}
@@ -39,9 +55,9 @@
 \section{Academic Positions}
 \cventry
 {09/12-Present}
-{Professor of Law and O.K. Patton Fellow in Law}
+{Professor and O.K. Patton Fellow in Law}
 {University of Iowa}
-{Iowa City, IA}
+{}
 {}
 {\begin{itemize}%
 	\item Associate Professor of Law (pre-tenure): 2012-2017.
@@ -58,21 +74,21 @@
 {Ph.D., Political Science}
 {Stanford University}
 {}
-{\textit{Stanford, CA}}
+{}
 {}
 \cventry
 {2000}
 {J.D.}
 {Harvard Law School}
 {}
-{\textit{Cambridge, MA}}
+{}
 {}
 \cventry
 {1997}
 {B.A., Political Science}
-{California State University}
+{California State University, Los Angeles}
 {}
-{\textit{Los Angeles, CA}}
+{}
 {}
 %
 % Publications
@@ -127,7 +143,7 @@
 {}
 {\textit{Critical Review}}
 {}
-{26:3-4. (peer-edited, invited contribution, not blind reviewed)}
+{26(3-4):306-347. (peer-edited, invited contribution, not blind reviewed)}
 \vspace{1mm}
 \cventry
 {2013}
@@ -225,7 +241,7 @@
 {}
 {\textit{Transnational Law and Contemporary Problems}}
 {}
-{23:7-33 . (invited contribution)}
+{23:7-33. (invited contribution)}
 \vspace{1mm}
 \cventry
 {2006}
