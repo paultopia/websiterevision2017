@@ -92,8 +92,8 @@ const miscpubs = publications.filter(p => p.type === "misc").sort(chronThenTitle
 const refing = refereeing.sort();
 
 const opts = {cmd: 'xelatex',
-	            inputs: './cvtex',
-              fonts: './cvtex',
+	            inputs: './cvtex/',
+              fonts: './cvtex/',
               errorLogs: "./builderror.txt"};
 
 

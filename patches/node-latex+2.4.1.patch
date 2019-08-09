@@ -1,0 +1,26 @@
+diff --git a/node_modules/node-latex/index.js b/node_modules/node-latex/index.js
+index a4cb590..127784b 100644
+--- a/node_modules/node-latex/index.js
++++ b/node_modules/node-latex/index.js
+@@ -84,11 +84,19 @@ function latex(src, options) {
+ 
+     options = options || {}
+ 
++      // Permits paths in options to be absolute or relative.
++    function expandPath(pathOrArray) {
++      if (Array.isArray(pathOrArray)) {
++        return pathOrArray.map(pth => path.resolve(pth))
++      }
++      return path.resolve(pathOrArray)
++    }
++
+     // The path(s) to your TEXINPUTS.
+-    const inputs = options.inputs || tempPath
++    const inputs = expandPath(options.inputs) || tempPath
+ 
+     // The path(s) to your font inputs for fontspec.
+-    const fonts = options.fonts || tempPath
++    const fonts = expandPath(options.fonts) || tempPath
+ 
+     // The binary command to run (`pdflatex`, `xetex`, etc).
+     const cmd = options.cmd || 'pdflatex'
