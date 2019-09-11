@@ -22,6 +22,8 @@
             <li>courtesy appointments in political science (2012-), philosophy (2016-)</li>
             </ul>
         </p>
+        
+        <p>Fall 2019 <b>Visiting Professor of Law</b>, Boston University</p>
           
 
         <h2>Education</h2>
