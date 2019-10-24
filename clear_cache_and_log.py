@@ -8,19 +8,20 @@ import os
 import requests
 import re
 
-email = os.environ["cloudflareemail"]
-apikey = os.environ["cloudflareapi"]
-zone = os.environ['cloudflarezone']
+now = datetime.datetime.now().strftime("%m-%d-%Y %I:%M%p")
+labels = ["css", "app_js", "manifest_js", "vendor_js"]
 
 # Start by clearing the cloudflare cache.
 
+email = os.environ["cloudflareemail"]
+apikey = os.environ["cloudflareapi"]
+zone = os.environ['cloudflarezone']
 endpoint = "https://api.cloudflare.com/client/v4/zones/{}/purge_cache".format(zone)
-
 headers = {"X-Auth-Email": email, "X-Auth-Key": apikey, "Content-Type": "application/json"}
 
 
 def clear_cache():
-    print("Calling: " + endpoint + " to clear cache.")
+    print("Trying to clear cache.")
     resp = requests.post(endpoint, headers=headers, json={"purge_everything": True})
     output = resp.json()
     print(output)
@@ -30,17 +31,11 @@ def clear_cache():
 
 cache_api_cleared = clear_cache()
 
-now = datetime.datetime.now().strftime("%m-%d-%Y %I:%M%p")
-
-labels = ["css", "app_js", "manifest_js", "vendor_js"]
-
 # GET THE CORRECT FILENAMES FROM CURRENT BUILD
 
 jsfiles = sorted([os.path.basename(x) for x in glob("dist/static/js/*.js")])
 cssfiles = sorted([os.path.basename(x) for x in glob("dist/static/css/*.css")])
 local_files = dict(zip(labels, cssfiles + jsfiles))
-
-print(local_files)
 
 # GET THE FILENAMES THAT SHOW UP ONLINE
 
