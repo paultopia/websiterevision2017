@@ -11,7 +11,7 @@ import re
 now = datetime.datetime.now().strftime("%m-%d-%Y %I:%M%p")
 labels = ["css", "app_js", "manifest_js", "vendor_js"]
 
-# Start by clearing the cloudflare cache.
+# CLEAR_THE_CLOUDFLARE_CACHE
 
 email = os.environ["cloudflareemail"]
 apikey = os.environ["cloudflareapi"]
@@ -41,25 +41,38 @@ local_files = dict(zip(labels, cssfiles + jsfiles))
 
 livehtml = requests.get("https://gowder.io").text
 
-remote_files = {}
-remote_files['css'] = re.search(r'static\/css\/(app.*?\.css)', livehtml).group(1)
-remote_files['app_js'] = re.search(r'static\/js\/(app.*?\.js)', livehtml).group(1)
-remote_files['manifest_js'] = re.search(r'static\/js\/(manifest.*?\.js)', livehtml).group(1)
-remote_files['vendor_js'] = re.search(r'static\/js\/(vendor.*?\.js)', livehtml).group(1)
+regex_patterns = [r'static\/css\/(app.*?\.css)',
+           r'static\/js\/(app.*?\.js)',
+           r'static\/js\/(manifest.*?\.js)',
+           r'static\/js\/(vendor.*?\.js)']
+
+regexes = dict(zip(labels, regex_patterns))
+
+
+def extract_remote_file(label):
+    return label, re.search(regexes[label], livehtml).group(1)
+
+
+remote_files = {k: v for (k, v) in map(extract_remote_file, labels)}
 
 # ALERT IF SOMETHING IS WRONG
 
-all_files_match = True
+fuckups = []
+
 
 def check_for_fuckup(name):
-    global all_files_match
     if local_files[name] != remote_files[name]:
         print(f'{name} DOES NOT MATCH REMOTE.  Local: {local_files[name]}, Remote: {remote_files[name]}')
-        all_files_match = False
+        return True
+    return False
 
 
 for x in labels:
-    check_for_fuckup(x)
+    fucked_up = check_for_fuckup(x)
+    if fucked_up:
+        fuckups.append(x)
+
+all_files_match = not bool(fuckups)
 
 if all_files_match:
     print("All files successfully matched.")
@@ -74,8 +87,6 @@ for x in labels:
     extended_labels.append('remote_' + x)
 
 header = f'{",".join(extended_labels)}\n'
-
-cache_api_cleared = True
 
 logfields = [now, cache_api_cleared, all_files_match]
 for x in labels:
