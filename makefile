@@ -6,11 +6,8 @@ PAULGOWDERCOM = ${paulgowdercom}
 
 all: log
 
-log: cleanup
-	python log_filenames.py
-
-cleanup: deploy
-	python clearcloudflare.py
+log: deploy
+	python clear_cache_and_log.py
 
 deploy: build
 	ssh $(PAULGOWDERCOM) "rm -rf public_html/paul-gowder.com/static/" # cleanup old versions of compiled files
