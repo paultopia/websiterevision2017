@@ -1,23 +1,33 @@
+- years: '2019-20'
+  subentity: 'College of Law'
+  entity: 'University of Iowa'
+  role: 'Member, Faculty Appointments Committee'
+  type: 'university'
 - years: '2019'
   subentity: 'College of Law'
   entity: 'University of Iowa'
   role: 'Member, Curricular and Community Enhancement Committee'
   type: 'university'
-- years: 2017-
+- years: '2018-20'
+  subentity: 'College of Law'
+  entity: 'University of Iowa'
+  role: 'Member, Tenure Committee (for one junior colleague)'
+  type: 'university'
+- years: '2017-9'
   subentity: College of Law
   entity: University of Iowa
   role: 'Member, J.D. Admissions Committee'
   type: university
-- years: 2017-9
+- years: '2017-9'
   entity: University of Iowa
   role: 'Member, Faculty Judicial Commission'
   type: university
-- years: 2017-
+- years: '2017-9'
   subentity: College of Law
   entity: University of Iowa
   role: 'Chair, S.J.D. Admissions Committee'
   type: university
-- years: 2017-
+- years: '2017-'
   subentity: Obermann Center for Advanced Studies
   entity: University of Iowa
   role: Advisory Board Member
@@ -37,27 +47,27 @@
   entity: University of Iowa
   role: 'Faculty Advisor, American Constitution Society Student Chapter'
   type: university
-- years: 2016-7
+- years: '2016-7'
   subentity: College of Law
   entity: University of Iowa
   role: 'Member, Diversity Committee'
   type: university
-- years: 2016-7
+- years: '2016-7'
   subentity: College of Law
   entity: University of Iowa
   role: 'Member, Honors and Awards Committee'
   type: university
-- years: 2015-
+- years: '2015-9'
   subentity: College of Law
   entity: University of Iowa
   role: 'Service on one S.J.D. committee, and (2016-) adviser to another'
   type: university
-- years: 2017-
+- years: '2017-9'
   subentity: Department of Philosophy
   entity: University of Iowa
   role: Service on two Ph.D. committees and one M.A. committee
   type: university
-- years: 2015-6
+- years: '2015-6'
   subentity: College of Law
   entity: University of Iowa
   role: 'Chair, Speakers Committee'
@@ -67,17 +77,17 @@
   entity: University of Iowa
   role: 'Faculty Advisor, AAI Moot Court Problem Creation'
   type: university
-- years: 2012-4
+- years: '2012-4'
   subentity: College of Law
   entity: University of Iowa
   role: 'Member, Speakers Committee'
   type: university
-- years: 2012-8
+- years: '2012-8'
   subentity: College of Law
   entity: University of Iowa
   role: 'Judge, AAI Moot Court'
   type: university
-- years: 2010-11
+- years: '2010-11'
   subentity: Department of Political Science
   entity: Stanford University
   role: Graduate Admissions Committee
