@@ -1,5 +1,12 @@
 [
   {
+    "years": "2019-20",
+    "subentity": "College of Law",
+    "entity": "University of Iowa",
+    "role": "Member, Faculty Appointments Committee",
+    "type": "university"
+  },
+  {
     "years": "2019",
     "subentity": "College of Law",
     "entity": "University of Iowa",
@@ -7,7 +14,14 @@
     "type": "university"
   },
   {
-    "years": "2017-",
+    "years": "2018-20",
+    "subentity": "College of Law",
+    "entity": "University of Iowa",
+    "role": "Member, Tenure Committee (for one junior colleague)",
+    "type": "university"
+  },
+  {
+    "years": "2017-9",
     "subentity": "College of Law",
     "entity": "University of Iowa",
     "role": "Member, J.D. Admissions Committee",
@@ -20,7 +34,7 @@
     "type": "university"
   },
   {
-    "years": "2017-",
+    "years": "2017-9",
     "subentity": "College of Law",
     "entity": "University of Iowa",
     "role": "Chair, S.J.D. Admissions Committee",
@@ -69,14 +83,14 @@
     "type": "university"
   },
   {
-    "years": "2015-",
+    "years": "2015-9",
     "subentity": "College of Law",
     "entity": "University of Iowa",
     "role": "Service on one S.J.D. committee, and (2016-) adviser to another",
     "type": "university"
   },
   {
-    "years": "2017-",
+    "years": "2017-9",
     "subentity": "Department of Philosophy",
     "entity": "University of Iowa",
     "role": "Service on two Ph.D. committees and one M.A. committee",
