@@ -682,6 +682,24 @@
   book: null
   coauthor: null
   editor: null
+  firstpage: 136
+  issue: 11
+  journal: Law and Politics Book Review
+  lastpage: 141
+  note: 
+  publink: "http://www.lpbr.net/2019/12/creating-constitution-law-democracy-and.html?m=1&fbclid=IwAR3rPJgIwZIhuKQO4VqLugKWAdA5WeedhgEBBGtoRnFX0ZqKK_ufr64AK7U"
+  publisher: null
+  title: "Untitled Review of Federica Carugati, Creating a Constitution: Law, Democracy and Growth in Ancient Athens"
+  type: misc
+  volume: 29
+  year: '2019'
+  tags: ['minor', review]
+- abstract: null
+  address: null
+  altlink: null
+  book: null
+  coauthor: null
+  editor: null
   firstpage: 261
   issue: 2
   journal: Tulsa Law Review
