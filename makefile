@@ -19,8 +19,11 @@ deploy: build
 	scp square.jpg $(GOWDERIOTARGET)
 
 # Netlify doesn't support LaTeX builds, so I'll have to rely on local build for this and can't really do prod.
-netlify: yaml2json updatedate
+netlify: buildcvfornetlify
 	npm run build
+
+buildcvfornetlify: yaml2json updatedate
+	node ./buildscripts/template-public-cv.js
 
 build: yaml2json updatedate buildpubliccv buildprivatecv
 	npm run build
@@ -39,3 +42,4 @@ buildpubliccv: updatedate yaml2json
 
 buildprivatecv: updatedate yaml2json
 	node ./buildscripts/compile-private-cv.js
+
