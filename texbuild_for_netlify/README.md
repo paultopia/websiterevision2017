@@ -1,0 +1,3 @@
+Note: the files in this directory are adapted from LaTeX on Netlify, at [https://github.com/frangio/netlify-latex](https://github.com/frangio/netlify-latex).  The code in there is covered under the GPL license. 
+
+The way I interpret the GPL license, and, in particular, its definition of "aggregate," while everything in this subdirectory is hence covered by the GPL, the rest of the repository, consisting of all the other code that I wrote to build this website, is not obliged to be (and hence is not) licensed under the GPL.  (This subdirectory is simply standalone functionality to produce a pdf from tex on netlify.)

@@ -22,7 +22,10 @@ deploy: build
 netlify: buildcvfornetlify
 	npm run build
 
-buildcvfornetlify: yaml2json updatedate
+buildcvfornetlify: templatecvfornetlify
+	bash texbuild_for_netlify/build.sh currentcv.tex
+
+templatecvfornetlify: yaml2json updatedate
 	node ./buildscripts/template-public-cv.js
 
 build: yaml2json updatedate buildpubliccv buildprivatecv
