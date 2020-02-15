@@ -23,13 +23,10 @@ netlify: buildcvfornetlify
 	npm run build
 
 buildcvfornetlify: templatecvfornetlify
-	cp currentcv.tex cvtex/currentcv.tex
-	cp texbuild_for_netlify/build.sh cvtex/build.sh
-	cp texbuild_for_netlify/install-tl-unx.tar.gz cvtex/install-tl-unx.tar.gz
-	cd cvtex
+	cp -R cvtex/. .
+	cp -R texbuild_for_netlify/. .
 	bash build.sh currentcv.tex
-	cp currentcv.pdf ../src/assets/pdf/gowdercv.pdf
-	cd ..
+	cp currentcv.pdf src/assets/pdf/gowdercv.pdf
 
 templatecvfornetlify: yaml2json updatedate
 	node ./buildscripts/template-public-cv.js
