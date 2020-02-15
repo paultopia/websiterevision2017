@@ -23,7 +23,7 @@ netlify: buildcvfornetlify
 	npm run build
 
 buildcvfornetlify: templatecvfornetlify
-  cp currentcv.tex cvtex/currentcv.tex
+	cp currentcv.tex cvtex/currentcv.tex
 	bash texbuild_for_netlify/build.sh cvtex/currentcv.tex
 
 templatecvfornetlify: yaml2json updatedate
