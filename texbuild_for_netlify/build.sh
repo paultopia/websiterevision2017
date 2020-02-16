@@ -73,6 +73,7 @@ fi
 export PATH="$TEXLIVE_BIN:$PATH"
 
 tlmgr update -self -all
+tlmgr install xetex
 tlmgr install l3packages
 tlmgr install etoolbox
 tlmgr install xcolor
