@@ -73,7 +73,7 @@ fi
 export PATH="$TEXLIVE_BIN:$PATH"
 
 tlmgr update -self -all
-tlmgr install xpackages
+tlmgr install l3packages
 tlmgr install etoolbox
 
 python "$TEXLIVEONFLY" -c latexmk -a "-g -pdf -synctex=1 -interaction=nonstopmode" "$@"
