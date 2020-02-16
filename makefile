@@ -20,19 +20,19 @@ deploy: build
 
 # Netlify doesn't support LaTeX builds, so I'll have to rely on local build for this and can't really do prod.
 
-netlify: buildjavascriptfornetlify
+netlify: buildjsnetlify
 	cp -r swap_in/* dist
 
-buildjavscriptfornetlify: buildcvfornetlify
+buildjsnetlify: buildcvnetlify
 	npm run build
 
-buildcvfornetlify: templatecvfornetlify
+buildcvnetlify: templatecvnetlify
 	cp -R cvtex/. .
 	cp -R texbuild_for_netlify/. .
 	bash build.sh currentcv.tex
 	cp currentcv.pdf src/assets/pdf/gowdercv.pdf
 
-templatecvfornetlify: yaml2json updatedate
+templatecvnetlify: yaml2json updatedate
 	node ./buildscripts/template-public-cv.js
 
 build: yaml2json updatedate buildpubliccv buildprivatecv
