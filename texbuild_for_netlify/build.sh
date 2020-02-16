@@ -78,6 +78,7 @@ tlmgr install etoolbox
 tlmgr install xcolor
 tlmgr install microtype
 tlmgr install l3kernel
+tlmgr install moderncv
 
 python "$TEXLIVEONFLY" -c latexmk -a "-g -pdf -synctex=1 -interaction=nonstopmode" "$@"
 
