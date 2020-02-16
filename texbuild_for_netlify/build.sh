@@ -80,7 +80,7 @@ tlmgr install microtype
 tlmgr install l3kernel
 tlmgr install regexpatch
 
-python "$TEXLIVEONFLY" -c latexmk -a "-g -pdf -synctex=1 -interaction=nonstopmode" "$@"
+python "$TEXLIVEONFLY" -c latexmk --engine=xelatex -a "-g -pdf -synctex=1 -interaction=nonstopmode" "$@"
 
 mkdir -p dist
 cp *.pdf dist
