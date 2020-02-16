@@ -83,27 +83,27 @@ tlmgr install regexpatch
 
 python "$TEXLIVEONFLY" -c latexmk --compiler=xelatex -a "-g -pdf -synctex=1 -interaction=nonstopmode" "$@"
 
-mkdir -p dist
-cp *.pdf dist
+# mkdir -p dist
+# cp *.pdf dist
 
 # used to url encode the filename, which can includes special characters that
 # conflict with the _redirects file syntax
-urlencode() {
-  local string="${1}"
-  local strlen="${#string}"
-  local encoded=""
-  local pos c o
+# urlencode() {
+#   local string="${1}"
+#   local strlen="${#string}"
+#   local encoded=""
+#   local pos c o
 
-  for (( pos=0 ; pos<strlen ; pos++ )); do
-    c="${string:$pos:1}"
-    case "$c" in
-      [-_.~a-zA-Z0-9] ) o="${c}" ;;
-      * ) printf -v o '%%%02x' "'$c"
-    esac
-    encoded+="${o}"
-  done
+#   for (( pos=0 ; pos<strlen ; pos++ )); do
+#     c="${string:$pos:1}"
+#     case "$c" in
+#       [-_.~a-zA-Z0-9] ) o="${c}" ;;
+#       * ) printf -v o '%%%02x' "'$c"
+#     esac
+#     encoded+="${o}"
+#   done
 
-  echo "${encoded}"
-}
+#   echo "${encoded}"
+# }
 
-echo "/ /$(urlencode "${1/%.tex/.pdf}") 302" > dist/_redirects
+# echo "/ /$(urlencode "${1/%.tex/.pdf}") 302" > dist/_redirects
