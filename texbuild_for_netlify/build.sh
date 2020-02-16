@@ -75,6 +75,9 @@ export PATH="$TEXLIVE_BIN:$PATH"
 tlmgr update -self -all
 tlmgr install l3packages
 tlmgr install etoolbox
+tlmgr install xcolor
+tlmgr install microtype
+tlmgr install l3regex
 
 python "$TEXLIVEONFLY" -c latexmk -a "-g -pdf -synctex=1 -interaction=nonstopmode" "$@"
 
