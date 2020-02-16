@@ -1,0 +1,253 @@
+%% start of file 'template.tex'.
+%% Based on a c.v. template (moderncv) that is Copyright 2006-2013 Xavier Danaux (xdanaux@gmail.com).
+%% Also based on code by Saad Quadri in latexresu.me
+%% modern cv under LaTeX Project Public License version 1.3c
+%% latexresu.me under MIT license. 
+%% Paul Gowder additions under MIT license.
+
+\documentclass[letterpaper]{moderncv} 
+\usepackage{textcomp}
+% moderncv themes
+\moderncvstyle{classic}
+% style options are 'casual' (default), 'classic', 'oldstyle' and 'banking'
+\moderncvcolor{blue}
+% color options 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
+%\renewcommand{\familydefault}{\sfdefault}         % to set the default font; use '\sfdefault' for the default sans serif font, '\rmdefault' for the default roman one, or any tex font name
+%\nopagenumbers{}                                  % uncomment to suppress automatic page numbering for CVs longer than one page
+
+% character encoding
+\usepackage[utf8]{inputenc}                       % if you are not using xelatex ou lualatex, replace by the encoding you are using
+
+% adjust the page margins
+\usepackage[scale=0.75]{geometry}
+\setlength{\hintscolumnwidth}{2cm}
+% if you want to change the width of the column with the dates
+%\setlength{\makecvtitlenamewidth}{10cm}           % for the 'classic' style, if you want to force the width allocated to your name and avoid line breaks. be careful though, the length is normally calculated to avoid any overlap with your personal info; use this at your own typographical risks...
+    % Profile
+\name{<<basic.core.name>>}{}
+\address{Last update: <<basic.core.revdate>>} %% total hack to get last rev date instead of
+                                %% address in here.
+\phone[mobile]{+1 650-739-5203}
+\email{<<basic.core.email>>}
+\homepage{gowder.io}
+    \begin{document}
+\makecvtitle
+
+\lfoot{\thepage}
+
+%
+% positions
+%
+\section{Roles}
+
+\subsection{Academic}
+
+\cventry
+{09/12-Present}
+{Professor of Law and O.K. Patton Fellow in Law}
+{University of Iowa}
+{Iowa City, IA}
+{}
+{\begin{itemize}%
+	\item Associate Professor of Law (pre-tenure): 2012-2017.
+	\item Professor of Law (tenured): 2017-; and O.K. Patton Fellow in Law 7/2019-.
+	\item Courtesy appointments in Political Science (2012-), Philosophy (2016-)
+	\end{itemize}}
+\vspace{1mm}
+\subsection{Legal}
+
+\cventry
+{2004-6}
+{Victor M. Glasberg and Associates}
+{Associate Attorney}
+{Alexandria, VA}
+{}
+{\begin{itemize}%
+	\item Civil rights litigation in small private public interest firm with caseload including employment discrimination,
+    police misconduct, First Amendment, due process and similar subject areas.
+	\end{itemize}}
+
+\cventry
+{2001-3}
+{Oregon Law Center}
+{Staff Attorney}
+{Ontario, OR}
+{}
+{\begin{itemize}%
+	\item Low-income legal services representation with caseload primarily centered on employment
+    (especially farmworker), housing, and public benefits litigation.
+	\end{itemize}}
+
+\cventry
+{1999}
+{ACLU of the National Capital Area}
+{Summer Law Clerk}
+{Washington, D.C.}
+{}
+{}
+\vspace{1mm}
+\subsection{Consulting (Paid and Volunteer)}
+
+\cventry
+{2018-present}
+{Facebook, Inc.}
+{Contract Researcher/Consultant}
+{Menlo Park, CA}
+{}
+{\begin{itemize}%
+	\item Consulting relating to questions surrounding elections and democratic
+    integrity. Full-time for two months in summer 2018, and then continuing on
+    part-time/as-needed basis thereafter. Formal relationship
+    as contractor via Pro Unlimited, Inc.
+	\end{itemize}}
+
+\cventry
+{07/2016}
+{JSTOR Labs}
+{Subject matter expert}
+{Ann Arbor, CA}
+{}
+{\begin{itemize}%
+	\item Participate as outside expert on a voluntary basis in weeklong design
+    sprint relating to potential expansion of scholarly archiving and discovery products.
+	\end{itemize}}
+
+%
+% education
+%
+\section{Education}
+\cventry
+{2012}
+{Ph.D., Political Science}
+{Stanford University}
+{}
+{\textit{Stanford, CA}}
+{}
+\cventry
+{2000}
+{J.D.}
+{Harvard Law School}
+{}
+{\textit{Cambridge, MA}}
+{}
+\cventry
+{1997}
+{B.A., Political Science}
+{California State University}
+{}
+{\textit{Los Angeles, CA}}
+{}
+%
+% Publications
+%
+\section{Publications}
+\subsection{Books}
+<<#books>>
+\cventry
+{<<year>>}
+{<<title>>}
+{}
+{\textit{<<publisher>>}}
+{}
+{}
+\vspace{1mm}
+<</books>>
+\vspace{1mm}
+\subsection{Peer-Reviewed/Edited Articles}
+<<#peerreview>>
+\cventry
+{<<year>>}
+{<<title>>}
+{}
+{\textit{<<journal>>}}
+{}
+{<<cite>>. <<note>>}
+\vspace{1mm}
+<</peerreview>>
+\vspace{1mm}
+\subsection{Law Review (Student-Edited) Articles}
+<<#lawreview>>
+\cventry
+{<<year>>}
+{<<title>>}
+{}
+{\textit{<<journal>>}}
+{}
+{<<cite>>. <<note>>}
+\vspace{1mm}
+<</lawreview>>
+\vspace{1mm}
+\subsection{Book Chapters}
+<<#chapters>>
+\cventry
+{<<year>>}
+{<<title>>}
+{}
+{in \textit{<<book>>}}
+{}
+{<<editor>>, ed., <<publisher>>, pp. <<firstpage>>-<<lastpage>>.}
+\vspace{1mm}
+<</chapters>>
+\vspace{1mm}
+
+\subsection{Forthcoming (all categories)}
+<<#forthcoming>>
+\cvitem
+{}
+{\textit{<<title>>}, forthcoming in <<outlet>>.}
+\vspace{1mm}
+<</forthcoming>>
+
+
+\section{Grants, Awards, Honors}
+<<#awards>>
+\cvitem
+{<<year>>}
+{<<award>>.}
+\vspace{1mm}
+<</awards>>
+
+
+
+
+\section{Teaching}
+\subsection{Lead Instructor}
+<<#leadteaching>>
+\cvitem
+{<<terms>>}
+{<<title>>, <<school>>.}
+\vspace{1mm}
+<</leadteaching>>
+\subsection{Teaching Assistant}
+<<#taships>>
+\cvitem
+{<<terms>>}
+{<<title>>, <<school>>.
+  \newline
+  <<notes>>.
+}
+\vspace{1mm}
+<</taships>>
+
+
+% 
+% Misc
+%
+\section{Other}
+\subsection{Languages}
+\cvitem{Human}{English (native). Attic Greek (rudimentary reading).}
+\cvitem{Computer}{<<#misc.computerlang>><<.>>. <</misc.computerlang>>}
+\subsection{Less Formal Education}
+\cvitem{2017}{Recurse Center (summer 2 half-batch).}
+\cvitem{2013}{University College Cork, Attic Greek Summer Immersion.}
+\subsection{Notes}
+\cvitem{}{Research Assistant to Lawrence Lessig (2006-8, 1999), and to Richard Sobel (1998).}
+\subsection{Community Engagement}
+<<#cserv>>
+\cvitem
+{<<years>>}
+{<<role>>.}
+\vspace{1mm}
+<</cserv>>
+\ 
+\end{document}

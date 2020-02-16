@@ -124,8 +124,8 @@ fs.writeFileSync("./currentcv.tex", input)
 const output = fs.createWriteStream('./src/assets/pdf/gowdercv.pdf');
 
 const opts = {cmd: 'xelatex',
-	            inputs: './cvtex',
-              fonts: './cvtex'};
+	            inputs: './LOCAL_BUILD_CVTEX',
+              fonts: './LOCAL_BUILD_CVTEX'};
 
 const pdf = latex(input, opts)
 

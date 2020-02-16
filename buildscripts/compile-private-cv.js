@@ -94,22 +94,22 @@ const refing = refereeing.sort()
 const templatedata = {awards, basic, leadteaching, taships, misc, invited, conferences, campus, userv, dserv, cserv, books, peerreview, lawreview, chapters, miscpubs, forthcoming, refing};
 
 const opts = {cmd: 'xelatex',
-	            inputs: './cvtex',
-              fonts: './cvtex'};
+	            inputs: './LOCAL_BUILD_CVTEX',
+              fonts: './LOCAL_BUILD_CVTEX'};
 
-const templatePrivate = fs.readFileSync("./cvtex/private/private.tex", "utf8");
+const templatePrivate = fs.readFileSync("./LOCAL_BUILD_CVTEX/private/private.tex", "utf8");
 
 const inputPrivate = Mustache.render(templatePrivate, templatedata);
 
-const outputPrivate = fs.createWriteStream('./cvtex/private/gowdercv_private.pdf');
+const outputPrivate = fs.createWriteStream('./LOCAL_BUILD_CVTEX/private/gowdercv_private.pdf');
 
 latex(inputPrivate, opts).pipe(outputPrivate);
 
 
-const templateAbbr = fs.readFileSync("./cvtex/private/abbreviated.tex", "utf8");
+const templateAbbr = fs.readFileSync("./LOCAL_BUILD_CVTEX/private/abbreviated.tex", "utf8");
 
 const inputAbbr = Mustache.render(templateAbbr, templatedata);
 
-const outputAbbr = fs.createWriteStream('./cvtex/private/gowdercv_abbreviated.pdf');
+const outputAbbr = fs.createWriteStream('./LOCAL_BUILD_CVTEX/private/gowdercv_abbreviated.pdf');
 
 latex(inputAbbr, opts).pipe(outputAbbr);
