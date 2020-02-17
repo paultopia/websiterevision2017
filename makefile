@@ -20,11 +20,14 @@ deploy: build
 
 # Netlify doesn't support LaTeX builds, so I'll have to rely on local build for this and can't really do prod.
 
-netlify: buildjsnetlify
-	cd apps/apps && lein package
+netlify: buildjsnetlify buildcljsnetlify buildcvnetlify
 	cp -r swap_in/* dist
 
-buildjsnetlify: buildcvnetlify
+buildcljsnetlify:
+	cd apps/apps && lein package
+	cp -r apps/apps/public/. swap_in/apps
+
+buildjsnetlify:
 	npm run build
 
 buildcvnetlify: templatecvnetlify
