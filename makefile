@@ -22,7 +22,8 @@ deploy: build
 
 netlify: buildjsnetlify
 	cd apps/apps
-	lein cljsbuild once
+	lein help
+	ls
 	cp -r swap_in/* dist
 
 buildjsnetlify: buildcvnetlify
