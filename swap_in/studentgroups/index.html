@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <!-- Basic Page Needs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta charset="utf-8">
+  <title>Student Matcher</title>
+  <meta name="description" content="Quick and dirty tool to match students into groups">
+  <meta name="author" content="Paul Gowder">
+
+  <!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- FONT
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link href="https://fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+
+  <!-- CSS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="stylesheet" href="normalize.css">
+  <link rel="stylesheet" href="skeleton.css">
+
+
+
+</head>
+<body>
+
+  <!-- Primary Page Layout
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <div class="container">
+    <div class="row">
+      <div class="twelve columns" style="margin-top: 1%">
+          <h4>Student Matcher</h4>
+
+        <p>This is a quick and dirty tool that I (<a href="https://gowder.io">Paul Gowder</a>) banged out to match my students into "virtual study groups" in order to do peer discussion exercises/think-pair-share/etc. virtually while the campus is closed due to coronavirus. It's meant to replicate a casual "go talk to your neighbors about X and then report back" classroom technique.</p>
+
+        <p>The code asks for three things from you: (1) a list of student names (or email addresses, or nicknames, or whatever), one per line, in the text box, (2) a number for the size of groups you want (e.g., groups of 2 students, groups of 3 students), and (3) what to do if the number of students doesn't divide evenly into the group size, namely, (a) create a few groups that have one extra student, or (b) make a smaller group with the leftover people.  It will then generate a list of groups suitable to paste into an e-mail or whatever.</p>
+
+        <p><b>THIS WEBPAGE DOES NOT COLLECT ANY DATA</b>.  It is a pure "client-side" micro-application.  This means that it never talks to any server, except when you first load the page, and does not send the list of students anywhere. It just does a little bit of random matching using javascript in the browser which is running on your own computer. Hence, it doesn't compromise student privacy. If you read javascript, you can verify this claim by looking at the html for this page, plus <i>randomize.js</i>, which is the only javascript file referenced in the html.  I have deliberately left the code for this in as readable a state as possible to make this readily verifiable.</p>
+
+      </div>
+    </div>
+    <div class="row">
+
+      <div class="six columns">
+
+        <p><b>List of students goes here, one per line</b><br>
+
+            <textarea id="students" rows="10" cols="40"></textarea>
+
+        </p>
+
+        <p>Number of students per group: <input type="number" id="numStuds" value="2"></p>
+        <p> What to do when the number of students doesn't evenly divide into the number of students per group?
+
+            <select id="overflow">
+                <option value="smaller">Have a small group</option>
+                <option value="larger">Have a few larger groups</option>
+
+            </select>
+        </p>
+
+
+        <p><button class="button-primary" id="gobutton">Create groups</button></p>
+
+      </div>
+
+      <div class="six columns">
+          <p><b>Output below, one group per line:</b> </p>
+
+        <div id="output"></div>
+
+      </div>
+    </div>
+  </div>
+
+   <script src="randomize.js" type="text/javascript"></script>
+
+<!-- End Document
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+</body>
+</html>
