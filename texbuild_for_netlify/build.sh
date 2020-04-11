@@ -80,6 +80,7 @@ tlmgr install xcolor
 tlmgr install microtype
 tlmgr install l3kernel
 tlmgr install regexpatch
+tlmgr install marvosym
 
 python "$TEXLIVEONFLY" -c latexmk --compiler=xelatex -a "-g -pdf -synctex=1 -interaction=nonstopmode" "$@"
 
