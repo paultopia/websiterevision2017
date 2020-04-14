@@ -1,8 +1,10 @@
 I'm best reached over e-mail. 
 
-If you'd like to reach me on *official University of Iowa business*, please e-mail me at paul-gowder (AT-SYMBOL-GOES-HERE) uiowa.edu.
+Currently (through the end of Spring 2020), if you'd like to reach me on *official University of Iowa business*, please e-mail me at paul-gowder (AT-SYMBOL-GOES-HERE) uiowa.edu.
 
 However, you should be aware that **my university e-mail is subject to the state of Iowa's open records laws**. If you'd like to reach me on *personal business*, and *especially* if anything political is involved, please e-mail me at paul.gowder (AT SYMBOL, YEP) gmail.com.
+
+**At the end of Spring 2020, I'm leaving the University of Iowa and joining the faculty at Northwestern University, so please update your e-mail address for me. In the future, academic e-mail should go to paul.gowder [at-symbol] law.northwestern.edu.** I expect my Iowa e-mail to go poof around the end of May 2020.
 
 I really prefer not to receive unsolicited telephone calls, and I very rarely check voicemail unless a call has been prearranged. 
 
