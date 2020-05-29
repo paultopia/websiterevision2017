@@ -1,1 +1,0 @@
-Local buld cvtex and cvtex are different because my local installation of latex is old. The local installation of latex needs `\usepackage{l3regex}` but the installation of latex that works on netlify needs `\usepackage{expl3}` instead.  So I've just duplicated the whole damn thing. 
