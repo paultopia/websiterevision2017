@@ -10,21 +10,19 @@
 
         <h2>Academic Positions</h2>
 
-        <p>2017- <b>Professor of Law and (2019-) O.K. Patton Fellow in Law</b>, University of Iowa
-          <ul>
-            <li>with tenure</li>
-            <li>courtesy appointments in political science, philosophy</li>
-            </ul>
+        <p>2020- <b>Professor of Law</b>, Northwestern University
         </p>
-        <p>2012-7 <b>Associate Professor of Law</b>, University of Iowa
+
+        <p>2012-2020 <b>Professor of Law and (2019-) O.K. Patton Fellow in Law</b>, University of Iowa
           <ul>
-            <li>pre-tenure</li>
-            <li>courtesy appointments in political science (2012-), philosophy (2016-)</li>
-            </ul>
+            <li>pre-tenure associate professor 2012-7, tenured and promoted to full 2017
+            <li>courtesy appointments in political science (2012-20), philosophy (2016-20)</li>
+          </ul>
         </p>
-        
+
+
         <p>Fall 2019 <b>Visiting Professor of Law</b>, Boston University</p>
-          
+
 
         <h2>Education</h2>
         <p>2012 <b>Ph.D., Political Science</b>, Stanford University</p>
@@ -107,7 +105,7 @@ import generictable from "./generictable.vue";
 import publications from "./publications.vue";
 import service from "./service.vue";
 
-export default {    
+export default {
     components: {presentations, teaching, generictable, publications, service},
     computed: {
         cvURL: function(){return this.$store.state.cvURL;},
