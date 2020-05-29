@@ -56,3 +56,4 @@ buildpubliccv: updatedate yaml2json
 
 buildprivatecv: updatedate yaml2json
 	node ./buildscripts/compile-private-cv.js
+

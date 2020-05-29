@@ -97,19 +97,18 @@ const opts = {cmd: 'xelatex',
 	            inputs: './LOCAL_BUILD_CVTEX',
               fonts: './LOCAL_BUILD_CVTEX'};
 
+
 const templatePrivate = fs.readFileSync("./LOCAL_BUILD_CVTEX/private/private.tex", "utf8");
-
 const inputPrivate = Mustache.render(templatePrivate, templatedata);
-
 const outputPrivate = fs.createWriteStream('./LOCAL_BUILD_CVTEX/private/gowdercv_private.pdf');
-
 latex(inputPrivate, opts).pipe(outputPrivate);
 
+// const templateNoaddress = fs.readFileSync("./LOCAL_BUILD_CVTEX/private/noaddress.tex", "utf8");
+// const inputNoaddress = Mustache.render(templateNoaddress, templatedata);
+// const outputNoaddress = fs.createWriteStream('./LOCAL_BUILD_CVTEX/private/gowdercv_noaddress.pdf');
+// latex(inputNoaddress, opts).pipe(outputNoaddress);
 
 const templateAbbr = fs.readFileSync("./LOCAL_BUILD_CVTEX/private/abbreviated.tex", "utf8");
-
 const inputAbbr = Mustache.render(templateAbbr, templatedata);
-
 const outputAbbr = fs.createWriteStream('./LOCAL_BUILD_CVTEX/private/gowdercv_abbreviated.pdf');
-
 latex(inputAbbr, opts).pipe(outputAbbr);
