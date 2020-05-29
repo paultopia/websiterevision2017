@@ -5,6 +5,7 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 cvtex/private/
+LOCAL_BUILD_CVTEX/private/
 apps/apps/target/
 apps/apps/public/js/
 apps/apps/.rebel_readline_history
