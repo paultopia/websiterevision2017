@@ -7,6 +7,10 @@ if [ "$#" -eq 0 ]; then
   exit 1
 fi
 
+echo "PWD IS: "
+
+echo $PWD
+
 # We use $DEPLOY_URL to detect the Netlify environment.
 if [ -v DEPLOY_URL ]; then
   : ${NETLIFY_BUILD_BASE="/opt/buildhome"}
@@ -58,11 +62,13 @@ TEXMFSYSCONFIG $TEXLIVE_DIR/2020/texmf-config
 TEXMFSYSVAR $TEXLIVE_DIR/2020/texmf-var
 "
 
+echo "$TEXLIVE_PROFILE" > texlive.profile
+
 if [ ! -e "$INSTALL_TL_SUCCESS" ]; then
   tar xf "$INSTALL_TL"
 
   echo "[$0] Installing TeX Live..."
-  "$INSTALL_TL_VERSION"/install-tl --profile=<(echo "$TEXLIVE_PROFILE")
+  "$INSTALL_TL_VERSION"/install-tl --profile=texlive.profile
   echo "[$0] Installed TeX Live."
 
   touch "$INSTALL_TL_SUCCESS"
