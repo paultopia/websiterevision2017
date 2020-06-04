@@ -8,7 +8,7 @@ Other web presences that you might use to reach me, find out more about me, etc.
 
 - [Linkedin](http://www.linkedin.com/in/paulgowder)
 
-- [PhilPapers](http://philpapers.org/profile/12056) and [PhilPeople](https://philpeople.org/profiles/paul-gowder)
+- [PhilPapers/PhilPeople](https://philpeople.org/profiles/paul-gowder)
 
 - [Orcid](http://orcid.org/0000-0001-7641-585X)
 
