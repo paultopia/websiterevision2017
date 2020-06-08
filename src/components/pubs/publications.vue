@@ -101,6 +101,11 @@
                     <p>
                         <a :href="risurl" download="gowder.ris">download ris (reference manager format)</a>
                         </p>
+
+			<p>
+				If you use Zotero for reference management, you can also add individual publications directly to your library via [My Zotero Profile](https://www.zotero.org/paulgowder) (give the list a moment to load). 
+			</p>
+
                         <p>
 
                       See cv page for additional, minor, publications.
