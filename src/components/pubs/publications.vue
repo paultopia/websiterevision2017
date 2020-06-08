@@ -103,7 +103,7 @@
                         </p>
 
 			<p>
-				If you use Zotero for reference management, you can also add individual publications directly to your library via [My Zotero Profile](https://www.zotero.org/paulgowder) (give the list a moment to load). 
+				If you use Zotero for reference management, you can also add individual publications directly to your library via <a href="https://www.zotero.org/paulgowder">my Zotero profile</a> (give the list a moment to load). 
 			</p>
 
                         <p>
