@@ -17,7 +17,7 @@ deploy: build
 # scp -r dist/static/ $(PAULGOWDERCOMTARGET)
 #	scp dist/index.html $(PAULGOWDERCOMTARGET)
 #	scp square.jpg $(GOWDERIOTARGET)
-echo "this shouldn't be run, it's obsolete"
+	echo "this shouldn't be run, it's obsolete"
 
 # Netlify doesn't support LaTeX builds, so I'll have to rely on local build for this and can't really do prod.
 
