@@ -9,6 +9,7 @@
         <p>
           <a :href="cvURL" download="gowdercv.pdf"><img src="../../assets/icons/file-pdf.svg" class="cvicon"> Download in PDF</a>
           <br><a href="gowdercv.pdf">Link above doesn't work? Try this one.</a>
+          <br><a :href="newCVURL" download="gowdercv.pdf">TRY 3</a>
         </p>
 
         <h2>Academic Positions</h2>
@@ -97,8 +98,8 @@
 <script>
 
 function chron(a, b){
-    if(a.year >= b.year) return -1;
-    return 1;
+if(a.year >= b.year) return -1;
+return 1;
 }
 
 
@@ -107,11 +108,13 @@ import teaching from "./teaching.vue";
 import generictable from "./generictable.vue";
 import publications from "./publications.vue";
 import service from "./service.vue";
+import b64ToBlob from "../../blob.js";
 
 export default {
-    components: {presentations, teaching, generictable, publications, service},
-    computed: {
+components: {presentations, teaching, generictable, publications, service},
+computed: {
         cvURL: function(){return this.$store.state.cvURL;},
+        newCVURL: function(){return b64ToBlob(this.$store.state.cvURL);},
         pubs: function(){return this.$store.state.pubs;},
         pres: function(){return this.$store.state.pres;},
         courses: function(){return this.$store.state.courses;},
