@@ -1,30 +1,8 @@
-GOWDERIOTARGET = ${gowderiotarget}
-# PAULGOWDERCOMTARGET = ${paulgowdercomtarget}
-GOWDERIO = ${gowderio}
-# PAULGOWDERCOM = ${paulgowdercom}
-# I don't want to expose usernames and servers, set in env variable via api keys file
-
-all: log
-
-log: deploy
-	python clear_cache_and_log.py
-
-deploy: build
-# ssh $(PAULGOWDERCOM) "rm -rf public_html/paul-gowder.com/static/" # cleanup old versions of compiled files
-#	ssh $(GOWDERIO) "rm -rf static/"
-#	scp -r dist/static/ $(GOWDERIOTARGET)
-#	scp dist/index.html $(GOWDERIOTARGET)
-# scp -r dist/static/ $(PAULGOWDERCOMTARGET)
-#	scp dist/index.html $(PAULGOWDERCOMTARGET)
-#	scp square.jpg $(GOWDERIOTARGET)
-	echo "this shouldn't be run, it's obsolete"
-
-# Netlify doesn't support LaTeX builds, so I'll have to rely on local build for this and can't really do prod.
+# Netlify functionality
 
 netlify: buildjsnetlify buildcljsnetlify
 	cp -r swap_in/* dist
 	cp currentcv.pdf dist/gowdercv.pdf
-
 
 buildcljsnetlify:
 	cd apps/apps && lein package
@@ -42,10 +20,12 @@ buildcvnetlify: templatecvnetlify
 templatecvnetlify: yaml2json updatedate
 	node ./buildscripts/template-public-cv.js
 
-build: yaml2json updatedate buildpubliccv buildprivatecv
+# Local functionality
+
+local: cvbuild
 	npm run build
 
-local: yaml2json updatedate buildpubliccv buildprivatecv
+dev: cvbuild
 	npm run dev
 
 yaml2json:
@@ -54,8 +34,22 @@ yaml2json:
 updatedate: yaml2json
 	node ./buildscripts/update-last-updated.js
 
+cvbuild: updatedate yaml2json
+	node ./buildscripts/template-public-cv.js
+	cp -r cvtex temp_cv_build
+	cp currentcv.tex temp_cv_build
+	cd temp_cv_build && xelatex currentcv.tex
+	cp temp_cv_build/currentcv.pdf .
+	rm -rf temp_cv_build
+
 buildpubliccv: updatedate yaml2json
 	node ./buildscripts/compile-public-cv.js
 
 buildprivatecv: updatedate yaml2json
 	node ./buildscripts/compile-private-cv.js
+
+fancy_local: yaml2json updatedate buildpubliccv buildprivatecv
+	npm run build
+
+fancy_dev: yaml2json updatedate buildpubliccv buildprivatecv
+	npm run dev
