@@ -7,9 +7,7 @@
 
         <h1>Paul Gowder: CV</h1>
         <p>
-          <a :href="cvURL" download="gowdercv.pdf"><img src="../../assets/icons/file-pdf.svg" class="cvicon"> Download in PDF</a>
-          <br><a href="gowdercv.pdf">Link above doesn't work? Try this one.</a>
-          <br><a :href="newCVURL" download="gowdercv.pdf">TRY 3</a>
+          <a :href="newCVURL" download="gowdercv.pdf"><img src="../../assets/icons/file-pdf.svg" class="cvicon"> Download in PDF</a>
         </p>
 
         <h2>Academic Positions</h2>
