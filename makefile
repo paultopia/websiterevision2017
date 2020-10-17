@@ -11,17 +11,20 @@ log: deploy
 
 deploy: build
 # ssh $(PAULGOWDERCOM) "rm -rf public_html/paul-gowder.com/static/" # cleanup old versions of compiled files
-	ssh $(GOWDERIO) "rm -rf static/"
-	scp -r dist/static/ $(GOWDERIOTARGET)
-	scp dist/index.html $(GOWDERIOTARGET)
+#	ssh $(GOWDERIO) "rm -rf static/"
+#	scp -r dist/static/ $(GOWDERIOTARGET)
+#	scp dist/index.html $(GOWDERIOTARGET)
 # scp -r dist/static/ $(PAULGOWDERCOMTARGET)
 #	scp dist/index.html $(PAULGOWDERCOMTARGET)
-	scp square.jpg $(GOWDERIOTARGET)
+#	scp square.jpg $(GOWDERIOTARGET)
+echo "this shouldn't be run, it's obsolete"
 
 # Netlify doesn't support LaTeX builds, so I'll have to rely on local build for this and can't really do prod.
 
 netlify: buildjsnetlify buildcljsnetlify
 	cp -r swap_in/* dist
+	cp currentcv.pdf dist/gowdercv.pdf
+
 
 buildcljsnetlify:
 	cd apps/apps && lein package
@@ -56,4 +59,3 @@ buildpubliccv: updatedate yaml2json
 
 buildprivatecv: updatedate yaml2json
 	node ./buildscripts/compile-private-cv.js
-
