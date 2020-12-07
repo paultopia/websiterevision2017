@@ -1,6 +1,11 @@
 - years: '2020-1'
   subentity: 'Pritzker School of Law'
   entity: 'Northwestern University'
+  role: 'Member, Dean Search Committee'
+  type: 'university'
+- years: '2020-1'
+  subentity: 'Pritzker School of Law'
+  entity: 'Northwestern University'
   role: 'Member, Public Interest Committee'
   type: 'university'
 - years: '2020-1'
@@ -238,11 +243,11 @@
   role: 'Reviewer, Northwestern University Law Review'
   type: disciplinary
 - years: '2018'
-  role: 'Reviewer, Law & Policy' 
+  role: 'Reviewer, Law & Policy'
   type: disciplinary
 - years: '2020'
-  role: 'Reviewer, Hart Publishing' 
+  role: 'Reviewer, Hart Publishing'
   type: disciplinary
 - years: '2020'
-  role: 'Reviewer, American Political Science Review' 
+  role: 'Reviewer, American Political Science Review'
   type: disciplinary
