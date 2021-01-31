@@ -1,3 +1,21 @@
+- abstract: null
+  address: null
+  altlink: null
+  book: null
+  coauthor: null
+  editor: null
+  firstpage: 12
+  issue: 1
+  journal: Law and Politics Book Review
+  lastpage: 47
+  note: Law and Politics Book Review
+  publink: "http://www.lpbr.net/2021/01/law-and-leviathan-redeeming.html"
+  publisher: null
+  title: "Untitled Review of Cass Sunstein and Adrian Vermeule, Law and Leviathan: Redeeming the Administrative State"
+  type: misc
+  volume: 31
+  year: '2021'
+  tags: ['minor', review]
 - abstract: >-
     According to many constitutional lawyers and political scientists, the presidential administration of Donald Trump 
     (for scholars on the left), or the response to that presidency (for scholars on the right) poses serious dangers to American 
