@@ -12,3 +12,4 @@ The progression over the years has been something like:
 
 2017: all the ridiculousness of the modern front-end web: a SPA with Vue, prerendering, hand-rolled and moderately buggy navigation, Webpack, ES6, handwritten CSS with responsive-ish layout using media queries and Flexbox (but not Sass or SCSS or whatever the flavor of the month is there), LaTeX and HTML CVs and BibTeX rendered from the same YAML->JSON pipeline with a makefile. YOLO.
 
+2019-20 and now the same but with continuous integration so I build on push, wheeeee
