@@ -25,4 +25,4 @@ for (yamlfilename of yamlfiles){
     fs.writeFile(outfile, jsonstring, function(err){console.log(err ? err : "");});
 }
 
-
+console.log("yaml converted to json")

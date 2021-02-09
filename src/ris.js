@@ -27,38 +27,28 @@ function basicR (entry) {
 }
 
 function typeMaker (pubitem) {
-
     const refType = {"law review": "JOUR",
-        "peer review": "JOUR",
-        "chapter": "CHAP",
-        "book": "BOOK"}[pubitem.type];
-
+		     "book review": "JOUR",
+		     "peer review": "JOUR",
+		     "chapter": "CHAP",
+		     "book": "BOOK"}[pubitem.type];
     return `\nTY  - ${refType}`;
-
 }
 
 function authorFlip (author) {
-
     // Won't work with jr etc.
     var alist = author.split(" ")
     const lastname = alist.pop();
-
     return `AU  - ${lastname},${alist.join(",")}`;
-
 }
 
 function authorMaker (pubitem) {
-
     const moi = "AU  - Gowder,Paul";
-
     return pubitem.coauthor ? `${authorFlip(pubitem.coauthor)}\n${moi}` : moi;
-
 }
 
 function yearMaker (pubitem) {
-
     return `PY  - ${pubitem.year}///`;
-
 }
 
 const funcUp = (fields) => [
@@ -114,11 +104,11 @@ function bookRis (pubitem) {
 function makeRis (pubs) {
 
     return pubs.map((pubitem) => get({"law review": articleRis,
-      	"peer review": articleRis,
-      	"chapter": chapterRis,
-      	"book": bookRis}, pubitem.type, (_) => null)(pubitem)).filter((elem) => elem).
-        join("\n");
-
+      				      "peer review": articleRis,
+				      "book review": articleRis,
+      				      "chapter": chapterRis,
+      				      "book": bookRis}, pubitem.type, (_) => null)(pubitem)).filter((elem) => elem)
+	.join("\n");
 }
 
 export default makeRis;

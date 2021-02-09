@@ -86,6 +86,7 @@ const books = publications.filter(p => p.type === "book").sort(chronThenTitle);
 const peerreview = publications.filter(p => p.type === "peer review").sort(chronThenTitle).map(citeAdder);
 const lawreview = publications.filter(p => p.type === "law review").sort(chronThenTitle).map(citeAdder);
 const chapters = publications.filter(p => p.type === "chapter").sort(chronThenTitle);
+const bookreview = publications.filter(p => p.type === "book review").sort(chronThenTitle).map(citeAdder);
 const miscpubs = publications.filter(p => p.type === "misc").sort(chronThenTitle);
 
 const refing = refereeing.sort()
@@ -112,7 +113,26 @@ function chunkArray(arr){
 
 const chunkrefs = chunkArray(refing)
 
-const templatedata = {awards, basic, leadteaching, taships, misc, invited, conferences, campus, userv, dserv, cserv, books, peerreview, lawreview, chapters, miscpubs, forthcoming, refing, chunkrefs};
+const templatedata = {awards,
+		      basic,
+		      leadteaching,
+		      taships,
+		      misc,
+		      invited,
+		      conferences,
+		      campus,
+		      userv,
+		      dserv,
+		      cserv,
+		      books,
+		      peerreview,
+		      lawreview,
+		      chapters,
+		      bookreview,
+		      miscpubs,
+		      forthcoming,
+		      refing,
+		      chunkrefs};
 
 const template = fs.readFileSync("./cvtex/template.tex", "utf8");
 

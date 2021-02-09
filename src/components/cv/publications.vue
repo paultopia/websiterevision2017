@@ -106,7 +106,6 @@
                     </tr>
                 </tbody></table>
 
-
             <h3>Book Chapters</h3>
             <table>
 <col style="width:5%">
@@ -140,6 +139,38 @@
 
 </tr>
                     
+            </tbody></table>
+
+            <h3>Book Reviews</h3>
+            <table>
+                <col style="width:5%">
+                <col style="width:35%">
+                <col style="width:35%">
+                <col style="width:20%">
+
+                <tbody>
+
+<tr v-for="rev in sortedPubs" v-if="rev.type === 'book review'">
+                    <td>
+
+                        {{ rev.year }}
+
+                    </td>
+                    <td>
+                        {{ rev.title }}
+
+                        <span v-if="rev.coauthor">
+                        <br>(Co-Author with {{ rev.coauthor }})
+                        </span>
+
+                    </td><td>
+                        {{ rev.journal }}
+
+                    </td><td>
+                        {{ makeCitation(rev) }}
+
+                    </td>
+                    </tr>
                 </tbody></table>
 
             <h3>Miscellany</h3>

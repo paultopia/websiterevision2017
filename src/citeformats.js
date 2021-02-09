@@ -17,7 +17,8 @@ function Chicago(p, _){
 	  const numbers = p.volume ? `${p.volume}${p.issue ? `, no. ${p.issue}` : ""} (${p.year}):${p.firstpage}-${p.lastpage}` : "";
 	  switch (p.type) {
 	  case "peer review":
-        // horrible fallthrough fuckery I may regret this oh god.  I don't want to duplicate journal code though!
+              // horrible fallthrough fuckery I may regret this oh god.  I don't want to duplicate journal code though!
+	  case "book review":
 	  case "law review":
 		    text = `${author}. ${quoter(`${p.title}.`)} ${p.journal} ${numbers}.`
 		    html = `${author}. ${quoter(`${p.title}.`)} ${italicizer(p.journal)} ${numbers}.`
@@ -43,6 +44,7 @@ function Bluebook(p, bb){
     const journal = p.journal ? bbjournal(p.journal, bb) : "";
     switch (p.type) {
     case "law review":
+    case "book review":
     case "peer review":
         text = `${author}, ${p.title}, ${p.volume} ${journal} ${p.firstpage} (${p.year}).`;
         html = `${author}, ${italicizer(p.title)}, ${p.volume} ${smallcapser(journal)} ${p.firstpage} (${p.year}).`;

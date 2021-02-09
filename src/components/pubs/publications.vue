@@ -93,6 +93,34 @@
                                         </div>
 
 
+ <h3>Book Reviews</h3>
+
+            <div class="nomobile">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Title</th>
+                        <th>Citation</th>
+                        <th>Year</th>
+                        <th>options</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+
+                        <tr is="articlerow" v-for="rev in bookReviews" v-bind:art="rev" v-bind:key="rev.title"></tr>
+
+
+                        </tbody>
+                      </table>
+
+                    </div> 
+
+                    <div class="mobileonly">
+
+                         <mobilearticlerow v-for="rev in bookReviews" v-bind:art="rev" v-bind:key="rev.title"></mobilearticlerow>
+
+                                        </div>
+		    
                     
                     <p>
                         <a :href="bturl" download="gowder.bib">download bibtex</a>
@@ -135,6 +163,8 @@ const isArticle = pub => pub.type === "peer review" || pub.type === "law review"
 
 const isChapter = pub => pub.type === "chapter";
 
+const isBookReview = pub => pub.type === "book review";
+
 function chronThenTypeThenTitle(a, b){
     if(parseInt(a.year) > parseInt(b.year)) return -1;
     if(parseInt(a.year) < parseInt(b.year)) return 1;
@@ -171,6 +201,9 @@ export default {
                    return arts;},
                  chapters: function(){return this.$store.state.augmented
                    .filter(isChapter)
+                   .sort(chronThenTitle)},
+                 bookReviews: function(){return this.$store.state.augmented
+                   .filter(isBookReview)
                    .sort(chronThenTitle)},
                  bturl: function (){return downloadURL(bibtex(this.publications));},
                  risurl: function (){return downloadURL(ris(this.publications));}

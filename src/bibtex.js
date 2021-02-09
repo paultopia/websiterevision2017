@@ -7,9 +7,10 @@ import { get } from "./utils.js";
 function makebibtex(pubs){
 	return pubs.map(function(pubitem){
       return get({"law review": articleBT,
-      	"peer review": articleBT,
-      	"chapter": chapterBT,
-      	"book": bookBT}, pubitem.type, _=>null)(pubitem);
+      		  "peer review": articleBT,
+      		  "chapter": chapterBT,
+		  "book review": articleBT,
+      		  "book": bookBT}, pubitem.type, _=>null)(pubitem);
 	}).filter(elem=>elem).join(",\n\n");
 }
 
@@ -62,8 +63,11 @@ function editorMaker(pubitem){
 }
 
 function nameMaker(pubitem){
-	var bibtextype = {"law review": "article", "peer review": "article", 
-		"chapter": "incollection", "book": "book"}[pubitem.type];
+    var bibtextype = {"law review": "article",
+		      "peer review": "article",
+		      "book review": "article", 
+		      "chapter": "incollection",
+		      "book": "book"}[pubitem.type];
 	var nom1 = pubitem.coauthor ? pubitem.coauthor.split(" ")[1]
 		.toLowerCase() + "gowder" : "gowder"; 
 	var nom2 = pubitem.title.split(" ").map(function(word){return word[0];})
