@@ -1,6 +1,10 @@
 lead:
   - notes: ''
     title: 'Critical Race Theory'
+    school: 'Northwestern University'
+    terms: '2021-'
+  - notes: ''
+    title: 'Critical Race Theory'
     school: 'Boston University'
     terms: '2019'
   - notes: ''
@@ -10,11 +14,11 @@ lead:
   - notes: ''
     title: Introduction to Quantitative and Computational Legal Reasoning
     school: University of Iowa
-    terms: 2019-
+    terms: 2019-20
   - notes: ''
     title: Torts
     school: University of Iowa
-    terms: 2016-
+    terms: 2016-20
   - notes: (covers federalism and separation of powers)
     title: Constitutional Law I
     school: University of Iowa
@@ -22,7 +26,7 @@ lead:
   - notes: (covers bill of rights and reconstruction amendments)
     title: Constitutional Law II
     school: University of Iowa
-    terms: 2012-
+    terms: 2012-20
   - notes: (yearlong)
     title: Policy Lab
     school: University of Iowa
