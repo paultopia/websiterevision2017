@@ -17,11 +17,11 @@ notes:
 humanlang:
   - ' Attic Greek (basic reading level, rusty)'
 computerlang:
-  - ' Python (intermediate)'
+  - ' Python (intermediate/advanced)'
   - ' R (intermediate, rusty)'
   - ' Clojure (intermediate)'
   - ' Swift (beginner)'
-  - ' Javascript (rudimentary)'
+  - ' Javascript (beginner/intermediate)'
 practice:
   - employer: Victor M. Glasberg & Associates
     role: Attorney (civil rights/liberties practice)
