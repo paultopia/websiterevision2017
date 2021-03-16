@@ -29,8 +29,8 @@
   role: 'Member, Tenure Committee (for one junior colleague)'
   type: 'university'
 - years: '2017-9'
-  subentity: College of Law
-  entity: University of Iowa
+  subentity: 'College of Law'
+  entity: 'University of Iowa'
   role: 'Member, J.D. Admissions Committee'
   type: university
 - years: '2017-9'
@@ -42,22 +42,22 @@
   entity: University of Iowa
   role: 'Chair, S.J.D. Admissions Committee'
   type: university
-- years: '2017-'
+- years: '2017-20'
   subentity: Obermann Center for Advanced Studies
   entity: University of Iowa
   role: Advisory Board Member
   type: university
-- years: '2017'
+- years: '2017-20'
   subentity: Student Governmemt/Lecture Committee
   entity: University of Iowa
   role: 'Public/Student Presentation, "The Unfamiliar Threats to Free Speech"'
   type: university
-- years: 2016-
+- years: '2016-20'
   subentity: College of Law
   entity: University of Iowa
   role: 'Faculty Adviser, Black Law Students Association'
   type: university
-- years: 2016-
+- years: '2016-20'
   subentity: College of Law
   entity: University of Iowa
   role: 'Faculty Advisor, American Constitution Society Student Chapter'

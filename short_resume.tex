@@ -1,0 +1,342 @@
+%% start of file 'template.tex'.
+%% Based on a c.v. template (moderncv) that is Copyright 2006-2013 Xavier Danaux (xdanaux@gmail.com).
+%% Also based on code by Saad Quadri in latexresu.me
+%% modern cv under LaTeX Project Public License version 1.3c
+%% latexresu.me under MIT license.
+%% Paul Gowder additions under MIT license.
+
+\documentclass[letterpaper]{moderncv}
+\usepackage{textcomp}
+\usepackage{multicol}
+% moderncv themes
+\moderncvstyle{classic}           % style options are 'casual' (default), 'classic', 'oldstyle' and 'banking'
+\moderncvcolor{green}               % color options 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
+%\renewcommand{\familydefault}{\sfdefault}         % to set the default font; use '\sfdefault' for the default sans serif font, '\rmdefault' for the default roman one, or any tex font name
+%\nopagenumbers{}                                  % uncomment to suppress automatic page numbering for CVs longer than one page
+
+% character encoding
+\usepackage[utf8]{inputenc}                       % if you are not using xelatex ou lualatex, replace by the encoding you are using
+
+% adjust the page margins
+\usepackage[scale=0.75]{geometry}
+\setlength{\hintscolumnwidth}{2cm}                % if you want to change the width of the column with the dates
+%\setlength{\makecvtitlenamewidth}{10cm}           % for the 'classic' style, if
+%you want to force the width allocated to your name and avoid line breaks. be
+%careful though, the length is normally calculated to avoid any overlap with
+%your personal info; use this at your own typographical risks...
+
+
+\usepackage{fontspec}
+\renewcommand*{\addressfont}{\small\mdseries}
+\renewcommand*{\namefont}{\fontsize{34}{36}\mdseries\upshape\sffamily}
+\renewcommand*{\titlefont}{\LARGE\mdseries\upshape\sffamily}
+\renewcommand*{\sectionfont}{\Large\bfseries\upshape\sffamily}
+\renewcommand*{\subsectionfont}{\large\bfseries\upshape\sffamily}
+\setsansfont{CooperHewitt-Medium.ttf}
+
+
+
+\usepackage{xpatch}
+\xpatchcmd{\cventry}{\slshape#4}{#4}{}{}
+
+\newcommand*{\mycvlistdoubleitem}[3][.25em]{%
+  \cvitem[#1]{}{\begin{minipage}[t]{\listdoubleitemcolumnwidth}#2\end{minipage}%
+  \hfill% fill of \separatorcolumnwidth
+  \ifthenelse{\equal{#3}{}}%
+    {}%
+    {\begin{minipage}[t]{\listdoubleitemcolumnwidth}#3\end{minipage}}}}
+
+
+
+    % Profile
+\name{Paul Gowder}{}
+\address{Last update: March 15, 2021} %% total hack to get last rev date instead of
+                                %% address in here.
+\email{paul.gowder@gmail.com}
+\homepage{gowder.io}
+
+\begin{document}
+
+\makecvtitle
+
+\lfoot{\thepage}
+
+%
+% positions
+%
+\section{Employment}
+\cventry
+{2020-}
+{Professor of Law}
+{Northwestern University}
+{Chicago, IL}
+{}
+{\begin{itemize}%
+  \item Research and teaching (across academic positions) in areas of law including constitutional law, torts, race and the law, law and technology, professional ethics.
+  \item Publications and other academic accomplishments listed in full c.v. on https://gowder.io, including 2016 book, The Rule of Law in the Real World (Cambridge University Press).
+  \end{itemize}}
+
+\cventry
+{2012-2020}
+{Professor of Law}
+{University of Iowa}
+{Iowa City, IA}
+{}
+{Associate Professor of Law (pre-tenure) 2012-17; Professor of Law (tenured); 2017-2020; Professor of Law and O.K. Patton Fellow in Law 2019-20; courtesy appointments in Political Science 2012-20, Philosophy 2016-20.}
+%
+
+\cventry
+{Fall 2019}
+{Visiting Professor of Law}
+{Boston University}
+{}
+{}
+{}
+
+\cventry
+{2004-6}
+{Victor M. Glasberg and Associates}
+{Associate Attorney}
+{Alexandria, VA}
+{}
+{\begin{itemize}%
+	\item Civil rights litigation in small private public interest firm with caseload including employment discrimination,
+    police misconduct, First Amendment, due process and similar subject areas.
+	\end{itemize}}
+
+\cventry
+{2001-3}
+{Oregon Law Center}
+{Staff Attorney}
+{Ontario, OR}
+{}
+{\begin{itemize}%
+	\item Low-income legal services representation with caseload primarily centered on employment
+    (especially farmworker), housing, and public benefits litigation.
+	\end{itemize}}
+
+\cventry
+{1999}
+{ACLU of the National Capital Area}
+{Summer Law Clerk}
+{Washington, D.C.}
+{}
+{}
+
+
+\section{Consulting}
+
+\cventry
+{2018-2019}
+{Facebook, Inc.}
+{Contract Researcher/Consultant}
+{Menlo Park, CA}
+{}
+{\begin{itemize}%
+	\item Consulting relating to questions surrounding elections and democratic
+    integrity as well as content moderation oversight board.
+    Full-time for two months in summer 2018, and then continuing on
+    part-time basis thereafter. Formal relationship
+    as contractor via Pro Unlimited, Inc.
+	\end{itemize}}
+
+\cventry
+{07/2016}
+{JSTOR Labs}
+{Subject matter expert}
+{Ann Arbor, CA}
+{}
+{\begin{itemize}%
+	\item Participate as outside expert on a voluntary basis in weeklong design
+    sprint relating to potential expansion of scholarly archiving and discovery products.
+	\end{itemize}}
+
+%
+% education
+%
+\section{Education}
+\cventry
+{2012}
+{Ph.D., Political Science}
+{Stanford University}
+{}
+{}
+{}
+\cventry
+{2000}
+{J.D.}
+{Harvard Law School}
+{}
+{}
+{}
+\cventry
+{1997}
+{B.A., Political Science}
+{California State University, Los Angeles}
+{}
+{}
+{}
+
+
+\section{Grants, Awards, Honors}
+\cvitem
+{2020-}
+{American Law Institute, elected member (beginning December 2020).}
+\vspace{1mm}
+\cvitem
+{2020-1}
+{Knight Foundation, grant funding (\$100,000) to support research that applies principles from constitutional law and institutional political science to the challenges of platform governance.}
+\vspace{1mm}
+\cvitem
+{2014-5}
+{Institute for Advanced Study, Princeton, NJ: Member (School of Social Science).}
+\vspace{1mm}
+\cvitem
+{2014}
+{Montreal Political Theory Manuscript Award, Groupe de recherche interuniversitaire en philosophie politique de Montreal (for The Rule of Law in the Real World).}
+\vspace{1mm}
+
+\section{Significant Community and Institutional Service}
+\cvitem
+{2020-1}
+{Member, Dean Search Committee, Northwestern University, Pritzker School of Law.}
+\vspace{1mm}
+\cvitem
+{2020-1}
+{Member, Faculty Advisory Council, Northwestern University, Buffett Institute for Global Affairs.}
+\vspace{1mm}
+\cvitem
+{2019-20}
+{Member, Faculty Appointments Committee, University of Iowa, College of Law.}
+\vspace{1mm}
+\cvitem
+{2017-20}
+{Advisory Board Member, University of Iowa, Obermann Center for Advanced Studies.}
+\vspace{1mm}
+\cvitem
+{2016-7}
+{Member, Diversity Committee, University of Iowa, College of Law.}
+\vspace{1mm}
+\cvitem
+{2016-20}
+{Faculty Adviser, Black Law Students Association, University of Iowa, College of Law.}
+\vspace{1mm}
+\cvitem
+{2016-}
+{Faculty Advisor, American Constitution Society Student Chapter, University of Iowa, College of Law.}
+\vspace{1mm}
+\cvitem
+{2015-9}
+{Service on one S.J.D. committee, and (2016-) adviser to another, University of Iowa, College of Law.}
+\vspace{1mm}
+\cvitem
+{2015-6}
+{Chair, Speakers Committee, University of Iowa, College of Law.}
+\vspace{1mm}
+\cvitem
+{2014, 6}
+{Faculty Advisor, AAI Moot Court Problem Creation, University of Iowa, College of Law.}
+\vspace{1mm}
+\cvitem
+{2012-8}
+{Judge, AAI Moot Court, University of Iowa, College of Law.}
+\vspace{1mm}
+\cvitem
+{2012-4}
+{Member, Speakers Committee, University of Iowa, College of Law.}
+\vspace{1mm}
+\cvitem
+{2010-11}
+{Graduate Admissions Committee, Stanford University, Department of Political Science.}
+\vspace{1mm}
+\cvitem
+{2008}
+{Graduate Organizer, Political Theory Workshop, Stanford University, Department of Political Science.}
+\vspace{1mm}
+\cvitem
+{2008}
+{Graduate Organizer (interim), Global Justice Workshop, Stanford University, Department of Political Science.}
+\vspace{1mm}
+\cvitem
+{2008}
+{Chair, Ad Hoc Graduate Incentives Committee, Political Science Graduate Students Association, Stanford University, Department of Political Science.}
+\vspace{1mm}
+\cvitem
+{2007-8}
+{Social Chair, Political Science Graduate Students Association, Stanford University, Department of Political Science.}
+\vspace{1mm}
+\cvitem
+{1999-2000}
+{Public Relations Chair, Harvard Law School, Student Public Interest Network.}
+\vspace{1mm}
+
+
+\vspace{1mm}
+\subsection{Community Service and Outreach}
+\cvitem
+{2016-9}
+{Member, Iowa City Telecommunications Commission.}
+\vspace{1mm}
+\cvitem
+{2016}
+{Panelist: 'Family Law', Iowa LGBT Rural Summit (USDA/National Center for Lesbian Rights/Drake Law School).}
+\vspace{1mm}
+\cvitem
+{2016}
+{Presentation, 'Loving v. Virginia,' African-American Museum of Iowa/Cedar Rapids Public Library.}
+\vspace{1mm}
+\cvitem
+{2015, 6}
+{Guest blogger, Prawfsblawg.}
+\vspace{1mm}
+\cvitem
+{2015}
+{Presentation, 'The Leadership Rationale,' The Past, Present, \& Future of Diversity and Inclusion Within the Central Iowa Legal Community.}
+\vspace{1mm}
+\cvitem
+{2014}
+{Editorial, "Court Moves Toward Death for Contraceptive Coverage": Des Moines Register,.}
+\vspace{1mm}
+\cvitem
+{2014}
+{Panelist, Ethical Perspectives on the News: KCRG TV (discussing religion and public life, Hobby Lobby, etc.).}
+\vspace{1mm}
+\cvitem
+{2014}
+{Presentation, Voting Rights in the United States: Iowa Interfaith Alliance, Intersections speaker series.}
+\vspace{1mm}
+\cvitem
+{2013}
+{Guest blogger, Concurring Opinions.}
+\vspace{1mm}
+\cvitem
+{2012}
+{Editorial: "Independent Judiciary": Cedar Rapids Gazette (with Nicholas Johnson).}
+\vspace{1mm}
+\cvitem
+{2010}
+{Presentation: The Law and Ethics of Farm Worker Internships, Cultivating Food Justice Conference.}
+\vspace{1mm}
+\cvitem
+{2005}
+{Editorial: "A Naked Assault on the Public and Courts": Oregon State Bar Journal.}
+\vspace{1mm}
+\cvitem
+{2001-3}
+{Executive Board Member, Oregon Rural Action.}
+\vspace{1mm}
+%
+% languages
+%
+\section{Miscellany}
+
+\subsection{Languages}
+\cvitem{Human}{English (native). Attic Greek (rudimentary reading, extremely rusty).}
+\cvitem{Computer}{ Python (intermediate/advanced).  R (intermediate, rusty).  Clojure (intermediate).  Swift (beginner/intermediate).  Javascript (beginner). }
+\subsection{Bar Admissions}
+\cvitem{}{ Louisiana, Massachusetts, Oregon, Virginia (bar admissions not currently in active or authorized to practice status; not currently engaged in practice of law)}
+\subsection{Less Formal Education}
+\cvitem{2017}{Recurse Center (summer 2 half-batch).}
+\cvitem{2013}{University College Cork, Attic Greek Summer Immersion.}
+
+\end{document}
