@@ -1,5 +1,8 @@
-conferences:
-  - venue: 'American Association of Law Schools Annual Meeting, Immigration Section'
+conferences: 
+  - venue: 'First Annual Conference of the Platform Governance Research Network (via Zoom)'
+    title: "Platforms’ Schmittian Dilemma"
+    year: '2021'
+  - venue: 'American Association of Law Schools Annual Meeting, Immigration Section (via Zoom)'
     title: 'Lawless Lawmaking: The Attorney General Self-Referral Power and the Rule of Law (Co-author with Stella Elias)'
     year: '2021'
   - venue: 'National People of Color Legal Scholarship Conference, American University'
@@ -162,6 +165,9 @@ campus:
       Psychology and Politics of the Money-Hungry
     year: '2010'
 invited:
+  - venue: "Karsh Center for Law and Democracy, University of Virginia (via Zoom)"
+    title: "The Rule of Law in the United States"
+    year: '2021'
   - venue: "Florida International University Law School Faculty Workshop (via Zoom)"
     title: "The Rule of Law in the United States"
     year: '2021'
