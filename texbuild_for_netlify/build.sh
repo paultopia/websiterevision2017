@@ -21,15 +21,15 @@ fi
 NETLIFY_CACHE_DIR="$NETLIFY_BUILD_BASE/cache"
 
 TEXLIVE_DIR="$NETLIFY_CACHE_DIR/texlive"
-TEXLIVE_BIN="$TEXLIVE_DIR/2021/bin/x86_64-linux"
+TEXLIVE_BIN="$TEXLIVE_DIR/2020/bin/x86_64-linux"
 
-INSTALL_TL="install-tl-unx.tar.gz"
+INSTALL_TL="2020-install-tl-unx.tar.gz"
 INSTALL_TL_VERSION="$(tar tf "$INSTALL_TL" | grep -om1 '^install-tl-[0-9]*')"
 INSTALL_TL_SUCCESS="$NETLIFY_CACHE_DIR/$INSTALL_TL_VERSION-success"
 
-TEXLIVEONFLY="$TEXLIVE_DIR/2021/texmf-dist/scripts/texliveonfly/texliveonfly.py"
+TEXLIVEONFLY="$TEXLIVE_DIR/2020/texmf-dist/scripts/texliveonfly/texliveonfly.py"
 
-export CTAN_REPO="http://mirror.las.iastate.edu/tex-archive/systems/texlive/tlnet"
+# export CTAN_REPO="http://mirror.las.iastate.edu/tex-archive/systems/texlive/tlnet"
 
 TEXLIVE_PROFILE="\
 selected_scheme scheme-custom
@@ -58,10 +58,10 @@ tlpdbopt_sys_bin /usr/local/bin
 tlpdbopt_sys_info /usr/local/share/info
 tlpdbopt_sys_man /usr/local/share/man
 tlpdbopt_w32_multi_user 1
-TEXDIR $TEXLIVE_DIR/2021
+TEXDIR $TEXLIVE_DIR/2020
 TEXMFLOCAL $TEXLIVE_DIR/texmf-local
-TEXMFSYSCONFIG $TEXLIVE_DIR/2021/texmf-config
-TEXMFSYSVAR $TEXLIVE_DIR/2021/texmf-var
+TEXMFSYSCONFIG $TEXLIVE_DIR/2020/texmf-config
+TEXMFSYSVAR $TEXLIVE_DIR/2020/texmf-var
 "
 
 echo "$TEXLIVE_PROFILE" > texlive.profile
@@ -79,6 +79,11 @@ else
 fi
 
 export PATH="$TEXLIVE_BIN:$PATH"
+
+# FREEZE 2020 repository
+tlmgr repository add ftp://tug.org/historic/systems/texlive/2020/tlnet-final
+
+tlmgr option repository ftp://tug.org/historic/systems/texlive/2020/tlnet-final
 
 tlmgr --verify-repo=none update -self -all
 tlmgr --verify-repo=none install xetex
