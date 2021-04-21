@@ -78,9 +78,8 @@ TEXMFSYSVAR $TEXLIVE_DIR/2021/texmf-var
 
 echo "$TEXLIVE_PROFILE" > texlive.profile
 
-# temporarily commenting out the condition in order that I can definitely get a fresh texlive install in.
 
-# if [ ! -e "$INSTALL_TL_SUCCESS" ]; then
+if [ ! -e "$INSTALL_TL_SUCCESS" ]; then
   echo "[$0] Installing TeX Live..."
 
   curl -L "$INSTALL_TL_URL" | tar xz --one-top-level=itl --strip-components=1
@@ -90,9 +89,9 @@ echo "$TEXLIVE_PROFILE" > texlive.profile
   echo "[$0] Installed TeX Live."
 
   touch "$INSTALL_TL_SUCCESS"
-# else
-#   echo "[$0] Found existing TeX Live installation."
-# fi
+else
+  echo "[$0] Found existing TeX Live installation."
+fi
 
 
 export PATH="$TEXLIVE_BIN:$PATH"
