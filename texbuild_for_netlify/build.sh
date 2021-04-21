@@ -109,15 +109,15 @@ export PATH="$TEXLIVE_BIN:$PATH"
 
 # TEMPORARILY GETTING RID OF THIS TO SEE IF I CAN GET IT TO DO SOMETHING.
 
-# tlmgr --verify-repo=none update -self -all
-# tlmgr --verify-repo=none install xetex
-# tlmgr --verify-repo=none install l3packages
-# tlmgr --verify-repo=none install etoolbox
-# tlmgr --verify-repo=none install xcolor
-# tlmgr --verify-repo=none install microtype
-# tlmgr --verify-repo=none install l3kernel
-# tlmgr --verify-repo=none install regexpatch
-# tlmgr --verify-repo=none install marvosym
+tlmgr --verify-repo=none update -self -all
+tlmgr --verify-repo=none install xetex
+tlmgr --verify-repo=none install l3packages
+tlmgr --verify-repo=none install etoolbox
+tlmgr --verify-repo=none install xcolor
+tlmgr --verify-repo=none install microtype
+tlmgr --verify-repo=none install l3kernel
+tlmgr --verify-repo=none install regexpatch
+tlmgr --verify-repo=none install marvosym
 
 python "$TEXLIVEONFLY" -c latexmk --compiler=xelatex -a "-g -pdf -synctex=1 -interaction=nonstopmode" "$@"
 
