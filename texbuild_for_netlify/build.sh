@@ -29,6 +29,8 @@ INSTALL_TL_SUCCESS="$NETLIFY_CACHE_DIR/$INSTALL_TL_VERSION-success"
 
 TEXLIVEONFLY="$TEXLIVE_DIR/2021/texmf-dist/scripts/texliveonfly/texliveonfly.py"
 
+export CTAN_REPO="http://mirror.las.iastate.edu/tex-archive/systems/texlive/tlnet"
+
 TEXLIVE_PROFILE="\
 selected_scheme scheme-custom
 TEXMFCONFIG \$TEXMFSYSCONFIG
