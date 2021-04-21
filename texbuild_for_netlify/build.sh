@@ -23,7 +23,8 @@ NETLIFY_CACHE_DIR="$NETLIFY_BUILD_BASE/cache"
 TEXLIVE_DIR="$NETLIFY_CACHE_DIR/texlive"
 TEXLIVE_BIN="$TEXLIVE_DIR/2020/bin/x86_64-linux"
 
-INSTALL_TL="2020-install-tl-unx.tar.gz"
+# points to 2020 version, for some reason naming it 2020 doesn't work.
+INSTALL_TL="install-tl-unx.tar.gz"
 INSTALL_TL_VERSION="$(tar tf "$INSTALL_TL" | grep -om1 '^install-tl-[0-9]*')"
 INSTALL_TL_SUCCESS="$NETLIFY_CACHE_DIR/$INSTALL_TL_VERSION-success"
 
