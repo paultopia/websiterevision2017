@@ -34,8 +34,12 @@
     </table>
 </p>
 
-       <h3>Book</h3>
-<p><em>The Rule of Law in the Real World</em>, Cambridge University Press 2016. <br> For more information, go to <a href="http://rulelaw.net">rulelaw.net</a>.</p>
+       <h3>Books</h3>
+       
+<p><em>The Rule of Law in the United States: An Unfinished Project of Black Liberation</em>, Hart Publishing/Bloomsbury 2021. <br> For more information, to buy, or to download a free open-access PDF, go to <a href="https://rulelaw.us">rulelaw.us</a>.</p>
+       
+<p><em>The Rule of Law in the Real World</em>, Cambridge University Press 2016. <br> For more information or to buy, go to <a href="https://rulelaw.net">rulelaw.net</a>.</p>
+
             <h3>Articles</h3>
 
             <div class="nomobile">
