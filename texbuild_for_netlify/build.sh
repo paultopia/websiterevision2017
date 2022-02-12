@@ -43,6 +43,12 @@ TEXLIVEONFLY="$TEXLIVE_DIR/2021/texmf-dist/scripts/texliveonfly/texliveonfly.py"
 
 # export CTAN_REPO="http://mirror.las.iastate.edu/tex-archive/systems/texlive/tlnet"
 
+export CTAN_REPO="http://ctan.math.illi­nois.edu/systems/texlive/tlnet"
+
+# See https://github.com/yihui/tinytex/issues/114 
+
+# and https://tex.stackexchange.com/a/463002/112616
+
 TEXLIVE_PROFILE="\
 selected_scheme scheme-custom
 TEXMFCONFIG \$TEXMFSYSCONFIG
