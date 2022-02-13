@@ -18,10 +18,12 @@
   volume: null
   year: '2021'
   tags: ['rule of law', 'egalitarianism', 'race', 'black liberation', 'critical race theory', 'constitutional law']
+  
+  
 - abstract: >-
     This short chapter sketches two conditions for the maintenance of rule of law systems: mass solidarity and elite socialization.  It then uses the treatment of immigrants in the United States as a case study of how undermining those conditions at the margin of legal inclusion can threaten the rule of law even for those who are not in legally subordinated communities.
   address: "Dueville, Italy"
-  altlink: null
+  altlink: 'https://gowder.io/decay.pdf'
   book: "Rule of Law: Cases, Strategies and Interpretations"
   coauthor: null
   editor: 'Barbara Faedda'
@@ -37,9 +39,11 @@
   volume: null
   year: '2021'
   tags: ['immigration', 'rule of law']
+  
+  
 - abstract: null
   address: null
-  altlink: null
+  altlink: 'https://gowder.io/svreview.pdf'
   book: null
   coauthor: null
   editor: null
@@ -55,9 +59,11 @@
   volume: 31
   year: '2021'
   tags: ['minor', review]
+  
+  
 - abstract: null
   address: null
-  altlink: null
+  altlink: 'https://gowder.io/fcreview.pdf'
   book: null
   coauthor: null
   editor: null
@@ -73,9 +79,11 @@
   volume: 29
   year: '2019'
   tags: ['minor', review]
+  
+  
 - abstract: null
   address: null
-  altlink: null
+  altlink: 'https://gowder.io/evans_review.pdf'
   book: null
   coauthor: null
   editor: null
@@ -91,6 +99,8 @@
   volume: 53
   year: '2018'
   tags: ['minor', review]
+  
+  
 - abstract: >-
     According to many constitutional lawyers and political scientists, the presidential administration of Donald Trump 
     (for scholars on the left), or the response to that presidency (for scholars on the right) poses serious dangers to American 
@@ -101,7 +111,7 @@
     executive, regardless of ideology. The rule of law conflicts of the Trump administration, while dangerous in their own right, are 
     fundamentally symptoms of this broader political and legal crisis.
   address: null
-  altlink: null
+  altlink: 'https://gowder.io/cardozo-dangers.pdf'
   book: null
   coauthor: null
   editor: null
@@ -117,6 +127,8 @@
   volume: '2020'
   year: '2020'
   tags: ['rule of law', 'democracy', 'constitutional politics', 'United States', 'polarization', 'inequality']
+  
+  
 - abstract: >-
     Could we insert machine learning into the adjudicative process? This chapter considers the extent of the 
     isomorphism between common-law reasoning from prior cases and machine learning reasoning from prior 
@@ -142,12 +154,14 @@
   volume: null
   year: '2020'
   tags: ['machine learning', 'jurisprudence']
+  
+  
 - abstract: >-
     This Article draws on Black American intellectual history to offer an approach to fundamental questions of constitutional theory from the standpoint of the politically excluded.
     Democratic constitutional theory is vexed by a series of well-known challenges rooted in the inability to justify law without democracy ("the countermajoritarian difficulty") and the inability to justify any particular composition of the popular demos without law ("the problem of constituent power"). Under conditions of genuine egalitarian political inclusion, a constitutional conception of popular sovereignty derived primarily from the civic republican constitutional patriotism associated with Jürgen Habermas and others can resolve these challenges by providing a conceptual basis for understanding the constitutional demos as a corporate body extending across time and capable of ongoing political legitimation.
     Unfortunately, the constitutional conception cannot justify states, such as the United States, characterized by the persistent exclusion of some legitimate members of the demos from political institutions. The resolution to this problem can be found in an important tradition in Black American constitutional thought, beginning with Frederick Douglass, which represents American constitutional institutions as conditionally worthy of attachment in virtue of their latent normative potential. The correct conception of constitutional legitimacy for the United States combines Douglass’s insights, and those of his intellectual heirs, with those working in the tradition which Habermas represents.
   address: null
-  altlink: null
+  altlink: 'https://gowder.io/reconstituting.pdf'
   book: null
   coauthor: null
   editor: null
@@ -164,6 +178,8 @@
   year: '2019'
   doi: null
   tags: ['democracy', 'constitutionalism', critical race theory']
+  
+  
 - abstract: >-
     This is a response to commentary (by Colleen Murphy, Robin West, Chad Flanders and Matt Lister)
     on my The Rule of Law in the Real World (Cambridge, 2016) in which I further defend the 
@@ -172,7 +188,7 @@
     oppression and state oppression, rape culture, and arbitrary official power over migrants, 
     among other issues.
   address: null
-  altlink: 'https://zenodo.org/record/1305412'
+  altlink: 'https://gowder.io/resisting.pdf'
   book: null
   coauthor: null
   editor: null
@@ -189,6 +205,8 @@
   year: '2018'
   doi: '10.5281/zenodo.1305411'
   tags: ['rule of law', 'egalitarianism']
+  
+  
 - abstract: >-
     This article distinguishes two types of legal technology, ‘cheaper lawyers’ (or simply
     replacing the cognitive operations of lawyers in their existing domains with technology)
@@ -214,6 +232,8 @@
   year: '2018'
   doi: '10.3138/utlj.2017-0047'
   tags: ['rule of law', 'legal technology', 'artificial intelligence']
+  
+  
 - abstract: >-
     In this paper, I first defend a broad analogy between our worries about
     individual level paternalism and our worries about antimajoritarian elite
@@ -225,7 +245,7 @@
     their compatability with individual and collective agents conceived as
     capable of learning and revising decisions over the course of time.
   address: null
-  altlink: 'http://paul-gowder.com/DemPat.pdf'
+  altlink: 'https://gowder.io/DemPat.pdf'
   book: null
   coauthor: null
   editor: null
@@ -241,6 +261,8 @@
   volume: '14'
   year: '2016'
   tags: ['democracy', 'libertarianism', 'egalitarianism']
+  
+  
 - abstract: >-
     We use game theory to argue that perceptions of widespread corruption in the
     judicial processes in many countries create ex ante incentives to act
@@ -252,7 +274,7 @@
     structural solutions. The Article offers one such solution: the
     establishment of an international court of civil justice.
   address: null
-  altlink: null
+  altlink: 'https://gowder.io/transnational.pdf'
   book: null
   coauthor: Maya Steinitz
   editor: null
@@ -268,6 +290,8 @@
   volume: '94'
   year: '2016'
   tags: ['corruption', 'rule of law']
+  
+  
 - abstract: >-
     This short essay, published in a law review online supplement, is a response
     to Corey Brettschneider & David McNamee's 'Sovereign and State: A Democratic
@@ -283,7 +307,7 @@
     that violate the rule of law are inconsistent with the equal standing of
     citizens presupposed by democratic theory.
   address: null
-  altlink: null
+  altlink: 'https://gowder.io/sov_im.pdf'
   book: null
   coauthor: null
   editor: null
@@ -299,6 +323,8 @@
   volume: '93'
   year: '2015'
   tags: ['rule of law', 'democracy', 'constitutional law']
+  
+  
 - abstract: >-
     This paper, prepared for a Fordham Law Review symposium on critical race
     theory and empiricism, argues for the consolidation of a methodological
@@ -308,7 +334,7 @@
     science methodology about the ways in which those biases can be ameliorated
     (or compensated for with counter-bias).
   address: null
-  altlink: null
+  altlink: 'https://gowder.io/crscience.pdf'
   book: null
   coauthor: null
   editor: null
@@ -324,6 +350,8 @@
   volume: '83'
   year: '2015'
   tags: ['race']
+  
+  
 - abstract: >-
     This paper describes a new model of the relationship between racial
     ascriptions on an individual level, private racial bias, social
@@ -344,7 +372,7 @@
     print until mid-2015; I am not certain what the best choice is to handle
     this, citation-wise.)
   address: null
-  altlink: 'https://zenodo.org/record/57249'
+  altlink: 'https://gowder.io/ascriptive.pdf'
   book: null
   coauthor: null
   editor: null
@@ -360,6 +388,8 @@
   volume: '92'
   year: '2014'
   tags: ['race', 'constitutional law']
+  
+  
 - abstract: >-
     The principle that the law must be general - that it must apply equally to
     all - is often said to be a fundamental demand of legal morality, associated
@@ -390,7 +420,7 @@
     be found. And it aims to show that rule of law, interpreted in this
     expressive fashion, genuinely protects 'substantive' equality
   address: null
-  altlink: 'http://paul-gowder.com/Equal_Law_in_an_Unequal_World.pdf'
+  altlink: 'https://gowder.io/Equal_Law_in_an_Unequal_World.pdf'
   book: null
   coauthor: null
   editor: null
@@ -406,6 +436,8 @@
   volume: '99'
   year: '2014'
   tags: ['rule of law', 'egalitarianism', 'constitutional law']
+  
+  
 - abstract: >-
     In this paper, I defend three claims. First, contra some classicists
     and legal historians, classical Athens during the democratic period
@@ -435,7 +467,7 @@
     strength topos led the Athenians to take the internal point of view on the
     law.
   address: null
-  altlink: 'http://paul-gowder.com/Democracy_Solidarity_and_the_Rule_of_Law.pdf'
+  altlink: 'https://gowder.io/Democracy_Solidarity_and_the_Rule_of_Law.pdf'
   book: null
   coauthor: null
   editor: null
@@ -451,6 +483,8 @@
   volume: '62'
   year: '2014'
   tags: ['rule of law', 'democracy', 'athens', 'egalitarianism']
+  
+  
 - abstract: >-
     This essay offers an argument against the proposition that binding judicial
     review is inconsistent with democracy. The first section considers three
@@ -472,7 +506,7 @@
     choice to have or not have what critics of the U.S. system have misguidedly
     named 'judicial supremacy.'
   address: null
-  altlink: 'http://paul-gowder.com/cmc-paper.pdf'
+  altlink: 'https://gowder.io/cmc-paper.pdf'
   book: null
   coauthor: null
   editor: null
@@ -488,6 +522,8 @@
   volume: '23'
   year: '2014'
   tags: ['democracy', 'judicial review', 'constitutional law']
+  
+  
 - abstract: null
   address: null
   altlink: null
@@ -506,6 +542,8 @@
   volume: '115'
   year: '2006'
   tags: ['constitutional law']
+  
+  
 - abstract: null
   address: null
   altlink: null
@@ -526,6 +564,8 @@
   volume: '35'
   year: '1998'
   tags: ['constitutional law']
+  
+  
 - abstract: >-
     This paper gives a novel reading of the argument addressed by the Laws of
     Athens to Socrates in Plato's Crito. Many philosophers have suggested that
@@ -552,7 +592,7 @@
     collective defense of the democratic legal system; they make this demand on
     Socrates in virtue of the Laws' role in Socrates's identity as citizen.
   address: null
-  altlink: null
+  altlink: 'https://gowder.io/socrates.pdf'
   book: null
   coauthor: null
   editor: null
@@ -568,6 +608,8 @@
   volume: '98'
   year: '2015'
   tags: ['athens', 'democracy', 'rule of law']
+  
+  
 - abstract: >-
     In this paper, I describe a category of political values that I call
     institutional values. An institutional value (the quintessential examples of
@@ -577,7 +619,7 @@
     incorrect conceptions of an institutional value that relies on two ideas:
     coherence and verisimilitude.
   address: null
-  altlink: 'http://paul-gowder.com/iv-paper.pdf'
+  altlink: 'https://gowder.io/iv-paper.pdf'
   book: null
   coauthor: null
   editor: null
@@ -594,6 +636,8 @@
   volume: '30'
   year: '2014'
   tags: ['democracy', 'rule of law']
+  
+  
 - abstract: >-
     The literature contains two concepts of corruption which are often confused
     with one another: corruption as twisted character (pollution), and
@@ -610,7 +654,7 @@
     corruption as disloyalty and explaining its moral significance for the
     political legitimacy of a democracy.
   address: null
-  altlink: 'http://www.erudit.org/revue/ateliers/2014/v9/n1/1024296ar.pdf'
+  altlink: 'https://gowder.io/corruption.pdf'
   book: null
   coauthor: null
   editor: null
@@ -626,6 +670,8 @@
   volume: '9'
   year: '2014'
   tags: ['corruption', 'democracy']
+  
+  
 - abstract: >-
     John Tomasi's 'market democrat' is right to suppose that Rawlsians have
     erred in omitting economic liberty from their theories of justice. A
@@ -655,6 +701,8 @@
   volume: '26'
   year: '2014'
   tags: ['libertarianism', 'egalitarianism']
+  
+  
 - abstract: >-
     This paper offers an expressive interpretation of Chief Justice Roberts's
     opinion in NFIB v. Sebelius, focusing on the Chief Justice's distinction
@@ -670,7 +718,7 @@
     Mandate Really is a Tax, and That's a Good Thing Too,' also listed in this
     publications list.
   address: null
-  altlink: 'http://paul-gowder.com/Death_and_Taxes.pdf'
+  altlink: 'https://gowder.io/Death_and_Taxes.pdf'
   book: null
   coauthor: null
   editor: null
@@ -686,6 +734,8 @@
   volume: '27'
   year: '2013'
   tags: ['constitutional law']
+  
+  
 - abstract: >-
     This paper prevents a novel account of the rule of law and its normative
     value. Conventional conceptions of the rule of law are rooted in an idea of
@@ -720,6 +770,8 @@
   volume: '32'
   year: '2013'
   tags: ['rule of law', 'egalitarianism']
+  
+  
 - abstract: null
   address: null
   altlink: null
@@ -740,6 +792,8 @@
   volume: '2'
   year: '2006'
   tags: ['minor']
+  
+  
 - abstract: >-
     This paper draws on a case study of the Athenian amnesty after the
     blood-soaked rule of the Thirty Tyrants (404-3 B.C.E.) to draw out some
@@ -759,7 +813,7 @@
     that the truth commissions often seen in contemporary transitional states
     can serve some of the same functions.
   address: Burlington
-  altlink: 'http://paul-gowder.com/AthensTJ.pdf'
+  altlink: 'https://gowder.io/AthensTJ.pdf'
   book: Theorizing Transitional Justice
   coauthor: null
   editor: 'Corradetti, Eiskovits, and Rotondi'
@@ -775,6 +829,8 @@
   volume: null
   year: '2015'
   tags: ['athens', 'rule of law', 'democracy']
+  
+  
 - abstract: >-
     See above, 'Death and Taxes in NFIB v. Sebelius.'  This is an adaptation of
     that paper.
@@ -795,6 +851,8 @@
   volume: null
   year: '2014'
   tags: ['constitutional law']
+  
+  
 - abstract: >-
     The Rule of Law in the Real World gives a comprehensive new theory of the
     political and legal ideal known as the rule of law: what it means (the
@@ -803,7 +861,7 @@
     be taken into account in social scientific attempts to measure it as well as
     policy efforts to promote it.
   address: New York
-  altlink: 'http://rulelaw.net'
+  altlink: 'https://rulelaw.net'
   book: null
   coauthor: null
   editor: null
@@ -820,6 +878,8 @@
   volume: null
   year: '2016'
   tags: ['rule of law', 'egalitarianism']
+  
+  
 - abstract: null
   address: null
   altlink: null
@@ -831,13 +891,15 @@
   journal: null
   lastpage: null
   note: entry in Oxford Bibliographies in Political Science
-  publink: null
+  publink: 'https://doi.org/10.1093/obo/9780199756223-0197'
   publisher: null
   title: The Rule of Law
   type: misc
   volume: null
   year: '2016'
   tags: ['rule of law', 'minor', review]
+  
+  
 - abstract: null
   address: null
   altlink: null
@@ -849,13 +911,15 @@
   journal: null
   lastpage: null
   note: 'open access casebook chapter, released on SSRN'
-  publink: 'http://paul-gowder.com/PDP-Chapter.pdf'
+  publink: 'https://gowder.io/PDP-Chapter.pdf'
   publisher: null
   title: 'Procedural Due Process: the Missing Casebook Chapter'
   type: misc
   volume: null
   year: '2014'
   tags: ['constitutional law', 'minor']
+  
+  
 - abstract: null
   address: null
   altlink: null
@@ -867,13 +931,15 @@
   journal: null
   lastpage: null
   note: entry in Sage Encyclopedia of Criminal Justice Ethics
-  publink: null
+  publink: 'http://dx.doi.org/10.4135/9781452274102.n297'
   publisher: null
   title: The Rule of Law
   type: misc
   volume: null
   year: '2014'
   tags: ['rule of law', 'minor']
+  
+  
 - abstract: null
   address: null
   altlink: null
@@ -894,6 +960,8 @@
   volume: null
   year: '2013'
   tags: ['minor']
+  
+  
 - abstract: null
   address: null
   altlink: null
@@ -916,6 +984,8 @@
   volume: null
   year: '2009'
   tags: ['constitutional law', 'minor']
+  
+  
 - abstract: null
   address: null
   altlink: null
@@ -938,6 +1008,8 @@
   volume: null
   year: '2008'
   tags: ['constitutional law', 'minor']
+  
+  
 - abstract: null
   address: null
   altlink: null
@@ -956,6 +1028,8 @@
   volume: 12
   year: '1999'
   tags: ['review', 'minor']
+  
+  
 - abstract: null
   address: null
   altlink: null
@@ -974,6 +1048,8 @@
   volume: 12
   year: '1999'
   tags: ['review', 'minor']
+  
+  
 - abstract: null
   address: null
   altlink: null
