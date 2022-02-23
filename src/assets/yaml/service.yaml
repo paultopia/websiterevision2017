@@ -1,9 +1,14 @@
+- years: '2021-'
+  subentity: 'Pritzker School of Law'
+  entity: 'Northwestern University'
+  role: 'Member, Faculty Advisory Committee'
+  type: 'university'
 - years: '2020-1'
   subentity: 'Pritzker School of Law'
   entity: 'Northwestern University'
   role: 'Member, Dean Search Committee'
   type: 'university'
-- years: '2020-1'
+- years: '2020-'
   subentity: 'Pritzker School of Law'
   entity: 'Northwestern University'
   role: 'Member, Public Interest Committee'
@@ -134,6 +139,9 @@
   entity: Harvard Law School
   role: Public Relations Chair
   type: university
+- years: 2021-
+  role: 'Fellow and Board Member, Integrity Institute'
+  type: community
 - years: 2016-9
   role: 'Member, Iowa City Telecommunications Commission'
   type: community
