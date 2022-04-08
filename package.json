@@ -13,7 +13,7 @@
   "dependencies": {
     "caniuse-lite": "^1.0.30000731",
     "js-yaml": "^3.13.1",
-    "moment": "^2.21.0",
+    "moment": "^2.29.2",
     "patch-package": "^6.1.2",
     "prerender-spa-plugin": "^2.1.0",
     "process-nextick-args": "^1.0.7",
