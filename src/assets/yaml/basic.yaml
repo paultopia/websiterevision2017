@@ -6,7 +6,11 @@ positions:
     title: >-
       Professor of Law (with tenure; with courtesy appointments in Political
       Science, Philosophy)
-    year: 2017-
+    year: 2017-2020
+  - university: Northwestern University
+    title: >-
+      Professor of Law 
+    year: 2020- 
 education:
   - year: '2012'
     name: Stanford University
@@ -20,10 +24,10 @@ education:
 core:
   cvurl: 'http://paul-gowder.com/gowdercv.pdf'
   phone: 319-384-3202
-  url: 'http://paul-gowder.com'
-  revdate: 'September 22, 2017'
+  url: 'https://gowder.io'
+  revdate: 'May 12, 2022'
   name: Paul Gowder
-  addr2: 'Iowa City, IA 52242'
-  addr1: 408 Boyd Law Building
+  addr2: 'Chicago, IL 60611'
+  addr1: 375 E. Chicago Ave.
   email: paul.gowder@law.northwestern.edu
   phoneid: office
