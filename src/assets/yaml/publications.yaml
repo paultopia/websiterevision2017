@@ -878,6 +878,26 @@
   volume: null
   year: '2016'
   tags: ['rule of law', 'egalitarianism']
+
+
+- abstract: null
+  address: null
+  altlink: null
+  book: null
+  coauthor: null
+  editor: null
+  firstpage: null
+  issue: null
+  journal: null
+  lastpage: null
+  note: "Boston Review Forum XXII (Spring 2022), pp. 147-161"
+  publink: null
+  publisher: null
+  title: Law for Black Radical Liberation
+  type: misc
+  volume: null
+  year: '2022'
+  tags: ['race', 'rule of law', 'minor']
   
   
 - abstract: null
