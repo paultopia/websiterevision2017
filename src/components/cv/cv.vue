@@ -12,13 +12,16 @@
 
         <h2>Academic Positions</h2>
 
-        <p>2020- <b>Professor of Law</b>, Northwestern University
+        <p>2020- <b>Professor of Law and Associate Dean of Research and Intellectual Life</b>, Northwestern University Pritzker School of Law
+        <ul>
+            <li>Professor of Law 2020-
+            <li>Professor of Law and Associate Dean of Research and Intellectual Life, 9/2022-</li></ul>
         </p>
 
-        <p>2012-2020 <b>Professor of Law and (2019-) O.K. Patton Fellow in Law</b>, University of Iowa
+        <p>2012-2020 <b>Professor of Law and O.K. Patton Fellow in Law</b>, University of Iowa College of Law
           <ul>
-            <li>pre-tenure associate professor 2012-7, tenured and promoted to full 2017
-            <li>courtesy appointments in political science (2012-20), philosophy (2016-20)</li>
+            <li>pre-tenure associate professor 2012-7; tenured and promoted to full 2017; O.K. Patton Fellow in Law 2019-2020
+            <li>courtesy appointments in political science (2012-20); philosophy (2016-20)</li>
           </ul>
         </p>
 
