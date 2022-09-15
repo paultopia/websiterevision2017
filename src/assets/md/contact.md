@@ -12,11 +12,13 @@ Other web presences that you might use to reach me, find out more about me, etc.
 
 - [Orcid](http://orcid.org/0000-0001-7641-585X)
 
+- [SSRN](https://papers.ssrn.com/sol3/cf_dev/AbsByAuth.cfm?per_id=1158647)
+
 - [Zotero](https://www.zotero.org/paulgowder)
 
 - [Github](https://github.com/paultopia)
 
-- [Amazon Author Page](https://www.amazon.com/author/paulgowder)
+- [Amazon Author Page](https://www.amazon.com/author/paulgowder) 
 
 I'm available to provide comments to the press on constitutional law, ethics in public life, democracy and the rule of law, platform governance, and legal technology. I'm available for consulting on difficult legal matters for lawyers only (I don't offer legal services to the public), and on ethics and public policy related issues in my research specialties for companies, governments, etc. I'm also available for interesting and exciting tech projects. However, I'm currently not available for tech industry consulting, as I'm currently working on grant-funded research in platform governance and wish to avoid the potential for conflicts of interest (this project should be complete by late 2022, and I may be available thereafter).
 
