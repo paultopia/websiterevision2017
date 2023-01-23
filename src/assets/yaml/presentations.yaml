@@ -1,4 +1,7 @@
 conferences: 
+  - venue: 'American Association of Law Schools Sections on Civil Rights and Minority Groups'
+    title: "Black Liberation Constitutionalism"
+    year: '2023'
   - venue: 'Tilburg Institute for Law, Technology, and Society, TILTing Perspectives 2021: Regulating in Times of Crisis (via Zoom)'
     title: "Platform Regulation as Rule of Law Development Assistance"
     year: '2021'
@@ -168,6 +171,9 @@ campus:
       Psychology and Politics of the Money-Hungry
     year: '2010'
 invited:
+  - venue: 'Maurer School of Law Center for Law, Society & Culture Faculty Workshop'
+    title: "Is Criminal Law Unlawful?"
+    year: '2023'
   - venue: "Iowa Law Review Symposium"
     title: "Why Majority Religions Should Not be Accommodated"
     year: "2022" 
