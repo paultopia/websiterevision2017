@@ -15,7 +15,7 @@
     "js-yaml": "^3.13.1",
     "moment": "^2.21.0",
     "patch-package": "^6.1.2",
-    "prerender-spa-plugin": "^2.1.0",
+    "prerender-spa-plugin": "^3.4.0",
     "process-nextick-args": "^1.0.7",
     "ramda": "^0.26.1",
     "util-deprecate": "^1.0.2",
