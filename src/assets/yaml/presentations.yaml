@@ -1,4 +1,7 @@
 conferences: 
+  - venue: 'John Mercer Langston Conference'
+    title: 'Constitutional Democracy for Time-Travelers: A Critical Race Afrofuturist Reading of the American Project'
+    year: '2023'
   - venue: 'American Association of Law Schools Sections on Civil Rights and Minority Groups'
     title: "Black Liberation Constitutionalism"
     year: '2023'
@@ -173,6 +176,9 @@ campus:
 invited:
   - venue: "DePaul University College of Law Enlund Scholar in Residence Lecture"
     title: "The Rule of Law in the Real World: An Unfinished Project of Black Liberation (book talk)/The Constitutional Ambition of Black Liberation (next steps preview talk)"
+    year: "2023"
+  - venue: "Rutgers Institute for Law and Philosophy conference on Postema's Law's Rule"
+    title: "Finding Leviathan in Hegel: The Private Rule of Law and its Limits"
     year: "2023"
   - venue: "Tulane University Law School Gordon Gamm Comparative Law and Justice Symposium"
     title: "Is Criminal Law Unlawful?"
