@@ -35,6 +35,8 @@
 </p>
 
        <h3>Books</h3>
+
+<p><em>The Networked Leviathan: For Democratic Platforms</em>, Cambridge University Press 2023. <br> For more information, to buy, or to download a free open-access PDF, go to <a href="https://networked-leviathan.com">networked-leviathan.com</a>.</p>
        
 <p><em>The Rule of Law in the United States: An Unfinished Project of Black Liberation</em>, Hart Publishing/Bloomsbury 2021. <br> For more information, to buy, or to download a free open-access PDF, go to <a href="https://rulelaw.us">rulelaw.us</a>.</p>
        
