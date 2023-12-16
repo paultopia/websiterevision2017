@@ -149,6 +149,9 @@
   entity: Harvard Law School
   role: Public Relations Chair
   type: university
+- years: 2024-5
+  role: 'Non-Resident Fellow, Center for Democracy and Technology'
+  type: community
 - years: 2023-
   role: 'Steering Committee Member, Council on Technology and Social Cohesion'
   type: community
