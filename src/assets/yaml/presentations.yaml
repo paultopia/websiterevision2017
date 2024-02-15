@@ -1,4 +1,13 @@
 conferences: 
+  - venue: 'Knight Foundation, INFORMED: Conversations on Democracy in the Digital Age'
+    title: 'The Networked Leviathan (lightning book talk)'
+    year: '2024'
+  - venue: 'American Association of Law Schools (Hot Topics Session)'
+    title: 'Standpoint Epistemology, the First Amendment, and University Affirmative Action'
+    year: '2024'
+  - venue: 'American Association of Law Schools (Technology, Law and Legal Education and Law Libraries and Legal Information Joint Program, Co-Sponsored by Jurisprudence)'
+    title: "Commentary on Postema, Law's Rule"
+    year: '2024'
   - venue: 'University of Manchester MANCEPT'
     title: 'The Networked Leviathan (book presentation)'
     year: '2023'
@@ -143,6 +152,7 @@ conferences:
   - venue: Loyola Constitutional Law Colloquium
     title: "Beyond the Arab Spring: Digital Collective Action and the Rule of Law"
     year: '2017'
+    
 campus:
   - venue: Iowa Legal Studies Workshop
     title: >-
@@ -174,9 +184,13 @@ campus:
   - venue: 'Stanford Ethics and Politics, Ancient and Modern Workshop'
     title: >-
       The Oligarch, the Miser, and the Capitalist: Plato, Kant, and Marx on the
-      Psychology and Politics of the Money-Hungry
+      Psychology and Politics of the Money-Hungry 
     year: '2010'
+ 
 invited:
+  - venue: "Yale Law School Information Society Project"
+    title: "The Networked Leviathan (book talk)"
+    year: "2024"
   - venue: "Yale Law School Public Law Workshop"
     title: "Constitutional Sankofa"
     year: "2023"
