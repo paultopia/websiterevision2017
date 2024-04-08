@@ -1,4 +1,7 @@
 conferences: 
+  - venue: 'Information Communication Technology for Development (ICT4D) conference, Accra, Ghana'
+    title: '(Panel presentation on platform governance derived from The Networked Leviathan)'
+    year: '2024'
   - venue: 'Knight Foundation, INFORMED: Conversations on Democracy in the Digital Age'
     title: 'The Networked Leviathan (lightning book talk)'
     year: '2024'
@@ -188,6 +191,12 @@ campus:
     year: '2010'
  
 invited:
+  - venue: "Boston University School of Law"
+    title: "The Networked Leviathan (book talk)"
+    year: "2024"
+  - venue: "Arizona State University College of Law"
+    title: "The Networked Leviathan (book talk)"
+    year: "2024"
   - venue: "Yale Law School Information Society Project"
     title: "The Networked Leviathan (book talk)"
     year: "2024"
