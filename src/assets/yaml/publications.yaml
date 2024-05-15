@@ -1,4 +1,25 @@
 - abstract: >-
+    This essay argues for an end to law's infamously Byzantine and bloated citation manual, the Bluebook. The very features that make the Bluebook distinctive when compared to citation systems in other academic fields are also those that inflict vast amounts of unnecessary if not downright harmful labor on its users. The root of the problem is its obsolescence: the Bluebook was designed for a system in which legal scholarship was primarily consumed in print and for material where the doctrinal epistemology of authority predominated. Today, legal scholarship is primarily consumed electronically, and it largely shares an epistemology of credence with other scholarly disciplines. (Nor are its hundreds of pages of rules particularly useful for practicing lawyers and judges, who sensibly disregard most of it anyway.) At a minimum, the signals, typographical rules, abbreviations, and cross-references need to be put out of their misery; when those are gone what is left would be practically indistinguishable from the sensible citation systems of other fields, as it should be. Also, we should automate as much as possible---and that turns out to be quite a lot.
+  address: null
+  altlink: 
+  book: null
+  coauthor: null
+  editor: null
+  firstpage: 'Article 2'
+  issue: 1
+  journal: 'Northwestern Law Journal des Refusés'
+  lastpage: ' '
+  note: null
+  publink: 'https://scholarlycommons.law.northwestern.edu/nljr/vol1/iss1/2/'
+  publisher: null
+  title: 'An Old-Fashioned Bluebook Burning'
+  type: 'law review'
+  volume: 1
+  year: '2024'
+  tags: ['legal academia']
+  
+
+- abstract: >-
     This paper uses Gerald Postema's _Law's Rule_ to take up one of the most 
     controversial questions in rule of law scholarship: whether the ideal can 
     provide the basis for criticizing the state alone, or private individuals 
