@@ -3,6 +3,7 @@
 netlify: buildjsnetlify buildcljsnetlify
 	cp -r swap_in/* dist
 	cp currentcv.pdf dist/gowdercv.pdf
+	cp currentcv.tex dist/currentcv.tex
 
 buildcljsnetlify:
 	cd apps/apps && lein package
