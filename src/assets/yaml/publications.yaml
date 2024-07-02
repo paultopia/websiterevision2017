@@ -1,4 +1,96 @@
 - abstract: >-
+    The Supreme Court’s 2022 decision in Dobbs v. Jackson Women’s Health Organization, overturning the half-century old constitutional right to reproductive choice, is only the most prominent example of a global series of attacks on rights of personal, sexual, and family autonomy. The attacks on LGBTQ+ rights by the Christian nationalist governments of Hungary and Poland are another important example. A cadre of anti-liberal scholars and public intellectuals such as Patrick Deneen, Sohrab Ahmari, and Adrian Vermeule serve as the intelligentsia within this global reactionary movement, advocating for the direct importation of far-right values into the law of western states on the basis of a religious, anti-liberal conception of community and public identity. In common parlance, the victims of this attack on egalitarian legal rights sometimes say that they are excluded or erased or treated as sub-human. That response is intuitively plausible--it is easy to think, for example, that taking away gay rights excludes LGBTQ+ individuals from the political community by communicating that they lack the support of their societies for their personal relationships and individual identities. But this idea is somewhat undertheorized in the scholarly literature. This Essay contributes to the theoretical development of the idea of rights-retrenchment as exclusion. Reading together Patricia Williams and G.W.F. Hegel, it offers an account of how liberal legal rights support the individual and social identities of those who enjoy them, and how those rights are particularly critical to members of socially subordinated groups. It is concluded that one reason to value the rule of law, in its facet as a demand for the stable protection of individual rights, is to protect this identity-supporting function. This Essay is thus both a critique of the modern anti-liberal movement and an updating of the critical race theory defense of rights for the present era of reaction and retrenchment.
+  address: null
+  altlink: 'https://gowder.io/AntiLiberalRetrenchment.pdf'
+  book: null
+  coauthor: null
+  editor: null
+  firstpage: '1173'
+  issue: '5'
+  journal: 'Emory Law Journal'
+  lastpage: '1214'
+  note: null
+  publink: 'https://scholarlycommons.law.emory.edu/elj/vol73/iss5/2/'
+  publisher: null
+  title: 'Anti-Liberal Rights Retrenchment as a Threat to the Rule of Law'
+  type: 'law review'
+  volume: '73'
+  year: '2024'
+  tags: ['rule of law', 'critical race theory', 'hegel']
+
+
+- abstract: >-
+    This chapter elucidates dignity as a rule of law value through an examination of its opposite, humiliation. Focusing as a case study on the author's own unlawful and racially based arrest in 2003 in New Orleans, it unpacks the phenomenon of the abuse of legally conferred power to claim a higherarchically superior status over the victims of that power. It further examines forced self-abnegation as a signal of the failure of the rule of law through the phenomenon of 'the Talk' that parents of color are forced to inflict on their children, counselling them to behave in a subordinate manner toward police. 
+  address: 'Abington and New York'
+  altlink: null
+  book: 'Human Dignity, Judicial Reasoning, and the Law: Comparative Perspectives on a Key Constitutional Concept'
+  coauthor: null
+  editor: 'Brett G. Scharffs, Andrea Pin, and Dmytro Vovk'
+  firstpage: '15'
+  issue: null
+  journal: null
+  lastpage: '31'
+  note: null
+  publink: 'https://www.routledge.com/Human-Dignity-Judicial-Reasoning-and-the-Law-Comparative-Perspective/Pin-Scharffs-Vovk/p/book/9781032310572?_ga=2137706556.1715299200'
+  publisher: 'Routledge'
+  title: 'The Rule of Law Sets its Face Against Humiliation'
+  type: 'chapter'
+  volume: null
+  year: '2024'
+  tags: ['rule of law']
+  
+
+- abstract: >-
+    This essay argues for an end to law's infamously Byzantine and bloated citation manual, the Bluebook. The very features that make the Bluebook distinctive when compared to citation systems in other academic fields are also those that inflict vast amounts of unnecessary if not downright harmful labor on its users. The root of the problem is its obsolescence: the Bluebook was designed for a system in which legal scholarship was primarily consumed in print and for material where the doctrinal epistemology of authority predominated. Today, legal scholarship is primarily consumed electronically, and it largely shares an epistemology of credence with other scholarly disciplines. (Nor are its hundreds of pages of rules particularly useful for practicing lawyers and judges, who sensibly disregard most of it anyway.) At a minimum, the signals, typographical rules, abbreviations, and cross-references need to be put out of their misery; when those are gone what is left would be practically indistinguishable from the sensible citation systems of other fields, as it should be. Also, we should automate as much as possible---and that turns out to be quite a lot. (Note: the local version of the paper should contain embedded citation information, whereas the official version may not.)
+  address: null
+  altlink: 'https://gowder.io/An_Old-Fashioned_Bluebook_Burning_with_json.pdf'
+  book: null
+  coauthor: null
+  editor: null
+  firstpage: 'Article 2'
+  issue: 1
+  journal: 'Northwestern Law Journal des Refusés'
+  lastpage: ' '
+  note: null
+  publink: 'https://scholarlycommons.law.northwestern.edu/nljr/vol1/iss1/2/'
+  publisher: null
+  title: 'An Old-Fashioned Bluebook Burning'
+  type: 'law review'
+  volume: 1
+  year: '2024'
+  tags: ['legal academia']
+  
+
+- abstract: >-
+    This paper uses Gerald Postema's _Law's Rule_ to take up one of the most 
+    controversial questions in rule of law scholarship: whether the ideal can 
+    provide the basis for criticizing the state alone, or private individuals 
+    and entities exercising power over others as well. An account of the 
+    characteristics of states in virtue of which the rule of law licenses 
+    control over their power is developed, followed by an examination of some 
+    cases in which non-state holders of power over others might take on some of 
+    those characteristics. Under such circumstances, there are rule of law 
+    reasons to demand state control of private power.
+  address: null
+  altlink: 'https://rdcu.be/dEpg8'
+  book: null
+  coauthor: null
+  editor: null
+  firstpage: 'Initial online release, DOI: 10.1007/s10982-024-09497-1'
+  issue: ' '
+  journal: 'Law and Philosophy'
+  lastpage: ' '
+  note: null
+  publink: 'https://link.springer.com/article/10.1007/s10982-024-09497-1'
+  publisher: null
+  title: 'Finding Leviathan in Hegel: The Private Rule of Law and its Limits'
+  type: 'peer review'
+  volume: ' '
+  year: '2024'
+  tags: ['rule of law']
+  
+
+- abstract: >-
     We all--users, businesses, governments, and the general public--expect internet platform companies, like Meta, Alphabet, and Amazon to govern their users. Without platform governance, we all experience disasters like foreign election interference, vaccine misinformation, counterfeiting, and even genocide. The failures of platform companies result not from mailce, but from companies' inability to manage the complexity of their userbases and products and of their own incentives under the eyes of conflicting internal and external constituencies. Political scientists, constitutional theorists, and other scholars of governance have been studying the efforts of states to govern under complexity for centuries under theoretical rubrics like the problem of knowledge and incentive-compatible institutional design. The Networked Leviathan argues that this hard-won knowledge about states also applies to platforms. The insights from the research in political science and allied disciplines leads inexorably to the conclusion that governments and companies should collaborate to build democratic institutions for platform governance. By permitting ordinary people from across the world to participate in the governance enterprise, we allow those with the knowledge critical to making and applying platform rules to deploy that knowledge where it can make an impact. Democratic governance also allows companies to recruit third parties to help manage their own capacity to make and stick to decisions. The Networked Leviathan offers a case and a roadmap for democratizing the platforms.
   address: New York
   altlink: 'https://networked-leviathan.com'
@@ -18,6 +110,26 @@
   volume: null
   year: '2023'
   tags: ['platform governance', 'law and technology']
+  
+- abstract: >-
+    This essay, delivered as the 2023 Enlund Scholar-in-Residence Lecture at DePaul University College of Law and thereafter published in the DePaul Journal for Social Justice, briefly summarizes a Black Liberation approach to constitutional law which begins from the twin propositions that (a) a democratically legitimate constitution must represent the agency of the entire demos, and (b) Black Americans have in fact exercised authorial agency over the U.S. Constitution, but that agency has been consistently disregarded in Supreme Court doctrine.
+  address: null
+  altlink: 'https://gowder.io/depaul-ambition.pdf'
+  book: null
+  coauthor: null
+  editor: null
+  firstpage: 'Article 7, 1'
+  issue: 1
+  journal: 'DePaul Journal for Social Justice'
+  lastpage: 18
+  note: null
+  publink: "https://via.library.depaul.edu/jsj/vol17/iss1/7/"
+  publisher: null
+  title: 'The Constitutional Ambition of Black Liberation'
+  type: 'law review'
+  volume: 17
+  year: '2023'
+  tags: ['constitutional law', 'critical race theory', 'democratic theory'] 
 
 - abstract: >-
     A legal theorist reading contemporary criminal justice scholarship is confronted with a troubling sense of dissonance. Foundational to modern accounts of the concept of law are rules, and the chief modality of law\’s operation in ordinary peoples’ lives is said to be in enforcing those (primary) rules. Normative theories by philosophers of law typically deploy this rule-oriented character as a key virtue of legal systems, whether in Fullerian theories of the moral value of law itself in terms of its facilitation of autonomous self-application by individuals of the rules that apply to them, or in theories of the rule of law according to which one of the key criteria of good legal systems is that they only coerce individuals pursuant to rules.
@@ -43,7 +155,7 @@
   note: null
   publink: 'https://drive.google.com/file/d/1O_XMl7ct8hcI9rxToY07lIc0THaoeWfj/view?usp=drive_link'
   publisher: null
-  title: 'Is Criminal Law Unlawful'
+  title: 'Is Criminal Law Unlawful?'
   type: law review
   volume: '2023'
   year: '2023'

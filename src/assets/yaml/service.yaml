@@ -1,9 +1,24 @@
+- years: '2023-5'
+  subentity: 'Pritzker School of Law'
+  entity: 'Northwestern University'
+  role: 'Co-chair (2023-4)/Chair (2024-5), VAP Appointments Committee'
+  type: 'university'
+- years: '2024-5'
+  subentity: 'Pritzker School of Law'
+  entity: 'Northwestern University'
+  role: 'Member, Faculty Appointments Committee'
+  type: 'university'
+- years: '2024'
+  subentity: 'Pritzker School of Law'
+  entity: 'Northwestern University'
+  role: 'Member, Search Committee for Associate Dean of Diversity, Equity, and Inclusion'
+  type: 'university'
 - years: '2022-3'
   subentity: 'Pritzker School of Law'
   entity: 'Northwestern University'
   role: 'Ex Officio Member and Chair, Lectures Committee'
   type: 'university'
-- years: '2022-3'
+- years: '2022-4'
   subentity: 'Pritzker School of Law'
   entity: 'Northwestern University'
   role: 'Ex Officio Member, Workshop Committee'
@@ -149,7 +164,11 @@
   entity: Harvard Law School
   role: Public Relations Chair
   type: university
-- years: 2023-
+
+- years: 2024-5
+  role: 'Non-Resident Fellow, Center for Democracy and Technology'
+  type: community
+- years: 7/2023-2/2024
   role: 'Steering Committee Member, Council on Technology and Social Cohesion'
   type: community
 - years: 2021-

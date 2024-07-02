@@ -3,8 +3,15 @@ orderedcategories:
   - Political Virtue
   - Legal Commentary
   - Math and Code
+  - Tech/Platforms
   - Other
 articles:
+  - title: 'Dismantle or Democratize Big Tech.' 
+    publisher: 'Law and Political Economy Blog'
+    url: 'https://lpeproject.org/blog/dismantle-or-democratize-big-tech/'
+    month: '09'
+    year: '2023' 
+    category: Tech/Platforms
   - title: 'Toward Progressive Identity Constitutionalism' 
     publisher: 'Balkinization Blog'
     url: 'https://balkin.blogspot.com/2023/01/toward-public-identity-constitutionalism.html'
