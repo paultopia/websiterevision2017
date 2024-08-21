@@ -97,15 +97,15 @@
   coauthor: null
   editor: null
   firstpage: 'Initial online release, DOI: 10.1007/s10982-024-09497-1'
-  issue: ' '
+  issue: null
   journal: 'Law and Philosophy'
-  lastpage: ' '
+  lastpage: null
   note: null
   publink: 'https://link.springer.com/article/10.1007/s10982-024-09497-1'
   publisher: null
   title: 'Finding Leviathan in Hegel: The Private Rule of Law and its Limits'
   type: 'peer review'
-  volume: ' '
+  volume: null
   year: '2024'
   tags: ['rule of law']
   
