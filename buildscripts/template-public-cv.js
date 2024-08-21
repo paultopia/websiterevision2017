@@ -57,9 +57,13 @@ function termsThenSchoolthenTitle(a, b){
     return 1;
 }
 
-
 function citeMaker(art){
+// if something is "online first" or the like, that info gets put in the first page slot
+  if (art.volume){
     return art.issue ? art.volume + "(" + art.issue + "):" + art.firstpage + "-" + art.lastpage : art.volume + ":" + art.firstpage + "-" + art.lastpage;
+  }
+// if no volume, then it's an online first thingy 
+  return art.firstpage
 }
 
 function citeAdder(art){
