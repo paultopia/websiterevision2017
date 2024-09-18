@@ -191,6 +191,9 @@ campus:
     year: '2010'
  
 invited:
+  - venue: "Denison University Department of History"
+    title: "Three Stories About the Rule of Law: Property, Stability, Equality"
+    year: "2024"
   - venue: "Boston University School of Law"
     title: "The Networked Leviathan (book talk)"
     year: "2024"
