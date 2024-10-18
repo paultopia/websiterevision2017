@@ -7,7 +7,6 @@ const misc = require('../src/assets/json/misc.json');
 const presentations = require('../src/assets/json/presentations.json');
 const publications = require('../src/assets/json/publications.json');
 const service = require('../src/assets/json/service.json');
-const forthcoming = require('../src/assets/json/forthcoming.json');
 const refereeing = require('../src/assets/json/refereeing.json');
 
 const customTags = [ '<<', '>>' ];
@@ -134,7 +133,6 @@ const templatedata = {awards,
 		      chapters,
 		      bookreview,
 		      miscpubs,
-		      forthcoming,
 		      refing,
 		      chunkrefs};
 

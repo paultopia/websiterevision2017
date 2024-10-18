@@ -8,7 +8,6 @@ const misc = require('../src/assets/json/misc.json');
 const presentations = require('../src/assets/json/presentations.json');
 const publications = require('../src/assets/json/publications.json');
 const service = require('../src/assets/json/service.json');
-const forthcoming = require('../src/assets/json/forthcoming.json');
 const refereeing = require('../src/assets/json/refereeing.json');
 
 const customTags = [ '<<', '>>' ];
@@ -117,7 +116,7 @@ function chunkArray(arr){
 
 const chunkrefs = chunkArray(refing)
 
-const templatedata = {awards, basic, leadteaching, taships, misc, invited, conferences, campus, userv, dserv, cserv, books, peerreview, lawreview, chapters, miscpubs, forthcoming, refing, chunkrefs};
+const templatedata = {awards, basic, leadteaching, taships, misc, invited, conferences, campus, userv, dserv, cserv, books, peerreview, lawreview, chapters, miscpubs, refing, chunkrefs};
 
 const template = fs.readFileSync("./cvtex/template.tex", "utf8");
 
