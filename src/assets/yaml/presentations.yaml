@@ -157,6 +157,8 @@ conferences:
     year: '2017'
     
 campus:
+  - venue: "Buffett Institute for Global Affairs, Northwestern University"
+    title: "The Networked Leviathan (book talk)"
   - venue: Iowa Legal Studies Workshop
     title: >-
       Corruption and the Transnational Litigation Prisoner's Dilemma (Co-Author
@@ -191,6 +193,8 @@ campus:
     year: '2010'
  
 invited:
+  - venue: "Information Society Project, Yale---Ideas Lunch"
+  - title: "Implementation as Constraint: Protecting the Rule of Law from Automated Centralization"
   - venue: "Denison University Department of History"
     title: "Three Stories About the Rule of Law: Property, Stability, Equality"
     year: "2024"
