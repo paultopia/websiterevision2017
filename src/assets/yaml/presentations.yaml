@@ -194,6 +194,9 @@ campus:
     year: '2010'
  
 invited:
+  - venue: "Penn Law Review Symposium: The Uses (and Misuses) of History in Constitutional Interpretation"
+    title: "Ameliorative Constitutionalism"
+    year: "2024"
   - venue: "Information Society Project, Yale---Ideas Lunch"
     title: "Implementation as Constraint: Protecting the Rule of Law from Automated Centralization"
     year: "2024"
