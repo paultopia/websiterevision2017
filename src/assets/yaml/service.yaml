@@ -23,7 +23,7 @@
   entity: 'Northwestern University'
   role: 'Ex Officio Member, Workshop Committee'
   type: 'university'
-- years: '2021-2'
+- years: '2021-2, 2024-5'
   subentity: 'Pritzker School of Law'
   entity: 'Northwestern University'
   role: 'Member, Faculty Advisory Committee'
@@ -38,7 +38,7 @@
   entity: 'Northwestern University'
   role: 'Member, Public Interest Committee'
   type: 'university'
-- years: '2020-'
+- years: '2020-4'
   subentity: 'Buffett Institute for Global Affairs'
   entity: 'Northwestern University'
   role: 'Member, Faculty Advisory Council'
@@ -165,6 +165,9 @@
   role: Public Relations Chair
   type: university
 
+- years: '12/2024'
+  role: 'Member, Global Rule of Law Commission of the European Public Law Institute'
+  type: 'community'
 - years: 2024-5
   role: 'Non-Resident Fellow, Center for Democracy and Technology'
   type: community
