@@ -12,9 +12,9 @@
 
         <h2>Academic Positions</h2>
 
-        <p>2020- <b>Professor of Law and Associate Dean of Research and Intellectual Life</b>, Northwestern University Pritzker School of Law
+        <p>2020- <b>Professor of Law</b>, Northwestern University Pritzker School of Law
         <ul>
-            <li>Professor of Law 2020-
+            <li>Associate Dean of Research and Intellectual Life 9/2022-8/2024
             <li>Professor of Law and Associate Dean of Research and Intellectual Life, 9/2022-</li></ul>
         </p>
 
