@@ -14,8 +14,7 @@
 
         <p>2020- <b>Professor of Law</b>, Northwestern University Pritzker School of Law
         <ul>
-            <li>Associate Dean of Research and Intellectual Life 9/2022-8/2024
-            <li>Professor of Law and Associate Dean of Research and Intellectual Life, 9/2022-</li></ul>
+            <li>Associate Dean of Research and Intellectual Life 9/2022-8/2024</li></ul>
         </p>
 
         <p>2012-2020 <b>Professor of Law and O.K. Patton Fellow in Law</b>, University of Iowa College of Law
