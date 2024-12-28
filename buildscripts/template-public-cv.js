@@ -1,6 +1,7 @@
 const fs = require('fs');
 const Mustache = require('mustache');
 const awards = require('../src/assets/json/awards.json');
+const affiliations = require('../src/assets/json/affiliations.json');
 const basic = require('../src/assets/json/basic.json');
 const courses = require('../src/assets/json/courses.json');
 const misc = require('../src/assets/json/misc.json');
@@ -117,6 +118,7 @@ function chunkArray(arr){
 const chunkrefs = chunkArray(refing)
 
 const templatedata = {awards,
+          affiliations,
 		      basic,
 		      leadteaching,
 		      taships,

@@ -15,6 +15,7 @@ import svc from './assets/json/service.json';
 import commentary from './assets/json/commentary.json';
 import bbabbrv from './assets/json/bbtables.json';
 import awards from './assets/json/awards.json';
+import affiliations from './assets/json/affiliations.json';
 import cvURL from './assets/pdf/gowdercv.pdf';
 
 
@@ -44,6 +45,7 @@ var state = {currentView,
              commentary,
              bbabbrv,
              awards,
+             affiliations,
              cvURL,
              citeText,
              augmented};

@@ -37,7 +37,7 @@
 
         <publications :pubs="pubs"></publications>
 
-        <h2>Grants, Awards and Honors</h2>
+        <h2>Honors, Awards and Grants</h2>
 
             <table>
         <col style="width:20%">
@@ -45,6 +45,17 @@
 
         <tr v-for="aw in awards">
           <td>{{ aw.year }}</td> <td>{{ aw.award }}</td>
+        </tr>
+        </table>
+
+        <h2>Affiliations</h2>
+
+            <table>
+        <col style="width:20%">
+        <col style="width:80%">
+
+        <tr v-for="af in affiliations">
+          <td>{{ af.years }}</td> <td>{{ af.organization }}</td> <td>{{ af.role }}</td>
         </tr>
         </table>
 
@@ -123,6 +134,7 @@ computed: {
         basics: function(){return this.$store.state.basics;},
         svc: function(){return this.$store.state.svc;},
         awards: function(){return this.$store.state.awards;},
+        affiliations: function(){return this.$store.state.affiliations;},
         practice: function(){return this.misc.practice.sort(chron);}
     }
 }

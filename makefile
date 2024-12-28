@@ -21,7 +21,7 @@ buildcvnetlify: templatecvnetlify
 templatecvnetlify: yaml2json updatedate
 	node ./buildscripts/template-public-cv.js
 
-# Local functionality
+# Local functionality (POSSIBLY OBSOLETE)
 
 local: cvbuild
 	npm run build
