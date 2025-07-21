@@ -14,6 +14,7 @@
 
         <p>2020- <b>Professor of Law</b>, Northwestern University Pritzker School of Law
         <ul>
+	<li>Frederic P. Vose Professor of Law from 9/2025-</li>
             <li>Associate Dean of Research and Intellectual Life 9/2022-8/2024</li></ul>
         </p>
 
@@ -58,7 +59,7 @@
         </tr>
         </table>
 
-            <h2>Presentations</h2>
+            <h2>Presentations (selected)</h2>
 
             <presentations header="Invited Talks" :presentationlist="pres.invited"></presentations>
             <presentations header="Conference Presentations" :presentationlist="pres.conferences"></presentations>
