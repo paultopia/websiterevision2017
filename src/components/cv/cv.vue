@@ -12,9 +12,10 @@
 
         <h2>Academic Positions</h2>
 
-        <p>2020- <b>Professor of Law</b>, Northwestern University Pritzker School of Law
+        <p>2020- <b>Frederic P. Vose Professor of Law</b>, Northwestern University Pritzker School of Law
         <ul>
 	<li>Frederic P. Vose Professor of Law from 9/2025-</li>
+	<li>Professor of Law from 2020-8/2025</li>
             <li>Associate Dean of Research and Intellectual Life 9/2022-8/2024</li></ul>
         </p>
 
