@@ -1,0 +1,637 @@
+INFO FROM FEB 26 2026 GEMINI RESPONSE TO BREAKING FORCED BUILD OS UPDATE
+
+(and todo) 
+
+BUILD FAILURE:
+
+[Gemini
+
+](https://gemini.google.com/app)
+
+# **Debugging Netlify Build Failure**
+
+<https://gemini.google.com/share/932cf32a0c5a>[ ](https://gemini.google.com/share/932cf32a0c5a)
+
+Created with **Pro** February 25, 2026 at 08:15 PM Published February 25, 2026 at 08:59 PM
+
+You said
+
+I need your help in debugging a failing web application build process. I'm building the website on netlify using continuous integration, and it uses a 2.x version of vue.js and a 2.x version of webpack.
+
+  
+
+This project has been successfully building for years, and I have not knowingly changed any of the dependencies or JavaScript code, but all of a sudden the latest build has begun failing. I've pasted in below the relevant parts of the build logs from netlify. Can you help me problem-solve this?
+
+  
+
+BUILD LOGS FOLLOW:
+
+  
+
+----
+
+  
+
+8:07:39 PM: npm run build
+
+8:07:39 PM: > websiterevision2017@1.0.0 build /opt/build/repo
+
+8:07:39 PM: > node build/build.js
+
+8:07:40 PM: (node:8618) [DEP0022] DeprecationWarning: os.tmpDir() is deprecated. Use os.tmpdir() instead.
+
+8:07:44 PM: Starting to optimize CSS...
+
+8:07:44 PM: Processing static/css/app.45f8154a3d328e420a930f43b9d696e3.css...
+
+8:07:44 PM: Processed static/css/app.45f8154a3d328e420a930f43b9d696e3.css, before: 6121, after: 6053, ratio: 98.89%
+
+8:07:44 PM: /opt/build/repo/node_modules/prerender-spa-plugin/lib/compile-to-html.js:82
+
+8:07:44 PM: if (error) throw stdout
+
+8:07:44 PM: ^
+
+8:07:44 PM: npm ERR! code ELIFECYCLE
+
+8:07:44 PM: npm ERR! errno 1
+
+8:07:44 PM: npm ERR! websiterevision2017@1.0.0 build: `node build/build.js`
+
+8:07:44 PM: npm ERR! Exit status 1
+
+8:07:44 PM: npm ERR!
+
+8:07:44 PM: npm ERR! Failed at the websiterevision2017@1.0.0 build script.
+
+8:07:44 PM: npm ERR! This is probably not a problem with npm. There is likely additional logging output above. 8:07:44 PM: npm ERR! A complete log of this run can be found in:
+
+8:07:44 PM: npm ERR! /opt/buildhome/.npm/_logs/2026-02-26T02_07_44_942Z-debug.log
+
+8:07:44 PM: make: *** [makefile:13: buildjsnetlify] Error 1
+
+  
+
+----
+
+It is incredibly frustrating when a project that has been stable for years suddenly decides to break without a single code change.
+
+Looking closely at your build log, the failure is happening right here: `8:07:44 PM: /opt/build/repo/node_modules/prerender-spa-plugin/lib/compile-to-html.js:82` `8:07:44 PM: if (error) throw stdout`
+
+Here is what is happening and why it suddenly broke.
+
+### The Culprit: Environment Drift
+
+The `prerender-spa-plugin` works by spinning up a "headless" web browser in the background during your build process to render your Vue routes into static HTML. Given your older stack (Webpack 2, Vue 2), your version of this plugin is likely relying on an outdated headless browser, such as PhantomJS or an early version of Puppeteer.
+
+Even though you haven't changed your code or dependencies, **Netlify regularly updates its underlying build environments**. They frequently upgrade the default Node.js version and the underlying operating system (e.g., upgrading their build images from older versions of Ubuntu to newer ones).
+
+When the OS upgrades, certain older system-level libraries (like older versions of OpenSSL or font rendering engines) that your older headless browser relies on are removed or changed. The browser tries to boot up, fails because it's missing a system requirement, and crashes.
+
+To make matters worse, that specific line of code in the plugin (`if (error) throw stdout`) is a known flaw in older versions. When the browser crashes, the error details are sent to `stderr` (standard error), but the plugin mistakenly throws `stdout` (standard output), which is usually empty. This completely hides the actual reason for the crash.
+
+### How to Fix It
+
+Since the goal is to get your build passing again quickly, the best approach is to roll back the environment changes Netlify made behind the scenes.
+
+**1. Pin your Node.js Version** If Netlify bumped your default Node version, it might be incompatible with the older packages.
+- Add a file named `.nvmrc` to the root of your repository.
+- Inside that file, specify the older Node version you know used to work (for a project from 2017, this might be `10`, `12`, or `14`).
+- Alternatively, you can go to your Netlify dashboard: **Site settings > Environment variables** and add a variable named `NODE_VERSION` set to your desired version (e.g., `14.17.0`).
+
+**2. Downgrade the Netlify Build Image** If a Node version downgrade doesn't fix it, the OS update is the issue.
+- Go to your Netlify dashboard for this site.
+- Navigate to **Site configuration > Build & deploy > Continuous Deployment**.
+- Look for the **Build image selection** section.
+- If it is set to a newer version (like Ubuntu 22.04 or 24.04), edit it and roll it back to the oldest available option (such as Ubuntu 20.04) to restore the legacy system libraries your plugin needs.
+
+**3. The Long-Term Fix** Eventually, Netlify will fully deprecate older build images. To future-proof the site, you would need to either upgrade `prerender-spa-plugin` to a newer version that uses a modern Puppeteer implementation, or switch to a different pre-rendering strategy entirely.
+
+Would you like me to walk you through how to patch your local `compile-to-html.js` file to reveal the exact hidden error message, or would you prefer to try pinning the environment versions first?
+
+You said
+
+Please help me patch the compile-to-html.js file first?
+
+It is a smart move to want to see the actual error message before making arbitrary environment changes. We need to force that plugin to spill its secrets.
+
+Here is the catch: because `node_modules` is git-ignored, modifying the file directly on your local machine won't help your Netlify build. We have to tell Netlify to patch the file automatically _before_ it tries to run the build.
+
+We can do this easily with a tiny, temporary Node script.
+
+### Step 1: Create the Patch Script
+
+In the root directory of your repository, create a new file named `patch-prerender.js` and paste the following code into it:
+
+JavaScript
+    
+    
+    const fs = require('fs');
+    const path = require('path');
+    
+    const filePath = path.join(__dirname, 'node_modules', 'prerender-spa-plugin', 'lib', 'compile-to-html.js');
+    
+    try {
+      let code = fs.readFileSync(filePath, 'utf8');
+      
+      // Replace the faulty line with one that logs the actual error output
+      const badCode = 'if (error) throw stdout';
+      const goodCode = 'if (error) { console.error("HIDDEN PRERENDER ERROR:", stderr); throw error; }';
+      
+      if (code.includes(badCode)) {
+        code = code.replace(badCode, goodCode);
+        fs.writeFileSync(filePath, code);
+        console.log('Successfully patched compile-to-html.js');
+      } else {
+        console.log('Patch not applied: Target code not found.');
+      }
+    } catch (err) {
+      console.error('Failed to patch file:', err.message);
+    }
+    
+
+### Step 2: Update Your Build Command
+
+We need to make sure this script runs immediately after your dependencies are installed, but right before your actual build starts.
+
+Since your logs show you are using a makefile (`make: *** [makefile:13: buildjsnetlify] Error 1`), open your `makefile` and find the `buildjsnetlify` target.
+
+Modify the command sequence to run the patch script first. It should look something like this:
+
+Makefile
+    
+    
+    buildjsnetlify:
+    	node patch-prerender.js
+    	npm run build
+    
+
+_(Alternatively, if you prefer adjusting `package.json`, you can change your build script to `"build": "node patch-prerender.js && node build/build.js"`)._
+
+### Step 3: Push and Read the Logs
+
+Commit the new `patch-prerender.js` file and your updated `makefile` (or `package.json`), and push the changes to trigger a new Netlify build.
+
+When the build inevitably fails again, check the Netlify logs. Right above the failure point, you should now see **"HIDDEN PRERENDER ERROR:"** followed by the actual system-level error from PhantomJS or Puppeteer (usually a missing `.so` library or a segmentation fault).
+
+Would you like to paste that new error output here once you have it so we can figure out the exact environment fix together?
+
+You said
+
+Here is the new error output.
+
+  
+
+ERROR OUTPUT FOLLOWS
+
+  
+
+----
+
+  
+
+8:28:14 PM: npm run build
+
+8:28:14 PM: > websiterevision2017@1.0.0 build /opt/build/repo
+
+8:28:14 PM: > node build/build.js
+
+8:28:15 PM: (node:8883) [DEP0022] DeprecationWarning: os.tmpDir() is deprecated. Use os.tmpdir() instead.
+
+8:28:19 PM: Starting to optimize CSS...
+
+8:28:19 PM: Processing static/css/app.45f8154a3d328e420a930f43b9d696e3.css...
+
+8:28:19 PM: Processed static/css/app.45f8154a3d328e420a930f43b9d696e3.css, before: 6121, after: 6053, ratio: 98.89%
+
+8:28:19 PM: HIDDEN PRERENDER ERROR: Auto configuration failed
+
+8:28:19 PM: 140220208047936:error:25066067:DSO support routines:DLFCN_LOAD:could not load the shared library:dso_dlfcn.c:185:filename(libproviders.so): libproviders.so: cannot open shared object file: No such file or directory
+
+8:28:19 PM: 140220208047936:error:25070067:DSO support routines:DSO_load:could not load the shared library:dso_lib.c:244:
+
+8:28:19 PM: 140220208047936:error:0E07506E:configuration file routines:MODULE_LOAD_DSO:error loading dso:conf_mod.c:285:module=providers, path=providers
+
+8:28:19 PM: 140220208047936:error:0E076071:configuration file routines:MODULE_RUN:unknown module name:conf_mod.c:222:module=providers
+
+8:28:19 PM: /opt/build/repo/node_modules/prerender-spa-plugin/lib/compile-to-html.js:82
+
+8:28:19 PM: if (error) { console.error("HIDDEN PRERENDER ERROR:", stderr); throw error; }
+
+8:28:19 PM: ^
+
+8:28:19 PM: Error: Command failed: /opt/build/repo/node_modules/phantomjs-prebuilt/lib/phantom/bin/phantomjs /opt/build/repo/node_modules/prerender-spa-plugin/lib/phantom-page-render.js http://localhost:8000/ {}
+
+8:28:19 PM: Auto configuration failed
+
+8:28:19 PM: 140220208047936:error:25066067:DSO support routines:DLFCN_LOAD:could not load the shared library:dso_dlfcn.c:185:filename(libproviders.so): libproviders.so: cannot open shared object file: No such file or directory
+
+8:28:19 PM: 140220208047936:error:25070067:DSO support routines:DSO_load:could not load the shared library:dso_lib.c:244:
+
+8:28:19 PM: 140220208047936:error:0E07506E:configuration file routines:MODULE_LOAD_DSO:error loading dso:conf_mod.c:285:module=providers, path=providers
+
+8:28:19 PM: 140220208047936:error:0E076071:configuration file routines:MODULE_RUN:unknown module name:conf_mod.c:222:module=providers
+
+8:28:19 PM: at ChildProcess.exithandler (child_process.js:270:12)
+
+8:28:19 PM: at emitTwo (events.js:125:13)
+
+8:28:19 PM: at ChildProcess.emit (events.js:213:7)
+
+8:28:19 PM: at maybeClose (internal/child_process.js:927:16)
+
+8:28:19 PM: at Process.ChildProcess._handle.onexit (internal/child_process.js:211:5)
+
+8:28:19 PM: npm ERR! code ELIFECYCLE
+
+8:28:19 PM: npm ERR! errno 1
+
+8:28:19 PM: npm ERR! websiterevision2017@1.0.0 build: `node build/build.js`
+
+8:28:19 PM: npm ERR! Exit status 1
+
+8:28:19 PM: npm ERR!
+
+8:28:19 PM: npm ERR! Failed at the websiterevision2017@1.0.0 build script.
+
+8:28:19 PM: npm ERR! This is probably not a problem with npm. There is likely additional logging output above.
+
+8:28:19 PM: npm ERR! A complete log of this run can be found in:
+
+8:28:19 PM: npm ERR! /opt/buildhome/.npm/_logs/2026-02-26T02_28_19_623Z-debug.log
+
+8:28:19 PM: make: *** [makefile:14: buildjsnetlify] Error 1
+
+  
+
+----
+
+That patch worked perfectly! We caught the culprit red-handed.
+
+The hidden error confirms exactly what we suspected about the environment drift, but now we know the specific piece of technology that broke: **PhantomJS vs. OpenSSL**.
+
+### The Root Cause: The Ghost in the Machine
+
+Your `prerender-spa-plugin` relies on `phantomjs-prebuilt` (an ancient, headless browser that was officially deprecated in 2018).
+
+The error lines complaining about `libproviders.so`, `DLFCN_LOAD`, and `Auto configuration failed` are OpenSSL errors. Recently, Netlify upgraded their default underlying build operating system to a newer version of Ubuntu (likely 22.04 or 24.04). These newer operating systems use OpenSSL 3.0, which completely changed how security "providers" are loaded in the system configuration.
+
+When the old PhantomJS binary wakes up and tries to read the new Ubuntu system's OpenSSL configuration file, it doesn't understand the new syntax, panics, and crashes immediately.
+
+### How to Fix It Right Now
+
+To get your site building successfully today, the most reliable fix is to revert the Netlify build environment to the older operating system that your 2017-era stack expects.
+
+Here is exactly how to do that in the Netlify dashboard:
+
+1. Go to your site's dashboard in Netlify.
+
+2. Navigate to **Site configuration** > **Build & deploy** > **Continuous Deployment**.
+
+3. Scroll down to the **Build image selection** section.
+
+4. Click **Edit**.
+
+5. Change the image from the current default (likely "Ubuntu 22.04" or "Ubuntu 24.04") back to **Ubuntu 20.04 (Focal)**.
+
+6. Save the settings.
+
+Once you save this, go to your "Deploys" tab and trigger a new deployment. Ubuntu 20.04 uses the older OpenSSL 1.1.1, which PhantomJS can read perfectly, so your CSS optimization and HTML pre-rendering should sail right through just like it used to.
+
+Would you like to go ahead and make that change in Netlify, or would you like to explore a slightly hacky environment variable workaround (bypassing the OpenSSL config entirely) if you want to stay on the newer build image?
+
+You said
+
+Netlify won't allow me to roll back to the earlier image, so can we try the hacks environment variable workaround?
+
+I completely understand wanting to stick with the newer build image and handle this with a workaround instead. It is often better to move forward than to roll back, and this particular hack is a well-known lifesaver for older Node packages trapped in modern Linux environments.
+
+### The Workaround: `OPENSSL_CONF=/dev/null`
+
+Here is exactly how the hack works. The OpenSSL crash happens because the ancient PhantomJS binary is trying (and failing) to parse the syntax of the new Ubuntu system's OpenSSL 3 configuration file (`/etc/ssl/openssl.cnf`).
+
+By setting the environment variable `OPENSSL_CONF=/dev/null`, we tell PhantomJS to look at an empty, blank file for its configuration instead. Since it doesn't see the new, complex security provider settings, it bypasses the crash entirely, falls back to its own internal defaults, and boots up successfully.
+
+You can apply this in two different ways. Choose whichever fits your workflow best:
+
+### Option 1: The Netlify Dashboard (Cleanest)
+
+This approach is great because you don't have to touch or commit any code.
+
+1. Go to your site's Netlify dashboard and navigate to **Site configuration** > **Environment variables**.
+
+2. Click **Add a variable** > **Add a single variable**.
+
+3. Set the **Key** to `OPENSSL_CONF`.
+
+4. Set the **Value** to `/dev/null`.
+
+5. Save the variable.
+
+6. Navigate to your **Deploys** tab and trigger a brand new deploy.
+
+### Option 2: Update Your `makefile` (Code-Tracked)
+
+If you prefer to keep the fix tied to your repository so it's documented in your version control, you can inline the environment variable directly into your build script.
+
+Open your `makefile` and update your `buildjsnetlify` target to prefix the command with the variable:
+
+Makefile
+    
+    
+    buildjsnetlify:
+    	OPENSSL_CONF=/dev/null npm run build
+    
+
+_(Note: If you are still running the `patch-prerender.js` script we made earlier, just add `OPENSSL_CONF=/dev/null` in front of the specific command that triggers your build)._
+
+Give either of those a shot; your CSS optimization and HTML pre-rendering should successfully complete.
+
+Would you like me to help you outline a more modern, Puppeteer-based pre-rendering strategy so you can eventually retire PhantomJS from this project for good?
+
+You said
+
+Yes please!
+
+Awesome! Let's get that ancient PhantomJS ghost out of your machine for good.
+
+The biggest issue with `prerender-spa-plugin` isn't just that it uses PhantomJS; it's that it forces the pre-rendering process directly inside Webpack. Because you are using Webpack 2 (which is several generations old), trying to find a modern plugin that is still compatible with your specific Webpack version is an absolute nightmare of dependency conflicts.
+
+The modern best practice is to **decouple pre-rendering from Webpack entirely**.
+
+Instead of pre-rendering _during_ the build, you do it _after_ the build. Webpack compiles your standard Vue Single Page Application (SPA), and then a separate script spins up a modern headless browser to visit the local files, take HTML snapshots, and save them.
+
+Here are the two best ways to do this, depending on how much control you want.
+
+### Option 1: The "Zero-Config" Package (`react-snap`)
+
+Don't let the name fool you! `react-snap` is a heavily used, framework-agnostic pre-rendering library that works beautifully with Vue 2. It uses a modern, up-to-date version of Puppeteer under the hood.
+
+Because it runs entirely as a post-build step, you can completely rip `prerender-spa-plugin` out of your `webpack.config.js`.
+
+**How to implement it:**
+
+1. Install the package: `npm install --save-dev react-snap`
+
+2. Remove all traces of `prerender-spa-plugin` from your Webpack configuration files.
+
+3. Open your `package.json` and add a `postbuild` script. Netlify (and npm) will automatically run this immediately after your main `build` script finishes.
+
+JSON
+    
+    
+    "scripts": {
+      "build": "node build/build.js",
+      "postbuild": "react-snap"
+    }
+    
+
+`react-snap` will automatically crawl your built `dist` folder, find all your links, render them using a modern headless Chrome, and save the static HTML files.
+
+* * *
+
+### Option 2: The DIY Puppeteer Script (Maximum Control)
+
+If you don't want to rely on another third-party black-box library, writing your own pre-render script is surprisingly easy and future-proofs your app forever.
+
+**How to implement it:**
+
+1. Remove `prerender-spa-plugin` from Webpack.
+
+2. Install Puppeteer and Express: `npm install --save-dev puppeteer express`
+
+3. Create a file in your project root called `prerender.js`:
+
+JavaScript
+    
+    
+    const puppeteer = require('puppeteer');
+    const express = require('express');
+    const fs = require('fs');
+    const path = require('path');
+    
+    // List the exact routes you want to prerender
+    const routes = ['/', '/about', '/contact']; 
+    
+    async function buildStatic() {
+      // 1. Serve the compiled Vue app from your dist folder
+      const app = express();
+      app.use(express.static(path.join(__dirname, 'dist')));
+      const server = app.listen(8080);
+    
+      // 2. Launch modern Puppeteer
+      const browser = await puppeteer.launch({ headless: 'new' });
+      const page = await browser.newPage();
+    
+      // 3. Render and save each route
+      for (const route of routes) {
+        console.log(`Rendering ${route}...`);
+        
+        // Wait for the network to be idle so Vue has time to mount
+        await page.goto(`http://localhost:8080${route}`, { waitUntil: 'networkidle0' });
+        const html = await page.content();
+        
+        // Create the directory structure if it doesn't exist
+        const dirPath = path.join(__dirname, 'dist', route);
+        if (!fs.existsSync(dirPath)) {
+          fs.mkdirSync(dirPath, { recursive: true });
+        }
+        
+        // Overwrite the SPA output with the static HTML
+        fs.writeFileSync(path.join(dirPath, 'index.html'), html);
+      }
+    
+      // 4. Clean up
+      await browser.close();
+      server.close();
+      console.log('Pre-rendering complete!');
+    }
+    
+    buildStatic();
+    
+
+4. Update your `makefile` or `package.json` to run this script right after Webpack finishes:
+
+Makefile
+    
+    
+    buildjsnetlify:
+    	npm run build
+    	node prerender.js
+    
+
+Would you like me to walk you through safely removing the old `prerender-spa-plugin` code from your Webpack configuration files to prep for one of these modern setups?
+
+You said
+
+Yes please, that would be great!
+
+Let's do some codebase spring cleaning!
+
+Since your project dates back to around 2017, you are most likely using the classic Vue CLI 2 file structure. In those older setups, the Webpack configuration is usually split into a few different files inside a `build` directory.
+
+Here is exactly how to surgically remove the old plugin without breaking the rest of your build.
+
+### Step 1: Locate the Production Webpack Config
+
+Pre-rendering is a production-only optimization, so it is rarely in the base or development configs.
+
+Look inside your project for a file named **`build/webpack.prod.conf.js`**. _(If you don't have that exact file, look for `webpack.config.js` or `build/webpack.config.js`)._
+
+### Step 2: Delete the Import Statement
+
+Open that file and look near the top where all the modules are being required. You are looking for a line that looks something like this:
+
+JavaScript
+    
+    
+    const PrerenderSpaPlugin = require('prerender-spa-plugin')
+    // or sometimes
+    var PrerenderSpaPlugin = require('prerender-spa-plugin')
+    
+
+Go ahead and **delete** that line.
+
+### Step 3: Remove it from the Plugins Array
+
+Scroll down in the same file until you find the `plugins: [` array. Inside that array, you will see the plugin being instantiated. It will look similar to this block:
+
+JavaScript
+    
+    
+        // ... other plugins ...
+    
+        new PrerenderSpaPlugin(
+          // Absolute path to compiled SPA
+          path.join(__dirname, '../dist'),
+          // List of routes to prerender
+          [ '/', '/about', '/contact' ] 
+          // there might be other configuration options here too
+        ),
+    
+        // ... other plugins ...
+    
+
+**Delete** that entire `new PrerenderSpaPlugin(...)` block. Be careful to ensure the commas separating your other plugins in the array remain syntactically correct!
+
+Save the file. Your Webpack configuration is now clean and entirely decoupled from pre-rendering.
+
+### Step 4: Uninstall the Package
+
+Finally, let's remove the actual dependency from your `package.json` so `phantomjs` stops getting downloaded to your machine and Netlify's servers.
+
+Run this command in your terminal at the root of your project:
+
+Bash
+    
+    
+    npm uninstall prerender-spa-plugin
+    
+
+Once that is done, your project is officially ready for a modern pre-rendering step!
+
+Which of the two modern approaches--the zero-config `react-snap` package or the DIY Puppeteer script--would you like me to help you set up next?
+
+You said
+
+I'd like to try the react-snap package, but before we do that, can I just install these packages and uninstall prerender-spa-plugin by editing package.json? I'm working remotely from my iPad, and would prefer not to have to run to my laptop to get a command line.
+
+Working from an iPad without a terminal is totally understandable, and yes, you absolutely can do this just by editing your `package.json` directly!
+
+Since your codebase is hosted on a platform like GitHub or GitLab, you can use their web interface to edit the file and commit the changes directly. When Netlify sees the new commit, it will run `npm install` during the build step. It will realize your `package.json` has changed, automatically download the new package, remove the old one, and handle the rest on its own servers.
+
+Here are the exactly three edits you need to make to your `package.json` file:
+
+### 1. Remove the Old Plugin
+
+Scroll down to your `dependencies` or `devDependencies` block (wherever the old plugin is currently listed) and delete this line:
+
+JSON
+    
+    
+    "prerender-spa-plugin": "^x.x.x",
+    
+
+_(Make sure to remove the comma on the preceding line if this was the very last item in the list!)_
+
+### 2. Add `react-snap`
+
+In your `devDependencies` block, add the latest version of `react-snap`. It should look like this:
+
+JSON
+    
+    
+    "react-snap": "^1.23.0"
+    
+
+_(Again, just mind your JSON commas so the file remains valid)._
+
+### 3. Add the Postbuild Script
+
+Scroll up to your `scripts` block. You need to add a command called `postbuild`. Netlify and npm are smart enough to automatically run any script named `postbuild` immediately after your main `build` script finishes.
+
+Add it to the list like this:
+
+JSON
+    
+    
+    "scripts": {
+      "build": "node build/build.js",
+      "postbuild": "react-snap",
+      // ... your other scripts ...
+    }
+    
+
+Commit that modified `package.json` file directly to your repository along with the Webpack config removals we did earlier. Netlify will pick it up and run with it!
+
+> **One quick heads-up for when you get back to your laptop:** > Because you are bypassing the command line, your local `package-lock.json` file won't be updated yet. The next time you sit down at your actual computer, just do a `git pull` to get these changes, and then run a quick `npm install` in your terminal to sync your local lockfile and `node_modules` folder back up.
+
+Would you like me to show you the tiny change you need to make to your Vue app's mounting logic in `src/main.js` so that Vue knows how to "hydrate" the HTML that `react-snap` generates?
+
+You said
+
+Yes please!
+
+It is totally fine to make these edits directly from your iPad via your repository's web interface!
+
+Now that we are swapping the old plugin out for `react-snap`, we have to tell Vue how to handle the new pre-rendered HTML files.
+
+If we don't do this, when a user visits your site, Vue will see the pre-rendered HTML, delete it all, and rebuild it from scratch. This causes an annoying "flicker" or flash of blank content on load.
+
+We want Vue to **hydrate** instead. Hydration is when Vue looks at the existing HTML, says "Ah, this is already built!", and just quietly attaches its JavaScript event listeners in the background without redrawing the screen.
+
+### The Fix: `window.snapSaveState`
+
+Vue 2 is designed to automatically hydrate _if_ the root HTML element has a specific attribute: `data-server-rendered="true"`.
+
+Conveniently, `react-snap` has a built-in hook just for this. If it sees a function called `window.snapSaveState`, it will run it inside its headless browser exactly one millisecond before it takes the snapshot and saves your HTML to disk.
+
+**Here is how to add it:**
+
+1. Navigate to your `src` folder and open your main entry file (usually **`src/main.js`**).
+
+2. Somewhere near the top of the file, paste in this tiny snippet:
+
+JavaScript
+    
+    
+    window.snapSaveState = () => {
+      // If your root element has a different ID, change '#app' to match it
+      const appElement = document.querySelector('#app');
+      if (appElement) {
+        appElement.setAttribute('data-server-rendered', 'true');
+      }
+    };
+    
+
+That is it! You don't even need to change your `new Vue({ ... }).$mount('#app')` logic.
+
+When your new `postbuild` script runs, `react-snap` will automatically stamp that attribute onto the HTML. When a user loads the page, Vue will see the stamp and hydrate smoothly.
+
+Once you commit this final file, your Netlify build should automatically kick off, install the new package, build the site, and run `react-snap` to generate the pages.
+
+Would you like to drop your Netlify deploy logs in here once it finishes so we can verify that `react-snap` successfully found and crawled all your routes?
+
+[Google Privacy Policy Opens in a new window ](https://policies.google.com/privacy)[Google Terms of Service Opens in a new window ](https://policies.google.com/terms)[Your privacy & Gemini Apps Opens in a new window ](https://support.google.com/gemini?p=privacy_notice)
+
+Gemini may display inaccurate info, including about people, so double-check its responses.
