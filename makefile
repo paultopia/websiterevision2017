@@ -11,7 +11,9 @@ buildcljsnetlify:
 
 buildjsnetlify: buildcvnetlify
 	node patch-prerender.js
-	npm run build
+	OPENSSL_CONF=/dev/null npm run build
+
+# NOTE: the patch and openssl are a kind of a hack suggested by gemini to resolve a bug from a new version of ubuntu, see ubuntu-change-log.txt for details
 
 buildcvnetlify: templatecvnetlify
 	cp -R cvtex/. .
