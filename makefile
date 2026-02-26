@@ -10,6 +10,7 @@ buildcljsnetlify:
 	cp -r apps/apps/public/. swap_in/apps
 
 buildjsnetlify: buildcvnetlify
+	node patch-prerender.js
 	npm run build
 
 buildcvnetlify: templatecvnetlify
