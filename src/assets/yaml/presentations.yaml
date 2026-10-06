@@ -1,4 +1,7 @@
 conferences: 
+  - venue: 'John Mercer Langston Conference'
+    title: 'Disobey Trump v. United States'
+    year: '2026'
   - venue: 'Firearms Law Works-in-Progress Conference, Duke Law School'
     title: 'The Collective Defense Second Amendment, From the Black Vigilance Committees to the Deacons'
     year: '2026'
@@ -197,6 +200,9 @@ campus:
     year: '2010'
 
 invited:
+  - venue: "Columbia Law School Legal Philosophy Workshop"
+    title: "The Constitution for Time Travelers (selected work-in-progress chapters)"
+    year: "2026"
   - venue: "Alabama Civil Rights & Civil Liberties Law Review Symposium: The Ever-Evolving Definition of America's History and Tradition"
     title: "Never Send to Know on Whom the Boot Stomps; it Stomps on Thee (keynote presentation)"
     year: "2026"
